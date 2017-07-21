@@ -46,7 +46,6 @@ module.exports = ((settings) => {
     .reduce((all, pkg) => all.concat(pkg), [])
     .filter(packagePath => fs.existsSync(`${packagePath}/tests/nightwatch`));
 
-
   config.test_settings = {
     default: {
       launch_url: `http://localhost:${port}`,
