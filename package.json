@@ -2,7 +2,7 @@
   "name": "terra-consumer",
   "private": true,
   "version": "0.0.1",
-  "description": "terra-core",
+  "description": "terra-consumer",
   "engines": {
     "node": "6.9.4"
   },
@@ -13,8 +13,8 @@
   "keywords": [
     "Cerner",
     "Terra",
-    "Terra Core",
-    "terra-core"
+    "Terra Consumer",
+    "terra-consumer"
   ],
   "author": "Cerner Corporation",
   "license": "Apache-2.0",
