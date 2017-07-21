@@ -1,0 +1,11 @@
+@import '~terra-mixins';
+@import './variables';
+@import './mixins';
+
+:local {
+  /* stylelint-disable selector-class-pattern  */
+  .nav {
+    display: block;
+  }
+  /* stylelint-enable */
+}

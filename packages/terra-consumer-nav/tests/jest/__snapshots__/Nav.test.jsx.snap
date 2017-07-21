@@ -1,0 +1,6 @@
+exports[`Nav should render a default component 1`] = `
+<div
+  className="nav">
+  default
+</div>
+`;
