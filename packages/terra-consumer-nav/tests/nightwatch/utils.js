@@ -22,6 +22,9 @@ const resizeTo = (breakpoints, suite) =>
         resizedTests[key] = value;
       }
     });
+    resizedTests.after = (browser, done) => {
+      browser.end(done);
+    };
     return Object.assign(resizedTests, tests);
   }, {});
 

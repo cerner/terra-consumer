@@ -29,8 +29,7 @@ const startWebpackDevServer = (done) => {
 };
 
 const stopWebpackDevServer = (done) => {
-  webpackServer.close();
-  done();
+  webpackServer.close(() => done());
 };
 
 
@@ -66,9 +65,6 @@ module.exports = ((settings) => {
         },
         before: startWebpackDevServer,
         after: stopWebpackDevServer,
-        afterEach: (browser, done) => {
-          browser.end(done);
-        },
       },
       filter: 'tests/nightwatch/*-spec.js',
       screenshots: {
