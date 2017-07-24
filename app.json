@@ -1,0 +1,34 @@
+{
+  "name": "terra-consumer",
+  "description": "Heroku reviews app for terra-consumer development",
+  "keywords": [
+    "productivity"
+  ],
+  "website": "https://engineering.cerner.com/terra-consumer/#/site",
+  "repository": "https://github.com/cerner/terra-consumer",
+  "success_url": "/",
+  "scripts": {},
+  "env": {
+    "NODE_ENV": {
+      "description": "development environment",
+      "value": "development"
+    },
+    "NPM_CONFIG_PRODUCTION": {
+      "description": "development environment",
+      "value": "false"
+    },
+    "NODE_MODULES_CACHE": {
+      "description": "No cache",
+      "value": "false"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "stack": "heroku-16",
+  "addons": [],
+  "buildpacks": []
+}

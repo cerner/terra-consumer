@@ -1,0 +1,19 @@
+{
+  "src_folders" : ["tests/nightwatch"],
+  "output_folder" : "reports",
+  "custom_commands_path" : "",
+  "custom_assertions_path" : "",
+  "page_objects_path" : "",
+  "persist_globals": true,
+  "detailed_output": false,
+  "test_workers": false,
+  "selenium": {
+    "start_process": false,
+    "server_path": "/opt/selenium/selenium-server-standalone.jar",
+    "log_path": "tests",
+    "host": "127.0.0.1",
+    "port": 4444,
+    "cli_args": {
+    }
+  }
+}
