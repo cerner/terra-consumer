@@ -1,5 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "chromedriver" }]*/
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "chromedriver" }] */
 
 const fs = require('fs');
 const globSync = require('glob').sync;
