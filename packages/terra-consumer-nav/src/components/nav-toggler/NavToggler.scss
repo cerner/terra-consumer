@@ -1,0 +1,28 @@
+.toggle-header {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.toggle-content {
+  line-height: 20px;
+  padding-left: 20px;
+}
+
+.nav-toggler--is-collapsed {
+  > .toggle-content {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.25s ease-out;
+  }
+}
+
+.nav-toggler--is-open {
+  > .toggle-content {
+    height: auto;
+    transition: height 0.25s ease-in;
+  }
+}

@@ -1,0 +1,38 @@
+@import './variables';
+
+.text-dark {
+  color: #3d3d3d;
+}
+
+.font-medium {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.topia-icon {
+  box-sizing: content-box;
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  pointer-events: none;
+  stroke: currentColor;
+  transform: translateX(0);
+  vertical-align: -0.15em;
+  width: 1em;
+}
+
+.active {
+  font-weight: bold;
+
+  #selection {
+    background: #000;
+    border-radius: 3px;
+    height: 19px;
+    left: 0;
+    position: absolute;
+    width: 4px;
+    @media screen and (max-width: $mobile-breakpoint) {
+      background: #fff;
+    }
+  }
+}
