@@ -2,8 +2,67 @@
 
 exports[`Nav should render a default component 1`] = `
 <div
-  className="nav"
+  className="layout"
 >
-  default
+  <div
+    className="nav"
+  >
+    <div
+      className="logo-container"
+    >
+      <img
+        alt="placeholder"
+        src="http://placeholder.pics/svg/270x170/FF0606-FFFFFF"
+      />
+    </div>
+    <QuickLinks
+      maxListSize={4}
+      quickLinks={
+        Array [
+          Object {
+            "text": "Create Appointment",
+            "uri": "/?react_perf",
+          },
+          Object {
+            "text": "Send Message",
+            "uri": "/?react_perf",
+          },
+          Object {
+            "text": "Refill Medications",
+            "uri": "/?react_perf",
+          },
+          Object {
+            "text": "Log Daily Fitness",
+            "uri": "/?react_perf",
+          },
+        ]
+      }
+    />
+    <NavItems
+      maxNavItems={9}
+      navItems={
+        Array [
+          Object {
+            "isActive": false,
+            "text": "test",
+            "uri": "/test",
+          },
+        ]
+      }
+    />
+    <div
+      className="profile-container"
+    >
+      hello world
+    </div>
+    <div
+      className="help-button"
+    >
+      ?  -  help
+    </div>
+  </div>
+  <div
+    className="main-container"
+  />
 </div>
 `;

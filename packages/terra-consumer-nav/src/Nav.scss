@@ -1,107 +1,112 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
 @import './variables';
 @import './text_utility';
-@import './spacing_utility';
 
-@keyframes fadeIn {
-  from {left: -$nav-container-width;}
-  to {left: 0;}
+:root {
+  // stylelint-disable-next-line custom-property-pattern
+  --nav-container-width: 320px;
 }
 
-@keyframes fadeOut {
-  from {left: 0;}
-  to {left: -$nav-container-width;}
-}
+:local {
+  @keyframes fadeIn {
+    from {left: -var(--nav-container-width);}
+    to {left: 0;}
+  }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-}
+  @keyframes fadeOut {
+    from {left: 0;}
+    to {left: -var(--nav-container-width);}
+  }
 
-.layout {
-  background: linear-gradient(#eee, #999);
-  display: flex;
-  font-size: 14px;
-  height: 100vh;
-  left: 0;
-  max-width: 100vw;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  width: 100vw;
-}
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+  }
 
-.main-container {
-  height: 100vh;
-  left: $nav-container-width;
-  max-width: calc(100vw - #{$nav-container-width});
-  overflow: scroll;
-  position: absolute;
-  text-align: left;
-  top: 0;
-  width: calc(100vw - #{$nav-container-width});
-  z-index: 100;
-  @media screen and (max-width: $mobile-breakpoint) {
+  .layout {
+    background: linear-gradient(#eee, #999);
+    display: flex;
+    font-size: 14px;
+    height: 100vh;
     left: 0;
     max-width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
     width: 100vw;
   }
-}
 
-.logo-container {
-  margin: 30px 25px;
-  max-height: 170px;
-  overflow: hidden;
-  width: 270px;
-}
-
-#nav {
-  height: 100%;
-  left: 0;
-  min-height: 100vh;
-  overflow-y: hidden;
-  width: $nav-container-width;
-  z-index: 100;
-  @media screen and (max-width: $mobile-breakpoint) {
-    animation: fadeOut 250ms ease-in-out;
-    display: none;
+  .nav {
+    height: 100%;
+    left: 0;
+    min-height: 100vh;
+    overflow-y: hidden;
+    width: var(--nav-container-width);
+    z-index: 100;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      animation: fadeOut 250ms ease-in-out;
+      display: none;
+    }
   }
-}
 
-/* stylelint-disable-next-line selector-max-id */
-#nav:target {
-  animation: fadeIn 250ms ease-in-out;
-  background: inherit;
-  display: block;
-  height: 100%;
-  left: 0;
-  min-height: 100vh;
-  overflow: hidden;
-  position: absolute;
-  width: $nav-container-width;
-  z-index: 400;
-}
+  .open {
+    animation: fadeIn 250ms ease-in-out;
+    background: inherit;
+    display: block;
+    height: 100%;
+    left: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: var(--nav-container-width);
+    z-index: 400;
+  }
 
-.profile-container {
-  bottom: 0;
-  height: auto;
-  left: 0;
-  position: absolute;
-  text-align: left;
-  width: inherit;
-  z-index: 200;
-}
+  .main-container {
+    height: 100vh;
+    left: var(--nav-container-width);
+    max-width: calc(100vw - #{var(--nav-container-width)});
+    overflow: scroll;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: calc(100vw - #{var(--nav-container-width)});
+    z-index: 100;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      left: 0;
+      max-width: 100vw;
+      width: 100vw;
+    }
+  }
 
-.help-button {
-  background: #fff;
-  border-radius: 20px;
-  bottom: 15px;
-  box-shadow: 0 1px 1px #666;
-  padding: 10px;
-  position: absolute;
-  right: 15px;
-  z-index: 200;
-  @media screen and (max-width: $mobile-breakpoint) {
-    display: none;
+  .logo-container {
+    margin: 30px 25px;
+    max-height: 170px;
+    overflow: hidden;
+    width: 270px;
+  }
+
+  .profile-container {
+    bottom: 0;
+    height: auto;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    width: inherit;
+    z-index: 200;
+  }
+
+  .help-button {
+    background: #fff;
+    border-radius: 20px;
+    bottom: 15px;
+    box-shadow: 0 1px 1px #666;
+    padding: 10px;
+    position: absolute;
+    right: 15px;
+    z-index: 200;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: none;
+    }
   }
 }

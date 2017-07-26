@@ -1,28 +1,37 @@
-.toggle-header {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  text-align: left;
-  width: 100%;
-}
+// NOTE: compose must come before all other classnames and is not listed as a known property
+// https://github.com/css-modules/css-modules#composition
 
-.toggle-content {
-  line-height: 20px;
-  padding-left: 20px;
-}
-
-.nav-toggler--is-collapsed {
-  > .toggle-content {
-    height: 0;
-    overflow: hidden;
-    transition: height 0.25s ease-out;
+// stylelint-disable property-no-unknown, order/properties-alphabetical-order
+:local {
+  .text {
+    color: #3d3d3d;
+    font-size: 16px;
+    text-decoration: none;
   }
-}
 
-.nav-toggler--is-open {
-  > .toggle-content {
-    height: auto;
-    transition: height 0.25s ease-in;
+  .toggle-header {
+    composes: text;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    line-height: 16px;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .pull-right {
+    display: inline;
+    float: right;
+  }
+
+  .toggle-margin-top {
+    margin-top: 15px;
+  }
+
+  .sub-item {
+    composes: text;
+    line-height: 20px;
+    padding-left: 20px;
   }
 }

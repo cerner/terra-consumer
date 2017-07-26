@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 import NavToggler from '../nav-toggler/NavToggler';
-import './NavItems.scss';
+import styles from './NavItems.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   navItems: PropTypes.arrayOf(
@@ -47,6 +49,7 @@ const propTypes = {
 const defaultProps = {
   navItems: [],
   maxNavItems: 9,
+  // TODO: remove config should prevent more coming in from props
 };
 
 class NavItems extends Component {
@@ -67,11 +70,9 @@ class NavItems extends Component {
   }
 
   render() {
-    let ret = [];
-
     const { navItems, maxNavItems, ...customProps } = this.props;
 
-    ret = navItems.map((element, i) => {
+    const ret = navItems.map((element, i) => {
       const activeClass = classNames([
         { active: element.isActive },
       ]);
@@ -89,13 +90,14 @@ class NavItems extends Component {
           { element.isActive &&
             <div id="selection" />
           }
-          <a href={element.uri} onClick={() => this.setActiveURI(element.uri)} className="text-dark font-medium">
-            <span className="nav-icon">{element.icon}</span>
+          <a href={element.uri} className={cx('nav-item')}>
+            <span className={cx('nav-icon')}>{element.icon}</span>
             {element.text}
           </a>
         </div>);
+
         return (
-          <div key={`${element.text}`} className="u-mb--md">
+          <div key={`${element.text}`} style={{ paddingBottom: '20px' }}>
             {currentItem}
           </div>
         );
@@ -104,7 +106,7 @@ class NavItems extends Component {
     });
 
     return (
-      <div {...customProps}>
+      <div style={{ padding: '20px' }} {...customProps}>
         {ret}
       </div>
     );

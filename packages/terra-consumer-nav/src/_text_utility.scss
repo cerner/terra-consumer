@@ -1,14 +1,5 @@
 @import './variables';
 
-.text-dark {
-  color: #3d3d3d;
-}
-
-.font-medium {
-  font-size: 16px;
-  text-decoration: none;
-}
-
 .topia-icon {
   box-sizing: content-box;
   display: inline-block;
@@ -27,11 +18,11 @@
   #selection {
     background: #000;
     border-radius: 3px;
-    height: 19px;
+    height: 16px;
     left: 0;
     position: absolute;
     width: 4px;
-    @media screen and (max-width: $mobile-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint) {
       background: #fff;
     }
   }

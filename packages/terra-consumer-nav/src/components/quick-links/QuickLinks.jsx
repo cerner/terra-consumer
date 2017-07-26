@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import './QuickLinks.scss';
+import classNames from 'classnames/bind';
+import Button from 'terra-button';
+import styles from './QuickLinks.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   quickLinks: PropTypes.arrayOf(
@@ -26,6 +29,7 @@ const propTypes = {
 const defaultProps = {
   quickLinks: [],
   maxListSize: 4,
+  // TODO: remove, config should prevent more from coming in props
 };
 
 const QuickLinks = ({
@@ -33,26 +37,19 @@ const QuickLinks = ({
   maxListSize,
   ...customProps
 }) => {
-  const linkClassName = classNames([
-    'text-dark',
-    'font-medium',
-    'quicklink',
-    'u-mb--sm',
-    customProps.className,
-  ]);
   let ret = [];
   let linkCount = 0;
 
   ret = quickLinks.map((element) => {
     if (linkCount < maxListSize && (element.text && element.uri)) {
       linkCount += 1;
-      return (<a className={linkClassName} href={element.uri} key={element.text}>{element.text}</a>);
+      return (<Button className={cx('quicklink', customProps.className)} href={element.uri} text={element.text} key={element.text} />);
     }
     return null;
   });
 
   return (
-    <div>
+    <div style={{ padding: '0 20px' }}>
       {ret}
     </div>
   );

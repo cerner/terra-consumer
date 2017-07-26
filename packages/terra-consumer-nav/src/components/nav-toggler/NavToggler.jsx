@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
+import Toggler from 'terra-toggle';
+import Arrange from 'terra-arrange';
 import OutlineChevronDown from '../../icons/OutlineChevronDown';
 import OutlineChevronUp from '../../icons/OutlineChevronUp';
-import './NavToggler.scss';
+import styles from './NavToggler.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   text: PropTypes.string,
@@ -16,12 +20,9 @@ const propTypes = {
   ),
   handleToggle: PropTypes.func.isRequired,
   isCollapsed: PropTypes.bool,
-  setActive: PropTypes.func,
 };
 
 const defaultProps = {
-  setActive: () => {},
-  activeURI: null,
   isCollapsed: true,
 };
 
@@ -30,48 +31,40 @@ const NavToggler = ({
   subItems,
   handleToggle,
   isCollapsed,
-  setActive,
   ...customProps
 }) => {
-  const toggleClassTag = isCollapsed ? 'is-collapsed' : 'is-open';
   const tabIndex = isCollapsed ? -1 : 0;
 
-  const togglerClass = classNames([
-    'text-dark',
-    'font-medium',
-    `nav-toggler--${toggleClassTag}`,
-  ]);
-
-  const buttonClass = classNames([
-    'text-dark',
-    'font-medium',
-    'toggle-header',
-  ]);
   const subNavs = subItems.map((element) => {
-    const subItemClass = classNames([
+    const subItemClass = cx([
       { active: element.isActive },
-      'u-mt--15',
+      'toggle-margin-top',
     ]);
+
     return (
       <div className={subItemClass} key={element.text}>
         { (element.isActive && !isCollapsed) &&
           <div id="selection" />
         }
-        <a tabIndex={tabIndex} className="text-dark font-medium" href={element.uri} onClick={() => setActive(element.uri)}>{element.text}</a>
+        <a tabIndex={tabIndex} className={cx('sub-item')} href={element.uri}>{element.text}</a>
       </div>
     );
   });
 
   const toggleIcon = isCollapsed ? <OutlineChevronDown /> : <OutlineChevronUp />;
+
   return (
-    <div className={togglerClass} {...customProps}>
-      <button className={buttonClass} onClick={() => handleToggle(!isCollapsed)}>
-        {text}
-        <span className="pull-right">{toggleIcon}</span>
+    <div className={cx(customProps.className)}>
+      <button className={cx('toggle-header')} onClick={() => handleToggle(!isCollapsed)}>
+        <Arrange
+          align="stretch"
+          fill={text}
+          fitEnd={toggleIcon}
+        />
       </button>
-      <div className="toggle-content">
+      <Toggler isOpen={!isCollapsed} isAnimated style={{ padding: 0 }}>
         {subNavs}
-      </div>
+      </Toggler>
     </div>
   );
 };

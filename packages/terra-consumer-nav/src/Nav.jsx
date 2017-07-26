@@ -1,28 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import QuickLinks from './components/quick-links/QuickLinks';
 import NavItems from './components/nav-items/NavItems';
-import './Nav.scss';
+import styles from './Nav.scss';
+
+const cx = classNames.bind(styles);
 
 const propTypes = {
   test: PropTypes.string,
   help: PropTypes.string,
+  isMobileNavOpen: PropTypes.bool, // this is proof of concept. should we keep this?
   quickLinks: PropTypes.arrayOf(PropTypes.object),
   navItems: PropTypes.arrayOf(PropTypes.object),
   mainContent: PropTypes.node,
 };
 
 const defaultProps = {
+  isMobileNavOpen: false,
   test: 'hello world',
   help: 'help',
-  mainContent: (
-    <div>
-      <br />
-      <br />
-      <br />
-      <a href="#nav">show nav (mobile)</a>
-    </div>
-  ),
+  mainContent: null,
   quickLinks: [
     {
       uri: '/?react_perf',
@@ -90,33 +88,30 @@ const defaultProps = {
 const Nav = ({
   test,
   help,
+  isMobileNavOpen,
   quickLinks,
   navItems,
   mainContent,
   ...customProps
 }) => (
-  <div className="layout" {...customProps}>
-    <div id="nav">
-      {/* this represents the logo */}
-      <div className="logo-container">
+  <div className={cx('layout')} {...customProps}>
+    <div className={cx('nav', isMobileNavOpen ? 'open' : '')}>
+      {/* this represents the logo
+        TODO: extract into component
+      */}
+      <div className={cx('logo-container')}>
         <img src="http://placeholder.pics/svg/270x170/FF0606-FFFFFF" alt="placeholder" />
       </div>
-      {/* this represents the Quick Actions */}
-      <div className="u-mh--md">
-        <QuickLinks quickLinks={quickLinks} />
-      </div>
-      {/* this represents the Nav items */}
-      <div className="u-mh--md u-mt--md">
-        <NavItems navItems={navItems} />
-      </div>
-      <div className="profile-container">
+      <QuickLinks quickLinks={quickLinks} />
+      <NavItems navItems={navItems} />
+      <div className={cx('profile-container')}>
         {test}
       </div>
-      <div className="help-button">
+      <div className={cx('help-button')}>
         {`?  -  ${help}`}
       </div>
     </div>
-    <div className="main-container">
+    <div className={cx('main-container')}>
       {mainContent}
     </div>
   </div>
