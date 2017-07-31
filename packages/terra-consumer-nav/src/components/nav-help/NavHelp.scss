@@ -1,0 +1,58 @@
+@import '../../variables';
+
+:local {
+	.nav-help {
+      background-color: white;
+      font-size: 16px;
+      line-height: 20px;
+      border-radius: 20px;
+      bottom: 15px;
+      box-shadow: 0 1px 1px #666;
+      padding-top: 6px;
+      padding-bottom: 6px;
+      padding-left: 13px;
+      padding-right: 13px;
+      position: absolute;
+      right: 15px;
+      align-self: center;
+      text-align: center;
+      vertical-align:middle;
+      z-index: 200;
+      @media screen and (max-width: $terra-medium-breakpoint) {
+      display: none;
+      }
+    }
+    
+    .help-icon {
+       height: 16px;
+       width: 16px;
+    }
+    .popupContainer {
+       
+    }
+
+    .nav-help-item {
+      font-size: 14px;
+      line-height: 18px;
+      color:#383F42;
+      padding: 20px;
+      text-decoration: none;
+    }
+    .nav-help-subitem {
+      font-size: 14px;
+      line-height: 18px;
+      color: #64696C;
+      padding-left: 0px;
+      padding-top: 20px;
+      text-decoration: none;
+
+    }
+
+    .divider-top {
+      border-top: 1px solid #dedfe0;
+      margin: 0;
+      padding: 0;
+    }
+
+
+}

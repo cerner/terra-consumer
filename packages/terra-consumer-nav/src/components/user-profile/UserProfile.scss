@@ -1,0 +1,58 @@
+:local {
+	
+	.profile {
+	 font-size: 16px;
+	 line-height: 20px;
+	 padding-top: 20px;
+	 padding-bottom: 20px;
+	 padding-left: 25px;
+	 padding-right: 25px;
+	}
+	.profile-icon {
+	  height: 16px;
+      width: 16px;
+	}
+
+	.profile-link {
+      font-size: 14px;
+      line-height: 18px;
+      color:#383F42;
+      padding: 20px;
+      text-decoration: none;
+	}
+
+	.divider-top {
+      border-top: 1px solid #dedfe0;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profile-modal {
+    background: white;
+    border-radius: 5px;
+    display: block;
+    left: 10px;
+    overflow: auto;
+    position: fixed;
+    right: 10px;
+    top: 60px;
+    z-index: 200;
+    }
+
+    .profile-modal-title {
+     top: 0px;
+     position: absolute;
+     font-size: 20px;
+     line-height: 30px;
+    }
+
+    .modal-close-button {
+      height: 16px;
+      width: 16px;
+      fill: #fff;
+      right: 15px;
+      top:15px;
+      position:absolute;
+}
+
+}

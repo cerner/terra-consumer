@@ -8,6 +8,11 @@ import NavLogo from './components/nav-logo/NavLogo';
 import NavProfile from './components/nav-profile/NavProfile';
 import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
+import NavHelp from './components/nav-help/NavHelp';
+import UserProfile from './components/user-profile/UserProfile';
+import OutlineInfo from './icons/OutlineInfo';
+import UserIcon from './icons/UserIcon';
+import OutlineEllipses from './icons/OutlineEllipses';
 import styles from './Nav.scss';
 
 const cx = classNames.bind(styles);
