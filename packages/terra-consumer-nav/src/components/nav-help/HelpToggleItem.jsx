@@ -25,9 +25,9 @@ const propTypes = {
           PropTypes.element,
           ),
         uri: PropTypes.string,
-         }),
-      ),
+      }),
     ),
+  ),
 };
 
 const defaultProps = {
@@ -49,50 +49,44 @@ class HelpToggleItem extends React.Component {
   }
 
   render() {
-    const {navItem,navSubItems,navIcon,...customProps} = this.props;
+    const { navItem, navSubItems, navIcon, ...customProps } = this.props;
     const toggleIcon = this.state.isCollapsed ? <OutlineChevronDown /> : <OutlineChevronUp />;
     let toggleContent;
-    if(!Array.isArray(navSubItems)) {
-      toggleContent = <p style={{pointerEvents: 'none'}}>navSubItems</p>;
+    if (!Array.isArray(navSubItems)) {
+      toggleContent = <p style={{ pointerEvents: 'none' }}>navSubItems</p>;
     }
     let toggleContentList;
-    if(Array.isArray(navSubItems)) {
-      toggleContentList = navSubItems.map((item,i) => 
-      <a onClick={()=> window.location = item.uri }  key={i} style={{ paddingTop: '20px',paddingBottom:'20px'}}>
-       <Arrange
-        align="stretch"
-        fitStart={<div className={cx('help-icon')}>{item.icon}</div>}
-        fill={<div style={{paddingLeft:'10px', textDecoration:'none'}}>{item.text}</div>}
-       />
-      </a>);
+    if (Array.isArray(navSubItems)) {
+      toggleContentList = navSubItems.map((item) => {
+        return (<a onClick={() => window.location = item.uri} style={{ paddingTop: '20px', paddingBottom: '20px' }}>
+          <Arrange
+            align="stretch"
+            fitStart={<div className={cx('help-icon')}>{item.icon}</div>}
+            fill={<div style={{ paddingLeft: '10px', textDecoration: 'none' }}>{item.text}</div>}
+          />
+        </a>);
+      });
     }
-    /*const navToggleContent = !Array.isArray(navSubItems) ? navSubItems
-    : navSubItems.map((item,i) => 
-      <a onClick={()=> window.location = item.uri }  key={i} style={{ paddingTop: '20px',paddingBottom:'20px'}}>
-       <Arrange
-        align="stretch"
-        fitStart={<div className={cx('help-icon')}>{item.icon}</div>}
-        fill={<div style={{paddingLeft:'10px', textDecoration:'none'}}>{item.text}</div>}
-       />
-      </a>);*/
 
     return (
-      <div className={cx('nav-help-item')}>
+      <div className={cx('nav-help-item')} {...customProps}>
         <a onClick={this.handleOnClick}>
-         <Arrange
-          align="stretch"
-          fitStart={<div className={cx('help-icon')}>{navIcon}</div>}
-          fill={<div style={{paddingLeft:'10px'}}>{navItem}</div>}
-          fitEnd={toggleIcon}
-         />
+          <Arrange
+            align="stretch"
+            fitStart={<div className={cx('help-icon')}>{navIcon}</div>}
+            fill={<div role="button" style={{ paddingLeft: '10px' }}>{navItem}</div>}
+            fitEnd={toggleIcon}
+          />
         </a>
         <Toggler isOpen={!this.state.isCollapsed} isAnimated style={{ padding: 0 }}>
-         <div>{toggleContent}</div>
-         <div className={cx('nav-help-subitem')}>{toggleContentList}</div>        
+          <div>{toggleContent}</div>
+          <div className={cx('nav-help-subitem')}>{toggleContentList}</div>
         </Toggler>
       </div>
     );
   }
 }
 
+HelpToggleItem.propTypes = propTypes;
+HelpToggleItem.defaultProps = defaultProps;
 export default HelpToggleItem;

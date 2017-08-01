@@ -1,3 +1,5 @@
+@import '../../variables';
+
 :local {
 	
 	.profile {
@@ -10,25 +12,37 @@
 	}
 	.profile-icon {
 	  height: 16px;
-      width: 16px;
+    width: 16px;
+    font-szie: 16px
 	}
 
 	.profile-link {
-      font-size: 14px;
-      line-height: 18px;
-      color:#383F42;
-      padding: 20px;
-      text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    color:#383F42;
+    padding: 20px;
+    text-decoration: none;
 	}
 
 	.divider-top {
-      border-top: 1px solid #dedfe0;
+    border-top: 1px solid #dedfe0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .divider-bottom {
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      border-bottom: 1px solid #dedfe0;
       margin: 0;
       padding: 0;
     }
+  }
 
-    .profile-modal {
-    background: white;
+  .profile-modal {
+    background: #fff;
     border-radius: 5px;
     display: block;
     left: 10px;
@@ -36,23 +50,36 @@
     position: fixed;
     right: 10px;
     top: 60px;
-    z-index: 200;
+    z-index: 300;
     }
 
-    .profile-modal-title {
+  .profile-modal-header {
      top: 0px;
      position: absolute;
+     padding-top: 15px;
+     padding-bottom: 15px;
+     align-self: center;
+  }
+
+    .profile-modal-title {
      font-size: 20px;
      line-height: 30px;
+     color: #fff;
     }
 
-    .modal-close-button {
+    .modal-close-icon {
       height: 16px;
       width: 16px;
       fill: #fff;
-      right: 15px;
-      top:15px;
-      position:absolute;
-}
+    }
+
+    .modal-close-button {
+     background-color: Transparent;
+     border: none;
+     cursor:pointer; 
+     right: 20px;
+     top: 20px;
+     position: fixed;  
+    }
 
 }
