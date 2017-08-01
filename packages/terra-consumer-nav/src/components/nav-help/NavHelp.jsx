@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
 import Arrange from 'terra-arrange';
 import Overlay from 'terra-overlay';
 import ResponsiveElement from 'terra-responsive-element';
@@ -68,13 +67,14 @@ class NavHelp extends React.Component {
   render() {
     const { help, ...customProps } = this.props;
     const helpButton = (
-      <Button
+      <button
         id="nav-help-button"
         onClick={this.openPopup}
         className={cx('nav-help')}
-        icon={<svg className={cx('help-icon')} style={{ paddingRight: '6px' }}><OutlineInfo /></svg>}
-        text={translations.help}
-      />);
+      >
+        <svg className={cx('help-icon')}><OutlineInfo /></svg>
+        <span style={{ paddingLeft: '6px' }}>{translations.help}</span>
+      </button>);
 
     const popupContent = help.map((navItem) => {
       const currentItem = navItem.children.length > 0 ?

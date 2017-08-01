@@ -17,7 +17,13 @@
       align-self: center;
       text-align: center;
       vertical-align:middle;
+      border: none;
       z-index: 200;
+
+      &:hover {
+       cursor: pointer;
+       background: #eee;
+      }
       @media screen and (max-width: $terra-medium-breakpoint) {
       display: none;
       }
