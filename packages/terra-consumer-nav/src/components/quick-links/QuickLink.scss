@@ -1,11 +1,15 @@
 @import '../../variables';
 
 :local {
+  .quicklinks-container {
+    margin: 0 25px;
+  }
+
   .quicklink {
-    background: #fff;
+    background: var(--terra-consumer--quicklink-background, #fff);
     border: 0;
     border-radius: 3px;
-    color: #3d3d3d;
+    color: var(--terra-consumer--quicklink-color, #3d3d3d);
     display: inline-block;
     font-family: inherit;
     font-size: 16px;
@@ -17,7 +21,7 @@
     width: 100%;
 
     &:hover {
-      background: #eee;
+      background: var(--terra-consumer--quicklink-background-hover, #eee);
       cursor: pointer;
     }
 

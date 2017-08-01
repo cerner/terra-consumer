@@ -11,59 +11,35 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   text: PropTypes.string,
-  subItems: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string,
-      uri: PropTypes.string,
-      isActive: PropTypes.bool.isRequired,
-    }),
-  ),
+  subItems: PropTypes.arrayOf(PropTypes.element),
   handleToggle: PropTypes.func.isRequired,
-  isCollapsed: PropTypes.bool,
+  isOpen: PropTypes.bool,
 };
 
 const defaultProps = {
-  isCollapsed: true,
+  isOpen: false,
 };
 
 const NavToggler = ({
   text,
   subItems,
   handleToggle,
-  isCollapsed,
+  isOpen,
   ...customProps
 }) => {
-  const tabIndex = isCollapsed ? -1 : 0;
-
-  const subNavs = subItems.map((element) => {
-    const subItemClass = cx([
-      { active: element.isActive },
-      'toggle-margin-top',
-    ]);
-
-    return (
-      <div className={subItemClass} key={element.text}>
-        { (element.isActive && !isCollapsed) &&
-          <div id="selection" />
-        }
-        <a tabIndex={tabIndex} className={cx('sub-item')} href={element.uri}>{element.text}</a>
-      </div>
-    );
-  });
-
-  const toggleIcon = isCollapsed ? <OutlineChevronDown /> : <OutlineChevronUp />;
+  const toggleIcon = isOpen ? <OutlineChevronUp /> : <OutlineChevronDown />;
 
   return (
     <div className={cx(customProps.className)}>
-      <button className={cx('toggle-header')} onClick={() => handleToggle(!isCollapsed)}>
+      <button className={cx('toggle-header')} onClick={() => handleToggle(!isOpen)}>
         <Arrange
           align="stretch"
-          fill={text}
+          fill={<span>{text}</span>}
           fitEnd={toggleIcon}
         />
       </button>
-      <Toggler isOpen={!isCollapsed} isAnimated style={{ padding: 0 }}>
-        {subNavs}
+      <Toggler isOpen={isOpen} isAnimated className={cx('toggler')}>
+        {subItems}
       </Toggler>
     </div>
   );

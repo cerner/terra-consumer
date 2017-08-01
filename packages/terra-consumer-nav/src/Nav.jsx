@@ -1,121 +1,96 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import QuickLinks from './components/quick-links/QuickLinks';
+import HamburgerIcon from './icons/OutlineHamburger';
+import HelpButton from './components/help-button/HelpButton';
+import NavItem from './components/nav-items/NavItem';
 import NavItems from './components/nav-items/NavItems';
+import NavLogo from './components/nav-logo/NavLogo';
+import NavProfile from './components/nav-profile/NavProfile';
+import QuickLink from './components/quick-links/QuickLink';
+import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  test: PropTypes.string,
-  help: PropTypes.string,
-  isMobileNavOpen: PropTypes.bool, // this is proof of concept. should we keep this?
+  // expand object shape
   quickLinks: PropTypes.arrayOf(PropTypes.object),
   navItems: PropTypes.arrayOf(PropTypes.object),
-  mainContent: PropTypes.node,
+  logo: PropTypes.shape({
+    path: PropTypes.string,
+    altText: PropTypes.string,
+    isCard: PropTypes.bool,
+  }),
 };
 
 const defaultProps = {
-  isMobileNavOpen: false,
-  test: 'hello world',
-  help: 'help',
-  mainContent: null,
-  quickLinks: [
-    {
-      uri: '/?react_perf',
-      text: 'Create Appointment',
-    },
-    {
-      uri: '/?react_perf',
-      text: 'Send Message',
-    },
-    {
-      uri: '/?react_perf',
-      text: 'Refill Medications',
-    },
-    {
-      uri: '/?react_perf',
-      text: 'Log Daily Fitness',
-    },
-  ],
-  navItems: [
-    {
-      uri: '#',
-      text: 'Dashboard',
-      isActive: true,
-    },
-    {
-      uri: '',
-      text: 'Messaging',
-      sub_navs: [
-        {
-          uri: '#inbox',
-          text: 'Inbox',
-          isActive: true,
-        },
-        {
-          uri: '#sent',
-          text: 'Sent',
-          isActive: false,
-        },
-      ],
-    },
-    {
-      uri: '/?react_perf',
-      text: 'Health Record',
-      isActive: false,
-    },
-    {
-      uri: '',
-      text: 'See test data',
-      sub_navs: [
-        {
-          uri: '#inbox2',
-          text: 'Inbox',
-          isActive: false,
-        },
-        {
-          uri: '#sent2',
-          text: 'Sent',
-          isActive: false,
-        },
-      ],
-    },
-  ],
+  quickLinks: [],
+  navItems: [],
 };
 
-const Nav = ({
-  test,
-  help,
-  isMobileNavOpen,
-  quickLinks,
-  navItems,
-  mainContent,
-  ...customProps
-}) => (
-  <div className={cx('layout')} {...customProps}>
-    <div className={cx('nav', isMobileNavOpen ? 'open' : '')}>
-      {/* this represents the logo
-        TODO: extract into component
-      */}
-      <div className={cx('logo-container')}>
-        <img src="http://placeholder.pics/svg/270x170/FF0606-FFFFFF" alt="placeholder" />
+class Nav extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      isMobileNavOpen: false,
+      openToggle: null,
+    };
+
+    this.openMobileNav = this.openMobileNav.bind(this);
+    this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  openMobileNav() {
+    this.setState({
+      isMobileNavOpen: true,
+    });
+  }
+
+  handleToggle(i, isOpen) {
+    this.setState({
+      openToggle: isOpen ? i : null,
+    });
+  }
+
+  render() {
+    const { quickLinks, navItems, logo, ...customProps } = this.props;
+    const mobileClass = this.state.isMobileNavOpen ? 'nav-mobile' : '';
+
+    const quickLinkItems = quickLinks.map(element => <QuickLink {...element} key={element.text} />);
+
+    const navItemsArray = navItems.map((element, i) => {
+      let toggleProps = {};
+      if (element.subItems) {
+        const subNavs = element.subItems.map(item => <NavItem key={item.text} {...item} isSubNav />);
+        toggleProps = {
+          subNavs,
+          isOpen: this.state.openToggle === i,
+          handleToggle: this.handleToggle,
+          toggleId: i,
+        };
+      }
+      return (<NavItem key={element.text} {...element} {...toggleProps} />);
+    });
+
+    return (
+      <div {...customProps}>
+        <button className={cx('nav-burger')} onClick={this.openMobileNav}>
+          <HamburgerIcon />
+        </button>
+        <HelpButton />
+        {/* Make this into a Slide Component */}
+        <div className={cx('nav', mobileClass)}>
+          <NavLogo />
+          <QuickLinks quickLinks={quickLinkItems} />
+          <NavItems navItems={navItemsArray} />
+          <NavProfile />
+        </div>
       </div>
-      <QuickLinks quickLinks={quickLinks} />
-      <NavItems navItems={navItems} />
-      <div className={cx('profile-container')}>
-        {test}
-      </div>
-      <div className={cx('help-button')}>
-        {`?  -  ${help}`}
-      </div>
-    </div>
-    <div className={cx('main-container')}>
-      {mainContent}
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 Nav.propTypes = propTypes;
 Nav.defaultProps = defaultProps;

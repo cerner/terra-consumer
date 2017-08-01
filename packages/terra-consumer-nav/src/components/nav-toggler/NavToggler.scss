@@ -1,37 +1,18 @@
-// NOTE: compose must come before all other classnames and is not listed as a known property
-// https://github.com/css-modules/css-modules#composition
-
-// stylelint-disable property-no-unknown, order/properties-alphabetical-order
 :local {
-  .text {
-    color: #3d3d3d;
-    font-size: 16px;
-    text-decoration: none;
-  }
-
   .toggle-header {
-    composes: text;
     background-color: transparent;
     border: 0;
+    color: var(--terra-consumer--toggle-color, #3d3d3d);
     cursor: pointer;
+    font-size: 16px;
     line-height: 16px;
     padding: 0;
     text-align: left;
+    text-decoration: none;
     width: 100%;
   }
 
-  .pull-right {
-    display: inline;
-    float: right;
-  }
-
-  .toggle-margin-top {
-    margin-top: 15px;
-  }
-
-  .sub-item {
-    composes: text;
-    line-height: 20px;
-    padding-left: 20px;
+  .toggler {
+    padding: 0;
   }
 }

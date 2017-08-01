@@ -1,0 +1,50 @@
+@import '../../variables';
+
+:local {
+  .nav-icon {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .nav-items-contatiner {
+    margin: 20px 25px;
+  }
+
+  .nav-item {
+    color: var(--terra-consumer--nav-item-color, #3d3d3d);
+    font-size: 16px;
+    text-decoration: none;
+  }
+
+  .nav-item-wrapper {
+    padding-bottom: 20px;
+  }
+
+  .sub-item {
+    color: var(--terra-consumer--sub-item-color, #3d3d3d);
+    font-size: 16px;
+    line-height: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+  }
+
+  .toggler {
+    margin-top: 15px;
+  }
+
+  .active {
+    font-weight: bold;
+
+    > .selection {
+      background: #000; // NOTE: should this be theme-able?
+      border-radius: 3px;
+      height: 16px;
+      left: 0;
+      position: absolute;
+      width: 4px;
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        background: #fff;
+      }
+    }
+  }
+}

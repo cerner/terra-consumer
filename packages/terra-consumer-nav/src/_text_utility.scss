@@ -1,5 +1,6 @@
 @import './variables';
 
+// NOTE: What are we doing with terra-icons?
 .topia-icon {
   box-sizing: content-box;
   display: inline-block;
@@ -10,20 +11,4 @@
   transform: translateX(0);
   vertical-align: -0.15em;
   width: 1em;
-}
-
-.active {
-  font-weight: bold;
-
-  #selection {
-    background: #000;
-    border-radius: 3px;
-    height: 16px;
-    left: 0;
-    position: absolute;
-    width: 4px;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      background: #fff;
-    }
-  }
 }

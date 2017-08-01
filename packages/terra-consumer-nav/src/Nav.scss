@@ -2,20 +2,15 @@
 @import './variables';
 @import './text_utility';
 
-:root {
-  // stylelint-disable-next-line custom-property-pattern
-  --nav-container-width: 320px;
-}
-
 :local {
   @keyframes fadeIn {
-    from {left: -var(--nav-container-width);}
+    from {left: -$terra-consumer--nav-container-width;}
     to {left: 0;}
   }
 
   @keyframes fadeOut {
     from {left: 0;}
-    to {left: -var(--nav-container-width);}
+    to {left: -$terra-consumer--nav-container-width;}
   }
 
   body {
@@ -23,90 +18,50 @@
     margin: 0;
   }
 
-  .layout {
-    background: linear-gradient(#eee, #999);
-    display: flex;
-    font-size: 14px;
-    height: 100vh;
-    left: 0;
-    max-width: 100vw;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100vw;
-  }
-
   .nav {
     height: 100%;
     left: 0;
     min-height: 100vh;
     overflow-y: hidden;
-    width: var(--nav-container-width);
-    z-index: 100;
+    width: $terra-consumer--nav-container-width;
+
     @media screen and (max-width: $terra-medium-breakpoint) {
       animation: fadeOut 250ms ease-in-out;
       display: none;
     }
   }
 
-  .open {
+  .nav-mobile {
     animation: fadeIn 250ms ease-in-out;
-    background: inherit;
+    background: var(--terra-consumer--nav-background--mobile, linear-gradient(#eee, #999));
     display: block;
     height: 100%;
     left: 0;
     min-height: 100vh;
     overflow: hidden;
     position: absolute;
-    width: var(--nav-container-width);
-    z-index: 400;
+    width: $terra-consumer--nav-container-width;
   }
 
-  .main-container {
-    height: 100vh;
-    left: var(--nav-container-width);
-    max-width: calc(100vw - #{var(--nav-container-width)});
-    overflow: scroll;
-    position: absolute;
-    text-align: left;
-    top: 0;
-    width: calc(100vw - #{var(--nav-container-width)});
-    z-index: 100;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      left: 0;
-      max-width: 100vw;
-      width: 100vw;
-    }
-  }
-
-  .logo-container {
-    margin: 30px 25px;
-    max-height: 170px;
-    overflow: hidden;
-    width: 270px;
-  }
-
-  .profile-container {
-    bottom: 0;
-    height: auto;
+  .nav-burger {
+    background: none;
+    border: 0;
+    box-shadow: 0;
+    color: #000;
+    height: 24px;
     left: 0;
+    padding: 0;
     position: absolute;
-    text-align: left;
-    width: inherit;
-    z-index: 200;
-  }
-
-  .help-button {
-    background: #fff;
-    border-radius: 20px;
-    bottom: 15px;
-    box-shadow: 0 1px 1px #666;
-    padding: 10px;
-    position: absolute;
-    right: 15px;
-    z-index: 200;
+    top: 0;
+    visibility: hidden;
+    width: 24px;
     @media screen and (max-width: $terra-medium-breakpoint) {
-      display: none;
+      visibility: visible;
+    }
+
+    &:hover {
+      background: #eee;
+      cursor: pointer;
     }
   }
 }
