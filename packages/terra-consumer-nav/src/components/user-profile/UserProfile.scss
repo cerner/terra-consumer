@@ -3,27 +3,27 @@
 :local {
 	
 	.profile {
-	 font-size: 16px;
-	 line-height: 20px;
-	 padding-top: 20px;
-	 padding-bottom: 20px;
-	 padding-left: 25px;
-	 padding-right: 25px;
-	}
-	.profile-icon {
-	  height: 16px;
-    width: 16px;
-    font-szie: 16px
+	  font-size: 16px;
+	  line-height: 20px;
+	  padding-top: 20px;
+	  padding-bottom: 20px;
+	  padding-left: 25px;
+	  padding-right: 25px;
 	}
 
-	.profile-link {
+	.icon {
+	  height: 16px;
+    width: 16px;
+	}
+
+	.link {
     font-size: 14px;
     line-height: 18px;
     color:#383F42;
     padding: 20px;
     text-decoration: none;
 	}
-
+  
 	.divider-top {
     border-top: 1px solid #dedfe0;
     margin: 0;
@@ -33,15 +33,13 @@
   .divider-bottom {
     border-bottom: none;
     margin: 0;
-    padding: 0;
     @media screen and (max-width: $terra-medium-breakpoint) {
       border-bottom: 1px solid #dedfe0;
       margin: 0;
-      padding: 0;
     }
   }
 
-  .profile-modal {
+  .modal {
     background: #fff;
     border-radius: 5px;
     display: block;
@@ -51,35 +49,61 @@
     right: 10px;
     top: 60px;
     z-index: 300;
-    }
-
-  .profile-modal-header {
-     top: 0px;
-     position: absolute;
-     padding-top: 15px;
-     padding-bottom: 15px;
-     align-self: center;
   }
 
-    .profile-modal-title {
-     font-size: 20px;
-     line-height: 30px;
-     color: #fff;
-    }
+  .modal-header {
+    top: 15px;
+    left: 0px;
+    right:0px;
+    position: absolute;
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
+  }
 
-    .modal-close-icon {
-      height: 16px;
-      width: 16px;
-      fill: #fff;
-    }
+  .modal-title {
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+  }
 
-    .modal-close-button {
-     background-color: Transparent;
-     border: none;
-     cursor:pointer; 
-     right: 20px;
-     top: 20px;
-     position: fixed;  
-    }
+  .close-icon {
+    height: 16px;
+    width: 16px;
+    fill: #fff;
+  }
 
+  .close-button {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    vertical-align: bottom;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-right: 15px;
+    text-align: right;
+  }
+
+  .padding-none {
+    padding: 0;
+  }
+
+  .padding-left-small {
+    padding-left: 10px;
+  }
+
+  .padding-large {
+    padding: 20px;
+  }
+  
+  .text-align-right {
+    text-align: right;
+  }
+
+  .suppress-hyperlink {
+   text-decoration: none;
+  }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
+import Grid from 'terra-grid';
 import Popup from 'terra-popup';
 import Overlay from 'terra-overlay';
 import ResponsiveElement from 'terra-responsive-element';
@@ -73,48 +74,60 @@ class UserProfile extends React.Component {
     const { profile, ...customProps } = this.props;
     const profileLinks = profile.links.map((item) => {
       const currentItem = (profile.links.length > 0 &&
-      <a href={item.uri} onClick={() => window.location = item.uri} className={cx('profile-link')} style={{ padding: '0px' }}>
         <Arrange
           align="stretch"
-          fitStart={<div className={cx('profile-icon')}>{item.icon}</div>}
-          fill={<div style={{ paddingLeft: '10px' }}>{item.text}</div>}
+          fitStart={<div className={cx('icon')}>{item.icon}</div>}
+          fill={<div className={cx('padding-left-small')}>{item.text}</div>}
         />
-      </a>
       );
 
       return (
-        <div key={`${item.text}`} className={cx('divider-bottom')} style={{ padding: '20px' }}>
-          {currentItem}
-        </div>);
+        <a href={item.uri} onClick={() => window.location = item.uri} className={cx('suppress-hyperlink')}>
+          <div key={`${item.text}`} className={cx('link')}>
+            {currentItem}
+          </div>
+        </a>  
+      );
+
     });
 
     const defaultElement = (
       <Overlay isOpen={this.state.isOpen} backgroundStyle="dark" isScrollable>
-        <div className={cx('profile-modal-header')}>
-          <Arrange
-            fitStart={<div className={cx('profile-modal-title')}>{translations.settings}</div>}
-            fitEnd={<button className={cx('modal-close-button')} onClick={() => this.closePopup()}>{<div className={cx('modal-close-icon')}><CloseIcon /></div>}</button>}
-            align="center"
-          />
+        <div>
+          <Grid className={cx('modal-header')}>
+            <Grid.Row>
+              <Grid.Column col={2}>               
+              </Grid.Column>
+              <Grid.Column col={8}>
+                <div className={cx('modal-title')}>{translations.settings}</div>
+              </Grid.Column>
+              <Grid.Column className={cx('text-align-right')} col={2}>
+                <button className={cx('close-button')} onClick={() => this.closePopup()}>{<div className={cx('close-icon')}><CloseIcon /></div>}</button>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </div>
-        <div className={cx('profile-modal')}>
+        <div className={cx('modal')}>
           {(<div>
             {profileLinks}
-            <div style={{ padding: '20px' }}>
-              <a className={cx('profile-link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl} style={{ padding: '0px' }}>
-                {translations.help}
-              </a>
+            <a 
+              className={cx('suppress-hyperlink')}
+              href={profile.signoutUrl}
+              onClick={() => window.location = profile.signoutUrl}
+            >
+            <div className={cx('link', 'divider-bottom')}>
+               {translations.help}
             </div>
-            <div className={cx('divider-top')} style={{ padding: '20px' }}>
-              <a
-                className={cx('profile-link')}
-                href={profile.signoutUrl}
-                onClick={() => window.location = profile.signoutUrl}
-                style={{ padding: '0px' }}
-              >
-                {translations.signout}
-              </a>
+            </a>
+            <a
+              className={cx('suppress-hyperlink')}
+              href={profile.signoutUrl}
+              onClick={() => window.location = profile.signoutUrl}
+            >
+            <div className={cx('link')}>
+              {translations.signout}
             </div>
+            </a>
           </div>)}
         </div>
       </Overlay>);
@@ -131,13 +144,13 @@ class UserProfile extends React.Component {
       >
         {<div>
           {profileLinks}
-          <div style={{ padding: '20px' }}>
-            <a className={cx('profile-link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl} style={{ padding: '0px' }}>
+          <div>
+            <a className={cx('link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl}>
               {translations.help}
             </a>
           </div>
-          <div className={cx('divider-top')} style={{ padding: '20px' }}>
-            <a className={cx('profile-link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl} style={{ padding: '0px' }}>
+          <div>
+            <a className={cx('link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl}>
               {translations.signout}
             </a>
           </div>
@@ -149,9 +162,9 @@ class UserProfile extends React.Component {
       <div {...customProps}>
         <Arrange
           className={cx('profile')}
-          fitStart={<svg className={cx('profile-icon')}>{profile.avatar}</svg>}
-          fill={<div style={{ paddingLeft: '10px' }}>{profile.name}</div>}
-          fitEnd={<a id="profile-link-icon" onClick={this.openPopup}><svg className={cx('profile-icon')} role="button">{profile.icon}</svg></a>}
+          fitStart={<svg className={cx('icon')}>{profile.avatar}</svg>}
+          fill={<div className={cx('padding-left-small')}>{profile.name}</div>}
+          fitEnd={<a id="profile-link-icon" onClick={this.openPopup}><svg className={cx('icon')} role="button">{profile.icon}</svg></a>}
           align="center"
         />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} large={large} />
