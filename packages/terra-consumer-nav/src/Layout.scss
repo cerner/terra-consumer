@@ -2,7 +2,7 @@
 
 :local {
   .layout {
-    background: linear-gradient(#eee, #999);
+    background: linear-gradient(#ddd, #999);
     display: flex;
     font-size: 14px;
     height: 100vh;
@@ -24,7 +24,7 @@
     top: 0;
     width: calc(100vw - #{$terra-consumer--nav-container-width});
     @media screen and (max-width: $terra-medium-breakpoint) {
-      left: 0;
+      left: 20px;
       max-width: 100vw;
       width: 100vw;
     }

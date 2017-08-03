@@ -1,7 +1,9 @@
+// temp card component for logo
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import styles from './QuickLink.scss';
+import styles from './Card.scss';
 
 const cx = classNames.bind(styles);
 
@@ -13,16 +15,16 @@ const defaultProps = {
   children: null,
 };
 
-const QuickLinks = ({
+const Card = ({
   children,
   ...customProps
 }) => (
-  <div className={cx('quicklinks-container')} {...customProps}>
+  <div className={cx('card')} {...customProps}>
     {children}
   </div>
 );
 
-QuickLinks.propTypes = propTypes;
-QuickLinks.defaultProps = defaultProps;
+Card.propTypes = propTypes;
+Card.defaultProps = defaultProps;
 
-export default QuickLinks;
+export default Card;

@@ -34,16 +34,19 @@ const DefaultNav = () => {
         {
           uri: '',
           text: 'Messaging',
+          badgeValue: 2,
           subItems: [
             {
               uri: '#inbox',
               text: 'Inbox',
               isActive: true,
+              badgeValue: 1,
             },
             {
               uri: '#sent',
               text: 'Sent',
               isActive: false,
+              badgeValue: 1,
             },
           ],
         },

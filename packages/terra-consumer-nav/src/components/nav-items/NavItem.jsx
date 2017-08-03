@@ -7,17 +7,14 @@ import NavToggler from '../nav-toggler/NavToggler';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  // do we need these...
   slug: PropTypes.string,
-  navType: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
+  navType: PropTypes.oneOf(['grouping', 'external', 'application', 'modal']),
   target: PropTypes.string,
-  //
   uri: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   isActive: PropTypes.bool,
+  badgeValue: PropTypes.number,
 
-  // only those that need toggler
-  isSubNav: PropTypes.bool,
   toggleId: PropTypes.number,
   handleToggle: PropTypes.func,
   isOpen: PropTypes.bool,
@@ -29,54 +26,59 @@ const propTypes = {
       PropTypes.element,
     ]),
   */
-  subNavs: PropTypes.arrayOf(PropTypes.element),
+  children: PropTypes.node,
 };
 
 const defaultProps = {
   isActive: false,
-  key: 0,
   handleToggle: () => {},
 };
 
 const NavItem = ({
   slug,
   navType,
-  isSubNav,
   target,
   uri,
   text,
   isActive,
-  subNavs,
+  badgeValue,
   toggleId,
   handleToggle,
   isOpen,
+  children,
   ...customProps
 }) => {
   const activeClass = cx([
-    { toggler: isSubNav },
     { active: isActive },
   ]);
 
-  const currentItem = (subNavs && subNavs.length > 0) ?
+  const itemText = (
+    <span>
+      {text}
+      { badgeValue > 0 &&
+        <span className={cx('badge')}>{badgeValue}</span>
+      }
+    </span>
+  );
+
+  const currentItem = (children && children.length > 0) ?
     (<NavToggler
-      text={text}
-      subItems={subNavs}
+      text={itemText}
+      subItems={children}
       handleToggle={open => handleToggle(toggleId, open)}
       isOpen={isOpen}
+      className={cx('nav-item')}
     />)
   :
   (<div className={activeClass}>
-    { isActive &&
-      <div className={cx('selection')} />
-    }
-    <a href={uri} className={cx(isSubNav ? 'sub-item' : 'nav-item')}>
+    <a href={uri} className={cx('nav-item')}>
       {/* When Icon is figured out: <span className={cx('nav-icon')}>{icon}</span> */}
-      {text}
+      {itemText}
     </a>
   </div>);
 
   return (
-    <div key={text} className={cx(!isSubNav ? 'nav-item-wrapper' : '')} {...customProps}>
+    <div key={text} className={cx('nav-item-wrapper')} {...customProps}>
       {currentItem}
     </div>
   );

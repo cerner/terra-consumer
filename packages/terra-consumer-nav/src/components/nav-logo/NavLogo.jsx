@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Card from '../card/Card';
 import styles from './NavLogo.scss';
 
 const propTypes = {
@@ -19,9 +20,9 @@ const propTypes = {
 };
 
 const defaultProps = {
-  path: 'http://placeholder.pics/svg/220x140/FF0606-FFFFFF',
+  path: 'http://placeholder.pics/svg/190x120/FF0606-FFFFFF',
   altText: 'Client Logo',
-  isCard: false,
+  isCard: true,
 };
 
 const cx = classNames.bind(styles);
@@ -31,11 +32,15 @@ const NavLogo = ({
   altText,
   isCard,
   ...customProps
-}) => (
-  <div className={cx('logo-container', isCard ? 'logo-card' : '')} {...customProps}>
-    <img className={cx('img')} src={path} alt={altText} />
-  </div>
-);
+}) => {
+  const image = <img className={cx('img')} src={path} alt={altText} />;
+
+  return (
+    <div className={cx('logo-container')} {...customProps}>
+      { isCard ? <Card>{image}</Card> : image }
+    </div>
+  );
+};
 
 NavLogo.propTypes = propTypes;
 NavLogo.defaultProps = defaultProps;

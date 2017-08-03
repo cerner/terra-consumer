@@ -12,33 +12,46 @@
 
   .nav-item {
     color: var(--terra-consumer--nav-item-color, #3d3d3d);
+    display: block;
     font-size: 16px;
+    line-height: 20px;
     text-decoration: none;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      color: var(--terra-consumer--mobile-nav-item-color, #fff);
+    }
   }
 
   .nav-item-wrapper {
     padding-bottom: 20px;
+
+    .nav-item-wrapper {
+      margin-top: 15px;
+      padding-bottom: 0;
+      padding-left: 20px;
+    }
   }
 
-  .sub-item {
-    color: var(--terra-consumer--sub-item-color, #3d3d3d);
-    font-size: 16px;
-    line-height: 20px;
-    padding-left: 20px;
-    text-decoration: none;
-  }
-
-  .toggler {
-    margin-top: 15px;
+  // colors here need callouts, on the way. using estimated from mockups
+  .badge {
+    background: var(--terra-consumer--badge-background, #fff);
+    border-radius: 10px;
+    color: var(--terra-consumer--badge-text-color, inherit);
+    margin-left: 10px;
+    padding: 0 7px;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: var(--terra-consumer--mobile-badge-background, #aaa);
+      color: var(--terra-consumer--mobile-badge-text-color, #fff);
+    }
   }
 
   .active {
-    font-weight: bold;
+    font-weight: 900;
 
-    > .selection {
-      background: #000; // NOTE: should this be theme-able?
+    &::before {
+      background: #383f42; // NOTE: should this be theme-able?
       border-radius: 3px;
-      height: 16px;
+      content: '';
+      height: 20px;
       left: 0;
       position: absolute;
       width: 4px;

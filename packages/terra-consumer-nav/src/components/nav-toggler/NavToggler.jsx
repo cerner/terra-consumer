@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Toggler from 'terra-toggle';
 import Arrange from 'terra-arrange';
-import OutlineChevronDown from '../../icons/OutlineChevronDown';
-import OutlineChevronUp from '../../icons/OutlineChevronUp';
+import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
+import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import styles from './NavToggler.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  text: PropTypes.string,
+  text: PropTypes.element,
   subItems: PropTypes.arrayOf(PropTypes.element),
   handleToggle: PropTypes.func.isRequired,
   isOpen: PropTypes.bool,
@@ -27,14 +27,15 @@ const NavToggler = ({
   isOpen,
   ...customProps
 }) => {
-  const toggleIcon = isOpen ? <OutlineChevronUp /> : <OutlineChevronDown />;
+  const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
 
   return (
-    <div className={cx(customProps.className)}>
+    <div {...customProps}>
       <button className={cx('toggle-header')} onClick={() => handleToggle(!isOpen)}>
         <Arrange
-          align="stretch"
-          fill={<span>{text}</span>}
+          alignFill="stretch"
+          alignFitEnd="center"
+          fill={text}
           fitEnd={toggleIcon}
         />
       </button>

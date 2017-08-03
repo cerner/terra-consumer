@@ -1,16 +1,16 @@
+@import '../../variables';
+
 :local {
   .logo-container {
     margin: 30px 25px;
     max-height: 170px;
     overflow: hidden;
     width: 270px;
-  }
-
-  .logo-card {
-    background: #fff;
-    border-radius: 3px;
-    box-shadow: 0 1px 3px rgba(#000 , 0.3);
-    width: 270px;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      margin: 40px auto;
+      max-height: 120px;
+      width: 190px;
+    }
   }
 
   .img {
