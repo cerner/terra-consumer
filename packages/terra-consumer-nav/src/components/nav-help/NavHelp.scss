@@ -2,127 +2,133 @@
 
 :local {
 	.nav-help {
-      background-color: white;
-      font-size: 16px;
-      line-height: 20px;
-      border-radius: 20px;
-      bottom: 15px;
-      box-shadow: 0 1px 1px #666;
-      padding-top: 6px;
-      padding-bottom: 6px;
-      padding-left: 13px;
-      padding-right: 13px;
-      position: absolute;
-      right: 15px;
-      align-self: center;
-      text-align: center;
-      vertical-align:middle;
-      border: none;
-      z-index: 200;
+    background-color: white;
+    font-size: 16px;
+    line-height: 20px;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px #666;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 13px;
+    padding-right: 13px;
+    display: inline-block;
+    top: 15px;
+    bottom: 20px;
+    left: 90%;
+    position: relative;
+    border: none;
+    z-index: 200;
 
-      &:hover {
-       cursor: pointer;
-       background: #eee;
-      }
-      @media screen and (max-width: $terra-medium-breakpoint) {
+    &:hover {
+      cursor: pointer;
+      background: #eee;
+    }
+    @media screen and (max-width: $terra-medium-breakpoint) {
       display: none;
-      }
     }
+  }
     
+  .icon {
+    height: 16px;
+    width: 16px;
+  }
+
   .help-icon {
-      height: 16px;
-      width: 16px;
+    height: 16px;
+    width: 16px;
+    padding-top: 2px;
   }
   
-
-  .nav-help-item {
-      font-size: 14px;
-      line-height: 18px;
-      color:#383F42;
-      padding: 20px;
-      text-decoration: none;
+  .help-item {
+    font-size: 14px;
+    line-height: 18px;
+    color:#383F42;
+    padding: 20px;
+    border-top: 1px solid #dedfe0;
+    text-decoration: none;
+    cursor: pointer;
   }
   
-  .nav-help-subitem {
-      font-size: 14px;
-      line-height: 18px;
-      color: #64696C;
-      padding-left: 0px;
-      padding-top: 20px;
-      text-decoration: none;
+  .help-subitem {
+    font-size: 14px;
+    line-height: 18px;
+    color: #64696C;
+    text-decoration: none;
 
   }
 
-  .divider-top {
-      border-top: 1px solid #dedfe0;
-      margin: 0;
-      padding: 0;
+  .divider-bottom {
+    border-top: 1px solid #dedfe0;
+    margin: 0;
+    padding: 0;
   }
 
-  .help-modal-large {
-      background: #fff;
-      border-radius: 5px;
-      display: block;
-      bottom: 20px;
-      overflow: auto;
-      position: fixed;
-      right: 20px;
-      width: 300px;
-      z-index: 400;
+  .popup-content {
+    border-radius: 5px;
+    display: block;
+    z-index: 300;
   }
   
-  .help-modal-mobile {
-      background: #fff;
-      border-radius: 5px;
-      display: block;
-      left: 10px;
-      overflow: auto;
-      position: fixed;
-      right: 10px;
-      top: 60px;
-      z-index: 400;
-    }
-
-  .help-modal-header-large {
-      padding-top: 5px;
-      padding-bottom: 5px;
-      align-self: center;
-      background: #1c1f21;
+  .modal-header {
+    display:inline-block;
+    width: 100%;
+    background: #1c1f21;
+    text-align: center;
+    align-self: center;
+    vertical-align: middle;
   }
 
-  .help-modal-header-mobile {
-      top: 0px;
-      position: absolute;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      align-self: center;
+  .modal-title {
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    text-align: left;
+    padding-left: 15px;
   }
 
-  .help-modal-title {
-      font-size: 20px;
-      line-height: 30px;
-      color: #fff;
+  .close-icon {
+    height: 16px;
+    width: 16px;
+    fill: #fff;
   }
 
-  .modal-close-icon {
-      height: 16px;
-      width: 16px;
-      fill: #fff;
+  .close-button {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
+    vertical-align: bottom;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-right: 15px;
+    text-align: right;
+  }
+  
+  .text-align-right {
+    text-align: right;
   }
 
-  .modal-close-button-large {
-      background-color: Transparent;
-      border: none;
-      cursor:pointer; 
+  .padding-left-small {
+    padding-left: 10px;
   }
 
-  .modal-close-button-mobile {
-      background-color: Transparent;
-      border: none;
-      cursor:pointer; 
-      right: 20px;
-      top: 20px;
-      position: fixed;  
-    }
+  .suppress-hyperlink {
+    text-decoration: none;
+  }
+
+  .overlay {
+   z-index: 300;
+  }
+
+  .padding-none {
+   padding: 0;
+  }
+
+  .padding-top-md {
+    padding-top: 20px;
+  }
+
+  .padding-left-xsmall {
+    padding-left: 6px;
+  }
 
 }

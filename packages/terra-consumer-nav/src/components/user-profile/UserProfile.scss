@@ -3,6 +3,13 @@
 :local {
 	
 	.profile {
+    height: auto;
+    width: $terra-consumer--nav-container-width;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    text-align: left;
+    z-index: 200;
 	  font-size: 16px;
 	  line-height: 20px;
 	  padding-top: 20px;
@@ -27,7 +34,6 @@
 	.divider-top {
     border-top: 1px solid #dedfe0;
     margin: 0;
-    padding: 0;
   }
   
   .divider-bottom {
@@ -85,6 +91,12 @@
     padding-top: 7px;
     padding-right: 15px;
     text-align: right;
+  }
+  
+  .popup-button {
+    background-color: Transparent;
+    border: none;
+    cursor:pointer;
   }
 
   .padding-none {

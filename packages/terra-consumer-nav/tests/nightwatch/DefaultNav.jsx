@@ -3,6 +3,8 @@ import React from 'react';
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
 import Layout from './Layout';
+import OutlineInfo from '../../../src/icons/OutlineInfo';
+import UserIcon from '../../../src/icons/UserIcon';
 
 const DefaultNav = () => {
   const props = {
@@ -77,6 +79,39 @@ const DefaultNav = () => {
         altText: 'Placeholder logo',
         isCard: false,
       },
+
+      helpItems: [
+        {
+          text: 'Technical Questions',
+          uri: 'http://localhost:8083/',
+          icon: (<OutlineInfo />),
+          children: [{
+            text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
+            uri: 'http://localhost:8083/',
+          }],
+        },
+        {
+          text: 'Get Support ID',
+          uri: 'http://localhost:8083/',
+          icon: (<OutlineInfo />),
+          children: [],
+        },
+      ],
+      profileLinks: [
+        {
+          text: 'Account',
+          icon: (<OutlineInfo />),
+          uri: 'http://localhost:8083/',
+        },
+        {
+          text: 'Notifications',
+          icon: (<OutlineInfo />),
+          uri: 'http://localhost:8083/',
+        },
+      ],
+      userName: 'John Snow',
+      avatar: (<UserIcon />),
+      signoutUrl: 'http://localhost:8083/',
     },
   };
 

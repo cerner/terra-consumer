@@ -8,11 +8,7 @@ import NavLogo from './components/nav-logo/NavLogo';
 import NavProfile from './components/nav-profile/NavProfile';
 import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
-import NavHelp from './components/nav-help/NavHelp';
 import UserProfile from './components/user-profile/UserProfile';
-import OutlineInfo from './icons/OutlineInfo';
-import UserIcon from './icons/UserIcon';
-import OutlineEllipses from './icons/OutlineEllipses';
 import styles from './Nav.scss';
 
 const cx = classNames.bind(styles);
@@ -66,6 +62,45 @@ const propTypes = {
       },
     ),
   ),
+
+  helpItems: PropTypes.arrayOf(PropTypes.shape({
+    slug: PropTypes.string,
+    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
+    target: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    uri: PropTypes.string.isRequired,
+    icon: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]),
+    children: PropTypes.arrayOf(PropTypes.shape({
+      slug: PropTypes.string,
+      nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
+      text: PropTypes.string.isRequired,
+      uri: PropTypes.string.isRequired,
+      icon: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element,
+      ]),
+      children: PropTypes.array,
+    })),
+  })),
+  profileLinks: PropTypes.arrayOf(PropTypes.shape({
+    slug: PropTypes.string,
+    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
+    text: PropTypes.string.isRequired,
+    uri: PropTypes.string.isRequired,
+    icon: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]),
+  })),
+  userName: PropTypes.string.isRequired,
+  avatar: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+  signoutUrl: PropTypes.string.isRequired,
   /**
    * An object defining the logo to be displayed
    */
@@ -115,6 +150,7 @@ const Nav = ({
     </div>
   </div>
 );
+
 
 Nav.propTypes = propTypes;
 Nav.defaultProps = defaultProps;

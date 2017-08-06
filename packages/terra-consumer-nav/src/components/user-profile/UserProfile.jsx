@@ -6,7 +6,10 @@ import Grid from 'terra-grid';
 import Popup from 'terra-popup';
 import Overlay from 'terra-overlay';
 import ResponsiveElement from 'terra-responsive-element';
+import ProfileLinks from './ProfileLinks';
+import HelpModal from './HelpModal';
 import CloseIcon from '../../icons/CloseIcon';
+import OutlineEllipses from '../../icons/OutlineEllipses';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -16,19 +19,35 @@ const translations = {
   settings: 'Settings',
   help: 'Help',
 };
+
 const propTypes = {
-  profile: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    icon: PropTypes.PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]).isRequired,
-    avatar: PropTypes.oneOfType([
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+  signoutUrl: PropTypes.string.isRequired,
+  profileLinks: PropTypes.arrayOf(PropTypes.shape({
+    slug: PropTypes.string,
+    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
+    text: PropTypes.string.isRequired,
+    uri: PropTypes.string.isRequired,
+    icon: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element,
     ]),
-    signoutUrl: PropTypes.string.isRequired,
-    links: PropTypes.arrayOf(PropTypes.shape({
+  })),
+  help: PropTypes.arrayOf(PropTypes.shape({
+    slug: PropTypes.string,
+    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
+    target: PropTypes.string,
+    text: PropTypes.string.isRequired,
+    uri: PropTypes.string.isRequired,
+    icon: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+    ]),
+    children: PropTypes.arrayOf(PropTypes.shape({
       slug: PropTypes.string,
       nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
       text: PropTypes.string.isRequired,
@@ -37,15 +56,16 @@ const propTypes = {
         PropTypes.string,
         PropTypes.element,
       ]),
-    }),
-  ),
-  }),
+      children: PropTypes.array,
+    })),
+  })),
 };
 
 const defaultProps = {
   profile: {
     avatar: null,
-    links: [],
+    profileLinks: [],
+    help: [],
   },
 };
 
@@ -56,118 +76,111 @@ class UserProfile extends React.Component {
 
     this.state = {
       isOpen: false,
+      showModal: false,
     };
-
-    this.openPopup = this.openPopup.bind(this);
-    this.closePopup = this.closePopup.bind(this);
+    this.showModal = false;
+    this.openProfilePopup = this.openProfilePopup.bind(this);
+    this.closeProfilePopup = this.closeProfilePopup.bind(this);
+    this.openHelpModal = this.openHelpModal.bind(this);
+    this.closeHelpModal = this.closeHelpModal.bind(this);
   }
 
-  openPopup() {
+  openProfilePopup() {
     this.setState({ isOpen: true });
   }
 
-  closePopup() {
+  closeProfilePopup() {
     this.setState({ isOpen: false });
   }
 
+  openHelpModal() {
+    this.setState({ isOpen: false, showModal: true });
+  }
+
+  closeHelpModal() {
+    this.setState({ showModal: false });
+  }
+
   render() {
-    const { profile, ...customProps } = this.props;
-    const profileLinks = profile.links.map((item) => {
-      const currentItem = (profile.links.length > 0 &&
-        <Arrange
-          align="stretch"
-          fitStart={<div className={cx('icon')}>{item.icon}</div>}
-          fill={<div className={cx('padding-left-small')}>{item.text}</div>}
-        />
+    const { name, avatar, signoutUrl, profileLinks, help, ...customProps } = this.props;
+
+    const signout = (
+      <a
+        className={cx('suppress-hyperlink')}
+        href={signoutUrl}
+        onClick={() => window.location = signoutUrl}
+      >
+        <div className={cx('link', 'divider-top')}>
+          {translations.signout}
+        </div>
+      </a>);
+
+    const helpElement = (
+      <a
+        className={cx('suppress-hyperlink')}
+        onClick={() => this.openHelpModal()}
+      >
+        <div className={cx('link')}>
+          {translations.help}
+        </div>
+      </a>
+
       );
 
-      return (
-        <a href={item.uri} onClick={() => window.location = item.uri} className={cx('suppress-hyperlink')}>
-          <div key={`${item.text}`} className={cx('link')}>
-            {currentItem}
-          </div>
-        </a>  
-      );
-
-    });
+    const profileModalHeader = (
+      <div>
+        <Grid className={cx('modal-header')}>
+          <Grid.Row>
+            <Grid.Column col={2} />
+            <Grid.Column col={8}>
+              <div className={cx('modal-title')}>{translations.settings}</div>
+            </Grid.Column>
+            <Grid.Column className={cx('text-align-right')} col={2}>
+              <button className={cx('close-button')} onClick={() => this.closeProfilePopup()}>
+                {<div className={cx('close-icon')}><CloseIcon /></div>}
+              </button>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </div>);
 
     const defaultElement = (
-      <Overlay isOpen={this.state.isOpen} backgroundStyle="dark" isScrollable>
-        <div>
-          <Grid className={cx('modal-header')}>
-            <Grid.Row>
-              <Grid.Column col={2}>               
-              </Grid.Column>
-              <Grid.Column col={8}>
-                <div className={cx('modal-title')}>{translations.settings}</div>
-              </Grid.Column>
-              <Grid.Column className={cx('text-align-right')} col={2}>
-                <button className={cx('close-button')} onClick={() => this.closePopup()}>{<div className={cx('close-icon')}><CloseIcon /></div>}</button>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </div>
+      <Overlay isOpen={this.state.isOpen} backgroundStyle="dark">
+        {profileModalHeader}
         <div className={cx('modal')}>
-          {(<div>
-            {profileLinks}
-            <a 
-              className={cx('suppress-hyperlink')}
-              href={profile.signoutUrl}
-              onClick={() => window.location = profile.signoutUrl}
-            >
-            <div className={cx('link', 'divider-bottom')}>
-               {translations.help}
-            </div>
-            </a>
-            <a
-              className={cx('suppress-hyperlink')}
-              href={profile.signoutUrl}
-              onClick={() => window.location = profile.signoutUrl}
-            >
-            <div className={cx('link')}>
-              {translations.signout}
-            </div>
-            </a>
-          </div>)}
+          <ProfileLinks linkItems={profileLinks} />
+          {helpElement}
+          {signout}
         </div>
       </Overlay>);
 
     const large = (
       <Popup
         isOpen={this.state.isOpen}
-        onRequestClose={this.closePopup}
-        targetRef={() => document.getElementById('profile-link-icon')}
+        onRequestClose={this.closeProfilePopup}
+        targetRef={() => document.getElementById('profile-link-button')}
         isArrowDisplayed
         contentWidth="320"
-        contentHeight="400"
+        contentHeight="240"
         contentAttachment="top right"
       >
-        {<div>
-          {profileLinks}
-          <div>
-            <a className={cx('link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl}>
-              {translations.help}
-            </a>
-          </div>
-          <div>
-            <a className={cx('link')} href={profile.signoutUrl} onClick={() => window.location = profile.signoutUrl}>
-              {translations.signout}
-            </a>
-          </div>
+        <div>
+          <ProfileLinks linkItems={profileLinks} />
+          {signout}
         </div>
-        }
       </Popup>);
 
     return (
       <div {...customProps}>
         <Arrange
           className={cx('profile')}
-          fitStart={<svg className={cx('icon')}>{profile.avatar}</svg>}
-          fill={<div className={cx('padding-left-small')}>{profile.name}</div>}
-          fitEnd={<a id="profile-link-icon" onClick={this.openPopup}><svg className={cx('icon')} role="button">{profile.icon}</svg></a>}
-          align="center"
+          fitStart={<svg className={cx('icon')}>{avatar}</svg>}
+          fill={<div className={cx('padding-left-small')}>{name}</div>}
+          fitEnd={<button className={cx('popup-button')} id="profile-link-button" onClick={() => this.openProfilePopup()}><svg className={cx('icon')}><OutlineEllipses /></svg></button>}
+          align="stretch"
         />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} large={large} />
+        <HelpModal help={help} isModalOpen={this.state.showModal} closeModal={this.closeHelpModal} />
       </div>
     );
   }
