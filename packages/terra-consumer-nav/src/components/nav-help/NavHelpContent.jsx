@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Toggler from 'terra-toggle';
 import Arrange from 'terra-arrange';
-import OutlineChevronDown from '../../icons/OutlineChevronDown';
-import OutlineChevronUp from '../../icons/OutlineChevronUp';
+import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
+import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -52,10 +52,10 @@ class NavHelpContent extends React.Component {
 
   render() {
     const { helpContent, ...customProps } = this.props;
-    const toggleIcon = this.state.isOpen ? <OutlineChevronDown /> : <OutlineChevronUp />;
+    const toggleIcon = this.state.isOpen ? <IconChevronDown className={cx('icon')} /> : <IconChevronUp className={cx('icon')} />;
     const contentList = helpContent.map((content) => {
       const contentElement = content.children.length > 0 ?
-      (<div className={cx('help-item')}>
+      (<div key={`${content.text}`} className={cx('help-item')}>
         <a onClick={this.handleToggle}>
           <Arrange
             align="stretch"
@@ -66,7 +66,7 @@ class NavHelpContent extends React.Component {
         </a>
         <Toggler isOpen={!this.state.isOpen} isAnimated className={cx('padding-none')}>
           { content.children.map((element) => {
-            const helpInfo = (<div className={cx('help-subitem', 'padding-top-md')}>{element.text}</div>);
+            const helpInfo = (<div key={`${element.text}`} className={cx('help-subitem', 'padding-top-md')}>{element.text}</div>);
             return helpInfo;
           })
           }
@@ -74,7 +74,7 @@ class NavHelpContent extends React.Component {
       </div>
       )
       :
-      (<div className={cx('help-item')}>
+      (<div key={`${content.text}`} className={cx('help-item')}>
         <a onClick={() => window.location = content.uri}>
           <Arrange
             align="center"

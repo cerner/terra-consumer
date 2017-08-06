@@ -6,10 +6,10 @@ import Grid from 'terra-grid';
 import Popup from 'terra-popup';
 import Overlay from 'terra-overlay';
 import ResponsiveElement from 'terra-responsive-element';
+import IconClose from 'terra-icon/lib/icon/IconClose';
+import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import ProfileLinks from './ProfileLinks';
 import HelpModal from './HelpModal';
-import CloseIcon from '../../icons/CloseIcon';
-import OutlineEllipses from '../../icons/OutlineEllipses';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -137,7 +137,7 @@ class UserProfile extends React.Component {
             </Grid.Column>
             <Grid.Column className={cx('text-align-right')} col={2}>
               <button className={cx('close-button')} onClick={() => this.closeProfilePopup()}>
-                {<div className={cx('close-icon')}><CloseIcon /></div>}
+                {<svg className={cx('close-icon')}><IconClose /></svg>}
               </button>
             </Grid.Column>
           </Grid.Row>
@@ -176,7 +176,7 @@ class UserProfile extends React.Component {
           className={cx('profile')}
           fitStart={<svg className={cx('icon')}>{avatar}</svg>}
           fill={<div className={cx('padding-left-small')}>{name}</div>}
-          fitEnd={<button className={cx('popup-button')} id="profile-link-button" onClick={() => this.openProfilePopup()}><svg className={cx('icon')}><OutlineEllipses /></svg></button>}
+          fitEnd={<button className={cx('popup-button')} id="profile-link-button" onClick={() => this.openProfilePopup()}><svg className={cx('icon')}><IconEllipses /></svg></button>}
           align="stretch"
         />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} large={large} />

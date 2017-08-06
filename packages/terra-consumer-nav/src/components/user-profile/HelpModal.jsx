@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Grid from 'terra-grid';
 import Overlay from 'terra-overlay';
+import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavHelpContent from '../nav-help/NavHelpContent';
-import CloseIcon from '../../icons/CloseIcon';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -61,7 +61,7 @@ const HelpModal = ({
           </Grid.Column>
           <Grid.Column className={cx('text-align-right')} col={2}>
             <button className={cx('close-button')} onClick={() => closeModal()}>
-              {<div className={cx('close-icon')}><CloseIcon /></div>}
+              {<div className={cx('close-icon')}><IconClose /></div>}
             </button>
           </Grid.Column>
         </Grid.Row>

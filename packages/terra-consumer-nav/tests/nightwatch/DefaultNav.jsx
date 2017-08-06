@@ -1,10 +1,11 @@
 import React from 'react';
-
+import IconPerson from 'terra-icon/lib/icon/IconPerson';
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
 import Layout from './Layout';
 import OutlineInfo from '../../../src/icons/OutlineInfo';
 import UserIcon from '../../../src/icons/UserIcon';
+
 
 const DefaultNav = () => {
   const props = {
@@ -84,7 +85,7 @@ const DefaultNav = () => {
         {
           text: 'Technical Questions',
           uri: 'http://localhost:8083/',
-          icon: (<OutlineInfo />),
+          icon: (<IconInfo />),
           children: [{
             text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
             uri: 'http://localhost:8083/',
@@ -93,24 +94,24 @@ const DefaultNav = () => {
         {
           text: 'Get Support ID',
           uri: 'http://localhost:8083/',
-          icon: (<OutlineInfo />),
+          icon: (<IconInfo />),
           children: [],
         },
       ],
       profileLinks: [
         {
           text: 'Account',
-          icon: (<OutlineInfo />),
+          icon: (<IconInfo />),
           uri: 'http://localhost:8083/',
         },
         {
           text: 'Notifications',
-          icon: (<OutlineInfo />),
+          icon: (<IconInfo />),
           uri: 'http://localhost:8083/',
         },
       ],
       userName: 'John Snow',
-      avatar: (<UserIcon />),
+      avatar: (<IconPerson />),
       signoutUrl: 'http://localhost:8083/',
     },
   };

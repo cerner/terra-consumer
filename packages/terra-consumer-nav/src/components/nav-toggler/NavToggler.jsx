@@ -39,6 +39,7 @@ const NavToggler = ({
   children,
   ...customProps
 }) => {
+
   const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
 
   return (

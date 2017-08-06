@@ -2,7 +2,7 @@
 
 :local {
 	.nav-help {
-    background-color: white;
+    background-color:  #fff;
     font-size: 16px;
     line-height: 20px;
     border-radius: 20px;
@@ -33,12 +33,6 @@
     width: 16px;
   }
 
-  .help-icon {
-    height: 16px;
-    width: 16px;
-    padding-top: 2px;
-  }
-  
   .help-item {
     font-size: 14px;
     line-height: 18px;
@@ -90,6 +84,8 @@
     height: 16px;
     width: 16px;
     fill: #fff;
+    color: #fff;
+    font-size: 16px;
   }
 
   .close-button {

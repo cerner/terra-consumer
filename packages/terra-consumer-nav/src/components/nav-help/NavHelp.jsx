@@ -4,9 +4,9 @@ import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import Grid from 'terra-grid';
 import Popup from 'terra-popup';
+import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavHelpContent from './NavHelpContent';
-import OutlineInfo from '../../icons/OutlineInfo';
-import CloseIcon from '../../icons/CloseIcon';
+import IconInfo from '../../icons/IconInfo';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -72,7 +72,7 @@ class NavHelp extends React.Component {
         className={cx('nav-help')}
       >
         <Arrange
-          fitStart={<svg className={cx('help-icon')}><OutlineInfo /></svg>}
+          fill={<div className={cx('icon')}><IconInfo /></div>}
           fitEnd={<div className={cx('padding-left-xsmall')}>{translations.help}</div>}
           align="stretch"
         />
@@ -97,7 +97,7 @@ class NavHelp extends React.Component {
                 <div className={cx('modal-title')}>{translations.help}</div>
               </Grid.Column>
               <Grid.Column className={cx('text-align-right')} col={2}>
-                <button className={cx('close-button')} onClick={() => this.closePopup()}>{<div className={cx('close-icon')}><CloseIcon /></div>}</button>
+                <button className={cx('close-button')} onClick={() => this.closePopup()}>{<svg className={cx('close-icon')}><IconClose /></svg>}</button>
               </Grid.Column>
             </Grid.Row>
           </Grid>
