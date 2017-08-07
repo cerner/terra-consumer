@@ -36,7 +36,10 @@
     padding: 20px;
     border-top: 1px solid #dedfe0;
     text-decoration: none;
-    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+      background: #eee;
+    }
   }
   
   .help-subitem {

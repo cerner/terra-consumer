@@ -29,6 +29,10 @@
     color:#383F42;
     padding: 20px;
     text-decoration: none;
+    &:hover {
+      cursor: pointer;
+      background: #eee;
+    }
 	}
   
 	.divider-top {
