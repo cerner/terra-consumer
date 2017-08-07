@@ -8,6 +8,9 @@ import styles from './Card.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   *  Child node(s) to be displayed inside of the card.
+   */
   children: PropTypes.node,
 };
 
@@ -19,7 +22,7 @@ const Card = ({
   children,
   ...customProps
 }) => (
-  <div className={cx('card')} {...customProps}>
+  <div {...customProps} className={cx('card', customProps.className)}>
     {children}
   </div>
 );

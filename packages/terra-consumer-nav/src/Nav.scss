@@ -2,11 +2,6 @@
 @import './variables';
 
 :local {
-  body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-  }
-
   .nav-container {
     z-index: 1000;
   }
@@ -35,9 +30,9 @@
   .close-button {
     display: none;
     @media screen and (max-width: $terra-medium-breakpoint) {
-      background: none;
+      background: var(--terra-consumer--mobile-close-button-background, none);
       border: 0;
-      color: #fff;
+      color: var(--terra-consumer--mobile-close-button-color, #fff);
       display: block;
       font-size: 16px;
       line-height: 16px;
@@ -50,30 +45,8 @@
     }
 
     &:hover {
-      background: none;
-      color: #777;
-    }
-  }
-
-  .nav-burger {
-    background: none;
-    border: 0;
-    box-shadow: 0;
-    color: #000;
-    height: 24px;
-    left: 0;
-    padding: 0;
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-    width: 24px;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      visibility: visible;
-    }
-
-    &:hover {
-      background: #eee;
-      cursor: pointer;
+      background: var(--terra-consumer--mobile-close-button-hover-background, none);
+      color: var(--terra-consumer--mobile-close-button-hover-color, #777);
     }
   }
 }

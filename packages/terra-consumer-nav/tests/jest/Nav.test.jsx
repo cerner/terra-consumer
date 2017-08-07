@@ -1,14 +1,27 @@
 import React from 'react';
 import Nav from '../../src/Nav';
 
-const testData = [{
-  uri: '/test',
-  text: 'test',
-  isActive: false,
-}];
+const testData = {
+  quickLinks: [{
+    uri: '/test',
+    text: 'test',
+  }],
+  navItems: [{
+    uri: '#test',
+    text: 'test',
+    isActive: true,
+  }],
+  logo: {
+    path: '',
+    altText: 'test',
+    isCard: false,
+  },
+  isMobileNavOpen: false,
+  onRequestClose: () => {},
+};
 
 describe('Nav', () => {
-  const defaultRender = <Nav navItems={testData} />;
+  const defaultRender = <Nav {...testData} />;
 
   // Snapshot Tests
   it('should render a default component', () => {
@@ -17,8 +30,8 @@ describe('Nav', () => {
   });
 
   // Structure Tests
-  it('should have the class nav', () => {
+  it('should have the class nav-container', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('layout');
+    expect(wrapper.prop('className')).toContain('nav-container');
   });
 });

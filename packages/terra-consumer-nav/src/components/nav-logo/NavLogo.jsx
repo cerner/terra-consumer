@@ -8,9 +8,9 @@ const propTypes = {
   /**
    *  The path to where the image is located.
    */
-  path: PropTypes.string,
+  path: PropTypes.string.isRequired,
   /**
-   *  The alternate text that is read by screen readers.
+   *  The alternate text that is read by screen readers or displayed if the image fails to load.
    */
   altText: PropTypes.string,
   /**
@@ -20,9 +20,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  path: 'http://placeholder.pics/svg/190x120/FF0606-FFFFFF',
   altText: 'Client Logo',
-  isCard: true,
+  isCard: false,
 };
 
 const cx = classNames.bind(styles);
@@ -36,7 +35,7 @@ const NavLogo = ({
   const image = <img className={cx('img')} src={path} alt={altText} />;
 
   return (
-    <div className={cx('logo-container')} {...customProps}>
+    <div {...customProps} className={cx('logo-container', customProps.className)}>
       { isCard ? <Card>{image}</Card> : image }
     </div>
   );

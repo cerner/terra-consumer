@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Items should apply custom classes 1`] = `
+<div
+  className="nav-items-contatiner test-class"
+>
+  <NavItem
+    badgeValue={0}
+    handleToggle={[Function]}
+    isActive={false}
+    text="testIcon"
+    uri="#testPath"
+  />
+</div>
+`;
+
+exports[`Nav Items should render a default component 1`] = `
+<div
+  className="nav-items-contatiner"
+>
+  <NavItem
+    badgeValue={0}
+    handleToggle={[Function]}
+    isActive={false}
+    text="testIcon"
+    uri="#testPath"
+  />
+</div>
+`;

@@ -2,67 +2,52 @@
 
 exports[`Nav should render a default component 1`] = `
 <div
-  className="layout"
+  className="nav-container"
 >
   <div
+    aria-hidden={true}
     className="nav"
   >
-    <div
-      className="logo-container"
-    >
-      <img
-        alt="placeholder"
-        src="http://placeholder.pics/svg/270x170/FF0606-FFFFFF"
-      />
-    </div>
-    <QuickLinks
-      maxListSize={4}
-      quickLinks={
-        Array [
-          Object {
-            "text": "Create Appointment",
-            "uri": "/?react_perf",
-          },
-          Object {
-            "text": "Send Message",
-            "uri": "/?react_perf",
-          },
-          Object {
-            "text": "Refill Medications",
-            "uri": "/?react_perf",
-          },
-          Object {
-            "text": "Log Daily Fitness",
-            "uri": "/?react_perf",
-          },
-        ]
+    <Button
+      className="close-button"
+      icon={
+        <IconClose
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      type="button"
+      variant="default"
     />
+    <NavLogo
+      altText="test"
+      isCard={false}
+      path=""
+    />
+    <QuickLinks>
+      <QuickLink
+        text="test"
+        uri="/test"
+      />
+    </QuickLinks>
     <NavItems
-      maxNavItems={9}
       navItems={
         Array [
           Object {
-            "isActive": false,
+            "isActive": true,
             "text": "test",
-            "uri": "/test",
+            "uri": "#test",
           },
         ]
       }
     />
-    <div
-      className="profile-container"
-    >
-      hello world
-    </div>
-    <div
-      className="help-button"
-    >
-      ?  -  help
-    </div>
+    <NavProfile />
   </div>
-  <div
-    className="main-container"
-  />
 </div>
 `;

@@ -2,7 +2,7 @@ import React from 'react';
 
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
-import Layout from '../../src/Layout';
+import Layout from './Layout';
 
 const DefaultNav = () => {
   const props = {
@@ -72,11 +72,16 @@ const DefaultNav = () => {
           ],
         },
       ],
+      logo: {
+        path: 'http://placeholder.pics/svg/300x190/FF0606-FFFFFF',
+        altText: 'Placeholder logo',
+        isCard: false,
+      },
     },
   };
 
   return (
-    <Layout {...props} />
+    <Layout {...props} id="layout" />
   );
 };
 

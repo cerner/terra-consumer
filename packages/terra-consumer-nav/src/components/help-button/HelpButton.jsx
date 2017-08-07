@@ -6,7 +6,8 @@ const cx = classNames.bind(styles);
 
 const HelpButton = () => (
   <div className={cx('help-button')}>
-    {/* Placeholder for actual component */}
+    {/* Placeholder for actual component: REMOVE THIS */}
+    {/* eslint-disable no-alert */}
     <button onClick={() => alert('help button clicked')}> ? - Help </button>
   </div>
 );

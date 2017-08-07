@@ -5,7 +5,7 @@
     margin: 30px 25px;
     max-height: 170px;
     overflow: hidden;
-    width: 270px;
+    width: calc(100% - 50px});
     @media screen and (max-width: $terra-medium-breakpoint) {
       margin: 40px auto;
       max-height: 120px;

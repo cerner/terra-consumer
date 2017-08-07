@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Logo should apply custom classes 1`] = `
+<div
+  className="logo-container test-class"
+>
+  <img
+    alt="testIcon"
+    className="img"
+    src="#testPath"
+  />
+</div>
+`;
+
+exports[`Nav Logo should render a default component 1`] = `
+<div
+  className="logo-container"
+>
+  <img
+    alt="testIcon"
+    className="img"
+    src="#testPath"
+  />
+</div>
+`;
+
+exports[`Nav Logo should render inside a Card component when specified 1`] = `
+<div
+  className="logo-container"
+>
+  <Card>
+    <img
+      alt="testIcon"
+      className="img"
+      src="#testPath"
+    />
+  </Card>
+</div>
+`;

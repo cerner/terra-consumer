@@ -10,10 +10,22 @@ import styles from './NavToggler.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  text: PropTypes.element,
-  subItems: PropTypes.arrayOf(PropTypes.element),
+  /**
+   * Element to be displayed on top of the button that opens the toggle content.
+   */
+  header: PropTypes.element,
+  /**
+   * Function callback when the toggle component is clicked.
+   */
   handleToggle: PropTypes.func.isRequired,
+  /**
+   * Whether or not the content should be toggled open or not.
+   */
   isOpen: PropTypes.bool,
+  /**
+   * Items to be displayed within the toggler.
+   */
+  children: PropTypes.node,
 };
 
 const defaultProps = {
@@ -21,10 +33,10 @@ const defaultProps = {
 };
 
 const NavToggler = ({
-  text,
-  subItems,
+  header,
   handleToggle,
   isOpen,
+  children,
   ...customProps
 }) => {
   const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
@@ -35,12 +47,12 @@ const NavToggler = ({
         <Arrange
           alignFill="stretch"
           alignFitEnd="center"
-          fill={text}
+          fill={header}
           fitEnd={toggleIcon}
         />
       </button>
       <Toggler isOpen={isOpen} isAnimated className={cx('toggler')}>
-        {subItems}
+        {children}
       </Toggler>
     </div>
   );

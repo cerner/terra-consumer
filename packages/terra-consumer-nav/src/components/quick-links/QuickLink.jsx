@@ -7,28 +7,22 @@ import styles from './QuickLink.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  slug: PropTypes.string, // is this needed?
-  nav_type: PropTypes.string, // is this needed?
+  /**
+   * The path the quicklink should lead to.
+   */
   uri: PropTypes.string.isRequired,
+  /**
+   * The text displayed on the link.
+   */
   text: PropTypes.string.isRequired,
-  /*
-  TODO: Need to figure out what we are doing with icons
-
-  icon: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
-  */
 };
 
 const QuickLink = ({
-  slug,
-  nav_type,
   uri,
   text,
   ...customProps
 }) => (
-  <Button className={cx('quicklink', customProps.className)} href={uri} text={text} {...customProps} />
+  <Button {...customProps} className={cx('quicklink', customProps.className)} href={uri} text={text} key={text} />
 );
 
 QuickLink.propTypes = propTypes;

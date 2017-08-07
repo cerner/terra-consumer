@@ -6,8 +6,37 @@ import styles from './NavItem.scss';
 
 const cx = classNames.bind(styles);
 
+const navItemShape = {
+  /**
+   * The path the nav item should lead to.
+   */
+  uri: PropTypes.string,
+  /**
+   * The text displayed on the link.
+   */
+  text: PropTypes.string,
+  /**
+   * Whether or not the link should be styled as active or not.
+   */
+  isActive: PropTypes.bool,
+  /**
+   * An optional badge. When supplied, displays the value inline, styled alongside the text.
+   */
+  badgeValue: PropTypes.number,
+};
+
 const propTypes = {
-  navItems: PropTypes.arrayOf(PropTypes.object),
+  navItems: PropTypes.arrayOf(
+    PropTypes.shape(
+      navItemShape,
+      {
+        /**
+         * An optional array of objects to be displayed as sub navs toggled by the main nav.
+         */
+        subNavs: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
+      },
+    ),
+  ),
 };
 
 const defaultProps = {
@@ -47,14 +76,21 @@ class NavItems extends Component {
       }
 
       return (
-        <NavItem key={element.text} {...element} {...toggleProps}>
+        <NavItem
+          key={element.text}
+          uri={element.uri}
+          text={element.text}
+          isActive={element.isActive}
+          badgeValue={element.badgeValue}
+          {...toggleProps}
+        >
           {subNavs}
         </NavItem>
       );
     });
 
     return (
-      <div className={cx('nav-items-contatiner')} {...customProps}>
+      <div {...customProps} className={cx('nav-items-contatiner', customProps.className)}>
         {content}
       </div>
     );

@@ -7,25 +7,37 @@ import NavToggler from '../nav-toggler/NavToggler';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  slug: PropTypes.string,
-  navType: PropTypes.oneOf(['grouping', 'external', 'application', 'modal']),
-  target: PropTypes.string,
-  uri: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  /**
+   * The path the nav item should lead to.
+   */
+  uri: PropTypes.string,
+  /**
+   * The text displayed on the link.
+   */
+  text: PropTypes.string,
+  /**
+   * Whether or not the link should be styled as active or not.
+   */
   isActive: PropTypes.bool,
+  /**
+   * An optional badge. When supplied, displays the value inline, styled alongside the text.
+   */
   badgeValue: PropTypes.number,
-
+  /**
+   * The id of the toggle component to be toggled.
+   */
   toggleId: PropTypes.number,
-  handleToggle: PropTypes.func,
+  /**
+   * Function callback when the toggle component is clicked.
+   */
+  handleToggle: PropTypes.func.isRequired,
+  /**
+   * Whether or not the content should be toggled open or not.
+   */
   isOpen: PropTypes.bool,
-  /*
-    TODO: Need to figure out what we are doing with icons or if navitems should even have icons
-
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-  */
+  /**
+   * Items to be displayed within the toggler.
+   */
   children: PropTypes.node,
 };
 
@@ -35,9 +47,6 @@ const defaultProps = {
 };
 
 const NavItem = ({
-  slug,
-  navType,
-  target,
   uri,
   text,
   isActive,
@@ -48,9 +57,9 @@ const NavItem = ({
   children,
   ...customProps
 }) => {
-  const activeClass = cx([
-    { active: isActive },
-  ]);
+  const activeClass = cx({
+    active: isActive,
+  });
 
   const itemText = (
     <span>
@@ -63,22 +72,22 @@ const NavItem = ({
 
   const currentItem = (children && children.length > 0) ?
     (<NavToggler
-      text={itemText}
-      subItems={children}
+      header={itemText}
       handleToggle={open => handleToggle(toggleId, open)}
       isOpen={isOpen}
       className={cx('nav-item')}
-    />)
+    >
+      {children}
+    </NavToggler>)
   :
   (<div className={activeClass}>
     <a href={uri} className={cx('nav-item')}>
-      {/* When Icon is figured out: <span className={cx('nav-icon')}>{icon}</span> */}
       {itemText}
     </a>
   </div>);
 
   return (
-    <div key={text} className={cx('nav-item-wrapper')} {...customProps}>
+    <div {...customProps} className={cx('nav-item-wrapper', customProps.className)}>
       {currentItem}
     </div>
   );

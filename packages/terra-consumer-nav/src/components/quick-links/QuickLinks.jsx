@@ -6,6 +6,9 @@ import styles from './QuickLink.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * The children to be displayed within the quicklink container.
+   */
   children: PropTypes.node,
 };
 
@@ -17,7 +20,7 @@ const QuickLinks = ({
   children,
   ...customProps
 }) => (
-  <div className={cx('quicklinks-container')} {...customProps}>
+  <div {...customProps} className={cx('quicklinks-container', customProps.className)}>
     {children}
   </div>
 );
