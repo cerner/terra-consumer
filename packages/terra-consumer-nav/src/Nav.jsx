@@ -16,11 +16,11 @@ const navItemShape = {
   /**
    * The path the nav item should lead to.
    */
-  uri: PropTypes.string,
+  uri: PropTypes.string.isRequired,
   /**
    * The text displayed on the link.
    */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   /**
    * Whether or not the link should be styled as active or not.
    */
@@ -40,11 +40,11 @@ const propTypes = {
       /**
        * The path the nav item should lead to.
        */
-      uri: PropTypes.string,
+      uri: PropTypes.string.isRequired,
       /**
        * The text displayed on the link.
        */
-      text: PropTypes.string,
+      text: PropTypes.string.isRequired,
     }),
   ),
   /**

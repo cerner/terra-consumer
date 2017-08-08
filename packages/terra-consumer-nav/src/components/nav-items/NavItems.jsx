@@ -54,9 +54,9 @@ class NavItems extends Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleToggle(i, isOpen) {
+  handleToggle(toggleId, isOpen) {
     this.setState({
-      openToggle: isOpen ? i : null,
+      openToggle: isOpen ? toggleId : null,
     });
   }
 

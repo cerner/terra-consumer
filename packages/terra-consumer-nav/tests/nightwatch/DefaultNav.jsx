@@ -27,7 +27,7 @@ const DefaultNav = () => {
       ],
       navItems: [
         {
-          uri: '#',
+          uri: '?react_perf#/tests/nav-tests/default',
           text: 'Dashboard',
           isActive: true,
         },
@@ -73,7 +73,7 @@ const DefaultNav = () => {
         },
       ],
       logo: {
-        path: 'http://placeholder.pics/svg/300x190/FF0606-FFFFFF',
+        path: 'http://placeholder.pics/svg/270x170/FF0606-FFFFFF',
         altText: 'Placeholder logo',
         isCard: false,
       },
