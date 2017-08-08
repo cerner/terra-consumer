@@ -27,8 +27,8 @@ const ProfileLinks = ({
   ...customProps
 }) => {
   const linkElements = linkItems.map((linkItem) => {
-    const linkElement = (<a key={`${linkItem.text}`} href={linkItem.uri} onClick={() => window.location = linkItem.uri} className={cx('suppress-hyperlink')}>
-      <div className={cx('link', 'divider-bottom')}>{linkItem.text}</div></a>);
+    const linkElement = (<a key={`${linkItem.text}`} href={linkItem.uri} onClick={() => { window.location = linkItem.uri; }} className={cx('link-text-style')}>
+      <div className={cx('link', 'nav-item-border')}>{linkItem.text}</div></a>);
     return linkElement;
   });
 

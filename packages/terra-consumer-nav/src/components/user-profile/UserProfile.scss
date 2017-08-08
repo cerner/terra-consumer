@@ -1,130 +1,73 @@
 @import '../../variables';
 
 :local {
-	
-	.profile {
-    height: auto;
-    width: $terra-consumer--nav-container-width;
+  .profile {
     bottom: 0;
+    font-size: 16px;
+    height: auto;
     left: 0;
+    line-height: 20px;
+    padding-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
     position: absolute;
     text-align: left;
+    width: $terra-consumer--nav-container-width;
     z-index: 200;
-	  font-size: 16px;
-	  line-height: 20px;
-	  padding-top: 20px;
-	  padding-bottom: 20px;
-	  padding-left: 25px;
-	  padding-right: 25px;
-	}
+  }
 
-	.icon {
-	  height: 16px;
+  .icon {
+    height: 16px;
     width: 16px;
-	}
+  }
 
-	.link {
+  .link {
+    color: #383f42;
     font-size: 14px;
     line-height: 18px;
-    color:#383F42;
     padding: 20px;
     text-decoration: none;
+
     &:hover {
-      cursor: pointer;
       background: #eee;
+      cursor: pointer;
     }
-	}
-  
-	.divider-top {
+  }
+
+  .signout-border {
     border-top: 1px solid #dedfe0;
     margin: 0;
   }
   
-  .divider-bottom {
-    border-bottom: none;
+  .nav-item-border {
+    border-bottom: 0;
     margin: 0;
+
     @media screen and (max-width: $terra-medium-breakpoint) {
       border-bottom: 1px solid #dedfe0;
       margin: 0;
     }
   }
 
-  .modal {
-    background: #fff;
-    border-radius: 5px;
-    display: block;
-    left: 10px;
-    overflow: auto;
-    position: fixed;
-    right: 10px;
-    top: 60px;
-    z-index: 300;
-  }
-
-  .modal-header {
-    top: 15px;
-    left: 0px;
-    right:0px;
-    position: absolute;
-    display:inline-block;
-    width: 100%;
-    text-align: center;
-    align-self: center;
-    vertical-align: middle;
-  }
-
-  .modal-title {
-    font-size: 20px;
-    line-height: 30px;
-    color: #fff;
-    text-align: center;
-  }
-
-  .close-icon {
-    height: 16px;
-    width: 16px;
-    fill: #fff;
-    color: #fff;
-    font-size: 16px;
-  }
-
-  .close-button {
-    background-color: Transparent;
-    border: none;
-    cursor:pointer;
-    vertical-align: bottom;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    padding-right: 15px;
-    text-align: right;
-  }
-
   .popup-button {
     background-color: Transparent;
-    border: none;
-    cursor:pointer;
-    text-align: center;
-    padding: 0;
+    border: 0;
+    cursor: pointer;
     font-size: 16px;
-  }
-
-  .padding-none {
     padding: 0;
+    text-align: center;
   }
 
-  .padding-left-small {
+  .profile-text-padding {
     padding-left: 10px;
   }
 
-  .padding-large {
-    padding: 20px;
-  }
-  
   .text-align-right {
     text-align: right;
   }
 
-  .suppress-hyperlink {
-   text-decoration: none;
+  .link-text-style {
+    text-decoration: none;
   }
 }

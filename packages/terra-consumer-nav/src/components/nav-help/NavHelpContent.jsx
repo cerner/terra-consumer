@@ -41,7 +41,7 @@ const defaultProps = {
 class NavHelpContent extends React.Component {
   constructor() {
     super();
-    this.state = ({ isOpen: true });
+    this.state = ({ isOpen: false });
 
     this.handleToggle = this.handleToggle.bind(this);
   }
@@ -52,37 +52,37 @@ class NavHelpContent extends React.Component {
 
   render() {
     const { helpContent, ...customProps } = this.props;
-    const toggleIcon = this.state.isOpen ? <IconChevronDown className={cx('icon')} /> : <IconChevronUp className={cx('icon')} />;
+    const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
     const contentList = helpContent.map((content) => {
       const contentElement = content.children.length > 0 ?
-      (<div key={`${content.text}`} className={cx('help-item')}>
-        <a onClick={this.handleToggle}>
+      (<a key={`${content.text}`} onClick={this.handleToggle} href="#info" className={cx('link-text-style')}>
+        <div className={cx('help-item')}>
           <Arrange
             align="stretch"
             fitStart={<div className={cx('icon')}>{content.icon}</div>}
-            fill={<div className={cx('padding-left-small')}>{content.text}</div>}
+            fill={<div className={cx('item-text-padding')}>{content.text}</div>}
             fitEnd={<div className={cx('icon')}>{toggleIcon}</div>}
           />
-        </a>
-        <Toggler isOpen={!this.state.isOpen} isAnimated className={cx('padding-none')}>
-          { content.children.map((element) => {
-            const helpInfo = (<div key={`${element.text}`} className={cx('help-subitem', 'padding-top-md')}>{element.text}</div>);
-            return helpInfo;
-          })
-          }
-        </Toggler>
-      </div>
+          <Toggler isOpen={this.state.isOpen} isAnimated className={cx('toggler-padding')}>
+            { content.children.map(element => (
+              <div key={`${element.text}`} className={cx('help-subitem', 'toggler-content-padding')}>{element.text}</div>
+              ))
+            }
+          </Toggler>
+        </div>
+      </a>
       )
       :
-      (<div key={`${content.text}`} className={cx('help-item')}>
-        <a onClick={() => window.location = content.uri}>
-          <Arrange
-            align="center"
-            fitStart={<div className={cx('icon')}>{content.icon}</div>}
-            fill={<div className={cx('padding-left-small')}>{content.text}</div>}
-          />
+      (
+        <a key={`${content.text}`} onClick={() => { window.location = content.uri; }} href="content.uri" className={cx('link-text-style')} >
+          <div className={cx('help-item')}>
+            <Arrange
+              align="center"
+              fitStart={<div className={cx('icon')}>{content.icon}</div>}
+              fill={<div className={cx('item-text-padding')}>{content.text}</div>}
+            />
+          </div>
         </a>
-      </div>
       );
       return contentElement;
     });

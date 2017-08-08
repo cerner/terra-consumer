@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import Grid from 'terra-grid';
-import Popup from 'terra-popup';
-import Overlay from 'terra-overlay';
 import ResponsiveElement from 'terra-responsive-element';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
+import Popup from '../Popup/Popup';
+import Modal from '../Modal/Modal';
 import ProfileLinks from './ProfileLinks';
 import HelpModal from './HelpModal';
 import styles from './UserProfile.scss';
@@ -78,27 +76,16 @@ class UserProfile extends React.Component {
       isOpen: false,
       showModal: false,
     };
-    this.showModal = false;
-    this.openProfilePopup = this.openProfilePopup.bind(this);
-    this.closeProfilePopup = this.closeProfilePopup.bind(this);
-    this.openHelpModal = this.openHelpModal.bind(this);
-    this.closeHelpModal = this.closeHelpModal.bind(this);
+    this.togglePopup = this.togglePopup.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
-  openProfilePopup() {
-    this.setState({ isOpen: true });
+  togglePopup() {
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
-  closeProfilePopup() {
-    this.setState({ isOpen: false });
-  }
-
-  openHelpModal() {
-    this.setState({ isOpen: false, showModal: true });
-  }
-
-  closeHelpModal() {
-    this.setState({ showModal: false });
+  toggleModal() {
+    this.setState({ isOpen: false, showModal: !this.state.showModal });
   }
 
   render() {
@@ -106,19 +93,20 @@ class UserProfile extends React.Component {
 
     const signout = (
       <a
-        className={cx('suppress-hyperlink')}
+        className={cx('link-text-style')}
         href={signoutUrl}
-        onClick={() => window.location = signoutUrl}
+        onClick={() => { window.location = signoutUrl; }}
       >
-        <div className={cx('link', 'divider-top')}>
+        <div className={cx('link', 'signout-border')}>
           {translations.signout}
         </div>
       </a>);
 
     const helpElement = (
       <a
-        className={cx('suppress-hyperlink')}
-        onClick={() => this.openHelpModal()}
+        className={cx('link-text-style')}
+        onClick={() => this.toggleModal()}
+        href="#modal"
       >
         <div className={cx('link')}>
           {translations.help}
@@ -127,60 +115,42 @@ class UserProfile extends React.Component {
 
       );
 
-    const profileModalHeader = (
-      <div>
-        <Grid className={cx('modal-header')}>
-          <Grid.Row>
-            <Grid.Column col={2} />
-            <Grid.Column col={8}>
-              <div className={cx('modal-title')}>{translations.settings}</div>
-            </Grid.Column>
-            <Grid.Column className={cx('text-align-right')} col={2}>
-              <button className={cx('close-button')} onClick={() => this.closeProfilePopup()}>
-                {<svg className={cx('close-icon')}><IconClose /></svg>}
-              </button>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </div>);
-
     const defaultElement = (
-      <Overlay isOpen={this.state.isOpen} backgroundStyle="dark">
-        {profileModalHeader}
-        <div className={cx('modal')}>
-          <ProfileLinks linkItems={profileLinks} />
+      <Modal
+        isModalOpen={this.state.isOpen}
+        title={translations.settings}
+        content={<div><ProfileLinks linkItems={profileLinks} />
           {helpElement}
-          {signout}
-        </div>
-      </Overlay>);
+          {signout}</div>}
+        closeModal={this.togglePopup}
+      />);
 
     const large = (
       <Popup
         isOpen={this.state.isOpen}
-        onRequestClose={this.closeProfilePopup}
+        closePopup={this.togglePopup}
         targetRef={() => document.getElementById('profile-link-button')}
         isArrowDisplayed
         contentWidth="320"
         contentHeight="240"
         contentAttachment="top right"
-      >
-        <div>
+        popupContent={<div>
           <ProfileLinks linkItems={profileLinks} />
           {signout}
-        </div>
-      </Popup>);
+        </div>}
+      />);
 
     return (
       <div {...customProps}>
         <Arrange
           className={cx('profile')}
           fitStart={<svg className={cx('icon')}>{avatar}</svg>}
-          fill={<div className={cx('padding-left-small')}>{name}</div>}
-          fitEnd={<button className={cx('popup-button')} id="profile-link-button" onClick={() => this.openProfilePopup()}><svg className={cx('icon')}><IconEllipses /></svg></button>}
+          fill={<div className={cx('profile-text-padding')}>{name}</div>}
+          fitEnd={<button className={cx('popup-button')} id="profile-link-button" onClick={() => this.togglePopup()}><svg className={cx('icon')}><IconEllipses /></svg></button>}
           align="stretch"
         />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} large={large} />
-        <HelpModal help={help} isModalOpen={this.state.showModal} closeModal={this.closeHelpModal} />
+        <HelpModal help={help} isOpen={this.state.showModal} closeModal={this.toggleModal} />
       </div>
     );
   }

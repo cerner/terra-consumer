@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Grid from 'terra-grid';
-import Overlay from 'terra-overlay';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavHelpContent from '../nav-help/NavHelpContent';
+import Modal from '../Modal/Modal';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -32,12 +30,13 @@ const propTypes = {
       children: PropTypes.array,
     })),
   })),
-  isModalOpen: PropTypes.bool.isRequired,
+  isOpen: PropTypes.bool,
   closeModal: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
   help: [],
+  isOpen: false,
 };
 
 const translations = {
@@ -46,42 +45,20 @@ const translations = {
 
 const HelpModal = ({
  help,
- isModalOpen,
+ isOpen,
  closeModal,
  ...customProps
 }) => {
-  const modalContent = <NavHelpContent className={cx('divider-bottom')} helpContent={help} />;
-  const modalHeader = (
-    <div>
-      <Grid className={cx('modal-header')}>
-        <Grid.Row>
-          <Grid.Column col={2} />
-          <Grid.Column col={8}>
-            <div className={cx('modal-title')}>{translations.help}</div>
-          </Grid.Column>
-          <Grid.Column className={cx('text-align-right')} col={2}>
-            <button className={cx('close-button')} onClick={() => closeModal()}>
-              {<div className={cx('close-icon')}><IconClose /></div>}
-            </button>
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
-    </div>);
-
-
-  const modal = (
-    <Overlay isOpen={isModalOpen} backgroundStyle="dark">
-      {modalHeader}
-      <div className={cx('modal')}>
-        {modalContent}
-      </div>
-    </Overlay>);
+  const modalContent = <NavHelpContent className={cx('nav-item-border')} helpContent={help} />;
 
   return (
-    <div {...customProps}>
-      {modal}
-    </div>
-  );
+    <Modal
+      {...customProps}
+      isModalOpen={isOpen}
+      title={translations.help}
+      content={modalContent}
+      closeModal={closeModal}
+    />);
 };
 
 HelpModal.propTypes = propTypes;

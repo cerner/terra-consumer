@@ -56,16 +56,18 @@
   }
 
   .footer {
-    width: 100%;
     bottom: 15px;
-    margin:0;
-    padding:0;
-    position:sticky;
+    margin: 0;
+    padding: 0;
+    position: sticky;
+    width: 100%;
   }
+  
   .help-button {
-    text-align: right;
-    padding-right:15px;
+    margin: 0;
+    padding-right: 15px;
     padding-top: 20px;
-    margin:0;
+    text-align: right;
   }
 }
+

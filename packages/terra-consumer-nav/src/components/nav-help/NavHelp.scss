@@ -1,23 +1,20 @@
 @import '../../variables';
 
 :local {
-	.nav-help {
-    background-color:  #fff;
-    font-size: 16px;
-    line-height: 20px;
+  .nav-help {
+    background-color: #fff;
+    border: 0;
     border-radius: 20px;
     box-shadow: 0 1px 1px #666;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    padding-left: 13px;
-    padding-right: 13px;
     display: inline-block;
-    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 6px 13px;
     z-index: 200;
 
     &:hover {
-      cursor: pointer;
       background: #eee;
+      cursor: pointer;
     }
     @media screen and (max-width: $terra-medium-breakpoint) {
       display: none;
@@ -30,100 +27,44 @@
   }
 
   .help-item {
+    border-top: 1px solid #dedfe0;
+    color: #383f42;
     font-size: 14px;
     line-height: 18px;
-    color:#383F42;
     padding: 20px;
-    border-top: 1px solid #dedfe0;
     text-decoration: none;
+
     &:hover {
-      cursor: pointer;
       background: #eee;
+      cursor: pointer;
     }
   }
   
   .help-subitem {
+    color: #64696c;
     font-size: 14px;
     line-height: 18px;
-    color: #64696C;
     text-decoration: none;
 
   }
 
-  .divider-bottom {
-    border-top: 1px solid #dedfe0;
-    margin: 0;
-    padding: 0;
-  }
-
-  .popup-content {
-    border-radius: 5px;
-    display: block;
-    z-index: 300;
-  }
-  
-  .modal-header {
-    display:inline-block;
-    width: 100%;
-    background: #1c1f21;
-    text-align: center;
-    align-self: center;
-    vertical-align: middle;
-  }
-
-  .modal-title {
-    font-size: 20px;
-    line-height: 30px;
-    color: #fff;
-    text-align: left;
-    padding-left: 15px;
-  }
-
-  .close-icon {
-    height: 16px;
-    width: 16px;
-    fill: #fff;
-    color: #fff;
-    font-size: 16px;
-  }
-
-  .close-button {
-    background-color: Transparent;
-    border: none;
-    cursor:pointer;
-    vertical-align: bottom;
-    padding-bottom: 7px;
-    padding-top: 7px;
-    padding-right: 15px;
-    text-align: right;
-  }
-  
-  .text-align-right {
-    text-align: right;
-  }
-
-  .padding-left-small {
+  .item-text-padding {
     padding-left: 10px;
   }
 
-  .suppress-hyperlink {
-    text-decoration: none;
+  .toggler-padding {
+    padding: 0;
   }
 
-  .overlay {
-   z-index: 300;
-  }
-
-  .padding-none {
-   padding: 0;
-  }
-
-  .padding-top-md {
+  .toggler-content-padding {
     padding-top: 20px;
   }
 
-  .padding-left-xsmall {
+  .button-text-padding {
     padding-left: 6px;
   }
 
+  .link-text-style {
+    text-decoration: none;
+  }
 }

@@ -1,0 +1,55 @@
+:local {
+  .modal {
+    background: #fff;
+    border-radius: 5px;
+    display: block;
+    left: 10px;
+    overflow: auto;
+    position: fixed;
+    right: 10px;
+    top: 60px;
+    z-index: 300;
+  }
+
+  .modal-header {
+    align-self: center;
+    display: inline-block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 15px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .modal-title {
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .close-icon {
+    color: #fff;
+    fill: #fff;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+  }
+
+  .close-button {
+    background-color: Transparent;
+    border: 0;
+    cursor: pointer;
+    padding-bottom: 7px;
+    padding-right: 15px;
+    padding-top: 7px;
+    text-align: right;
+    vertical-align: bottom;
+  }
+
+  .modal-close-align {
+    text-align: right;
+  }
+}

@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import Grid from 'terra-grid';
-import Popup from 'terra-popup';
-import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavHelpContent from './NavHelpContent';
 import IconInfo from '../../icons/IconInfo';
+import Popup from '../Popup/Popup';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -51,16 +49,11 @@ class NavHelp extends React.Component {
     this.state = {
       isOpen: false,
     };
-    this.openPopup = this.openPopup.bind(this);
-    this.closePopup = this.closePopup.bind(this);
+    this.togglePopup = this.togglePopup.bind(this);
   }
 
-  openPopup() {
-    this.setState({ isOpen: true });
-  }
-
-  closePopup() {
-    this.setState({ isOpen: false });
+  togglePopup() {
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
@@ -68,42 +61,30 @@ class NavHelp extends React.Component {
     const helpButton = (
       <button
         id="nav-help-button"
-        onClick={this.openPopup}
+        onClick={this.togglePopup}
         className={cx('nav-help')}
       >
         <Arrange
           fill={<div className={cx('icon')}><IconInfo /></div>}
-          fitEnd={<div className={cx('padding-left-xsmall')}>{translations.help}</div>}
+          fitEnd={<div className={cx('button-text-padding')}>{translations.help}</div>}
           align="stretch"
         />
       </button>);
 
     const popupContent = <NavHelpContent helpContent={help} />;
 
-    const popup = (
-      <Popup
-        isOpen={this.state.isOpen}
-        onRequestClose={this.closePopup}
-        targetRef={() => document.getElementById('nav-help-button')}
-        contentWidth="320"
-        contentHeight="240"
-        classNameContent="popup-content"
-        contentAttachment="middle center"
-      >
-        <div>
-          <Grid className={cx('modal-header')}>
-            <Grid.Row>
-              <Grid.Column col={10}>
-                <div className={cx('modal-title')}>{translations.help}</div>
-              </Grid.Column>
-              <Grid.Column className={cx('text-align-right')} col={2}>
-                <button className={cx('close-button')} onClick={() => this.closePopup()}>{<svg className={cx('close-icon')}><IconClose /></svg>}</button>
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-          {popupContent}
-        </div>
-      </Popup>);
+    const popup = (<Popup
+      title={translations.help}
+      hasHeader
+      isOpen={this.state.isOpen}
+      targetRef={() => document.getElementById('nav-help-button')}
+      closePopup={this.togglePopup}
+      contentWidth="320"
+      contentHeight="240"
+      classNameContent={cx('popup-content')}
+      contentAttachment="middle center"
+      popupContent={popupContent}
+    />);
 
     return (
       <div {...customProps}>
