@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon IconChatBubble should shallow IconBase 1`] = `
+<IconBase
+  ariaLabel={null}
+  focusable={false}
+  height="48"
+  isBidi={false}
+  isSpin={false}
+  viewBox="0 0 48 48"
+  width="48"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M46 4H2v30h14l8 10 8-10h14z"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+  <path
+    d="M14 14h20"
+    data-color="color-2"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+  <path
+    d="M14 24h12"
+    data-color="color-2"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+</IconBase>
+`;
+
+exports[`Icon IconColorIncentives should shallow IconBase 1`] = `
+<IconBase
+  ariaLabel={null}
+  focusable={false}
+  height="24"
+  isBidi={false}
+  isSpin={false}
+  viewBox="0 0 24 24"
+  width="24"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M11 12h4"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+  <circle
+    cx="13"
+    cy="3"
+    data-color="color-2"
+    fill="none"
+    r="2"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+  <path
+    d="M10 21v2"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+  <path
+    d="M16 21v2"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+  <path
+    d="M16.5 8H9C7.75 5.042 5 6 5 6l.9 3.089A6.531 6.531 0 0 0 3.505 12H1v5h2.5a6.5 6.5 0 0 0 6 4h7a6.5 6.5 0 1 0 0-13z"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+</IconBase>
+`;
+
+exports[`Icon IconOutlineChevronRight should render IconBase with custom-class 1`] = `
+<svg
+  aria-hidden="true"
+  class="icon is-bidi custom-class"
+  focusable="false"
+  height="48"
+  viewbox="0 0 48 48"
+  width="48"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14 4l20 20-20 20"
+    fill="none"
+    stroke="#444"
+    stroke-linecap="square"
+    stroke-miterlimit="10"
+    stroke-width="2"
+  />
+</svg>
+`;
+
+exports[`Icon IconOutlineChevronRight should shallow IconBase 1`] = `
+<IconBase
+  ariaLabel={null}
+  className=""
+  focusable={false}
+  height="48"
+  isBidi={true}
+  isSpin={false}
+  viewBox="0 0 48 48"
+  width="48"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M14 4l20 20-20 20"
+    fill="none"
+    stroke="#444"
+    strokeLinecap="square"
+    strokeMiterlimit="10"
+    strokeWidth="2"
+  />
+</IconBase>
+`;
