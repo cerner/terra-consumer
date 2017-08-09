@@ -7,12 +7,12 @@ const profileLinks = [
   {
     text: 'Account',
     icon: (<IconInfo />),
-    uri: 'http://localhost:8083/',
+    uri: 'http://localhost:8080/',
   },
   {
     text: 'Notifications',
     icon: (<IconInfo />),
-    uri: 'http://localhost:8083/',
+    uri: 'http://localhost:8080/',
   },
 ];
 
@@ -23,7 +23,7 @@ describe('UserProfile', () => {
       profileLinks={profileLinks}
       name="Frank Lampard"
       avatar={<IconPerson />}
-      signoutUrl="http://localhost:8083/"
+      signoutUrl="http://localhost:8080/"
     />);
     expect(wrapper).toMatchSnapshot();
   });

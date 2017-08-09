@@ -19,7 +19,7 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
           xmlns="http://www.w3.org/2000/svg"
     />,
         "text": "Account",
-        "uri": "http://localhost:8083/",
+        "uri": "http://localhost:8080/",
       },
       Object {
         "icon": <IconInfo
@@ -28,10 +28,10 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
           xmlns="http://www.w3.org/2000/svg"
     />,
         "text": "Notifications",
-        "uri": "http://localhost:8083/",
+        "uri": "http://localhost:8080/",
       },
     ]
   }
-  signoutUrl="http://localhost:8083/"
+  signoutUrl="http://localhost:8080/"
 />
 `;

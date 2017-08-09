@@ -6,12 +6,12 @@ const testData = [
   {
     text: 'Account',
     icon: (<IconInfo />),
-    uri: 'http://localhost:8083/',
+    uri: 'http://localhost:8080/',
   },
   {
     text: 'Notifications',
     icon: (<IconInfo />),
-    uri: 'http://localhost:8083/',
+    uri: 'http://localhost:8080/',
   },
 ];
 

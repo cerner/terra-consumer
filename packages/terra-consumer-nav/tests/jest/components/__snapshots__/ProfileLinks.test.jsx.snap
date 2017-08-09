@@ -4,7 +4,7 @@ exports[`Profile Link items should render a list of profile link items 1`] = `
 <div>
   <button
     className="link nav-item-border"
-    href="http://localhost:8083/"
+    href="http://localhost:8080/"
     onClick={[Function]}
   >
     <div
@@ -15,7 +15,7 @@ exports[`Profile Link items should render a list of profile link items 1`] = `
   </button>
   <button
     className="link nav-item-border"
-    href="http://localhost:8083/"
+    href="http://localhost:8080/"
     onClick={[Function]}
   >
     <div

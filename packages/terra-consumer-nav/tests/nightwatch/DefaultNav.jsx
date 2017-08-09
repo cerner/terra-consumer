@@ -82,16 +82,16 @@ const DefaultNav = () => {
       helpItems: [
         {
           text: 'Technical Questions',
-          uri: 'http://localhost:8083/',
+          uri: 'http://localhost:8080/',
           icon: (<IconInfo />),
           children: [{
             text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-            uri: 'http://localhost:8083/',
+            uri: 'http://localhost:8080/',
           }],
         },
         {
           text: 'Get Support ID',
-          uri: 'http://localhost:8083/',
+          uri: 'http://localhost:8080/',
           icon: (<IconInfo />),
           children: [],
         },
@@ -101,17 +101,17 @@ const DefaultNav = () => {
         {
           text: 'Account',
           icon: (<IconInfo />),
-          uri: 'http://localhost:8083/',
+          uri: 'http://localhost:8080/',
         },
         {
           text: 'Notifications',
           icon: (<IconInfo />),
-          uri: 'http://localhost:8083/',
+          uri: 'http://localhost:8080/',
         },
       ],
       userName: 'John Snow',
       avatar: (<IconPerson />),
-      signoutUrl: 'http://localhost:8083/',
+      signoutUrl: 'http://localhost:8080/',
     },
   };
 

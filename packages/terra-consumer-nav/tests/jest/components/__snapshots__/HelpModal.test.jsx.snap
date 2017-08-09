@@ -12,7 +12,7 @@ exports[`HelpModal with list of content items should render a modal with title,c
             "children": Array [
               Object {
                 "text": "Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx",
-                "uri": "http://localhost:8083/",
+                "uri": "http://localhost:8080/",
               },
             ],
             "icon": <IconInfo
@@ -31,7 +31,7 @@ exports[`HelpModal with list of content items should render a modal with title,c
               xmlns="http://www.w3.org/2000/svg"
         />,
             "text": "Get Support ID",
-            "uri": "http://localhost:8083/",
+            "uri": "http://localhost:8080/",
           },
         ]
       }

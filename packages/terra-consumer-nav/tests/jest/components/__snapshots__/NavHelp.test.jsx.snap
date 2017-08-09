@@ -18,7 +18,7 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
               "children": Array [
                 Object {
                   "text": "Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx",
-                  "uri": "http://localhost:8083/",
+                  "uri": "http://localhost:8080/",
                 },
               ],
               "icon": <IconInfo
@@ -27,7 +27,7 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
                 xmlns="http://www.w3.org/2000/svg"
           />,
               "text": "Technical Questions",
-              "uri": "http://localhost:8083/",
+              "uri": "http://localhost:8080/",
             },
             Object {
               "children": Array [],
@@ -37,7 +37,7 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
                 xmlns="http://www.w3.org/2000/svg"
           />,
               "text": "Get Support ID",
-              "uri": "http://localhost:8083/",
+              "uri": "http://localhost:8080/",
             },
           ]
         }
