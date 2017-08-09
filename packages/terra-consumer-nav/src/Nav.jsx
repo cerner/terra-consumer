@@ -135,7 +135,7 @@ const defaultProps = {
 };
 
 const Nav = ({
-  quickLinks, navItems, logo, isMobileNavOpen, onRequestClose, ...customProps
+  quickLinks, navItems,helpItems,profileLinks,userName,avatar,signoutUrl,logo, isMobileNavOpen, onRequestClose, ...customProps
 }) => (
   <div className={cx('nav-container')} {...customProps}>
     {/* Make this into a Slide Component */}
@@ -146,7 +146,7 @@ const Nav = ({
         {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
       </QuickLinks>
       <NavItems navItems={navItems} />
-      <NavProfile />
+      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} signoutUrl={signoutUrl}  help={helpItems} />
     </div>
   </div>
 );

@@ -3,9 +3,7 @@ import IconPerson from 'terra-icon/lib/icon/IconPerson';
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
 import Layout from './Layout';
-import OutlineInfo from '../../../src/icons/OutlineInfo';
-import UserIcon from '../../../src/icons/UserIcon';
-
+import IconInfo from '../../src/icons/IconInfo';
 
 const DefaultNav = () => {
   const props = {
