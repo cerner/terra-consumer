@@ -2,6 +2,7 @@
 
 :local {
   .profile {
+    background: inherit;
     bottom: 0;
     font-size: 16px;
     height: auto;
@@ -11,10 +12,15 @@
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 20px;
-    position: absolute;
+    position: fixed;
     text-align: left;
     width: $terra-consumer--nav-container-width;
     z-index: 200;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: var(--terra-consumer--mobile-badge-background, inherit);
+      color: var(--terra-consumer--mobile-badge-text-color, #fff);
+    }
   }
 
   .icon {
@@ -57,6 +63,11 @@
     font-size: 16px;
     padding: 0;
     text-align: center;
+ 
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: var(--terra-consumer--mobile-badge-background, inherit);
+      color: var(--terra-consumer--mobile-badge-text-color, #fff);
+    }
   }
 
   .profile-text-padding {
