@@ -1,5 +1,5 @@
 import React from 'react';
-import Popup from '../../../src/components/Popup/Popup';
+import Popup from '../../../src/components/popup/Popup';
 
 
 const popupContent = <div> This is a test content</div>;

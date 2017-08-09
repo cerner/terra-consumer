@@ -27,17 +27,27 @@
   }
 
   .help-item {
-    border-top: 1px solid #dedfe0;
-    color: #383f42;
-    font-size: 14px;
-    line-height: 18px;
+    background: #fff;
+    border: 0;
     padding: 20px;
     text-decoration: none;
+    width: 100%;
 
     &:hover {
       background: #eee;
       cursor: pointer;
     }
+  }
+
+  .help-item-text {
+    color: #383f42;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .help-item-border {
+    border-top: 1px solid #dedfe0;
   }
   
   .help-subitem {

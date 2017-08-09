@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should render a modal with title,close button and content 1`] = `
+<div>
+  <Overlay
+    backgroundStyle="dark"
+    className="overlay"
+    isOpen={false}
+    isRelativeToContainer={false}
+    isScrollable={false}
+  >
+    <div>
+      <Grid
+        className="modal-header"
+      >
+        <GridRow>
+          <GridColumn
+            col={2}
+          />
+          <GridColumn
+            col={8}
+          >
+            <div
+              className="modal-title"
+            >
+              Modal Tittle
+            </div>
+          </GridColumn>
+          <GridColumn
+            className="modal-close-align"
+            col={2}
+          >
+            <button
+              className="close-button"
+              onClick={[Function]}
+            >
+              <div
+                className="close-icon"
+              >
+                <IconClose
+                  data-name="Layer 1"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                />
+              </div>
+            </button>
+          </GridColumn>
+        </GridRow>
+      </Grid>
+    </div>
+    <div
+      className="modal"
+    >
+      <div>
+         This is a test content
+      </div>
+    </div>
+  </Overlay>
+</div>
+`;

@@ -3,6 +3,7 @@
 exports[`Nav should render a default component 1`] = `
 <div
   className="nav-container"
+  helpId="nav-help-button"
 >
   <div
     aria-hidden={true}
@@ -47,7 +48,48 @@ exports[`Nav should render a default component 1`] = `
         ]
       }
     />
-    <NavProfile />
+    <UserProfile
+      help={
+        Array [
+          Object {
+            "children": Array [
+              Object {
+                "text": "Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx",
+                "uri": "http://localhost:8083/",
+              },
+            ],
+            "text": "Technical Questions",
+            "uri": "http://localhost:8083/",
+          },
+          Object {
+            "children": Array [],
+            "text": "Get Support ID",
+            "uri": "http://localhost:8083/",
+          },
+        ]
+      }
+      name="John Snow"
+      profile={
+        Object {
+          "avatar": null,
+          "help": Array [],
+          "profileLinks": Array [],
+        }
+      }
+      profileLinks={
+        Array [
+          Object {
+            "text": "Account",
+            "uri": "http://localhost:8083/",
+          },
+          Object {
+            "text": "Notifications",
+            "uri": "http://localhost:8083/",
+          },
+        ]
+      }
+      signoutUrl="http://localhost:8080/"
+    />
   </div>
 </div>
 `;

@@ -96,6 +96,7 @@ const DefaultNav = () => {
           children: [],
         },
       ],
+      helpId: 'nav-help-button',
       profileLinks: [
         {
           text: 'Account',

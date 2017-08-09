@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content of the Help Modal/Popup should render a list of items with/without toggler 1`] = `
+<div>
+  <button
+    className="help-item"
+    onClick={[Function]}
+  >
+    <div
+      className="help-item-text"
+    >
+      <Arrange
+        align="stretch"
+        fill={
+          <div
+            className="item-text-padding"
+          >
+            Technical Questions
+          </div>
+        }
+        fitEnd={
+          <div
+            className="icon"
+          >
+            <IconChevronDown
+              className="icon"
+              data-name="Layer 1"
+              isBidi={true}
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </div>
+        }
+        fitStart={
+          <div
+            className="icon"
+          >
+            <IconInfo
+              data-name="Layer 1"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </div>
+        }
+      />
+      <Toggle
+        className="toggler-padding"
+        isAnimated={true}
+        isOpen={false}
+      >
+        <div
+          className="help-subitem toggler-content-padding"
+        >
+          Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx
+        </div>
+      </Toggle>
+    </div>
+  </button>
+  <button
+    className="help-item help-item-border"
+    href="content.uri"
+    onClick={[Function]}
+  >
+    <div
+      className="help-item-text"
+    >
+      <Arrange
+        align="center"
+        fill={
+          <div
+            className="item-text-padding"
+          >
+            Get Support ID
+          </div>
+        }
+        fitStart={
+          <svg
+            className="icon"
+          >
+            <IconInfo
+              data-name="Layer 1"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </svg>
+        }
+      />
+    </div>
+  </button>
+</div>
+`;

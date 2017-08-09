@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Link items should render a list of profile link items 1`] = `
+<div>
+  <button
+    className="link nav-item-border"
+    href="http://localhost:8083/"
+    onClick={[Function]}
+  >
+    <div
+      className="link-text"
+    >
+      Account
+    </div>
+  </button>
+  <button
+    className="link nav-item-border"
+    href="http://localhost:8083/"
+    onClick={[Function]}
+  >
+    <div
+      className="link-text"
+    >
+      Notifications
+    </div>
+  </button>
+</div>
+`;

@@ -4,34 +4,31 @@ import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import NavHelpContent from './NavHelpContent';
 import IconInfo from '../../icons/IconInfo';
-import Popup from '../Popup/Popup';
+import Popup from '../popup/Popup';
+import navElementShape from '../../NavPropShapes';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  help: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    target: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    children: PropTypes.arrayOf(PropTypes.shape({
-      slug: PropTypes.string,
-      nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-      text: PropTypes.string.isRequired,
-      uri: PropTypes.string.isRequired,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      children: PropTypes.array,
-    })),
-  })),
+  /**
+   * An array of items to be displayed as help menu/popup.
+   */
+  help: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape,
+    {
+      children: PropTypes.arrayOf(PropTypes.shape(
+      navElementShape,
+        {
+          children: PropTypes.array,
+        },
+      )),
+    },
+  )),
+  /**
+   * A unique id set to the help button that will be referred in help menu/popup .
+   */
+  id: PropTypes.string.isRequired,
 };
 
 const defaultProps = {
@@ -57,10 +54,10 @@ class NavHelp extends React.Component {
   }
 
   render() {
-    const { help, ...customProps } = this.props;
+    const { help, id, ...customProps } = this.props;
     const helpButton = (
       <button
-        id="nav-help-button"
+        id={id}
         onClick={this.togglePopup}
         className={cx('nav-help')}
       >
@@ -77,7 +74,7 @@ class NavHelp extends React.Component {
       title={translations.help}
       hasHeader
       isOpen={this.state.isOpen}
-      targetRef={() => document.getElementById('nav-help-button')}
+      targetRef={() => document.getElementById(id)}
       closePopup={this.togglePopup}
       contentWidth="320"
       contentHeight="240"

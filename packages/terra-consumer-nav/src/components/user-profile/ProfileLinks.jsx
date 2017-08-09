@@ -1,21 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  linkItems: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-  })),
+  /**
+   * An array of nav items to be displayed on the user profile/ settings menu/popup.
+   */
+  linkItems: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape)),
 };
 
 const defaultProps = {
@@ -27,8 +23,8 @@ const ProfileLinks = ({
   ...customProps
 }) => {
   const linkElements = linkItems.map((linkItem) => {
-    const linkElement = (<a key={`${linkItem.text}`} href={linkItem.uri} onClick={() => { window.location = linkItem.uri; }} className={cx('link-text-style')}>
-      <div className={cx('link', 'nav-item-border')}>{linkItem.text}</div></a>);
+    const linkElement = (<button key={`${linkItem.text}`} href={linkItem.uri} onClick={() => { window.location = linkItem.uri; }} className={cx('link', 'nav-item-border')}>
+      <div className={cx('link-text')}>{linkItem.text}</div></button>);
     return linkElement;
   });
 

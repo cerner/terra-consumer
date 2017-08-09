@@ -44,16 +44,16 @@ class Layout extends React.Component {
             <IconMenu />
           </button>
           {/* Added a div to test the HelpButton relative to page content */}
-          <div style={{ background: 'white', height: '1300', width: '100%' }}>I am in the main content</div>
-            <div className={cx('footer')}>
-             <Grid>
-                <Grid.Row>
-                  <Grid.Column col={10} />
-                  <Grid.Column col={2} className={cx('help-button')}>
-                    <NavHelp help={nav.helpItems} />
-                  </Grid.Column>
-                </Grid.Row>
-              </Grid>
+          <div style={{ background: '#fff', height: '60%', width: '100%' }}>I am in the main content</div>
+          <div className={cx('footer')}>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column col={10} />
+                <Grid.Column col={2} className={cx('help-button')}>
+                  <NavHelp help={nav.helpItems} id={nav.helpId} />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </div>
         </div>
       </div>

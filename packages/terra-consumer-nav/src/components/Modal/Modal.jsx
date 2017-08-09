@@ -9,9 +9,22 @@ import styles from './Modal.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+   * Title to be rendered on top of the modal content
+   */
   title: PropTypes.string,
+  /**
+   * Content to be rendered in the body of the dialog box.
+   */
   content: PropTypes.element,
+  /**
+   * Boolean value to render modal.
+   */
   isModalOpen: PropTypes.bool.isRequired,
+  /**
+   * Required callback function for use by parent component to update state.
+   */
+
   closeModal: PropTypes.func.isRequired,
 };
 
@@ -46,7 +59,7 @@ const Modal = ({
     </div>);
 
   const modal = (
-    <Overlay isOpen={isModalOpen} backgroundStyle="dark">
+    <Overlay isOpen={isModalOpen} backgroundStyle="dark" className={cx('overlay')}>
       {modalHeader}
       <div className={cx('modal')}>
         {content}

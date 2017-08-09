@@ -5,33 +5,26 @@ import Toggler from 'terra-toggle';
 import Arrange from 'terra-arrange';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
+import navElementShape from '../../NavPropShapes';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  helpContent: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    target: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    children: PropTypes.arrayOf(PropTypes.shape({
-      slug: PropTypes.string,
-      nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-      text: PropTypes.string.isRequired,
-      uri: PropTypes.string.isRequired,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      children: PropTypes.array,
-    })),
-  })),
+  /**
+   * A list of items to be displayed in help menu/popup/modal.
+   */
+  helpContent: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape,
+    {
+      children: PropTypes.arrayOf(PropTypes.shape(
+      navElementShape,
+        {
+          children: PropTypes.array,
+        },
+      )),
+    },
+  )),
 };
 
 const defaultProps = {
@@ -53,10 +46,10 @@ class NavHelpContent extends React.Component {
   render() {
     const { helpContent, ...customProps } = this.props;
     const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
-    const contentList = helpContent.map((content) => {
+    const contentList = helpContent.map((content, i) => {
       const contentElement = content.children.length > 0 ?
-      (<a key={`${content.text}`} onClick={this.handleToggle} href="#info" className={cx('link-text-style')}>
-        <div className={cx('help-item')}>
+      (<button key={`${content.text}`} onClick={this.handleToggle} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}>
+        <div className={cx('help-item-text')}>
           <Arrange
             align="stretch"
             fitStart={<div className={cx('icon')}>{content.icon}</div>}
@@ -70,19 +63,19 @@ class NavHelpContent extends React.Component {
             }
           </Toggler>
         </div>
-      </a>
+      </button>
       )
       :
       (
-        <a key={`${content.text}`} onClick={() => { window.location = content.uri; }} href="content.uri" className={cx('link-text-style')} >
-          <div className={cx('help-item')}>
+        <button key={`${content.text}`} onClick={() => { window.location = content.uri; }} href="content.uri" className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
+          <div className={cx('help-item-text')}>
             <Arrange
               align="center"
-              fitStart={<div className={cx('icon')}>{content.icon}</div>}
+              fitStart={<svg className={cx('icon')}>{content.icon}</svg>}
               fill={<div className={cx('item-text-padding')}>{content.text}</div>}
             />
           </div>
-        </a>
+        </button>
       );
       return contentElement;
     });

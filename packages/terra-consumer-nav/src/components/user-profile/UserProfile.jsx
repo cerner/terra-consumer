@@ -4,10 +4,11 @@ import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import ResponsiveElement from 'terra-responsive-element';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
-import Popup from '../Popup/Popup';
-import Modal from '../Modal/Modal';
+import Popup from '../popup/Popup';
+import Modal from '../modal/Modal';
 import ProfileLinks from './ProfileLinks';
 import HelpModal from './HelpModal';
+import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -19,44 +20,40 @@ const translations = {
 };
 
 const propTypes = {
+  /**
+   * User name to be displayed in profile.
+   */
   name: PropTypes.string.isRequired,
+  /**
+   * Avatar to be displayed in profile.
+   */
   avatar: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
   ]),
+  /**
+   * The path signout button would redirect to.
+   */
   signoutUrl: PropTypes.string.isRequired,
-  profileLinks: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-  })),
-  help: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    target: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    children: PropTypes.arrayOf(PropTypes.shape({
-      slug: PropTypes.string,
-      nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-      text: PropTypes.string.isRequired,
-      uri: PropTypes.string.isRequired,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      children: PropTypes.array,
-    })),
-  })),
+  /**
+   * The content of the each profile items.
+   */
+  profileLinks: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape)),
+  /**
+   * An array of items to be displayed as help modal.
+   */
+  help: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape,
+    {
+      children: PropTypes.arrayOf(PropTypes.shape(
+      navElementShape,
+        {
+          children: PropTypes.array,
+        },
+      )),
+    },
+  )),
 };
 
 const defaultProps = {
@@ -92,26 +89,25 @@ class UserProfile extends React.Component {
     const { name, avatar, signoutUrl, profileLinks, help, ...customProps } = this.props;
 
     const signout = (
-      <a
-        className={cx('link-text-style')}
+      <button
+        className={cx('link', 'signout-border')}
         href={signoutUrl}
         onClick={() => { window.location = signoutUrl; }}
       >
-        <div className={cx('link', 'signout-border')}>
+        <div className={cx('link-text')}>
           {translations.signout}
         </div>
-      </a>);
+      </button>);
 
     const helpElement = (
-      <a
-        className={cx('link-text-style')}
+      <button
+        className={cx('link')}
         onClick={() => this.toggleModal()}
-        href="#modal"
       >
-        <div className={cx('link')}>
+        <div className={cx('link-text')}>
           {translations.help}
         </div>
-      </a>
+      </button>
 
       );
 

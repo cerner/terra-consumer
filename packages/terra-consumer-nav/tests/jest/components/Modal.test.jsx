@@ -1,5 +1,5 @@
 import React from 'react';
-import Modal from '../../../src/components/Modal/Modal';
+import Modal from '../../../src/components/modal/Modal';
 
 
 const modalContent = <div> This is a test content</div>;

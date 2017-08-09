@@ -16,6 +16,30 @@ const testData = {
     altText: 'test',
     isCard: false,
   },
+  helpItems: [{
+    text: 'Technical Questions',
+    uri: 'http://localhost:8083/',
+    children: [{
+      text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
+      uri: 'http://localhost:8083/',
+    }],
+  },
+  {
+    text: 'Get Support ID',
+    uri: 'http://localhost:8083/',
+    children: [],
+  }],
+  helpId: 'nav-help-button',
+  profileLinks: [{
+    text: 'Account',
+    uri: 'http://localhost:8083/',
+  },
+  {
+    text: 'Notifications',
+    uri: 'http://localhost:8083/',
+  }],
+  userName: 'John Snow',
+  signoutUrl: 'http://localhost:8080/',
   isMobileNavOpen: false,
   onRequestClose: () => {},
 };

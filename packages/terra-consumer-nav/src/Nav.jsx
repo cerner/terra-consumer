@@ -9,6 +9,7 @@ import NavProfile from './components/nav-profile/NavProfile';
 import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
 import UserProfile from './components/user-profile/UserProfile';
+import navElementShape from './NavPropShapes';
 import styles from './Nav.scss';
 
 const cx = classNames.bind(styles);
@@ -62,44 +63,43 @@ const propTypes = {
       },
     ),
   ),
-
-  helpItems: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    target: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    children: PropTypes.arrayOf(PropTypes.shape({
-      slug: PropTypes.string,
-      nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-      text: PropTypes.string.isRequired,
-      uri: PropTypes.string.isRequired,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      children: PropTypes.array,
-    })),
-  })),
-  profileLinks: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-  })),
+  /**
+   * An array of items to be displayed as help menu content.
+   */
+  helpItems: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape,
+    {
+      children: PropTypes.arrayOf(PropTypes.shape(
+      navElementShape,
+        {
+          children: PropTypes.array,
+        },
+      )),
+    },
+  )),
+  /**
+   * A unique id set to the help button that will be referred in help menu/popup .
+   */
+  helpId: PropTypes.string.isRequired,
+  /**
+   * An array of nav items to be displayed on the user profile/ settings menu/popup.
+   */
+  profileLinks: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape)),
+  /**
+   * User name to be displayed in the profile in navigation.
+   */
   userName: PropTypes.string.isRequired,
+  /**
+   * Avatar to be displayed in user profile in navigation.
+   */
   avatar: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.element,
   ]),
+  /**
+   * The path signout button would redirect to.
+   */
   signoutUrl: PropTypes.string.isRequired,
   /**
    * An object defining the logo to be displayed
@@ -131,11 +131,12 @@ const propTypes = {
 const defaultProps = {
   quickLinks: [],
   navItems: [],
+  helpItems: [],
   logo: {},
 };
 
 const Nav = ({
-  quickLinks, navItems,helpItems,profileLinks,userName,avatar,signoutUrl,logo, isMobileNavOpen, onRequestClose, ...customProps
+  quickLinks, navItems, helpItems, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
 }) => (
   <div className={cx('nav-container')} {...customProps}>
     {/* Make this into a Slide Component */}
@@ -146,7 +147,7 @@ const Nav = ({
         {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
       </QuickLinks>
       <NavItems navItems={navItems} />
-      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} signoutUrl={signoutUrl}  help={helpItems} />
+      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} signoutUrl={signoutUrl} help={helpItems} />
     </div>
   </div>
 );

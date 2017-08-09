@@ -2,35 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import NavHelpContent from '../nav-help/NavHelpContent';
-import Modal from '../Modal/Modal';
+import Modal from '../modal/Modal';
+import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  help: PropTypes.arrayOf(PropTypes.shape({
-    slug: PropTypes.string,
-    nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-    target: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    uri: PropTypes.string.isRequired,
-    icon: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.element,
-    ]),
-    children: PropTypes.arrayOf(PropTypes.shape({
-      slug: PropTypes.string,
-      nav_type: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-      text: PropTypes.string.isRequired,
-      uri: PropTypes.string.isRequired,
-      icon: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.element,
-      ]),
-      children: PropTypes.array,
-    })),
-  })),
+  /**
+   * An array of navigation elements to be displayed in help menu/popup.
+   */
+  help: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape,
+    {
+      children: PropTypes.arrayOf(PropTypes.shape(
+      navElementShape,
+        {
+          children: PropTypes.array,
+        },
+      )),
+    },
+  )),
+  /**
+   * Boolean value to render modal.
+   */
   isOpen: PropTypes.bool,
+  /**
+   * Required callback function for use by parent component to update state.
+   */
   closeModal: PropTypes.func.isRequired,
 };
 

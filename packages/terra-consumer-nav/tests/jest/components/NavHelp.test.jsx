@@ -23,7 +23,7 @@ const helpItems = [
 describe('NavHelp button with pop/modal', () => {
   // Snapshot Tests
   it('should render a button with IconInfo,label and a pop/modal not opened', () => {
-    const wrapper = shallow(<NavHelp help={helpItems} />);
+    const wrapper = shallow(<NavHelp help={helpItems} id="nav-help-button" />);
     expect(wrapper).toMatchSnapshot();
   });
 });
