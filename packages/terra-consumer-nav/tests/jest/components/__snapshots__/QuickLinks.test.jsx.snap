@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuickLinks should apply custom classes 1`] = `
+<div
+  className="quicklinks-container test-class"
+/>
+`;
+
+exports[`QuickLinks should render a component with children 1`] = `
+<div
+  className="quicklinks-container"
+>
+  <div>
+    Item
+  </div>
+</div>
+`;
+
+exports[`QuickLinks should render a default component 1`] = `
+<div
+  className="quicklinks-container"
+/>
+`;

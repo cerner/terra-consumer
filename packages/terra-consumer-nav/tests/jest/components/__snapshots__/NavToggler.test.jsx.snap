@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Toggler should apply custom classes 1`] = `
+<div
+  className="test-class"
+>
+  <button
+    className="toggle-header"
+    onClick={[Function]}
+  >
+    <Arrange
+      alignFill="stretch"
+      alignFitEnd="center"
+      fill={
+        <span>
+          Test
+        </span>
+      }
+      fitEnd={
+        <IconChevronDown
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+  </button>
+  <Toggle
+    className="toggler"
+    isAnimated={true}
+    isOpen={false}
+  >
+    <div>
+      test
+    </div>
+  </Toggle>
+</div>
+`;
+
+exports[`Nav Toggler should render a default component 1`] = `
+<div>
+  <button
+    className="toggle-header"
+    onClick={[Function]}
+  >
+    <Arrange
+      alignFill="stretch"
+      alignFitEnd="center"
+      fill={
+        <span>
+          Test
+        </span>
+      }
+      fitEnd={
+        <IconChevronDown
+          className=""
+          data-name="Layer 1"
+          isBidi={true}
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+    />
+  </button>
+  <Toggle
+    className="toggler"
+    isAnimated={true}
+    isOpen={false}
+  >
+    <div>
+      <p>
+        Test Sub element 1
+      </p>
+      <p>
+        Test Sub element 2
+      </p>
+    </div>
+  </Toggle>
+</div>
+`;

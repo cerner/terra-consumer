@@ -1,7 +1,53 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
+@import './variables';
+
 :local {
-  /* stylelint-disable selector-class-pattern  */
-  .nav {
-    display: block;
+  .nav-container {
+    z-index: 1000;
   }
-  /* stylelint-enable */
+
+  .nav {
+    left: 0;
+    max-height: 100vh;
+    min-height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+    width: $terra-consumer--nav-container-width;
+  }
+
+  @media screen and (max-width: $terra-medium-breakpoint) {
+    .nav[aria-hidden='false'] {
+      background: var(--terra-consumer--mobile-nav-background, #383f42);
+      box-shadow: 0 1px 3px;
+      display: block;
+      opacity: 0.95;
+    }
+
+    .nav[aria-hidden='true'] {
+      display: none;
+    }
+  }
+
+  .close-button {
+    display: none;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: var(--terra-consumer--mobile-close-button-background, none);
+      border: 0;
+      color: var(--terra-consumer--mobile-close-button-color, #fff);
+      display: block;
+      font-size: 16px;
+      line-height: 16px;
+      margin-right: 15px;
+      margin-top: 15px;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &:hover {
+      background: var(--terra-consumer--mobile-close-button-hover-background, none);
+      color: var(--terra-consumer--mobile-close-button-hover-color, #777);
+    }
+  }
 }
