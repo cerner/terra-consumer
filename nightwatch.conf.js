@@ -4,8 +4,6 @@
 const fs = require('fs');
 const globSync = require('glob').sync;
 const packages = require('./lerna.json').packages;
-const chromefinder = require('chrome-launcher/chrome-finder');
-
 const chromedriver = require('chromedriver');
 
 
@@ -17,7 +15,6 @@ const seleniumServerStandaloneJar = require('selenium-server-standalone-jar');
 
 const port = 8080;
 const webpackServer = new WebpackDevServer(webpack(webpackConfig), { quiet: true, hot: false, inline: false });
-
 
 const startWebpackDevServer = (done) => {
   webpackServer.listen(port, '0.0.0.0', (err) => {
@@ -39,6 +36,7 @@ module.exports = ((settings) => {
   // Setup local selenium
   config.selenium.server_path = seleniumServerStandaloneJar.path;
   config.selenium.start_process = true;
+  config.selenium.cli_args = { 'webdriver.chrome.driver': chromedriver.path };
 
   // Discover all the nightwatch tests in the project
   config.src_folders = packages
@@ -78,7 +76,6 @@ module.exports = ((settings) => {
             '--disable-gpu ',
             '--no-sandbox ',
           ],
-          binary: chromefinder[process.platform]()[0],
         },
       },
     },
