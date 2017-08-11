@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal should render a pop with title,close button and content 1`] = `
+exports[`Popup should render a pop with title,close button and content 1`] = `
 <Popup
   boundingRef={null}
   classNameArrow={null}
@@ -37,15 +37,12 @@ exports[`Modal should render a pop with title,close button and content 1`] = `
             className="close-button"
             onClick={[Function]}
           >
-            <svg
+            <IconClose
               className="close-icon"
-            >
-              <IconClose
-                data-name="Layer 1"
-                viewBox="0 0 48 48"
-                xmlns="http://www.w3.org/2000/svg"
-              />
-            </svg>
+              data-name="Layer 1"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
           </button>
         </GridColumn>
       </GridRow>
@@ -57,7 +54,7 @@ exports[`Modal should render a pop with title,close button and content 1`] = `
 </Popup>
 `;
 
-exports[`Modal should render a pop without header(title & close button) 1`] = `
+exports[`Popup should render a popup without header(title & close button) 1`] = `
 <Popup
   boundingRef={null}
   classNameArrow={null}

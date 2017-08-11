@@ -58,7 +58,7 @@ const Popup = ({
           <div className={cx('popup-title')}>{title}</div>
         </Grid.Column>
         <Grid.Column className={cx('close-button-alignment')} col={2}>
-          <button className={cx('close-button')} onClick={() => closePopup()}>{<svg className={cx('close-icon')}><IconClose /></svg>}</button>
+          <button className={cx('close-button')} onClick={() => closePopup()}><IconClose className={cx('close-icon')} /></button>
         </Grid.Column>
       </Grid.Row>
     </Grid>);

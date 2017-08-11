@@ -4,10 +4,9 @@ import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import ResponsiveElement from 'terra-responsive-element';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
-import Popup from '../popup/Popup';
+import Popup from 'terra-popup';
 import Modal from '../modal/Modal';
 import ProfileLinks from './ProfileLinks';
-import HelpModal from './HelpModal';
 import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
 
@@ -99,24 +98,11 @@ class UserProfile extends React.Component {
         </div>
       </button>);
 
-    const helpElement = (
-      <button
-        className={cx('link')}
-        onClick={() => this.toggleModal()}
-      >
-        <div className={cx('link-text')}>
-          {translations.help}
-        </div>
-      </button>
-
-      );
-
     const defaultElement = (
       <Modal
         isModalOpen={this.state.isOpen}
         title={translations.settings}
         content={<div><ProfileLinks linkItems={profileLinks} />
-          {helpElement}
           {signout}</div>}
         closeModal={this.togglePopup}
       />);
@@ -124,29 +110,31 @@ class UserProfile extends React.Component {
     const large = (
       <Popup
         isOpen={this.state.isOpen}
-        closePopup={this.togglePopup}
+        onRequestClose={this.togglePopup}
         targetRef={() => document.getElementById('profile-link-button')}
-        isArrowDisplayed
-        contentWidth="320"
+        contentWidth="240"
         contentHeight="240"
         contentAttachment="top right"
-        popupContent={<div>
+        isArrowDisplayed
+      >
+        <div>
           <ProfileLinks linkItems={profileLinks} />
           {signout}
-        </div>}
-      />);
+        </div>
+      </Popup>
+      );
 
     return (
-      <div {...customProps}>
-        <Arrange
-          className={cx('profile')}
-          fitStart={<svg className={cx('icon')}>{avatar}</svg>}
-          fill={<div className={cx('profile-text-padding')}>{name}</div>}
-          fitEnd={<button className={cx('popup-button')} id="profile-link-button" onClick={() => this.togglePopup()}><svg className={cx('icon')}><IconEllipses /></svg></button>}
-          align="stretch"
-        />
-        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} large={large} />
-        <HelpModal help={help} isOpen={this.state.showModal} closeModal={this.toggleModal} />
+      <div {...customProps} className={cx('profile')}>
+        <button className={cx('popup-button')} id="profile-link-button" onClick={() => this.togglePopup()}>
+          <Arrange
+            fitStart={<svg className={cx('icon')}>{avatar}</svg>}
+            fill={<div className={cx('profile-text-padding')}>{name}</div>}
+            fitEnd={<svg className={cx('icon')}><IconEllipses /></svg>}
+            align="center"
+          />
+        </button>
+        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={large} large={large} />
       </div>
     );
   }

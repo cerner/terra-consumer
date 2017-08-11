@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
+import ResponsiveElement from 'terra-responsive-element';
 import NavHelpContent from './NavHelpContent';
 import IconInfo from '../../icons/IconInfo';
+import Modal from '../modal/Modal';
 import Popup from '../popup/Popup';
 import navElementShape from '../../NavPropShapes';
 import styles from './NavHelp.scss';
@@ -70,6 +72,13 @@ class NavHelp extends React.Component {
 
     const popupContent = <NavHelpContent helpContent={help} />;
 
+    const defaultElement = (<Modal
+      isModalOpen={this.state.isOpen}
+      title={translations.help}
+      content={popupContent}
+      closeModal={this.togglePopup}
+    />);
+
     const popup = (<Popup
       title={translations.help}
       hasHeader
@@ -85,8 +94,8 @@ class NavHelp extends React.Component {
 
     return (
       <div {...customProps}>
-        {popup}
-        {helpButton}
+        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} large={popup} />
+        { (this.state.isOpen === false) && helpButton}
       </div>
     );
   }

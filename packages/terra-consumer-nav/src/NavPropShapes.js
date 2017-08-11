@@ -2,10 +2,6 @@ import PropTypes from 'prop-types';
 
 const navElementShape = {
   /**
-   * Profile link action type.
-   */
-  navType: PropTypes.oneOf(['GROUPING', 'EXTERNAL', 'APPLICATION', 'MODAL']),
-  /**
    * Text to be displayed in profile link.
    */
   text: PropTypes.string.isRequired,

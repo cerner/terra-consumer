@@ -136,7 +136,7 @@ const defaultProps = {
 };
 
 const Nav = ({
-  quickLinks, navItems, helpItems, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
+  quickLinks, navItems, helpItems, helpId, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
 }) => (
   <div className={cx('nav-container')} {...customProps}>
     {/* Make this into a Slide Component */}

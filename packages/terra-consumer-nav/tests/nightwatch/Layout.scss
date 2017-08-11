@@ -56,18 +56,27 @@
   }
 
   .footer {
-    bottom: 15px;
-    margin: 0;
-    padding: 0;
-    position: sticky;
-    width: 100%;
+    width: inherit;
+    text-align: right;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    visibility: hidden;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+     visibility: visible;
+    }
   }
   
-  .help-button {
-    margin: 0;
-    padding-right: 15px;
-    padding-top: 20px;
-    text-align: right;
+
+  .help-button-desktop {
+    bottom: 15px;
+    right: 15px;
+    position: fixed;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: none;
+    }
   }
 }
 

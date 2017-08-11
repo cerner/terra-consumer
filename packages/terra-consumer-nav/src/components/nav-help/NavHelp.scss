@@ -16,9 +16,6 @@
       background: #eee;
       cursor: pointer;
     }
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      display: none;
-    }
   }
     
   .icon {
@@ -77,4 +74,10 @@
   .link-text-style {
     text-decoration: none;
   }
+
+  .popup-content {
+    border-radius: 5px;
+    box-shadow: 0 1px 5px #666;
+  }
+  
 }

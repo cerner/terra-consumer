@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
-import Grid from 'terra-grid';
 import Nav from '../../src/Nav';
 import NavHelp from '../../src/components/nav-help/NavHelp';
 import styles from './Layout.scss';
@@ -44,17 +43,11 @@ class Layout extends React.Component {
             <IconMenu />
           </button>
           {/* Added a div to test the HelpButton relative to page content */}
-          <div style={{ background: '#fff', height: '60%', width: '100%' }}>I am in the main content</div>
+          <div style={{ background: '#fff', height: '100%', width: 'inherit' }}>I am in the main content</div>
           <div className={cx('footer')}>
-            <Grid>
-              <Grid.Row>
-                <Grid.Column col={10} />
-                <Grid.Column col={2} className={cx('help-button')}>
-                  <NavHelp help={nav.helpItems} id={nav.helpId} />
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
+            <NavHelp help={nav.helpItems} id={nav.helpId} />
           </div>
+          <NavHelp className={cx('help-button-desktop')} help={nav.helpItems} id={nav.helpId} />
         </div>
       </div>
     );
