@@ -1,7 +1,7 @@
 {
   "name": "terra-consumer-nav",
   "main": "lib/Nav.js",
-  "version": "0.0.0",
+  "version": "0.1.0-BETA.1",
   "description": "Initial Navigation Component",
   "repository": {
     "type": "git",
