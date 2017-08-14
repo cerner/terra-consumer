@@ -4,7 +4,7 @@
 [![NPM version](http://img.shields.io/npm/v/terra-consumer-nav.svg)](https://www.npmjs.org/package/terra-consumer-nav)
 [![Build Status](https://travis-ci.org/cerner/terra-consumer.svg?branch=master)](https://travis-ci.org/cerner/terra-consumer)
 
-{insert description}
+Initial Navigation component
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-consumer/tree/master/packages/terra-consumer-nav/docs)

@@ -1,9 +1,9 @@
 ChangeLog
 =========
 
-# 1.0.0 - (August 7, 2017)
+# 1.0.0-BETA - (August 14, 2017)
 -----------------
-Initial stable release
+Initial beta release
 
 ### Added
 - Base Navigation component that wraps up all sub-components into one clean reusable package.

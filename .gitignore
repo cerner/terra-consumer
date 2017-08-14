@@ -54,3 +54,4 @@ target
 **/aggregated-translations/*.*
 lib
 props-table
+package-lock.json
