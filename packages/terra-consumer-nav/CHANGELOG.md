@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-# 1.0.0-BETA - (August 14, 2017)
+# 0.1.0-BETA.1 - (August 14, 2017)
 -----------------
 Initial beta release
 
