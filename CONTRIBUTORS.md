@@ -7,3 +7,4 @@ Cerner Corporation
 [@mhemesath]: https://github.com/mhemesath
 [@KevinJJackson]: https://github.com/KevinJJackson
 [@ryanthemanuel]: https://github.com/ryanthemanuel
+[@alex-bezek]: https://github.com/alex-bezek
