@@ -5,11 +5,7 @@ import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavItems from './components/nav-items/NavItems';
 import NavLogo from './components/nav-logo/NavLogo';
-<<<<<<< 37ea8a2edfd0e909b8bfa95d2184d18a89bfb68b
-import NavProfile from './components/nav-profile/NavProfile';
-=======
 import navElementShape from './NavPropShapes';
->>>>>>> Fixed import order alphabetically
 import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
