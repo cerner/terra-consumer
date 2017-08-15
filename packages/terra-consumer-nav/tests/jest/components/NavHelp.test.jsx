@@ -1,4 +1,6 @@
 import React from 'react';
+import { I18nProvider } from 'terra-i18n';
+import Messages from '../../../src/i18n/translations/messages.json';
 import NavHelp from '../../../src/components/nav-help/NavHelp';
 import IconInfo from '../../../src/icons/IconInfo';
 
@@ -23,7 +25,8 @@ const helpItems = [
 describe('NavHelp button with pop/modal', () => {
   // Snapshot Tests
   it('should render a button with IconInfo,label and a pop/modal not opened', () => {
-    const wrapper = shallow(<NavHelp help={helpItems} id="nav-help-button" />);
+    const wrapper = shallow(<I18nProvider locale="en-US" messages={Messages['en-US']}>
+      <NavHelp help={helpItems} id="nav-help-button" /></I18nProvider>);
     expect(wrapper).toMatchSnapshot();
   });
 });

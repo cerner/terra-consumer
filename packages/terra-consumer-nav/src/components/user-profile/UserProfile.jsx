@@ -1,22 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import ResponsiveElement from 'terra-responsive-element';
+import Button from 'terra-button';
+import classNames from 'classnames/bind';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
-import Popup from 'terra-popup';
+import TerraPopup from 'terra-popup';
+import ResponsiveElement from 'terra-responsive-element';
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import Modal from '../modal/Modal';
-import ProfileLinks from './ProfileLinks';
 import navElementShape from '../../NavPropShapes';
+import ProfileLinks from './ProfileLinks';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
-
-const translations = {
-  signout: 'Sign Out',
-  settings: 'Settings',
-  help: 'Help',
-};
 
 const propTypes = {
   /**
@@ -31,6 +27,10 @@ const propTypes = {
     PropTypes.element,
   ]),
   /**
+   * A unique id set to the profile popup button that will be referred in profile popup.
+   */
+  id: PropTypes.string.isRequired,
+  /**
    * The path signout button would redirect to.
    */
   signoutUrl: PropTypes.string.isRequired,
@@ -40,26 +40,15 @@ const propTypes = {
   profileLinks: PropTypes.arrayOf(PropTypes.shape(
     navElementShape)),
   /**
-   * An array of items to be displayed as help modal.
+   * Injected react-intl formatting api
    */
-  help: PropTypes.arrayOf(PropTypes.shape(
-    navElementShape,
-    {
-      children: PropTypes.arrayOf(PropTypes.shape(
-      navElementShape,
-        {
-          children: PropTypes.array,
-        },
-      )),
-    },
-  )),
+  intl: intlShape.isRequired,
 };
 
 const defaultProps = {
   profile: {
     avatar: null,
     profileLinks: [],
-    help: [],
   },
 };
 
@@ -85,33 +74,32 @@ class UserProfile extends React.Component {
   }
 
   render() {
-    const { name, avatar, signoutUrl, profileLinks, help, ...customProps } = this.props;
+    const { name, avatar, id, signoutUrl, profileLinks, intl, ...customProps } = this.props;
 
     const signout = (
-      <button
+      <Button
         className={cx('link', 'signout-border')}
         href={signoutUrl}
-        onClick={() => { window.location = signoutUrl; }}
       >
-        <div className={cx('link-text')}>
-          {translations.signout}
+        <div>
+          <FormattedMessage id="nav_signout" />
         </div>
-      </button>);
+      </Button>);
 
     const defaultElement = (
       <Modal
         isModalOpen={this.state.isOpen}
-        title={translations.settings}
+        title={intl.formatMessage({ id: 'nav_profile_title' })}
         content={<div><ProfileLinks linkItems={profileLinks} />
           {signout}</div>}
         closeModal={this.togglePopup}
       />);
 
-    const large = (
-      <Popup
+    const popup = (
+      <TerraPopup
         isOpen={this.state.isOpen}
         onRequestClose={this.togglePopup}
-        targetRef={() => document.getElementById('profile-link-button')}
+        targetRef={() => document.getElementById(id)}
         contentWidth="240"
         contentHeight="240"
         contentAttachment="top right"
@@ -121,20 +109,21 @@ class UserProfile extends React.Component {
           <ProfileLinks linkItems={profileLinks} />
           {signout}
         </div>
-      </Popup>
+      </TerraPopup>
       );
 
     return (
+
       <div {...customProps} className={cx('profile')}>
-        <button className={cx('popup-button')}  onClick={() => this.togglePopup()}>
+        <button className={cx('popup-button')} onClick={() => this.togglePopup()}>
           <Arrange
             fitStart={<svg className={cx('icon')}>{avatar}</svg>}
             fill={<div className={cx('profile-text-padding')}>{name}</div>}
-            fitEnd={<svg className={cx('icon')} id="profile-link-button"><IconEllipses /></svg>}
+            fitEnd={<IconEllipses className={cx('icon')} id={id} />}
             align="center"
           />
         </button>
-        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={large} large={large} />
+        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
       </div>
     );
   }
@@ -143,4 +132,4 @@ class UserProfile extends React.Component {
 UserProfile.propTypes = propTypes;
 UserProfile.defaultProps = defaultProps;
 
-export default UserProfile;
+export default injectIntl(UserProfile);

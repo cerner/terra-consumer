@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
+import Button from 'terra-button';
+import classNames from 'classnames/bind';
+import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
-import NavHelpContent from './NavHelpContent';
 import IconInfo from '../../icons/IconInfo';
 import Modal from '../modal/Modal';
-import Popup from '../popup/Popup';
 import navElementShape from '../../NavPropShapes';
+import NavHelpContent from './NavHelpContent';
+import Popup from '../popup/Popup';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -31,15 +33,17 @@ const propTypes = {
    * A unique id set to the help button that will be referred in help menu/popup .
    */
   id: PropTypes.string.isRequired,
+
+  /**
+   * Injected react-intl formatting api
+   */
+  intl: intlShape.isRequired,
 };
 
 const defaultProps = {
   help: [],
 };
 
-const translations = {
-  help: 'Help',
-};
 
 class NavHelp extends React.Component {
   constructor() {
@@ -56,31 +60,31 @@ class NavHelp extends React.Component {
   }
 
   render() {
-    const { help, id, ...customProps } = this.props;
+    const { help, id, intl, ...customProps } = this.props;
     const helpButton = (
-      <button
+      <Button
         id={id}
         onClick={this.togglePopup}
         className={cx('nav-help')}
       >
         <Arrange
           fill={<div className={cx('icon')}><IconInfo /></div>}
-          fitEnd={<div className={cx('button-text-padding')}>{translations.help}</div>}
+          fitEnd={<div className={cx('button-text-padding')}><FormattedMessage id="nav_help" /></div>}
           align="stretch"
         />
-      </button>);
+      </Button>);
 
     const popupContent = <NavHelpContent helpContent={help} />;
 
     const defaultElement = (<Modal
       isModalOpen={this.state.isOpen}
-      title={translations.help}
+      title={intl.formatMessage({ id: 'nav_help' })}
       content={popupContent}
       closeModal={this.togglePopup}
     />);
 
     const popup = (<Popup
-      title={translations.help}
+      title={intl.formatMessage({ id: 'nav_help' })}
       hasHeader
       isOpen={this.state.isOpen}
       targetRef={() => document.getElementById(id)}
@@ -93,8 +97,9 @@ class NavHelp extends React.Component {
     />);
 
     return (
+
       <div {...customProps}>
-        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} large={popup} />
+        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
         { (this.state.isOpen === false) && helpButton}
       </div>
     );
@@ -104,5 +109,5 @@ class NavHelp extends React.Component {
 
 NavHelp.propTypes = propTypes;
 NavHelp.defaultProps = defaultProps;
-export default NavHelp;
+export default injectIntl(NavHelp);
 

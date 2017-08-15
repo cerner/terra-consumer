@@ -2,7 +2,7 @@
 
 :local {
   .nav-help {
-    background-color: #fff;
+    background-color: var(--terra-consumer--help-button-background, #fff);
     border: 0;
     border-radius: 20px;
     box-shadow: 0 1px 1px #666;
@@ -10,10 +10,9 @@
     font-size: 16px;
     line-height: 20px;
     padding: 6px 13px;
-    z-index: 200;
 
     &:hover {
-      background: #eee;
+      background: var(--terra-consumer--help-button-hover-background, #eee);
       cursor: pointer;
     }
   }
@@ -24,31 +23,31 @@
   }
 
   .help-item {
-    background: #fff;
+    background: var(--terra-consumer--help-item-background, #fff);
     border: 0;
     padding: 20px;
     text-decoration: none;
     width: 100%;
 
     &:hover {
-      background: #eee;
+      background: var(--terra-consumer--help-item-background, #eee);
       cursor: pointer;
     }
   }
 
   .help-item-text {
-    color: #383f42;
+    color: var(--terra-consumer--help-item-text-color, #383f42);
     font-size: 14px;
     line-height: 18px;
     text-align: left;
   }
 
   .help-item-border {
-    border-top: 1px solid #dedfe0;
+    border-top: 1px solid var(--terra-consumer--help-item-border-color, #dedfe0);
   }
   
   .help-subitem {
-    color: #64696c;
+    color: var(--terra-consumer--help-subitem-text-color, #64696c);
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
@@ -77,10 +76,16 @@
 
   .popup-content {
     border-radius: 5px;
-    bottom: 15px;
+    bottom: 0;
     box-shadow: 0 1px 5px #666;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-top: 0;
     position: relative;
-    right: 15px;
+    right: 0;
+
+
   }
   
 }

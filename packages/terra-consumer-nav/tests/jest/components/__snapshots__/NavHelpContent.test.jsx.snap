@@ -2,9 +2,15 @@
 
 exports[`Content of the Help Modal/Popup should render a list of items with/without toggler 1`] = `
 <div>
-  <button
+  <Button
     className="help-item"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
     onClick={[Function]}
+    type="button"
+    variant="default"
   >
     <div
       className="help-item-text"
@@ -55,11 +61,16 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         </div>
       </Toggle>
     </div>
-  </button>
-  <button
+  </Button>
+  <Button
     className="help-item help-item-border"
-    href="content.uri"
-    onClick={[Function]}
+    href="http://localhost:8080/"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    type="button"
+    variant="default"
   >
     <div
       className="help-item-text"
@@ -86,6 +97,6 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         }
       />
     </div>
-  </button>
+  </Button>
 </div>
 `;

@@ -78,25 +78,6 @@ const DefaultNav = () => {
         altText: 'Placeholder logo',
         isCard: false,
       },
-
-      helpItems: [
-        {
-          text: 'Technical Questions',
-          uri: 'http://localhost:8080/',
-          icon: (<IconInfo />),
-          children: [{
-            text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-            uri: 'http://localhost:8080/',
-          }],
-        },
-        {
-          text: 'Get Support ID',
-          uri: 'http://localhost:8080/',
-          icon: (<IconInfo />),
-          children: [],
-        },
-      ],
-      helpId: 'nav-help-button',
       profileLinks: [
         {
           text: 'Account',
@@ -111,8 +92,29 @@ const DefaultNav = () => {
       ],
       userName: 'John Snow',
       avatar: (<IconPerson />),
+      profileId: 'profile-popup-button',
       signoutUrl: 'http://localhost:8080/',
     },
+
+    helpItems: [
+      {
+        text: 'Technical Questions',
+        uri: 'http://localhost:8080/',
+        icon: (<IconInfo />),
+        children: [{
+          text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
+          uri: 'http://localhost:8080/',
+        }],
+      },
+      {
+        text: 'Get Support ID',
+        uri: 'http://localhost:8080/',
+        icon: (<IconInfo />),
+        children: [],
+      },
+    ],
+    helpId: 'nav-help-button',
+    locale: 'en-US',
   };
 
   return (

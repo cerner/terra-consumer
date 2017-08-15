@@ -2,27 +2,27 @@
 
 exports[`Profile Link items should render a list of profile link items 1`] = `
 <div>
-  <button
-    className="link nav-item-border"
+  <Button
+    className="link profile-item-border"
     href="http://localhost:8080/"
-    onClick={[Function]}
-  >
-    <div
-      className="link-text"
-    >
-      Account
-    </div>
-  </button>
-  <button
-    className="link nav-item-border"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    text="Account"
+    type="button"
+    variant="default"
+  />
+  <Button
+    className="link profile-item-border"
     href="http://localhost:8080/"
-    onClick={[Function]}
-  >
-    <div
-      className="link-text"
-    >
-      Notifications
-    </div>
-  </button>
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    text="Notifications"
+    type="button"
+    variant="default"
+  />
 </div>
 `;

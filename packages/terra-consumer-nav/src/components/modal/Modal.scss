@@ -1,6 +1,6 @@
 :local {
   .modal {
-    background: #fff;
+    background: var(--terra-consumer--modal-background, #fff);
     border-radius: 5px;
     display: block;
     left: 10px;
@@ -24,34 +24,35 @@
   }
 
   .modal-title {
-    color: #fff;
+    color: var(--terra-consumer--modal-title-color, #fff);
     font-size: 20px;
     line-height: 30px;
     text-align: center;
   }
   
   .overlay {
-    background-color: #64696c;
+    background-color: var(--terra-consumer--overlay-background, #64696c);
     opacity: 1;
   }
 
   .close-icon {
-    color: #fff;
-    fill: #fff;
     font-size: 16px;
-    height: 16px;
-    width: 16px;
   }
 
   .close-button {
-    background-color: Transparent;
+    background: none;
     border: 0;
+    color: var(--terra-consumer--modal-close-button-color, #fff);
     cursor: pointer;
     padding-bottom: 7px;
     padding-right: 15px;
     padding-top: 7px;
     text-align: right;
     vertical-align: bottom;
+
+    &:hover {
+      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+    }
   }
 
   .modal-close-align {

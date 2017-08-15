@@ -1,7 +1,7 @@
 :local {
   .popup-header {
     align-self: center;
-    background: #64696c;
+    background: var(--terra-consumer--popup-header-background, #64696c);
     display: inline-block;
     padding: 5px 15px;
     text-align: center;
@@ -10,22 +10,21 @@
   }
 
   .popup-title {
-    color: #fff;
+    color: var(--terra-consumer--popup-title-color, #fff);
     font-size: 20px;
     line-height: 30px;
     text-align: left;
   }
 
   .close-icon {
-    color: #fff;
-    fill: #fff;
     height: 16px;
     width: 16px;
   }
 
   .close-button {
-    background-color: Transparent;
+    background: none;
     border: 0;
+    color: var(--terra-consumer--popup-close-button-color, #fff);
     cursor: pointer;
     font-size: 16px;
     padding-bottom: 5px;

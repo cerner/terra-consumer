@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Arrange from 'terra-arrange';
+import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import Toggler from 'terra-toggle';
-import Arrange from 'terra-arrange';
-import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
+import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import navElementShape from '../../NavPropShapes';
 import styles from './NavHelp.scss';
 
@@ -48,7 +49,7 @@ class NavHelpContent extends React.Component {
     const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
     const contentList = helpContent.map((content, i) => {
       const contentElement = content.children.length > 0 ?
-      (<button key={`${content.text}`} onClick={this.handleToggle} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}>
+      (<Button key={`${content.text}`} onClick={this.handleToggle} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}>
         <div className={cx('help-item-text')}>
           <Arrange
             align="stretch"
@@ -63,11 +64,11 @@ class NavHelpContent extends React.Component {
             }
           </Toggler>
         </div>
-      </button>
+      </Button>
       )
       :
       (
-        <button key={`${content.text}`} onClick={() => { window.location = content.uri; }} href="content.uri" className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
+        <Button key={`${content.text}`} href={content.uri} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
           <div className={cx('help-item-text')}>
             <Arrange
               align="center"
@@ -75,7 +76,7 @@ class NavHelpContent extends React.Component {
               fill={<div className={cx('item-text-padding')}>{content.text}</div>}
             />
           </div>
-        </button>
+        </Button>
       );
       return contentElement;
     });

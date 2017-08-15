@@ -64,24 +64,6 @@ const propTypes = {
     ),
   ),
   /**
-   * An array of items to be displayed as help menu content.
-   */
-  helpItems: PropTypes.arrayOf(PropTypes.shape(
-    navElementShape,
-    {
-      children: PropTypes.arrayOf(PropTypes.shape(
-      navElementShape,
-        {
-          children: PropTypes.array,
-        },
-      )),
-    },
-  )),
-  /**
-   * A unique id set to the help button that will be referred in help menu/popup .
-   */
-  helpId: PropTypes.string.isRequired,
-  /**
    * An array of nav items to be displayed on the user profile/ settings menu/popup.
    */
   profileLinks: PropTypes.arrayOf(PropTypes.shape(
@@ -97,6 +79,10 @@ const propTypes = {
     PropTypes.string,
     PropTypes.element,
   ]),
+  /**
+   * A unique id set to the profile popup button that will be referred in profile popup.
+   */
+  profileId: PropTypes.string.isRequired,
   /**
    * The path signout button would redirect to.
    */
@@ -131,12 +117,13 @@ const propTypes = {
 const defaultProps = {
   quickLinks: [],
   navItems: [],
-  helpItems: [],
+  profileLinks: [],
+  avatar: null,
   logo: {},
 };
 
 const Nav = ({
-  quickLinks, navItems, helpItems, helpId, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
+  quickLinks, navItems, profileLinks, userName, avatar, profileId, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
 }) => (
   <div className={cx('nav-container')} {...customProps}>
     {/* Make this into a Slide Component */}
@@ -147,7 +134,7 @@ const Nav = ({
         {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
       </QuickLinks>
       <NavItems navItems={navItems} />
-      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} signoutUrl={signoutUrl} help={helpItems} />
+      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} id={profileId} signoutUrl={signoutUrl} />
     </div>
   </div>
 );

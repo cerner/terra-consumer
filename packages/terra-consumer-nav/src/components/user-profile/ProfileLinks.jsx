@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
@@ -21,19 +22,14 @@ const defaultProps = {
 const ProfileLinks = ({
   linkItems,
   ...customProps
-}) => {
-  const linkElements = linkItems.map((linkItem) => {
-    const linkElement = (<button key={`${linkItem.text}`} href={linkItem.uri} onClick={() => { window.location = linkItem.uri; }} className={cx('link', 'nav-item-border')}>
-      <div className={cx('link-text')}>{linkItem.text}</div></button>);
-    return linkElement;
-  });
-
-  return (
-    <div {...customProps}>
-      {linkElements}
-    </div>
-  );
-};
+}) => (
+  <div {...customProps}>
+    { linkItems.map(linkItem => (
+      <Button key={`${linkItem.text}`} href={linkItem.uri} className={cx('link', 'profile-item-border')} text={linkItem.text} />
+      ))
+    }
+  </div>
+);
 
 ProfileLinks.propTypes = propTypes;
 ProfileLinks.defaultProps = defaultProps;
