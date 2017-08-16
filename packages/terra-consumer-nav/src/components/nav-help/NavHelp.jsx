@@ -100,7 +100,7 @@ class NavHelp extends React.Component {
 
       <div {...customProps}>
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
-        { (this.state.isOpen === false) && helpButton}
+        {!this.state.isOpen && helpButton}
       </div>
     );
   }

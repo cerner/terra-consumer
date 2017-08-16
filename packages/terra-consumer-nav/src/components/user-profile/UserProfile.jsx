@@ -81,9 +81,7 @@ class UserProfile extends React.Component {
         className={cx('link', 'signout-border')}
         href={signoutUrl}
       >
-        <div>
-          <FormattedMessage id="nav_signout" />
-        </div>
+        <FormattedMessage id="nav_signout" />
       </Button>);
 
     const defaultElement = (
