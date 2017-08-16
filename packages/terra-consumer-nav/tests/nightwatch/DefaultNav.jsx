@@ -75,9 +75,9 @@ const DefaultNav = () => {
         },
       ],
       logo: {
-        path: 'http://placeholder.pics/svg/270x170/FF0606-FFFFFF',
+        path: 'http://placeholder.pics/svg/160x120/FF0606-FFFFFF',
         altText: 'Placeholder logo',
-        isCard: false,
+        isCard: true,
       },
       profileLinks: [
         {

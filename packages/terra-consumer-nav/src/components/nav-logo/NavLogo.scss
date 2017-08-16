@@ -4,10 +4,10 @@
   .logo-container {
     margin: 30px 25px;
     max-height: 170px;
+    max-width: calc(100% - 50px});
     overflow: hidden;
-    width: calc(100% - 50px});
     @media screen and (max-width: $terra-medium-breakpoint) {
-      margin: 40px auto;
+      margin: 40px 25px;
       max-height: 120px;
       width: 190px;
     }

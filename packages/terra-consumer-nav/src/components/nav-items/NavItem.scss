@@ -36,6 +36,7 @@
     background: var(--terra-consumer--badge-background, #fff);
     border-radius: 10px;
     color: var(--terra-consumer--badge-text-color, inherit);
+    display: inline-block;
     margin-left: 10px;
     padding: 0 7px;
     @media screen and (max-width: $terra-medium-breakpoint) {

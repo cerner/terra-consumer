@@ -5,10 +5,10 @@ import App from './App';
 import Home from './Home';
 
 // Examples
+import NavExamples from './examples/nav/Index';
 
 // Test Routes
 /* eslint-disable import/first */
-
 import TestLinks from './TestLinks';
 // import IconTest from './IconTest';
 import IconExamples from './examples/icon/IconExamples';
@@ -20,6 +20,7 @@ ReactDOM.render((
     <Redirect from="/" to="/site" />
     <Route path="/site" component={App}>
       <IndexRoute component={Home} />
+      <Route path="nav" component={NavExamples} />
     </Route>
     <Route path="/tests" component={TestLinks} />
     { NavigationTestLinks }
