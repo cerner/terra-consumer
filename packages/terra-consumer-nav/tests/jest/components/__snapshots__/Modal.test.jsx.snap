@@ -9,44 +9,25 @@ exports[`Modal should render a modal with title,close button and content 1`] = `
     isRelativeToContainer={false}
     isScrollable={false}
   >
-    <div>
-      <Grid
-        className="modal-header"
+    <div
+      className="modal-header"
+    >
+      <p
+        className="modal-title"
       >
-        <GridRow>
-          <GridColumn
-            col={2}
+        Modal Tittle
+        <button
+          className="close-button"
+          onClick={[Function]}
+        >
+          <IconClose
+            className="close-icon"
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
           />
-          <GridColumn
-            col={8}
-          >
-            <div
-              className="modal-title"
-            >
-              Modal Tittle
-            </div>
-          </GridColumn>
-          <GridColumn
-            className="modal-close-align"
-            col={2}
-          >
-            <button
-              className="close-button"
-              onClick={[Function]}
-            >
-              <div
-                className="close-icon"
-              >
-                <IconClose
-                  data-name="Layer 1"
-                  viewBox="0 0 48 48"
-                  xmlns="http://www.w3.org/2000/svg"
-                />
-              </div>
-            </button>
-          </GridColumn>
-        </GridRow>
-      </Grid>
+        </button>
+      </p>
     </div>
     <div
       className="modal"

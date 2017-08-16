@@ -49,7 +49,7 @@ class NavHelpContent extends React.Component {
     const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
     const contentList = helpContent.map((content, i) => {
       const contentElement = content.children.length > 0 ?
-      (<Button key={`${content.text}`} onClick={this.handleToggle} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}>
+      (<button key={`${content.text}`} onClick={this.handleToggle} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}>
         <div className={cx('help-item-text')}>
           <Arrange
             align="stretch"
@@ -64,7 +64,7 @@ class NavHelpContent extends React.Component {
             }
           </Toggler>
         </div>
-      </Button>
+      </button>
       )
       :
       (

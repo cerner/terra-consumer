@@ -1,11 +1,9 @@
 :local {
   .popup-header {
-    align-self: center;
     background: var(--terra-consumer--popup-header-background, #64696c);
     display: inline-block;
-    padding: 5px 15px;
-    text-align: center;
-    vertical-align: middle;
+    padding: 5px 0;
+    text-align: left;
     width: 100%;
   }
 
@@ -13,7 +11,7 @@
     color: var(--terra-consumer--popup-title-color, #fff);
     font-size: 20px;
     line-height: 30px;
-    text-align: left;
+    padding-left: 15px;
   }
 
   .close-icon {
@@ -27,14 +25,11 @@
     color: var(--terra-consumer--popup-close-button-color, #fff);
     cursor: pointer;
     font-size: 16px;
-    padding-bottom: 5px;
-    padding-right: 0;
-    padding-top: 5px;
-    text-align: right;
-    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 15px;
+    top: 10px;
   }
 
-  .close-button-alignment {
-    text-align: right;
-  }
 }

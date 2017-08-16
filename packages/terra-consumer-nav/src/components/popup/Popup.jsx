@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Grid from 'terra-grid';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import TerraPopup from 'terra-popup';
 import styles from './Popup.scss';
@@ -52,16 +51,13 @@ const Popup = ({
  ...customProps
 }) => {
   const popupHeader = (
-    <Grid className={cx('popup-header')}>
-      <Grid.Row>
-        <Grid.Column col={10}>
-          <div className={cx('popup-title')}>{title}</div>
-        </Grid.Column>
-        <Grid.Column className={cx('close-button-alignment')} col={2}>
-          <button className={cx('close-button')} onClick={() => closePopup()}><IconClose className={cx('close-icon')} /></button>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>);
+    <div className={cx('popup-header')}>
+      <p className={cx('popup-title')}>
+        {title}
+        <button className={cx('close-button')} onClick={() => closePopup()}><IconClose className={cx('close-icon')} /></button>
+      </p>
+    </div>
+    );
 
   return (
     <TerraPopup

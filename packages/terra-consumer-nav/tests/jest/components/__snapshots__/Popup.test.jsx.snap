@@ -16,37 +16,26 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
   targetRef={[Function]}
 >
   <div>
-    <Grid
+    <div
       className="popup-header"
     >
-      <GridRow>
-        <GridColumn
-          col={10}
+      <p
+        className="popup-title"
+      >
+        Title
+        <button
+          className="close-button"
+          onClick={[Function]}
         >
-          <div
-            className="popup-title"
-          >
-            Title
-          </div>
-        </GridColumn>
-        <GridColumn
-          className="close-button-alignment"
-          col={2}
-        >
-          <button
-            className="close-button"
-            onClick={[Function]}
-          >
-            <IconClose
-              className="close-icon"
-              data-name="Layer 1"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </button>
-        </GridColumn>
-      </GridRow>
-    </Grid>
+          <IconClose
+            className="close-icon"
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </button>
+      </p>
+    </div>
     <div>
        This is a test content
     </div>
