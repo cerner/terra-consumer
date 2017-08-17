@@ -9,7 +9,7 @@ module.exports = {
   },
 
   afterEach: (browser, done) => {
-    screenshot(browser, 'terra-icon', done);
+    screenshot(browser, 'terra-consumer-icon', done);
   },
 
   'Displays a default icon with aria-hidden equal to true': (browser) => {
@@ -19,18 +19,18 @@ module.exports = {
       .expect.element('#icon-default').to.have.attribute('aria-hidden').which.contains('true');
   },
 
-  'Displays a default icon with height equal to 1em': (browser) => {
+  'Displays a default icon with height equal to 2em': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/icon-tests/default`)
       .waitForElementPresent('#icon-default', 1000)
-      .expect.element('#icon-default').to.have.attribute('height').which.contains('48');
+      .expect.element('#icon-default').to.have.attribute('height').which.contains('2em');
   },
 
-  'Displays a default icon with width equal to 1em': (browser) => {
+  'Displays a default icon with width equal to 2em': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/icon-tests/default`)
       .waitForElementPresent('#icon-default', 1000)
-      .expect.element('#icon-default').to.have.attribute('width').which.contains('48');
+      .expect.element('#icon-default').to.have.attribute('width').which.contains('2em');
   },
 
   'Displays a default icon with focusable equal to false': (browser) => {
