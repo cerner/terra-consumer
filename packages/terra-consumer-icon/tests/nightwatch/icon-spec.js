@@ -4,7 +4,8 @@ const screenshot = require('terra-toolkit').screenshot;
 
 module.exports = {
   before: (browser, done) => {
-    browser.resizeWindow(browser.globals.width, browser.globals.height, done);
+    const size = browser.globals.breakpoints.medium;
+    browser.resizeWindow(size[0], size[1], done);
   },
 
   afterEach: (browser, done) => {
