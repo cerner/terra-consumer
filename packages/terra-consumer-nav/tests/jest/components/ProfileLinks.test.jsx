@@ -1,6 +1,6 @@
 import React from 'react';
-import ProfileLinks from '../../../src/components/user-profile/ProfileLinks';
 import IconInfo from '../../../src/icons/IconInfo';
+import ProfileLinks from '../../../src/components/user-profile/ProfileLinks';
 
 const testData = [
   {

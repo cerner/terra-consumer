@@ -1,8 +1,9 @@
 import React from 'react';
 import { I18nProvider } from 'terra-i18n';
+import IconInfo from '../../../src/icons/IconInfo';
 import Messages from '../../../src/i18n/translations/messages.json';
 import NavHelp from '../../../src/components/nav-help/NavHelp';
-import IconInfo from '../../../src/icons/IconInfo';
+
 
 const helpItems = [
   {

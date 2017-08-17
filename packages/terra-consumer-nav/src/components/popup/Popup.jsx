@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import TerraPopup from 'terra-popup';
 import Grid from 'terra-grid';
 import IconClose from 'terra-icon/lib/icon/IconClose';
+import TerraPopup from 'terra-popup';
 import styles from './Popup.scss';
 
 const cx = classNames.bind(styles);

@@ -2,8 +2,9 @@ import React from 'react';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
-import Layout from './Layout';
 import IconInfo from '../../src/icons/IconInfo';
+import Layout from './Layout';
+
 
 const DefaultNav = () => {
   const props = {

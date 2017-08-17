@@ -1,7 +1,7 @@
 import React from 'react';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
-import UserProfile from '../../../src/components/user-profile/ProfileLinks';
 import IconInfo from '../../../src/icons/IconInfo';
+import UserProfile from '../../../src/components/user-profile/ProfileLinks';
 
 const profileLinks = [
   {

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
-import Toggler from 'terra-toggle';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
+import Toggler from 'terra-toggle';
 import navElementShape from '../../NavPropShapes';
 import styles from './NavHelp.scss';
 

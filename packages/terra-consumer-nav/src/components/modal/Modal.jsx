@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Grid from 'terra-grid';
-import Overlay from 'terra-overlay';
 import IconClose from 'terra-icon/lib/icon/IconClose';
+import Overlay from 'terra-overlay';
 import styles from './Modal.scss';
 
 const cx = classNames.bind(styles);

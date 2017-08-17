@@ -1,6 +1,6 @@
 import React from 'react';
-import NavHelpContent from '../../../src/components/nav-help/NavHelpContent';
 import IconInfo from '../../../src/icons/IconInfo';
+import NavHelpContent from '../../../src/components/nav-help/NavHelpContent';
 
 const testData = [
   {
