@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.1 - (August 14, 2017)
+# 0.2.0-BETA.1 - (August 17, 2017)
 -----------------
 Initial beta release
 
@@ -14,8 +14,8 @@ Initial beta release
   *  nav-toggler: A wrapper component of terra-toggler which styles the element.
   *  quick-links: Component that generates the quick link portion of the nav utilizing sub-component quick-link.
   *  quick-link: Component used to style all quick links.
-  *  help-button: Component that renders a help button. This is a placeholder and work in progress.
-  *  nav-profile: Component that renders the profile portion of the nav. This is a placeholder and work in progress.
+  *  nav-help: Component that renders a help button in bottom right corner of the screen. 
+  *  user-profile: Component that renders user profile portion of navigation and allows to access user specific settings. 
 - Test cases for Nav and sub components.
 
 ### Changed
