@@ -22,14 +22,14 @@ module.exports = {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/icon-tests/default`)
       .waitForElementPresent('#icon-default', 1000)
-      .expect.element('#icon-default').to.have.attribute('height').which.contains('1em');
+      .expect.element('#icon-default').to.have.attribute('height').which.contains('48');
   },
 
   'Displays a default icon with width equal to 1em': (browser) => {
     browser
       .url(`http://localhost:${browser.globals.webpackDevServerPort}/#/tests/icon-tests/default`)
       .waitForElementPresent('#icon-default', 1000)
-      .expect.element('#icon-default').to.have.attribute('width').which.contains('1em');
+      .expect.element('#icon-default').to.have.attribute('width').which.contains('48');
   },
 
   'Displays a default icon with focusable equal to false': (browser) => {
