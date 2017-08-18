@@ -18,6 +18,10 @@
       cursor: pointer;
     }
 
+    &:focus {
+      background: var(--terra-consumer--help-item-background, #eee);
+    }
+
     &:active {
       color: inherit;
     }
@@ -41,6 +45,11 @@
       background: var(--terra-consumer--help-item-background, #eee);
       cursor: pointer;
     }
+    
+    &:focus {
+      background: var(--terra-consumer--help-item-background, #eee);
+    }
+
   }
 
   .help-item-text {
@@ -70,6 +79,7 @@
   }
 
   .toggler-content-padding {
+    padding-right: 20px;
     padding-top: 20px;
   }
 

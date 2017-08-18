@@ -36,6 +36,10 @@
       background: var(--terra-consumer--profile-item-hover-background, #eee);
       cursor: pointer;
     }
+
+    &:focus {
+      background: var(--terra-consumer--help-item-background, #eee);
+    }
   }
 
   .signout-border {
@@ -76,6 +80,14 @@
       background: inherit;
       color: var(--terra-consumer--desktop-profile-button-color, #3d3d3d);
       cursor: pointer;
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        color: var(--terra-consumer--mobile-profile-button-color, #fff);
+      }
+    }
+
+    &:focus {
+      background: inherit;
+      color: var(--terra-consumer--desktop-profile-button-color, #3d3d3d);
       @media screen and (max-width: $terra-medium-breakpoint) {
         color: var(--terra-consumer--mobile-profile-button-color, #fff);
       }
