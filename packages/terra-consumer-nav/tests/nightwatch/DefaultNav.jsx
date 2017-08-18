@@ -31,7 +31,7 @@ const DefaultNav = () => {
         {
           uri: '?react_perf#/tests/nav-tests/default',
           text: 'Dashboard',
-          isActive: true,
+          isActive: false,
         },
         {
           uri: '',

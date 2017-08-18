@@ -33,7 +33,7 @@ const propTypes = {
         /**
          * An optional array of objects to be displayed as sub navs toggled by the main nav.
          */
-        subNavs: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
+        subItems: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
       },
     ),
   ),
@@ -44,11 +44,13 @@ const defaultProps = {
 };
 
 class NavItems extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    const initialIndex = props.navItems.findIndex(item => item.subItems && item.subItems.some(subItem => subItem.isActive));
 
     this.state = {
-      openToggle: null,
+      openToggle: initialIndex,
     };
 
     this.handleToggle = this.handleToggle.bind(this);
