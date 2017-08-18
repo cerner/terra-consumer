@@ -113,14 +113,14 @@ class UserProfile extends React.Component {
     return (
 
       <div {...customProps} className={cx('profile')}>
-        <button className={cx('popup-button')} onClick={() => this.togglePopup()}>
+        <Button className={cx('popup-button')} onClick={() => this.togglePopup()}>
           <Arrange
             fitStart={<svg className={cx('icon')}>{avatar}</svg>}
             fill={<div className={cx('profile-text-padding')}>{name}</div>}
             fitEnd={<IconEllipses className={cx('icon')} id={id} />}
             align="center"
           />
-        </button>
+        </Button>
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
       </div>
     );
