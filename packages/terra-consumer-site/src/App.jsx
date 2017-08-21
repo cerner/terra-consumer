@@ -51,9 +51,9 @@ class App extends React.Component {
               </div>
               <List className={styles['site-nav']}>
                 <List.Item content={<Link to="/">Home</Link>} />
-                <List.Item content={<Link to="/site/nav">Nav</Link>} />
                 <List.Item content={<Link to="/tests">Tests</Link>} />
-                <List.Item content={<Link to="/icon">Icon</Link>} />
+                <List.Item content={<Link to="/site/icon">Icon</Link>} />
+                <List.Item content={<Link to="/site/nav">Nav</Link>} />
               </List>
             </Grid.Column>
             <Grid.Column small={10}>
