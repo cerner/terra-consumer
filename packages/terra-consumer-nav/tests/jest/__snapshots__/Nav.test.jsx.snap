@@ -5,48 +5,32 @@ exports[`Nav should render a default component 1`] = `
   className="nav-container"
   profileId="profile-popup-button"
 >
-  <div
-    aria-hidden={true}
-    className="nav"
-  >
-    <Button
-      className="close-button"
-      icon={
-        <IconClose
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      }
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isReversed={false}
-      onClick={[Function]}
-      type="button"
-      variant="default"
-    />
-    <NavLogo
-      altText="test"
-      isCard={false}
-      path=""
-    />
-    <QuickLinks>
-      <QuickLink
-        text="test"
-        uri="/test"
+  <Button
+    className="close-button"
+    icon={
+      <IconClose
+        data-name="Layer 1"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
       />
-    </QuickLinks>
-    <NavItems
-      navItems={
-        Array [
-          Object {
-            "isActive": true,
-            "text": "test",
-            "uri": "#test",
-          },
-        ]
-      }
+    }
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    onClick={[Function]}
+    type="button"
+    variant="default"
+  />
+  <NavLogo
+    altText="test"
+    isCard={false}
+    path=""
+  />
+  <QuickLinks>
+    <QuickLink
+      text="test"
+      uri="/test"
     />
     <InjectIntl(UserProfile)
       avatar={null}
