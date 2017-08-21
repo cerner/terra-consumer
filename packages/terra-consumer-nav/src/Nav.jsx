@@ -5,7 +5,7 @@ import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavItems from './components/nav-items/NavItems';
 import NavLogo from './components/nav-logo/NavLogo';
-import navElementShape from './NavPropShapes';
+import navItemShape from './NavPropShapes';
 import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
@@ -13,41 +13,12 @@ import UserProfile from './components/user-profile/UserProfile';
 
 const cx = classNames.bind(styles);
 
-const navItemShape = {
-  /**
-   * The path the nav item should lead to.
-   */
-  uri: PropTypes.string.isRequired,
-  /**
-   * The text displayed on the link.
-   */
-  text: PropTypes.string.isRequired,
-  /**
-   * Whether or not the link should be styled as active or not.
-   */
-  isActive: PropTypes.bool,
-  /**
-   * An optional badge. When supplied, displays the value inline, styled alongside the text.
-   */
-  badgeValue: PropTypes.number,
-};
-
 const propTypes = {
   /**
    * An array of objects to be displayed as quick link options.
    */
-  quickLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      /**
-       * The path the nav item should lead to.
-       */
-      uri: PropTypes.string.isRequired,
-      /**
-       * The text displayed on the link.
-       */
-      text: PropTypes.string.isRequired,
-    }),
-  ),
+  quickLinks: PropTypes.arrayOf(PropTypes.shape(
+    navItemShape)),
   /**
    * An array of objects to be displayed as nav link options.
    */
@@ -66,7 +37,7 @@ const propTypes = {
    * An array of nav items to be displayed on the user profile/ settings menu/popup.
    */
   profileLinks: PropTypes.arrayOf(PropTypes.shape(
-    navElementShape)),
+    navItemShape)),
   /**
    * User name to be displayed in the profile in navigation.
    */
@@ -74,10 +45,7 @@ const propTypes = {
   /**
    * Avatar to be displayed in user profile in navigation.
    */
-  avatar: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
+  avatar: PropTypes.PropTypes.element,
   /**
    * A unique id set to the profile popup button that will be referred in profile popup.
    */

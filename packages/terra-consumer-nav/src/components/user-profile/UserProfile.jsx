@@ -88,8 +88,14 @@ class UserProfile extends React.Component {
       <Modal
         isModalOpen={this.state.isOpen}
         title={intl.formatMessage({ id: 'nav_profile_title' })}
-        content={<div><ProfileLinks linkItems={profileLinks} />
-          {signout}</div>}
+        content={
+          <div>
+            <ProfileLinks
+              linkItems={profileLinks}
+            />
+            {signout}
+          </div>
+        }
         closeModal={this.togglePopup}
       />);
 

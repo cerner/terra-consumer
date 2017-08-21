@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import Overlay from 'terra-overlay';
 import styles from './Modal.scss';
@@ -28,8 +29,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: null,
-  content: null,
   isModalOpen: false,
 };
 
@@ -42,25 +41,25 @@ const Modal = ({
 }) => {
   const modalHeader = (
     <div className={cx('modal-header')}>
-      <p className={cx('modal-title')}>
+      <div className={cx('modal-title')}>
         {title}
-        <button className={cx('close-button')} onClick={() => closeModal()}><IconClose className={cx('close-icon')} /></button>
-      </p>
+        <Button
+          className={cx('close-button')}
+          onClick={closeModal}
+        >
+          <IconClose className={cx('close-icon')} />
+        </Button>
+      </div>
     </div>
     );
 
-  const modal = (
-    <Overlay isOpen={isModalOpen} backgroundStyle="dark" className={cx('overlay')}>
+  return (
+    <Overlay {...customProps} isOpen={isModalOpen} backgroundStyle="dark" className={cx('overlay')}>
       {modalHeader}
       <div className={cx('modal')}>
         {content}
       </div>
-    </Overlay>);
-
-  return (
-    <div {...customProps}>
-      {modal}
-    </div>
+    </Overlay>
   );
 };
 

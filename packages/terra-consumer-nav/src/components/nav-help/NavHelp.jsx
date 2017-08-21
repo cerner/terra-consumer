@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
-import classNames from 'classnames/bind';
+import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
-import IconInfo from '../../icons/IconInfo';
 import Modal from '../modal/Modal';
 import navElementShape from '../../NavPropShapes';
 import NavHelpContent from './NavHelpContent';
-import Popup from '../popup/Popup';
+import NavHelpPopup from './NavHelpPopup';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -18,7 +18,7 @@ const propTypes = {
   /**
    * An array of items to be displayed as help menu/popup.
    */
-  help: PropTypes.arrayOf(PropTypes.shape(
+  helpNavs: PropTypes.arrayOf(PropTypes.shape(
     navElementShape,
     {
       children: PropTypes.arrayOf(PropTypes.shape(
@@ -41,7 +41,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  help: [],
+  helpNavs: [],
 };
 
 
@@ -60,7 +60,7 @@ class NavHelp extends React.Component {
   }
 
   render() {
-    const { help, id, intl, ...customProps } = this.props;
+    const { helpNavs, id, intl, ...customProps } = this.props;
     const helpButton = (
       <Button
         id={id}
@@ -68,13 +68,13 @@ class NavHelp extends React.Component {
         className={cx('nav-help')}
       >
         <Arrange
-          fill={<div className={cx('icon')}><IconInfo /></div>}
+          fill={<div className={cx('icon')} ><IconOutlineQuestionMark /></div>}
           fitEnd={<div className={cx('button-text-padding')}><FormattedMessage id="nav_help" /></div>}
           align="stretch"
         />
       </Button>);
 
-    const popupContent = <NavHelpContent helpContent={help} />;
+    const popupContent = <NavHelpContent helpContent={helpNavs} />;
 
     const defaultElement = (<Modal
       isModalOpen={this.state.isOpen}
@@ -83,7 +83,7 @@ class NavHelp extends React.Component {
       closeModal={this.togglePopup}
     />);
 
-    const popup = (<Popup
+    const popup = (<NavHelpPopup
       title={intl.formatMessage({ id: 'nav_help' })}
       hasHeader
       isOpen={this.state.isOpen}

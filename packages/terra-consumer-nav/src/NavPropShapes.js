@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const navElementShape = {
+const navItemShape = {
   /**
    * Text to be displayed in profile link.
    */
@@ -12,10 +12,15 @@ const navElementShape = {
   /**
    * Optional Icon to be displayed in profile link.
    */
-  icon: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
+  icon: PropTypes.element,
+  /**
+   * Whether or not the link should be styled as active or not.
+   */
+  isActive: PropTypes.bool,
+  /**
+   * An optional badge. When supplied, displays the value inline, styled alongside the text.
+   */
+  badgeValue: PropTypes.number,
 };
 
-export default navElementShape;
+export default navItemShape;

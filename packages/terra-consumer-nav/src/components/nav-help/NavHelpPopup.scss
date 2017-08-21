@@ -30,5 +30,15 @@
     position: absolute;
     right: 15px;
     top: 10px;
+
+    &:hover {
+      background: none;
+      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+    }
+
+    &:focus {
+      background: none;
+      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+    }
   }
 }

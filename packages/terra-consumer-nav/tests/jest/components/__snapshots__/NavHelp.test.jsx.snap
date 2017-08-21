@@ -22,9 +22,10 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
                 "uri": "http://localhost:8080/",
               },
             ],
-            "icon": <IconInfo
-              data-name="Layer 1"
+            "icon": <IconOutlineQuestionMark
+              height={16}
               viewBox="0 0 48 48"
+              width={16}
               xmlns="http://www.w3.org/2000/svg"
         />,
             "text": "Technical Questions",
@@ -32,9 +33,10 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
           },
           Object {
             "children": Array [],
-            "icon": <IconInfo
-              data-name="Layer 1"
+            "icon": <IconOutlineQuestionMark
+              height={16}
               viewBox="0 0 48 48"
+              width={16}
               xmlns="http://www.w3.org/2000/svg"
         />,
             "text": "Get Support ID",

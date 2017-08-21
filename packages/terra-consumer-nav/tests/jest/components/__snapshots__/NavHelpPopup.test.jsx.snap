@@ -19,13 +19,19 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
     <div
       className="popup-header"
     >
-      <p
+      <div
         className="popup-title"
       >
         Title
-        <button
+        <Button
           className="close-button"
+          isBlock={false}
+          isCompact={false}
+          isDisabled={false}
+          isReversed={false}
           onClick={[Function]}
+          type="button"
+          variant="default"
         >
           <IconClose
             className="close-icon"
@@ -33,8 +39,8 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
             viewBox="0 0 48 48"
             xmlns="http://www.w3.org/2000/svg"
           />
-        </button>
-      </p>
+        </Button>
+      </div>
     </div>
     <div>
        This is a test content

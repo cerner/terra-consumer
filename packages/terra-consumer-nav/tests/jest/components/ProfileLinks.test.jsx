@@ -1,16 +1,16 @@
 import React from 'react';
-import IconInfo from '../../../src/icons/IconInfo';
+import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import ProfileLinks from '../../../src/components/user-profile/ProfileLinks';
 
 const testData = [
   {
     text: 'Account',
-    icon: (<IconInfo />),
+    icon: (<IconOutlineQuestionMark height={16} width={16} />),
     uri: 'http://localhost:8080/',
   },
   {
     text: 'Notifications',
-    icon: (<IconInfo />),
+    icon: (<IconOutlineQuestionMark height={16} width={16} />),
     uri: 'http://localhost:8080/',
   },
 ];

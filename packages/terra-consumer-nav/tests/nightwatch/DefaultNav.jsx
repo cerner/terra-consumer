@@ -2,7 +2,7 @@ import React from 'react';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
-import IconInfo from '../../src/icons/IconInfo';
+import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import Layout from './Layout';
 
 
@@ -82,12 +82,12 @@ const DefaultNav = () => {
       profileLinks: [
         {
           text: 'Account',
-          icon: (<IconInfo />),
+          icon: (<IconOutlineQuestionMark />),
           uri: 'http://localhost:8080/',
         },
         {
           text: 'Notifications',
-          icon: (<IconInfo />),
+          icon: (<IconOutlineQuestionMark />),
           uri: 'http://localhost:8080/',
         },
       ],
@@ -101,7 +101,7 @@ const DefaultNav = () => {
       {
         text: 'Technical Questions',
         uri: 'http://localhost:8080/',
-        icon: (<IconInfo />),
+        icon: (<IconOutlineQuestionMark />),
         children: [{
           text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
           uri: 'http://localhost:8080/',
@@ -110,7 +110,7 @@ const DefaultNav = () => {
       {
         text: 'Get Support ID',
         uri: 'http://localhost:8080/',
-        icon: (<IconInfo />),
+        icon: (<IconOutlineQuestionMark />),
         children: [],
       },
     ],

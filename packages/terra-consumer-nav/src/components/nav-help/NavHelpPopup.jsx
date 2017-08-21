@@ -1,21 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import TerraPopup from 'terra-popup';
-import styles from './Popup.scss';
+import styles from './NavHelpPopup.scss';
 
 const cx = classNames.bind(styles);
-
 
 const propTypes = {
   /**
    * Title to be rendered on top of the popup content
    */
-  title: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
+  title: PropTypes.string,
   /**
    * Boolean value to hide/display popup header with title and close button
    */
@@ -35,14 +32,12 @@ const propTypes = {
 };
 
 const defaultProps = {
-  title: null,
   hasHeader: false,
-  popupContent: null,
   isOpen: false,
   closePopup: null,
 };
 
-const Popup = ({
+const NavHelpPopup = ({
  title,
  hasHeader,
  popupContent,
@@ -50,14 +45,18 @@ const Popup = ({
  closePopup,
  ...customProps
 }) => {
-  const popupHeader = (
+  const popupHeader = (hasHeader &&
     <div className={cx('popup-header')}>
-      <p className={cx('popup-title')}>
+      <div className={cx('popup-title')}>
         {title}
-        <button className={cx('close-button')} onClick={() => closePopup()}><IconClose className={cx('close-icon')} /></button>
-      </p>
-    </div>
-    );
+        <Button
+          className={cx('close-button')}
+          onClick={closePopup}
+        >
+          <IconClose className={cx('close-icon')} />
+        </Button>
+      </div>
+    </div>);
 
   return (
     <TerraPopup
@@ -67,14 +66,14 @@ const Popup = ({
       isHeaderDisabled
     >
       <div>
-        {hasHeader && popupHeader}
+        {popupHeader}
         {popupContent}
       </div>
     </TerraPopup>
   );
 };
 
-Popup.propTypes = propTypes;
-Popup.defaultProps = defaultProps;
+NavHelpPopup.propTypes = propTypes;
+NavHelpPopup.defaultProps = defaultProps;
 
-export default Popup;
+export default NavHelpPopup;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Popup from '../../../src/components/popup/Popup';
+import NavHelpPopup from '../../../src/components/nav-help/NavHelpPopup';
 
 
 const popupContent = <div> This is a test content</div>;
@@ -8,7 +8,7 @@ const mockFn = jest.fn();
 describe('Popup', () => {
   // Snapshot Tests
   it('should render a pop with title,close button and content', () => {
-    const wrapper = shallow(<Popup
+    const wrapper = shallow(<NavHelpPopup
       title="Title"
       hasHeader
       targetRef={mockFn}
@@ -22,7 +22,7 @@ describe('Popup', () => {
   });
 
   it('should render a popup without header(title & close button)', () => {
-    const wrapper = shallow(<Popup
+    const wrapper = shallow(<NavHelpPopup
       title="Title"
       hasHeader={false}
       targetRef={mockFn}

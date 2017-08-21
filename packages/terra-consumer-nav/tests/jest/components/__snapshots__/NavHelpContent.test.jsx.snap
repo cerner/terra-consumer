@@ -2,60 +2,68 @@
 
 exports[`Content of the Help Modal/Popup should render a list of items with/without toggler 1`] = `
 <div>
-  <button
+  <Button
     className="help-item"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
     onClick={[Function]}
+    type="button"
+    variant="default"
   >
-    <div
+    <Arrange
+      align="stretch"
       className="help-item-text"
-    >
-      <Arrange
-        align="stretch"
-        fill={
-          <div
-            className="item-text-padding"
-          >
-            Technical Questions
-          </div>
-        }
-        fitEnd={
-          <div
-            className="icon"
-          >
-            <IconChevronDown
-              className="icon"
-              data-name="Layer 1"
-              isBidi={true}
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        }
-        fitStart={
-          <div
-            className="icon"
-          >
-            <IconInfo
-              data-name="Layer 1"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </div>
-        }
-      />
-      <Toggle
-        className="toggler-padding"
-        isAnimated={true}
-        isOpen={false}
-      >
+      fill={
         <div
-          className="help-subitem toggler-content-padding"
+          className="item-text-padding"
+        >
+          Technical Questions
+        </div>
+      }
+      fitEnd={
+        <div
+          className="icon"
+        >
+          <IconChevronDown
+            className="icon"
+            data-name="Layer 1"
+            isBidi={true}
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </div>
+      }
+      fitStart={
+        <div
+          className="icon"
+        >
+          <IconOutlineQuestionMark
+            height={16}
+            viewBox="0 0 48 48"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </div>
+      }
+    />
+    <Toggle
+      className="toggler-padding"
+      isAnimated={true}
+      isOpen={false}
+    >
+      <p
+        className="toggler-content-alignment"
+      >
+        <span
+          className="help-subitem"
         >
           Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx
-        </div>
-      </Toggle>
-    </div>
-  </button>
+        </span>
+      </p>
+    </Toggle>
+  </Button>
   <Button
     className="help-item help-item-border"
     href="http://localhost:8080/"
@@ -66,31 +74,29 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
     type="button"
     variant="default"
   >
-    <div
+    <Arrange
+      align="center"
       className="help-item-text"
-    >
-      <Arrange
-        align="center"
-        fill={
-          <div
-            className="item-text-padding"
-          >
-            Get Support ID
-          </div>
-        }
-        fitStart={
-          <svg
-            className="icon"
-          >
-            <IconInfo
-              data-name="Layer 1"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            />
-          </svg>
-        }
-      />
-    </div>
+      fill={
+        <div
+          className="item-text-padding"
+        >
+          Get Support ID
+        </div>
+      }
+      fitStart={
+        <div
+          className="icon"
+        >
+          <IconOutlineQuestionMark
+            height={16}
+            viewBox="0 0 48 48"
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        </div>
+      }
+    />
   </Button>
 </div>
 `;

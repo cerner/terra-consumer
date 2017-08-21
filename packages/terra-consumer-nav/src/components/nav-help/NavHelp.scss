@@ -2,11 +2,11 @@
 
 :local {
   .nav-help {
-    background-color: var(--terra-consumer--help-button-background, #fff);
+    background-color: var(--terra-consumer--nav-help-button-background, #fff);
     border: 0;
     border-radius: 20px;
     box-shadow: 0 1px 1px #666;
-    color: var(--terra-consumer--help-button-color, #3d3d3d);
+    color: var(--terra-consumer--nav-help-button-color, #3d3d3d);
     display: inline-block;
     font-family: inherit;
     font-size: 16px;
@@ -14,12 +14,12 @@
     padding: 6px 13px;
 
     &:hover {
-      background: var(--terra-consumer--help-button-hover-background, #eee);
+      background: var(--terra-consumer--nav-help-button-hover-background, #eee);
       cursor: pointer;
     }
 
     &:focus {
-      background: var(--terra-consumer--help-item-background, #eee);
+      background: var(--terra-consumer--nav-help-button-background, #eee);
     }
 
     &:active {
@@ -27,13 +27,14 @@
     }
   }
     
-  .icon {
+  .icon svg {
+    font-size: 16px;
     height: 16px;
     width: 16px;
   }
 
   .help-item {
-    background: var(--terra-consumer--help-item-background, #fff);
+    background: var(--terra-consumer--nav-help-item-background, #fff);
     border: 0;
     border-radius: 0;
     font-family: inherit;
@@ -42,29 +43,29 @@
     width: 100%;
 
     &:hover {
-      background: var(--terra-consumer--help-item-background, #eee);
+      background: var(--terra-consumer--nav-help-item-background, #eee);
       cursor: pointer;
     }
     
     &:focus {
-      background: var(--terra-consumer--help-item-background, #eee);
+      background: var(--terra-consumer--nav-help-item-background, #eee);
     }
 
   }
 
   .help-item-text {
-    color: var(--terra-consumer--help-item-text-color, #383f42);
+    color: var(--terra-consumer--nav-help-item-text-color, #383f42);
     font-size: 14px;
     line-height: 18px;
     text-align: left;
   }
 
   .help-item-border {
-    border-top: 1px solid var(--terra-consumer--help-item-border-color, #dedfe0);
+    border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
   }
   
   .help-subitem {
-    color: var(--terra-consumer--help-subitem-text-color, #64696c);
+    color: var(--terra-consumer--nav-help-subitem-text-color, #64696c);
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;
@@ -78,9 +79,10 @@
     padding: 0;
   }
 
-  .toggler-content-padding {
+  .toggler-content-alignment {
     padding-right: 20px;
     padding-top: 20px;
+    text-align: left;
   }
 
   .button-text-padding {

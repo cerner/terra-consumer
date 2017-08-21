@@ -6,7 +6,6 @@ import classNames from 'classnames/bind';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import Toggler from 'terra-toggle';
-import navElementShape from '../../NavPropShapes';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -15,17 +14,7 @@ const propTypes = {
   /**
    * A list of items to be displayed in help menu/popup/modal.
    */
-  helpContent: PropTypes.arrayOf(PropTypes.shape(
-    navElementShape,
-    {
-      children: PropTypes.arrayOf(PropTypes.shape(
-      navElementShape,
-        {
-          children: PropTypes.array,
-        },
-      )),
-    },
-  )),
+  helpContent: PropTypes.array,
 };
 
 const defaultProps = {
@@ -47,11 +36,17 @@ class NavHelpContent extends React.Component {
   render() {
     const { helpContent, ...customProps } = this.props;
     const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
+
     const contentList = helpContent.map((content, i) => {
-      const contentElement = content.children.length > 0 ?
-      (<button key={`${content.text}`} onClick={this.handleToggle} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}>
-        <div className={cx('help-item-text')}>
+      let contentElement;
+      if (content.children.length > 0) {
+        contentElement = (<Button
+          key={`${content.text}`}
+          onClick={this.handleToggle}
+          className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}
+        >
           <Arrange
+            className={cx('help-item-text')}
             align="stretch"
             fitStart={<div className={cx('icon')}>{content.icon}</div>}
             fill={<div className={cx('item-text-padding')}>{content.text}</div>}
@@ -59,25 +54,25 @@ class NavHelpContent extends React.Component {
           />
           <Toggler isOpen={this.state.isOpen} isAnimated className={cx('toggler-padding')}>
             { content.children.map(element => (
-              <div key={`${element.text}`} className={cx('help-subitem', 'toggler-content-padding')}>{element.text}</div>
-              ))
+              <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
+                <span className={cx('help-subitem')}>
+                  {element.text}
+                </span>
+              </p>))
             }
           </Toggler>
-        </div>
-      </button>
-      )
-      :
-      (
-        <Button key={`${content.text}`} href={content.uri} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
-          <div className={cx('help-item-text')}>
-            <Arrange
-              align="center"
-              fitStart={<svg className={cx('icon')}>{content.icon}</svg>}
-              fill={<div className={cx('item-text-padding')}>{content.text}</div>}
-            />
-          </div>
-        </Button>
-      );
+        </Button>);
+      } else {
+        contentElement = (<Button key={`${content.text}`} href={content.uri} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
+          <Arrange
+            className={cx('help-item-text')}
+            align="center"
+            fitStart={<div className={cx('icon')}>{content.icon}</div>}
+            fill={<div className={cx('item-text-padding')}>{content.text}</div>}
+          />
+        </Button>);
+      }
+
       return contentElement;
     });
 

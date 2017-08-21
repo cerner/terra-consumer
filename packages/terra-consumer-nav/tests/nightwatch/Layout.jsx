@@ -61,9 +61,9 @@ class Layout extends React.Component {
             {/* Added a div to test the HelpButton relative to page content */}
             <div style={{ background: '#fff', height: '100%', width: 'inherit' }}>I am in the main content</div>
             <div className={cx('footer')}>
-              <NavHelp help={helpItems} id={helpId} />
+              <NavHelp helpNavs={helpItems} id={helpId} />
             </div>
-            <NavHelp className={cx('help-button-desktop')} help={helpItems} id={helpId} />
+            <NavHelp className={cx('help-button-desktop')} helpNavs={helpItems} id={helpId} />
           </div>
         </div>
       </I18nProvider>

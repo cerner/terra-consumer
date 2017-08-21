@@ -1,12 +1,12 @@
 import React from 'react';
-import IconInfo from '../../../src/icons/IconInfo';
+import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import NavHelpContent from '../../../src/components/nav-help/NavHelpContent';
 
 const testData = [
   {
     text: 'Technical Questions',
     uri: 'http://localhost:8080/',
-    icon: (<IconInfo />),
+    icon: (<IconOutlineQuestionMark height={16} width={16} />),
     children: [{
       text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
       uri: 'http://localhost:8080/',
@@ -15,7 +15,7 @@ const testData = [
   {
     text: 'Get Support ID',
     uri: 'http://localhost:8080/',
-    icon: (<IconInfo />),
+    icon: (<IconOutlineQuestionMark height={16} width={16} />),
     children: [],
   },
 ];
