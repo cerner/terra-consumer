@@ -14,6 +14,7 @@ ChangeLog
 - Updating Navigation Logo to no longer have a width constraint on mobile/tablet.
 - Navigation width is now inherited from parent to allow different widths.
 - Nav logo is now flush with top of screen to allow parent to control padding for consistency.
+- Prop Type validations are not checked  at nav root level, but rather let other components that use these props validate them
 
 -----------------
 
