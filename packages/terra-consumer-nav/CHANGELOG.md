@@ -20,3 +20,12 @@ Initial beta release
 
 ### Changed
 - package.json -> now includes required terra packages used by the nav
+
+# 0.2.0-BETA.1 - (August 22, 2017)
+-----------------
+Initial beta release
+
+### Added
+  *  nav-help: Component that renders a help button in bottom right corner of the screen. 
+  *  user-profile: Component that renders user profile portiand allows to access user specific settings.
+  *  Added support for i18n for Navigation components using terra-i18n.

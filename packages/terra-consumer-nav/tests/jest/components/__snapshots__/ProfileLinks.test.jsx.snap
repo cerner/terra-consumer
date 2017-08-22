@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Link items should render a list of profile link items 1`] = `
+<div>
+  <Button
+    className="link profile-item-border"
+    href="http://localhost:8080/"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    text="Account"
+    type="button"
+    variant="default"
+  />
+  <Button
+    className="link profile-item-border"
+    href="http://localhost:8080/"
+    isBlock={false}
+    isCompact={false}
+    isDisabled={false}
+    isReversed={false}
+    text="Notifications"
+    type="button"
+    variant="default"
+  />
+</div>
+`;

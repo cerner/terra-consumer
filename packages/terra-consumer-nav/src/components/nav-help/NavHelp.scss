@@ -1,0 +1,106 @@
+@import '../../variables';
+
+:local {
+  .nav-help {
+    background-color: var(--terra-consumer--nav-help-button-background, #fff);
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px #666;
+    color: var(--terra-consumer--nav-help-button-color, #3d3d3d);
+    display: inline-block;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 6px 13px;
+
+    &:hover {
+      background: var(--terra-consumer--nav-help-button-hover-background, #eee);
+      cursor: pointer;
+    }
+
+    &:focus {
+      background: var(--terra-consumer--nav-help-button-background, #eee);
+    }
+
+    &:active {
+      color: inherit;
+    }
+  }
+    
+  .icon svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  .help-item {
+    background: var(--terra-consumer--nav-help-item-background, #fff);
+    border: 0;
+    border-radius: 0;
+    font-family: inherit;
+    padding: 20px;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background: var(--terra-consumer--nav-help-item-background, #eee);
+      cursor: pointer;
+    }
+    
+    &:focus {
+      background: var(--terra-consumer--nav-help-item-background, #eee);
+    }
+
+  }
+
+  .help-item-text {
+    color: var(--terra-consumer--nav-help-item-text-color, #383f42);
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+  }
+
+  .help-item-border {
+    border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
+  }
+  
+  .help-subitem {
+    color: var(--terra-consumer--nav-help-subitem-text-color, #64696c);
+    font-size: 14px;
+    line-height: 18px;
+    text-decoration: none;
+  }
+
+  .item-text-padding {
+    padding-left: 10px;
+  }
+
+  .toggler-padding {
+    padding: 0;
+  }
+
+  .toggler-content-alignment {
+    padding-right: 20px;
+    padding-top: 20px;
+    text-align: left;
+  }
+
+  .button-text-padding {
+    padding-left: 6px;
+  }
+
+  .link-text-style {
+    text-decoration: none;
+  }
+
+  .popup-content {
+    border-radius: 5px;
+    bottom: 0;
+    box-shadow: 0 1px 1px #666;
+    margin-bottom: 15px;
+    margin-left: 0;
+    margin-right: 15px;
+    margin-top: 0;
+    position: relative;
+    right: 0;
+  }
+}

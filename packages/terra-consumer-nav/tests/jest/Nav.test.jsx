@@ -16,6 +16,17 @@ const testData = {
     altText: 'test',
     isCard: false,
   },
+  profileLinks: [{
+    text: 'Account',
+    uri: 'http://localhost:8080/',
+  },
+  {
+    text: 'Notifications',
+    uri: 'http://localhost:8080/',
+  }],
+  userName: 'John Snow',
+  profileId: 'profile-popup-button',
+  signoutUrl: 'http://localhost:8080/',
   isMobileNavOpen: false,
   onRequestClose: () => {},
 };
