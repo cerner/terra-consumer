@@ -5,7 +5,6 @@ import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import NavItems from './components/nav-items/NavItems';
 import NavLogo from './components/nav-logo/NavLogo';
-import navItemShape from './NavPropShapes';
 import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
@@ -17,27 +16,17 @@ const propTypes = {
   /**
    * An array of objects to be displayed as quick link options.
    */
-  quickLinks: PropTypes.arrayOf(PropTypes.shape(
-    navItemShape)),
+  quickLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+  })),
   /**
    * An array of objects to be displayed as nav link options.
    */
-  navItems: PropTypes.arrayOf(
-    PropTypes.shape(
-      navItemShape,
-      {
-        /**
-         * An optional array of objects to be displayed as sub navs toggled by the main nav.
-         */
-        subNavs: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
-      },
-    ),
-  ),
+  navItems: PropTypes.array.isRequired,
   /**
    * An array of nav items to be displayed on the user profile/ settings menu/popup.
    */
-  profileLinks: PropTypes.arrayOf(PropTypes.shape(
-    navItemShape)),
+  profileLinks: PropTypes.array.isRequired,
   /**
    * User name to be displayed in the profile in navigation.
    */
