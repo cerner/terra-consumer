@@ -13,7 +13,6 @@ const cx = classNames.bind(styles);
 const propTypes = {
   nav: PropTypes.object,
   helpItems: PropTypes.array,
-  helpId: PropTypes.string.isRequired,
   locale: PropTypes.oneOf(['en', 'en-GB', 'en-US', 'es']).isRequired,
 };
 
@@ -42,7 +41,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { nav, helpItems, helpId, locale, ...customProps } = this.props;
+    const { nav, helpItems, locale, ...customProps } = this.props;
     return (
       <I18nProvider
         locale={this.state.locale}
@@ -61,9 +60,9 @@ class Layout extends React.Component {
             {/* Added a div to test the HelpButton relative to page content */}
             <div style={{ background: '#fff', height: '100%', width: 'inherit' }}>I am in the main content</div>
             <div className={cx('footer')}>
-              <NavHelp helpNavs={helpItems} id={helpId} />
+              <NavHelp helpNavs={helpItems} id="nav-help-button" />
             </div>
-            <NavHelp className={cx('help-button-desktop')} helpNavs={helpItems} id={helpId} />
+            <NavHelp className={cx('help-button-desktop')} helpNavs={helpItems} id="nav-help-button" />
           </div>
         </div>
       </I18nProvider>

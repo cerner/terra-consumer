@@ -47,10 +47,6 @@ const propTypes = {
    */
   avatar: PropTypes.PropTypes.element,
   /**
-   * A unique id set to the profile popup button that will be referred in profile popup.
-   */
-  profileId: PropTypes.string.isRequired,
-  /**
    * The path signout button would redirect to.
    */
   signoutUrl: PropTypes.string.isRequired,
@@ -90,7 +86,7 @@ const defaultProps = {
 };
 
 const Nav = ({
-  quickLinks, navItems, profileLinks, userName, avatar, profileId, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
+  quickLinks, navItems, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
 }) => (
   <div className={cx('nav-container')} {...customProps}>
     {/* Make this into a Slide Component */}
@@ -101,7 +97,7 @@ const Nav = ({
         {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
       </QuickLinks>
       <NavItems navItems={navItems} />
-      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} id={profileId} signoutUrl={signoutUrl} />
+      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} id="profile-popup-button" signoutUrl={signoutUrl} />
     </div>
   </div>
 );

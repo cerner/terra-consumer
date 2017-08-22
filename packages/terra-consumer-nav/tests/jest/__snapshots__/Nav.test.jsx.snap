@@ -3,6 +3,7 @@
 exports[`Nav should render a default component 1`] = `
 <div
   className="nav-container"
+  profileId="profile-popup-button"
 >
   <div
     aria-hidden={true}

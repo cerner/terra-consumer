@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
@@ -9,17 +8,6 @@ import Toggler from 'terra-toggle';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
-
-const propTypes = {
-  /**
-   * A list of items to be displayed in help menu/popup/modal.
-   */
-  helpContent: PropTypes.array,
-};
-
-const defaultProps = {
-  helpContent: [],
-};
 
 class NavHelpContent extends React.Component {
   constructor() {
@@ -34,10 +22,10 @@ class NavHelpContent extends React.Component {
   }
 
   render() {
-    const { helpContent, ...customProps } = this.props;
+    const { ...customProps } = this.props;
     const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
 
-    const contentList = helpContent.map((content, i) => {
+    const contentList = customProps.helpContent.map((content, i) => {
       let contentElement;
       if (content.children.length > 0) {
         contentElement = (<Button
@@ -77,13 +65,12 @@ class NavHelpContent extends React.Component {
     });
 
     return (
-      <div {...customProps}>
+      <div>
         {contentList}
       </div>
     );
   }
 }
 
-NavHelpContent.propTypes = propTypes;
-NavHelpContent.defaultProps = defaultProps;
 export default NavHelpContent;
+

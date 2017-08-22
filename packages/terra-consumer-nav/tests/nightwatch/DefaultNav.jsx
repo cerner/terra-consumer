@@ -93,7 +93,6 @@ const DefaultNav = () => {
       ],
       userName: 'John Snow',
       avatar: (<IconPerson />),
-      profileId: 'profile-popup-button',
       signoutUrl: 'http://localhost:8080/',
     },
 
@@ -114,7 +113,6 @@ const DefaultNav = () => {
         children: [],
       },
     ],
-    helpId: 'nav-help-button',
     locale: 'en-US',
   };
 
