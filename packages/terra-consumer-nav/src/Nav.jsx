@@ -95,7 +95,7 @@ const Nav = ({
       {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
     </QuickLinks>
     <NavItems navItems={navItems} />
-    <UserProfile />
+    <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} id="profile-popup-button" signoutUrl={signoutUrl} />
   </div>
 );
 

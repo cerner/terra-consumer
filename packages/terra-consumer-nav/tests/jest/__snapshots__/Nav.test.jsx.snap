@@ -45,6 +45,23 @@ exports[`Nav should render a default component 1`] = `
       ]
     }
   />
-  <InjectIntl(UserProfile) />
+  <InjectIntl(UserProfile)
+    avatar={null}
+    id="profile-popup-button"
+    name="John Snow"
+    profileLinks={
+      Array [
+        Object {
+          "text": "Account",
+          "uri": "http://localhost:8080/",
+        },
+        Object {
+          "text": "Notifications",
+          "uri": "http://localhost:8080/",
+        },
+      ]
+    }
+    signoutUrl="http://localhost:8080/"
+  />
 </div>
 `;
