@@ -88,17 +88,14 @@ const defaultProps = {
 const Nav = ({
   quickLinks, navItems, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps
 }) => (
-  <div className={cx('nav-container')} {...customProps}>
-    {/* Make this into a Slide Component */}
-    <div className={cx('nav')} aria-hidden={!isMobileNavOpen}>
-      <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
-      <NavLogo {...logo} />
-      <QuickLinks>
-        {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
-      </QuickLinks>
-      <NavItems navItems={navItems} />
-      <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} id="profile-popup-button" signoutUrl={signoutUrl} />
-    </div>
+  <div {...customProps} className={cx('nav', customProps.className)} aria-hidden={!isMobileNavOpen}>
+    <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
+    <NavLogo {...logo} />
+    <QuickLinks>
+      {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
+    </QuickLinks>
+    <NavItems navItems={navItems} />
+    <UserProfile profileLinks={profileLinks} name={userName} avatar={avatar} id="profile-popup-button" signoutUrl={signoutUrl} />
   </div>
 );
 

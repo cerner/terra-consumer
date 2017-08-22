@@ -13,7 +13,7 @@ describe('Nav Logo', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should render inside a Card component when specified', () => {
+  it('should render a Card instead of a div when specified', () => {
     const wrapper = shallow(<NavLogo {...testData} isCard />);
     expect(wrapper).toMatchSnapshot();
   });

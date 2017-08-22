@@ -62,12 +62,12 @@ const NavItem = ({
   });
 
   const itemText = (
-    <span>
+    <div>
       {text}
       { badgeValue > 0 &&
-        <span className={cx('badge')}>{badgeValue}</span>
+        <div className={cx('badge')}>{badgeValue}</div>
       }
-    </span>
+    </div>
   );
 
   const currentItem = (children && children.length > 0) ?

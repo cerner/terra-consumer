@@ -41,8 +41,8 @@ describe('Nav', () => {
   });
 
   // Structure Tests
-  it('should have the class nav-container', () => {
+  it('should have the class nav', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('nav-container');
+    expect(wrapper.prop('className')).toContain('nav');
   });
 });

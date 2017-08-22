@@ -48,11 +48,13 @@ class Layout extends React.Component {
         messages={Object.assign({}, this.state.messages, Messages[this.state.locale])}
       >
         <div className={cx('layout', customProps.className)} {...customProps}>
-          <Nav
-            {...nav}
-            isMobileNavOpen={this.state.isMobileNavOpen}
-            onRequestClose={this.toggleNav}
-          />
+          <div className={cx('nav-container')}>
+            <Nav
+              {...nav}
+              isMobileNavOpen={this.state.isMobileNavOpen}
+              onRequestClose={this.toggleNav}
+            />
+          </div>
           <div className={cx('main-container')}>
             <button className={cx('nav-burger')} onClick={this.toggleNav}>
               <IconMenu />

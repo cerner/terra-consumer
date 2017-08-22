@@ -11,9 +11,9 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
       className="nav-item"
       href="#testPath"
     >
-      <span>
+      <div>
         testIcon
-      </span>
+      </div>
     </a>
   </div>
 </div>
@@ -30,9 +30,9 @@ exports[`Nav Item should apply custom classes 1`] = `
       className="nav-item"
       href="#testPath"
     >
-      <span>
+      <div>
         testIcon
-      </span>
+      </div>
     </a>
   </div>
 </div>
@@ -49,9 +49,9 @@ exports[`Nav Item should render a default component 1`] = `
       className="nav-item"
       href="#testPath"
     >
-      <span>
+      <div>
         testIcon
-      </span>
+      </div>
     </a>
   </div>
 </div>

@@ -2,11 +2,6 @@
 @import './variables';
 
 :local {
-  .nav-container {
-    background: inherit;
-    z-index: 100;
-  }
-
   .nav {
     background: inherit;
     left: 0;
@@ -14,7 +9,11 @@
     min-height: 100vh;
     overflow-y: auto;
     position: relative;
-    width: $terra-consumer--nav-container-width;
+    width: inherit;
+
+    @media screen and (max-width: $terra-tiny-breakpoint) {
+      width: 100vw;
+    }
   }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
@@ -23,6 +22,7 @@
       box-shadow: 0 1px 3px;
       display: block;
       opacity: 0.95;
+      z-index: 100;
     }
 
     .nav[aria-hidden='true'] {
