@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile should render a user profile with avatar,name and popup button 1`] = `
+<div
+  avatar={
+    <IconPerson
+      data-name="Layer 1"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+    />
+  }
+  name="Frank Lampard"
+  profileLinks={
+    Array [
+      Object {
+        "icon": <IconOutlineQuestionMark
+          height={16}
+          viewBox="0 0 48 48"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+    />,
+        "text": "Account",
+        "uri": "http://localhost:8080/",
+      },
+      Object {
+        "icon": <IconOutlineQuestionMark
+          height={16}
+          viewBox="0 0 48 48"
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+    />,
+        "text": "Notifications",
+        "uri": "http://localhost:8080/",
+      },
+    ]
+  }
+  signoutUrl="http://localhost:8080/"
+/>
+`;

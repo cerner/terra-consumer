@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 import Base from 'terra-base';
 import Grid from 'terra-grid';
 import List from 'terra-list';
-import './site.scss';
+import styles from './site.scss';
 
 const propTypes = {
   children: PropTypes.node,
@@ -49,10 +49,11 @@ class App extends React.Component {
                   <option value="fi-FI">fi-FI</option>
                 </select>
               </div>
-              <List className="site-nav">
+              <List className={styles['site-nav']}>
                 <List.Item content={<Link to="/">Home</Link>} />
-                <List.Item content={<Link to="/site/arrange">Arrange</Link>} />
                 <List.Item content={<Link to="/tests">Tests</Link>} />
+                <List.Item content={<Link to="/site/icon">Icon</Link>} />
+                <List.Item content={<Link to="/site/nav">Nav</Link>} />
               </List>
             </Grid.Column>
             <Grid.Column small={10}>

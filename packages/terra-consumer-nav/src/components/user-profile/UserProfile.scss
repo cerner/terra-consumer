@@ -1,0 +1,107 @@
+@import '../../variables';
+
+:local {
+  .profile {
+    background: none;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    position: fixed;
+    width: inherit;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: inherit;
+    }
+  }
+
+  .icon {
+    height: 16px;
+    width: 16px;
+  }
+
+  .link {
+    background: var(--terra-consumer--nav-profile-item-background, #fff);
+    border: 0;
+    border-radius: 0;
+    color: var(--terra-consumer--nav-profile-item-text-color, #383f42);
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover {
+      background: var(--terra-consumer--nav-profile-item-hover-background, #eee);
+      cursor: pointer;
+    }
+
+    &:focus {
+      background: var(--terra-consumer--nav-profile-item-background, #eee);
+    }
+  }
+
+  .signout-border {
+    border-top: 1px solid var(--terra-consumer--nav-profile-item-border-color, #dedfe0);
+    margin: 0;
+    visibility: visible;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      border-top: 0;
+    }
+  }
+  
+  .profile-item-border {
+    border-bottom: 0;
+    margin: 0;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      border-bottom: 1px solid var(--terra-consumer--nav-profile-item-border-color, #dedfe0);
+      margin: 0;
+    }
+  }
+
+  .popup-button {
+    background: inherit;
+    border: 0;
+    border-radius: 0;
+    color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
+    font-family: inherit;
+    font-size: 16px;
+    padding: 20px 25px;
+    text-align: center;
+    width: inherit;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
+    }
+
+    &:hover {
+      background: inherit;
+      color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
+      cursor: pointer;
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
+      }
+    }
+
+    &:focus {
+      background: inherit;
+      color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
+      }
+    }  
+  }
+
+  .profile-text-padding {
+    padding-left: 10px;
+    text-align: left;
+  }
+
+  .link-text-style {
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+  }
+}

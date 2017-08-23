@@ -12,6 +12,18 @@ exports[`Nav Logo should apply custom classes 1`] = `
 </div>
 `;
 
+exports[`Nav Logo should render a Card instead of a div when specified 1`] = `
+<Card
+  className="logo-container"
+>
+  <img
+    alt="testIcon"
+    className="img"
+    src="#testPath"
+  />
+</Card>
+`;
+
 exports[`Nav Logo should render a default component 1`] = `
 <div
   className="logo-container"
@@ -21,19 +33,5 @@ exports[`Nav Logo should render a default component 1`] = `
     className="img"
     src="#testPath"
   />
-</div>
-`;
-
-exports[`Nav Logo should render inside a Card component when specified 1`] = `
-<div
-  className="logo-container"
->
-  <Card>
-    <img
-      alt="testIcon"
-      className="img"
-      src="#testPath"
-    />
-  </Card>
 </div>
 `;

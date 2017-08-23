@@ -1,10 +1,9 @@
 # Terra Consumer Nav
 
-
 [![NPM version](http://img.shields.io/npm/v/terra-consumer-nav.svg)](https://www.npmjs.org/package/terra-consumer-nav)
 [![Build Status](https://travis-ci.org/cerner/terra-consumer.svg?branch=master)](https://travis-ci.org/cerner/terra-consumer)
 
-Initial Navigation component
+The Nav is a responsive container component that neatly displays a logo, quick-links, nav-links and a profile, as a page navigation with user-friendly interactions.
 
 - [Getting Started](#getting-started)
 - [Documentation](https://github.com/cerner/terra-consumer/tree/master/packages/terra-consumer-nav/docs)
