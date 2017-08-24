@@ -11,7 +11,7 @@ describe('Modal', () => {
     const wrapper = shallow(<Modal
       title="Modal Tittle"
       content={modalContent}
-      closeModal={mockFn}
+      onRequestClose={mockFn}
     />);
     expect(wrapper).toMatchSnapshot();
   });

@@ -2,7 +2,7 @@ import React from 'react';
 import NavLogo from '../../../src/components/nav-logo/NavLogo';
 
 const testData = {
-  path: '#testPath',
+  url: '#testPath',
   altText: 'testIcon',
 };
 

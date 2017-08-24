@@ -3,7 +3,7 @@ import NavItems from '../../../src/components/nav-items/NavItems';
 
 const testData = {
   navItems: [{
-    uri: '#testPath',
+    url: '#testPath',
     text: 'testIcon',
     isActive: false,
     badgeValue: 0,

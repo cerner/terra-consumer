@@ -2,7 +2,7 @@ import React from 'react';
 import QuickLink from '../../../src/components/quick-links/QuickLink';
 
 const testData = {
-  uri: '#testPath',
+  url: '#testPath',
   text: 'testIcon',
 };
 
