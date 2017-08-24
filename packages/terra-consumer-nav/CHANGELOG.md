@@ -1,6 +1,16 @@
 ChangeLog
 =========
 
+# 0.1.0-BETA.3 - (--)
+
+### Added
+
+### Changed
+
+### Removed
+
+-----------------
+
 # 0.1.0-BETA.2 - (August 24, 2017)
 
 ### Added

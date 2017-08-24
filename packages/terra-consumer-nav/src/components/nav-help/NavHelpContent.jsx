@@ -51,7 +51,7 @@ class NavHelpContent extends React.Component {
           </Toggler>
         </Button>);
       } else {
-        contentElement = (<Button key={`${content.text}`} href={content.uri} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
+        contentElement = (<Button key={`${content.text}`} href={content.url} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
           <Arrange
             className={cx('help-item-text')}
             align="center"
@@ -73,4 +73,3 @@ class NavHelpContent extends React.Component {
 }
 
 export default NavHelpContent;
-

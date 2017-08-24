@@ -46,17 +46,15 @@ const NavHelpPopup = ({
  ...customProps
 }) => {
   const popupHeader = (hasHeader &&
-    <div className={cx('popup-header')}>
-      <div className={cx('popup-title')}>
-        {title}
-        <Button
-          className={cx('close-button')}
-          onClick={closePopup}
-        >
-          <IconClose className={cx('close-icon')} />
-        </Button>
-      </div>
-    </div>);
+    <div className={cx('popup-title')}>
+      {title}
+      <Button
+        className={cx('close-button')}
+        onClick={closePopup}
+        icon={<IconClose />}
+      />
+    </div>
+  );
 
   return (
     <TerraPopup

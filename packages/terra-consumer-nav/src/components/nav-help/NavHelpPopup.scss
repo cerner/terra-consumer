@@ -1,44 +1,32 @@
 :local {
-  .popup-header {
-    background: var(--terra-consumer--popup-header-background, #64696c);
-    display: inline-block;
-    padding: 5px 0;
-    text-align: left;
-    width: 100%;
-  }
-
   .popup-title {
+    background: var(--terra-consumer--popup-title-background, #64696c);
     color: var(--terra-consumer--popup-title-color, #fff);
     font-size: 20px;
     line-height: 30px;
-    padding-left: 15px;
-  }
-
-  .close-icon {
-    height: 16px;
-    width: 16px;
+    padding: 5px 10px;
+    width: 100%;
   }
 
   .close-button {
     background: none;
     border: 0;
     color: var(--terra-consumer--popup-close-button-color, #fff);
-    cursor: pointer;
+    float: right;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    position: absolute;
-    right: 15px;
-    top: 10px;
+    padding-top: 3px;
 
     &:hover {
       background: none;
-      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      color: var(--terra-consumer--popup-close-button-hover-color, #777);
+      cursor: pointer;
     }
 
     &:focus {
       background: none;
-      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      color: var(--terra-consumer--popup-close-button-hover-color, #777);
     }
   }
 }

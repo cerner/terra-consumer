@@ -33,7 +33,6 @@ const propTypes = {
    * A unique id set to the help button that will be referred in help menu/popup .
    */
   id: PropTypes.string.isRequired,
-
   /**
    * Injected react-intl formatting api
    */
@@ -44,7 +43,6 @@ const defaultProps = {
   helpNavs: [],
 };
 
-
 class NavHelp extends React.Component {
   constructor() {
     super();
@@ -52,11 +50,14 @@ class NavHelp extends React.Component {
     this.state = {
       isOpen: false,
     };
+
     this.togglePopup = this.togglePopup.bind(this);
   }
 
   togglePopup() {
-    this.setState({ isOpen: !this.state.isOpen });
+    this.setState({
+      isOpen: !this.state.isOpen,
+    });
   }
 
   render() {
@@ -72,42 +73,46 @@ class NavHelp extends React.Component {
           fitEnd={<div className={cx('button-text-padding')}><FormattedMessage id="nav_help" /></div>}
           align="stretch"
         />
-      </Button>);
+      </Button>
+    );
 
     const popupContent = <NavHelpContent helpContent={helpNavs} />;
 
-    const defaultElement = (<Modal
-      isModalOpen={this.state.isOpen}
-      title={intl.formatMessage({ id: 'nav_help' })}
-      content={popupContent}
-      closeModal={this.togglePopup}
-    />);
+    const defaultElement = (
+      <Modal
+        isModalOpen={this.state.isOpen}
+        title={intl.formatMessage({ id: 'nav_help' })}
+        onRequestClose={this.togglePopup}
+      >
+        {popupContent}
+      </Modal>
+    );
 
-    const popup = (<NavHelpPopup
-      title={intl.formatMessage({ id: 'nav_help' })}
-      hasHeader
-      isOpen={this.state.isOpen}
-      targetRef={() => document.getElementById(id)}
-      closePopup={this.togglePopup}
-      contentWidth="320"
-      contentHeight="240"
-      classNameContent={cx('popup-content')}
-      contentAttachment="middle center"
-      popupContent={popupContent}
-    />);
+    const popup = (
+      <NavHelpPopup
+        title={intl.formatMessage({ id: 'nav_help' })}
+        hasHeader
+        isOpen={this.state.isOpen}
+        targetRef={() => document.getElementById(id)}
+        closePopup={this.togglePopup}
+        contentWidth="320"
+        contentHeight="240"
+        classNameContent={cx('popup-content')}
+        contentAttachment="middle center"
+        popupContent={popupContent}
+      />
+    );
 
     return (
-
       <div {...customProps}>
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
         {!this.state.isOpen && helpButton}
       </div>
     );
   }
-
 }
 
 NavHelp.propTypes = propTypes;
 NavHelp.defaultProps = defaultProps;
-export default injectIntl(NavHelp);
 
+export default injectIntl(NavHelp);

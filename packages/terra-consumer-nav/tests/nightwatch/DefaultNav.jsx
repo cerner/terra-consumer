@@ -11,41 +11,42 @@ const DefaultNav = () => {
     nav: {
       quickLinks: [
         {
-          uri: '/?react_perf',
+          url: '/?react_perf',
           text: 'Create Appointment',
         },
         {
-          uri: '/?react_perf',
+          url: '/?react_perf',
           text: 'Send Message',
         },
         {
-          uri: '/?react_perf',
+          url: '/?react_perf',
           text: 'Refill Medications',
         },
         {
-          uri: '/?react_perf',
+          url: '/?react_perf',
           text: 'Log Daily Fitness',
         },
       ],
       navItems: [
         {
-          uri: '?react_perf#/tests/nav-tests/default',
+          url: '?react_perf#/tests/nav-tests/default',
           text: 'Dashboard',
+          icon: <IconPerson />,
           isActive: false,
         },
         {
-          uri: '',
+          url: '',
           text: 'Messaging',
           badgeValue: 2,
           subItems: [
             {
-              uri: '#inbox',
+              url: '#inbox',
               text: 'Inbox',
               isActive: true,
               badgeValue: 1,
             },
             {
-              uri: '#sent',
+              url: '#sent',
               text: 'Sent',
               isActive: false,
               badgeValue: 1,
@@ -53,21 +54,21 @@ const DefaultNav = () => {
           ],
         },
         {
-          uri: '/?react_perf',
+          url: '/?react_perf',
           text: 'Health Record',
           isActive: false,
         },
         {
-          uri: '',
+          url: '',
           text: 'See test data',
           subItems: [
             {
-              uri: '#inbox2',
+              url: '#inbox2',
               text: 'Inbox',
               isActive: false,
             },
             {
-              uri: '#sent2',
+              url: '#sent2',
               text: 'Sent',
               isActive: false,
             },
@@ -75,7 +76,7 @@ const DefaultNav = () => {
         },
       ],
       logo: {
-        path: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
+        url: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
         altText: 'Placeholder logo',
         isCard: true,
       },
@@ -83,12 +84,12 @@ const DefaultNav = () => {
         {
           text: 'Account',
           icon: (<IconOutlineQuestionMark />),
-          uri: 'http://localhost:8080/',
+          url: 'http://localhost:8080/',
         },
         {
           text: 'Notifications',
           icon: (<IconOutlineQuestionMark />),
-          uri: 'http://localhost:8080/',
+          url: 'http://localhost:8080/',
         },
       ],
       userName: 'John Snow',
@@ -99,16 +100,16 @@ const DefaultNav = () => {
     helpItems: [
       {
         text: 'Technical Questions',
-        uri: 'http://localhost:8080/',
+        url: 'http://localhost:8080/',
         icon: (<IconOutlineQuestionMark />),
         children: [{
           text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-          uri: 'http://localhost:8080/',
+          url: 'http://localhost:8080/',
         }],
       },
       {
         text: 'Get Support ID',
-        uri: 'http://localhost:8080/',
+        url: 'http://localhost:8080/',
         icon: (<IconOutlineQuestionMark />),
         children: [],
       },

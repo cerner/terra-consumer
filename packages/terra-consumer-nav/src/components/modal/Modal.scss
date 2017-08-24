@@ -4,10 +4,9 @@
   .modal {
     background: var(--terra-consumer--modal-background, #fff);
     border-radius: 5px;
-    display: block;
     left: 20px;
     overflow: auto;
-    position: fixed;
+    position: absolute;
     right: 20px;
     top: 60px;
 
@@ -17,36 +16,26 @@
     }
   }
 
-  .modal-header {
-    display: inline-block;
+  .modal-title {
+    color: var(--terra-consumer--modal-title-color, #fff);
+    font-size: 20px;
     left: 0;
-    position: fixed;
+    line-height: 30px;
+    position: absolute;
     right: 0;
     text-align: center;
     top: 15px;
   }
 
-  .modal-title {
-    color: var(--terra-consumer--modal-title-color, #fff);
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center;
-  }
-  
   .overlay {
     background-color: var(--terra-consumer--overlay-background, #64696c);
     opacity: 1;
   }
 
-  .close-icon {
-    font-size: 16px;
-  }
-  
   .close-button {
     background: none;
     border: 0;
     color: var(--terra-consumer--modal-close-button-color, #fff);
-    cursor: pointer;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -61,6 +50,7 @@
     &:hover {
       background: none;
       color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      cursor: pointer;
     }
 
     &:focus {

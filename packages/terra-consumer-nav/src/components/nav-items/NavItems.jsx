@@ -2,28 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import NavItem from './NavItem';
+import navItemShape from '../../NavPropShapes';
 import styles from './NavItem.scss';
 
 const cx = classNames.bind(styles);
-
-const navItemShape = {
-  /**
-   * The path the nav item should lead to.
-   */
-  uri: PropTypes.string,
-  /**
-   * The text displayed on the link.
-   */
-  text: PropTypes.string,
-  /**
-   * Whether or not the link should be styled as active or not.
-   */
-  isActive: PropTypes.bool,
-  /**
-   * An optional badge. When supplied, displays the value inline, styled alongside the text.
-   */
-  badgeValue: PropTypes.number,
-};
 
 const propTypes = {
   navItems: PropTypes.arrayOf(
@@ -80,8 +62,9 @@ class NavItems extends Component {
       return (
         <NavItem
           key={element.text}
-          uri={element.uri}
+          url={element.url}
           text={element.text}
+          icon={element.icon}
           isActive={element.isActive}
           badgeValue={element.badgeValue}
           {...toggleProps}
