@@ -53,51 +53,33 @@ const defaultProps = {
 };
 
 
-class UserProfile extends React.Component {
-  constructor() {
-    super();
+const UserProfile = ({
+  name, avatar, id, signoutUrl, profileLinks, handleClick, intl, ...customProps
+}) => {
+  const content = (
+    <div>
+      <ProfileLinks linkItems={profileLinks} />
+      <Button className={cx('link', 'signout-border')} href={signoutUrl}>
+        <FormattedMessage id="nav_signout" />
+      </Button>
+    </div>
+  );
 
-    this.state = {
-      isOpen: false,
-    };
+  const title = intl.formatMessage({ id: 'nav_profile_title' });
 
-    this.togglePopup = this.togglePopup.bind(this);
-  }
-
-  togglePopup() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    });
-  }
-
-  render() {
-    const { name, avatar, id, signoutUrl, profileLinks, handleClick, intl, ...customProps } = this.props;
-
-    const content = (
-      <div>
-        <ProfileLinks linkItems={profileLinks} />
-        <Button className={cx('link', 'signout-border')} href={signoutUrl}>
-          <FormattedMessage id="nav_signout" />
-        </Button>
-      </div>
-    );
-
-    const title = intl.formatMessage({ id: 'nav_profile_title' });
-
-    return (
-      <div {...customProps} className={cx('profile')}>
-        <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
-          <Arrange
-            fitStart={<svg className={cx('icon')}>{avatar}</svg>}
-            fill={<div className={cx('profile-text-padding')}>{name}</div>}
-            fitEnd={<IconEllipses className={cx('icon')} id={id} />}
-            align="center"
-          />
-        </Button>
-      </div>
-    );
-  }
-}
+  return (
+    <div {...customProps} className={cx('profile')}>
+      <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
+        <Arrange
+          fitStart={<svg className={cx('icon')}>{avatar}</svg>}
+          fill={<div className={cx('profile-text-padding')}>{name}</div>}
+          fitEnd={<IconEllipses className={cx('icon')} id={id} />}
+          align="center"
+        />
+      </Button>
+    </div>
+  );
+};
 
 UserProfile.propTypes = propTypes;
 UserProfile.defaultProps = defaultProps;

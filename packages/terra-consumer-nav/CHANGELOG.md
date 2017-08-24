@@ -4,10 +4,13 @@ ChangeLog
 # 0.1.0-BETA.3 - (--)
 
 ### Added
+- Icon support for navigation items.
+- target attribute support for navigation items.
 
 ### Changed
-
-### Removed
+- Profile settings modal now opens as expected in safari tablet mode.
+- Minor UI fixes.
+- PropType consistency for links/paths.
 
 -----------------
 

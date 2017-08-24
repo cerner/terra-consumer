@@ -27,7 +27,7 @@ const ProfileLinks = ({
   <div {...customProps}>
     { linkItems.map(linkItem =>
       <Button
-        key={`${linkItem.text}`}
+        key={linkItem.text}
         href={linkItem.url}
         className={cx('link', 'profile-item-border')}
         text={linkItem.text}
