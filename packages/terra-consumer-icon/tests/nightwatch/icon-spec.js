@@ -19,18 +19,18 @@ module.exports = {
       .expect.element('#icon-default').to.have.attribute('aria-hidden').which.contains('true');
   },
 
-  'Displays a default icon with height equal to 48': (browser) => {
+  'Displays a default icon with height equal to 1em': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/icon-tests/default`)
       .waitForElementPresent('#icon-default', 1000)
-      .expect.element('#icon-default').to.have.attribute('height').which.contains('48');
+      .expect.element('#icon-default').to.have.attribute('height').which.contains('1em');
   },
 
-  'Displays a default icon with width equal to 48': (browser) => {
+  'Displays a default icon with width equal to 1em': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/icon-tests/default`)
       .waitForElementPresent('#icon-default', 1000)
-      .expect.element('#icon-default').to.have.attribute('width').which.contains('48');
+      .expect.element('#icon-default').to.have.attribute('width').which.contains('1em');
   },
 
   'Displays a default icon with focusable equal to false': (browser) => {

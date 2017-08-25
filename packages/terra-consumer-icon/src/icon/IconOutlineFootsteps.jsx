@@ -13,7 +13,7 @@ const SvgIcon = (customProps) => {
 };
 
 SvgIcon.displayName = "IconOutlineFootsteps";
-SvgIcon.defaultProps = {"viewBox":"0 0 24 24","height":"24","width":"24","xmlns":"http://www.w3.org/2000/svg"};
+SvgIcon.defaultProps = {"viewBox":"0 0 24 24","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */

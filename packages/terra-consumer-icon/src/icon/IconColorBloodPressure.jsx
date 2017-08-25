@@ -13,7 +13,7 @@ const SvgIcon = (customProps) => {
 };
 
 SvgIcon.displayName = "IconColorBloodPressure";
-SvgIcon.defaultProps = {"viewBox":"0 0 48 48","height":"48","width":"48","xmlns":"http://www.w3.org/2000/svg"};
+SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
 /* eslint-enable */

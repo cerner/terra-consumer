@@ -17,7 +17,7 @@ describe('Icon', () => {
     describe('height prop', () => {
       it('should have default height="1em"', () => {
         const wrapper = shallow(<IconChatBubble />);
-        expect(wrapper.prop('height')).toEqual('48');
+        expect(wrapper.prop('height')).toEqual('1em');
       });
       it('should have height=50', () => {
         const wrapper = shallow(<IconChatBubble height="50" />);
@@ -32,7 +32,7 @@ describe('Icon', () => {
     describe('width prop', () => {
       it('should have default width="1em"', () => {
         const wrapper = shallow(<IconChatBubble />);
-        expect(wrapper.prop('width')).toEqual('48');
+        expect(wrapper.prop('width')).toEqual('1em');
       });
       it('should have width=50', () => {
         const wrapper = shallow(<IconChatBubble width="50" />);
@@ -98,7 +98,7 @@ describe('Icon', () => {
     describe('height prop', () => {
       it('should have default height="1em"', () => {
         const wrapper = shallow(<IconColorIncentives />);
-        expect(wrapper.prop('height')).toEqual('24');
+        expect(wrapper.prop('height')).toEqual('1em');
       });
       it('should have height=50', () => {
         const wrapper = shallow(<IconColorIncentives height="50" />);
@@ -113,7 +113,7 @@ describe('Icon', () => {
     describe('width prop', () => {
       it('should have default width="1em"', () => {
         const wrapper = shallow(<IconColorIncentives />);
-        expect(wrapper.prop('width')).toEqual('24');
+        expect(wrapper.prop('width')).toEqual('1em');
       });
       it('should have width=50', () => {
         const wrapper = shallow(<IconColorIncentives width="50" />);
@@ -184,7 +184,7 @@ describe('Icon', () => {
     describe('height prop', () => {
       it('should have default height="1em"', () => {
         const wrapper = shallow(<IconOutlineChevronRight />);
-        expect(wrapper.prop('height')).toEqual('48');
+        expect(wrapper.prop('height')).toEqual('1em');
       });
       it('should have height=50', () => {
         const wrapper = shallow(<IconOutlineChevronRight height="50" />);
@@ -199,7 +199,7 @@ describe('Icon', () => {
     describe('width prop', () => {
       it('should have default width="1em"', () => {
         const wrapper = shallow(<IconOutlineChevronRight />);
-        expect(wrapper.prop('width')).toEqual('48');
+        expect(wrapper.prop('width')).toEqual('1em');
       });
       it('should have width=50', () => {
         const wrapper = shallow(<IconOutlineChevronRight width="50" />);

@@ -4,11 +4,11 @@ exports[`Icon IconChatBubble should shallow IconBase 1`] = `
 <IconBase
   ariaLabel={null}
   focusable={false}
-  height="48"
+  height="1em"
   isBidi={false}
   isSpin={false}
   viewBox="0 0 48 48"
-  width="48"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -44,11 +44,11 @@ exports[`Icon IconColorIncentives should shallow IconBase 1`] = `
 <IconBase
   ariaLabel={null}
   focusable={false}
-  height="24"
+  height="1em"
   isBidi={false}
   isSpin={false}
   viewBox="0 0 24 24"
-  width="24"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -102,9 +102,9 @@ exports[`Icon IconOutlineChevronRight should render IconBase with custom-class 1
   aria-hidden="true"
   class="icon is-bidi custom-class"
   focusable="false"
-  height="48"
+  height="1em"
   viewbox="0 0 48 48"
-  width="48"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -123,11 +123,11 @@ exports[`Icon IconOutlineChevronRight should shallow IconBase 1`] = `
   ariaLabel={null}
   className=""
   focusable={false}
-  height="48"
+  height="1em"
   isBidi={true}
   isSpin={false}
   viewBox="0 0 48 48"
-  width="48"
+  width="1em"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path

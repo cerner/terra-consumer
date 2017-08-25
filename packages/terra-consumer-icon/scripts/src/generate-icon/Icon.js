@@ -11,6 +11,9 @@ class Icon {
     this.attributes = classNamesToAttributes(Array.prototype.slice.call(node.attributes)
       .map(x => ({ name: htmlToReactAttributes(x.name), value: x.value }))
       .reduce((attrs, x) => Object.assign({ [x.name]: x.value }, attrs), {}));
+    // deleting height and width attributes as we can set this at consumer level
+    delete this.attributes.height;
+    delete this.attributes.width;
   }
 }
 
