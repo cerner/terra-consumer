@@ -12,10 +12,12 @@ const DefaultNav = () => {
       quickLinks: [
         {
           url: '/?react_perf',
+          icon: <IconPerson />,
           text: 'Create Appointment',
         },
         {
           url: '/?react_perf',
+          icon: (<IconOutlineQuestionMark />),
           text: 'Send Message',
         },
         {
@@ -35,7 +37,6 @@ const DefaultNav = () => {
           isActive: false,
         },
         {
-          url: '',
           text: 'Messaging',
           badgeValue: 2,
           subItems: [
@@ -59,7 +60,6 @@ const DefaultNav = () => {
           isActive: false,
         },
         {
-          url: '',
           text: 'See test data',
           subItems: [
             {

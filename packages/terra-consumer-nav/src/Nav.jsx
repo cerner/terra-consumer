@@ -19,7 +19,9 @@ const propTypes = {
   /**
    * An array of objects to be displayed as quick link options.
    */
-  quickLinks: PropTypes.array,
+  quickLinks: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+  })),
   /**
    * An array of objects to be displayed as nav link options.
    */

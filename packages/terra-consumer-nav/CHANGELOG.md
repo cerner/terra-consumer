@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.3 - (--)
+# 0.1.0-BETA.3 - (August 25, 2017)
 
 ### Added
 - Icon support for navigation items.
@@ -14,7 +14,7 @@ ChangeLog
 
 -----------------
 
-# 0.1.0-BETA.2 - (August 24, 2017)
+# 0.1.0-BETA.2 - (August 22, 2017)
 
 ### Added
 - nav-help: Component that renders a help button in bottom right corner of the screen.

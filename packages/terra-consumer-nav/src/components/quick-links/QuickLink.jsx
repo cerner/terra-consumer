@@ -12,6 +12,10 @@ const propTypes = {
    */
   url: PropTypes.string.isRequired,
   /**
+   *
+   */
+  icon: PropTypes.element,
+  /**
    * The text displayed on the link.
    */
   text: PropTypes.string.isRequired,
@@ -19,11 +23,15 @@ const propTypes = {
 
 const QuickLink = ({
   url,
+  icon,
   text,
   ...customProps
-}) => (
-  <Button {...customProps} className={cx('quicklink', customProps.className)} href={url} text={text} key={text} />
-);
+}) => {
+  const classIcon = <span className={cx('quicklink-icon')}>{icon}</span>;
+  return (
+    <Button {...customProps} className={cx('quicklink', customProps.className)} icon={classIcon} href={url} text={text} key={text} />
+  );
+};
 
 QuickLink.propTypes = propTypes;
 
