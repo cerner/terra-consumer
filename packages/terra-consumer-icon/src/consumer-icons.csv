@@ -25,7 +25,6 @@ outline-success,Nucleo_Outline/ui/outline_ui_48px_check-circle-08.svg,themeable,
 outline-warning,Nucleo_Outline/ui/outline_ui_48px_alert-circle-!.svg,themeable,
 outline-error,Nucleo_Outline/ui/outline_ui_48px_alert.svg,themeable,
 outline-filter,Nucleo_Outline/ui/outline_ui_48px_filter.svg,themeable,
-outline-calendar-simple,Nucleo_Outline/ui/outline_ui_48px_calendar-57.svg,themeable,
 outline-location-pin,Nucleo_Outline/business-finance/outline_business-finance_48px_pin.svg,themeable,
 outline-fingerprint,Nucleo_Outline/touch gestures/outline_touch-gestures_48px_touch-id.svg,themeable,
 outline-eyeglasses,Nucleo_Outline/clothes-accessories/outline_clothes-accessories_48px_glasses.svg,themeable,
@@ -51,7 +50,6 @@ outline-error-page,Nucleo_Outline/ui/outline_ui_48px_alert.svg,themeable,
 color-incentives,Nucleo_Colored/animals-nature/colored_animals-nature_48px_pig.svg,,
 color-footsteps,Nucleo_Colored/sport/colored_sport_48px_shoe-run.svg,,bi-directional
 color-running,Nucleo_Colored/sport/colored_sport_48px_user-run.svg,,bi-directional
-color_award-49,Nucleo_Colored/business-finance/colored_business-finance_48px_award-49.svg,,bi-directional
 color_award-49,Nucleo_Colored/business-finance/colored_business-finance_48px_award-49.svg,,bi-directional
 ui-color-1_calendar-grid-61,Nucleo_Colored/ui/colored_ui_48px_calendar-grid-61.svg,,
 color-weight-scale,Nucleo_Colored/furniture/colored_furniture_48px_weight.svg,,

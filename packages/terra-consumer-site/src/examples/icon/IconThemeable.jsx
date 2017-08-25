@@ -249,13 +249,6 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconOutlineCalendarSimple height='2em' width='2em' /></td>
-        <td>outline-calendar-simple</td>
-        <td>
-          import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineLocationPin height='2em' width='2em' /></td>
         <td>outline-location-pin</td>
         <td>
