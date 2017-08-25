@@ -6,13 +6,17 @@ const navItemShape = {
    */
   text: PropTypes.string.isRequired,
   /**
-   * The path the profile link would redirect to.
+   * The path the link would redirect to.
    */
-  uri: PropTypes.string.isRequired,
+  url: PropTypes.string,
   /**
    * Optional Icon to be displayed in profile link.
    */
   icon: PropTypes.element,
+  /**
+   *  Specifies where to open the linked document.
+   */
+  target: PropTypes.string,
   /**
    * Whether or not the link should be styled as active or not.
    */

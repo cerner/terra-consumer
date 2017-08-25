@@ -8,7 +8,7 @@ import NavHelp from '../../../src/components/nav-help/NavHelp';
 const helpItems = [
   {
     text: 'Technical Questions',
-    uri: 'http://localhost:8080/',
+    url: 'http://localhost:8080/',
     icon: (<IconOutlineQuestionMark height={16} width={16} />),
     children: [{
       text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
@@ -17,7 +17,7 @@ const helpItems = [
   },
   {
     text: 'Get Support ID',
-    uri: 'http://localhost:8080/',
+    url: 'http://localhost:8080/',
     icon: (<IconOutlineQuestionMark height={16} width={16} />),
     children: [],
   },

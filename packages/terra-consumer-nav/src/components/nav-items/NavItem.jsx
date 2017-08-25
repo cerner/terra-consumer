@@ -1,28 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Arrange from 'terra-arrange';
 import styles from './NavItem.scss';
 import NavToggler from '../nav-toggler/NavToggler';
+import navItemShape from '../../NavPropShapes';
 
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  /**
-   * The path the nav item should lead to.
-   */
-  uri: PropTypes.string,
-  /**
-   * The text displayed on the link.
-   */
-  text: PropTypes.string,
-  /**
-   * Whether or not the link should be styled as active or not.
-   */
-  isActive: PropTypes.bool,
-  /**
-   * An optional badge. When supplied, displays the value inline, styled alongside the text.
-   */
-  badgeValue: PropTypes.number,
+  ...navItemShape,
   /**
    * The id of the toggle component to be toggled.
    */
@@ -47,8 +34,10 @@ const defaultProps = {
 };
 
 const NavItem = ({
-  uri,
+  url,
   text,
+  icon,
+  target,
   isActive,
   badgeValue,
   toggleId,
@@ -62,12 +51,17 @@ const NavItem = ({
   });
 
   const itemText = (
-    <div>
-      {text}
-      { badgeValue > 0 &&
-        <div className={cx('badge')}>{badgeValue}</div>
+    <Arrange
+      fitStart={icon ? <span className={cx('nav-item-icon')}>{icon}</span> : null}
+      fill={
+        <div className={cx(icon && 'nav-item-text')}>
+          {text}
+          { badgeValue > 0 &&
+            <div className={cx('badge')}>{badgeValue}</div>
+          }
+        </div>
       }
-    </div>
+    />
   );
 
   const currentItem = (children && children.length > 0) ?
@@ -81,7 +75,7 @@ const NavItem = ({
     </NavToggler>)
   :
   (<div className={activeClass}>
-    <a href={uri} className={cx('nav-item')}>
+    <a href={url} target={target} className={cx('nav-item')}>
       {itemText}
     </a>
   </div>);

@@ -3,26 +3,26 @@ import Nav from '../../src/Nav';
 
 const testData = {
   quickLinks: [{
-    uri: '/test',
+    url: '/test',
     text: 'test',
   }],
   navItems: [{
-    uri: '#test',
+    url: '#test',
     text: 'test',
     isActive: true,
   }],
   logo: {
-    path: '',
+    url: '',
     altText: 'test',
     isCard: false,
   },
   profileLinks: [{
     text: 'Account',
-    uri: 'http://localhost:8080/',
+    url: 'http://localhost:8080/',
   },
   {
     text: 'Notifications',
-    uri: 'http://localhost:8080/',
+    url: 'http://localhost:8080/',
   }],
   userName: 'John Snow',
   profileId: 'profile-popup-button',

@@ -2,66 +2,101 @@
 
 exports[`Nav should render a default component 1`] = `
 <div
-  aria-hidden={true}
   className="nav"
-  profileId="profile-popup-button"
 >
-  <Button
-    className="close-button"
-    icon={
-      <IconClose
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    }
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isReversed={false}
-    onClick={[Function]}
-    type="button"
-    variant="default"
-  />
-  <NavLogo
-    altText="test"
-    isCard={false}
-    path=""
-  />
-  <QuickLinks>
-    <QuickLink
-      text="test"
-      uri="/test"
+  <div
+    aria-hidden={true}
+    className="nav"
+    profileId="profile-popup-button"
+  >
+    <Button
+      className="close-button"
+      icon={
+        <IconClose
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      type="button"
+      variant="default"
     />
-  </QuickLinks>
-  <NavItems
-    navItems={
-      Array [
-        Object {
-          "isActive": true,
-          "text": "test",
-          "uri": "#test",
-        },
-      ]
+    <NavLogo
+      altText="test"
+      isCard={false}
+      url=""
+    />
+    <QuickLinks>
+      <QuickLink
+        text="test"
+        url="/test"
+      />
+    </QuickLinks>
+    <NavItems
+      navItems={
+        Array [
+          Object {
+            "isActive": true,
+            "text": "test",
+            "url": "#test",
+          },
+        ]
+      }
+    />
+    <InjectIntl(UserProfile)
+      avatar={null}
+      handleClick={[Function]}
+      id="profile-popup-button"
+      name="John Snow"
+      profileLinks={
+        Array [
+          Object {
+            "text": "Account",
+            "url": "http://localhost:8080/",
+          },
+          Object {
+            "text": "Notifications",
+            "url": "http://localhost:8080/",
+          },
+        ]
+      }
+      signoutUrl="http://localhost:8080/"
+    />
+  </div>
+  <ResponsiveElement
+    defaultElement={
+      <Modal
+        isModalOpen={false}
+        onRequestClose={[Function]}
+        title=""
+      >
+        <div />
+      </Modal>
     }
-  />
-  <InjectIntl(UserProfile)
-    avatar={null}
-    id="profile-popup-button"
-    name="John Snow"
-    profileLinks={
-      Array [
-        Object {
-          "text": "Account",
-          "uri": "http://localhost:8080/",
-        },
-        Object {
-          "text": "Notifications",
-          "uri": "http://localhost:8080/",
-        },
-      ]
+    medium={
+      <Popup
+        boundingRef={null}
+        classNameArrow={null}
+        classNameContent={null}
+        classNameOverlay={null}
+        contentAttachment="top right"
+        contentHeight="240"
+        contentWidth="240"
+        isArrowDisplayed={true}
+        isHeaderDisabled={false}
+        isOpen={false}
+        onRequestClose={[Function]}
+        targetRef={[Function]}
+      >
+        <div />
+      </Popup>
     }
-    signoutUrl="http://localhost:8080/"
+    responsiveTo="window"
   />
 </div>
 `;

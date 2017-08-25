@@ -20,7 +20,7 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
           xmlns="http://www.w3.org/2000/svg"
     />,
         "text": "Account",
-        "uri": "http://localhost:8080/",
+        "url": "http://localhost:8080/",
       },
       Object {
         "icon": <IconOutlineQuestionMark
@@ -30,7 +30,7 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
           xmlns="http://www.w3.org/2000/svg"
     />,
         "text": "Notifications",
-        "uri": "http://localhost:8080/",
+        "url": "http://localhost:8080/",
       },
     ]
   }

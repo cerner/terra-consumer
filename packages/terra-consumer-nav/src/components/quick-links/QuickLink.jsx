@@ -10,7 +10,11 @@ const propTypes = {
   /**
    * The path the quicklink should lead to.
    */
-  uri: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  /**
+   *
+   */
+  icon: PropTypes.element,
   /**
    * The text displayed on the link.
    */
@@ -18,12 +22,16 @@ const propTypes = {
 };
 
 const QuickLink = ({
-  uri,
+  url,
+  icon,
   text,
   ...customProps
-}) => (
-  <Button {...customProps} className={cx('quicklink', customProps.className)} href={uri} text={text} key={text} />
-);
+}) => {
+  const classIcon = <span className={cx('quicklink-icon')}>{icon}</span>;
+  return (
+    <Button {...customProps} className={cx('quicklink', customProps.className)} icon={classIcon} href={url} text={text} key={text} />
+  );
+};
 
 QuickLink.propTypes = propTypes;
 

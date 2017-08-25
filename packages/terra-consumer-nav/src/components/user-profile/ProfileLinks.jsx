@@ -11,8 +11,9 @@ const propTypes = {
   /**
    * An array of nav items to be displayed on the user profile/ settings menu/popup.
    */
-  linkItems: PropTypes.arrayOf(PropTypes.shape(
-    navElementShape)),
+  linkItems: PropTypes.arrayOf(
+    PropTypes.shape(navElementShape),
+  ),
 };
 
 const defaultProps = {
@@ -24,9 +25,13 @@ const ProfileLinks = ({
   ...customProps
 }) => (
   <div {...customProps}>
-    { linkItems.map(linkItem => (
-      <Button key={`${linkItem.text}`} href={linkItem.uri} className={cx('link', 'profile-item-border')} text={linkItem.text} />
-      ))
+    { linkItems.map(linkItem =>
+      <Button
+        key={linkItem.text}
+        href={linkItem.url}
+        className={cx('link', 'profile-item-border')}
+        text={linkItem.text}
+      />)
     }
   </div>
 );

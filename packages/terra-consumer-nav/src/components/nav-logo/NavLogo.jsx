@@ -6,9 +6,9 @@ import styles from './NavLogo.scss';
 
 const propTypes = {
   /**
-   *  The path to where the image is located.
+   *  The url of the logo to be shown.
    */
-  path: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
   /**
    *  The alternate text that is read by screen readers or displayed if the image fails to load.
    */
@@ -27,12 +27,12 @@ const defaultProps = {
 const cx = classNames.bind(styles);
 
 const NavLogo = ({
-  path,
+  url,
   altText,
   isCard,
   ...customProps
 }) => {
-  const image = <img className={cx('img')} src={path} alt={altText} />;
+  const image = <img className={cx('img')} src={url} alt={altText} />;
   const domNode = isCard ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',

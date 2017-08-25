@@ -9,7 +9,7 @@ exports[`Nav Items should apply custom classes 1`] = `
     handleToggle={[Function]}
     isActive={false}
     text="testIcon"
-    uri="#testPath"
+    url="#testPath"
   />
 </div>
 `;
@@ -23,7 +23,7 @@ exports[`Nav Items should render a default component 1`] = `
     handleToggle={[Function]}
     isActive={false}
     text="testIcon"
-    uri="#testPath"
+    url="#testPath"
   />
 </div>
 `;

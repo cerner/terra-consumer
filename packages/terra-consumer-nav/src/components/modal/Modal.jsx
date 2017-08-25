@@ -1,3 +1,4 @@
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
@@ -14,18 +15,17 @@ const propTypes = {
    */
   title: PropTypes.string,
   /**
-   * Content to be rendered in the body of the dialog box.
-   */
-  content: PropTypes.element,
-  /**
    * Boolean value to render modal.
    */
   isModalOpen: PropTypes.bool.isRequired,
   /**
    * Required callback function for use by parent component to update state.
    */
-
-  closeModal: PropTypes.func.isRequired,
+  onRequestClose: PropTypes.func.isRequired,
+  /**
+   * Content to be rendered in the body of the dialog box.
+   */
+  children: PropTypes.node,
 };
 
 const defaultProps = {
@@ -33,31 +33,26 @@ const defaultProps = {
 };
 
 const Modal = ({
- title,
- content,
- isModalOpen,
- closeModal,
- ...customProps
+  title,
+  isModalOpen,
+  onRequestClose,
+  children,
+  ...customProps
 }) => {
   const modalHeader = (
-    <div className={cx('modal-header')}>
-      <div className={cx('modal-title')}>
-        {title}
-        <Button
-          className={cx('close-button')}
-          onClick={closeModal}
-        >
-          <IconClose className={cx('close-icon')} />
-        </Button>
-      </div>
+    <div className={cx('modal-title')}>
+      {title}
+      <Button className={cx('close-button')} onClick={onRequestClose}>
+        <IconClose />
+      </Button>
     </div>
-    );
+  );
 
   return (
-    <Overlay {...customProps} isOpen={isModalOpen} backgroundStyle="dark" className={cx('overlay')}>
+    <Overlay {...customProps} isOpen={isModalOpen} className={cx('overlay')}>
       {modalHeader}
       <div className={cx('modal')}>
-        {content}
+        {children}
       </div>
     </Overlay>
   );

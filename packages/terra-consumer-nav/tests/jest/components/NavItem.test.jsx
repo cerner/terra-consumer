@@ -2,7 +2,7 @@ import React from 'react';
 import NavItem from '../../../src/components/nav-items/NavItem';
 
 const testData = {
-  uri: '#testPath',
+  url: '#testPath',
   text: 'testIcon',
   isActive: false,
   badgeValue: 0,
