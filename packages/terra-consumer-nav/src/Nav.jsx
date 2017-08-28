@@ -12,6 +12,7 @@ import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
 import UserProfile from './components/user-profile/UserProfile';
+import NavHelp from './components/nav-help/NavHelp';
 
 const cx = classNames.bind(styles);
 
@@ -160,6 +161,7 @@ class Nav extends React.Component {
 }
 
 Nav.propTypes = propTypes;
+Nav.Help = NavHelp;
 Nav.defaultProps = defaultProps;
 
 export default Nav;

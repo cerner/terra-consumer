@@ -31,6 +31,7 @@ const ProfileLinks = ({
         href={linkItem.url}
         className={cx('link', 'profile-item-border')}
         text={linkItem.text}
+        target={linkItem.target}
       />)
     }
   </div>

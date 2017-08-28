@@ -67,6 +67,7 @@ class NavItems extends Component {
           icon={element.icon}
           isActive={element.isActive}
           badgeValue={element.badgeValue}
+          target={element.target}
           {...toggleProps}
         >
           {subNavs}
