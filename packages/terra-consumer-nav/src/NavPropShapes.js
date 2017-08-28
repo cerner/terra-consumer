@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const navItemShape = {
+export const navItemShape = {
   /**
    * Text to be displayed in profile link.
    */
@@ -27,4 +27,10 @@ const navItemShape = {
   badgeValue: PropTypes.number,
 };
 
-export default navItemShape;
+export const navItemShapeDefaults = {
+  url: '',
+  icon: null,
+  target: '_self',
+  isActive: false,
+  badgeValue: 0,
+};

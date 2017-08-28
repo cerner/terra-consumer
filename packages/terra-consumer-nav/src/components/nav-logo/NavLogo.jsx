@@ -33,7 +33,7 @@ const NavLogo = ({
   ...customProps
 }) => {
   const image = <img className={cx('img')} src={url} alt={altText} />;
-  const domNode = (isCard && url) ? Card : 'div';
+  const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',
     customProps.className,
