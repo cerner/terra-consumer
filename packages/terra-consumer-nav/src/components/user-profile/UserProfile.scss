@@ -14,11 +14,6 @@
     }
   }
 
-  .icon {
-    height: 16px;
-    width: 16px;
-  }
-
   .link {
     background: var(--terra-consumer--nav-profile-item-background, #fff);
     border: 0;
@@ -69,7 +64,7 @@
     font-family: inherit;
     font-size: 16px;
     padding: 20px 25px;
-    text-align: center;
+    text-align: left;
     width: inherit;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
@@ -94,9 +89,8 @@
     }
   }
 
-  .profile-text-padding {
-    padding-left: 10px;
-    text-align: left;
+  .avatar {
+    padding-right: 10px;
   }
 
   .link-text-style {

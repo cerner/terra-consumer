@@ -5,6 +5,7 @@ import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
+import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import ProfileLinks from './ProfileLinks';
 import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
@@ -71,8 +72,8 @@ const UserProfile = ({
     <div {...customProps} className={cx('profile')}>
       <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
         <Arrange
-          fitStart={<svg className={cx('icon')}>{avatar}</svg>}
-          fill={<div className={cx('profile-text-padding')}>{name}</div>}
+          fitStart={<div className={cx('avatar')}>{avatar || <IconPerson />}</div>}
+          fill={<span>{name}</span>}
           fitEnd={<IconEllipses className={cx('icon')} id={id} />}
           align="center"
         />

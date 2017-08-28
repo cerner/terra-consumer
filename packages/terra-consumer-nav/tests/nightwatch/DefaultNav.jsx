@@ -93,7 +93,6 @@ const DefaultNav = () => {
         },
       ],
       userName: 'John Snow',
-      avatar: (<IconPerson />),
       signoutUrl: 'http://localhost:8080/',
     },
 

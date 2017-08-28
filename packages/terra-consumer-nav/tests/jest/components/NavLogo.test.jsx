@@ -18,6 +18,11 @@ describe('Nav Logo', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should render a div regardless of isCard when no url is provided', () => {
+    const wrapper = shallow(<NavLogo isCard altText="test" />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should apply custom classes', () => {
     const wrapper = shallow(<NavLogo {...testData} className="test-class" />);
     expect(wrapper).toMatchSnapshot();

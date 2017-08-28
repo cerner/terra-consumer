@@ -26,11 +26,6 @@
       color: inherit;
     }
   }
-    
-  .icon svg {
-    height: 16px;
-    width: 16px;
-  }
 
   .help-item {
     background: var(--terra-consumer--nav-help-item-background, #fff);
@@ -45,7 +40,7 @@
       background: var(--terra-consumer--nav-help-item-background, #eee);
       cursor: pointer;
     }
-    
+
     &:focus {
       background: var(--terra-consumer--nav-help-item-background, #eee);
     }
@@ -62,7 +57,7 @@
   .help-item-border {
     border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
   }
-  
+
   .help-subitem {
     color: var(--terra-consumer--nav-help-subitem-text-color, #64696c);
     font-size: 14px;
@@ -97,9 +92,7 @@
     bottom: 0;
     box-shadow: 0 1px 1px #666;
     margin-bottom: 15px;
-    margin-left: 0;
     margin-right: 15px;
-    margin-top: 0;
     position: relative;
     right: 0;
   }
