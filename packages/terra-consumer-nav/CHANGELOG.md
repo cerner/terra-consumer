@@ -9,6 +9,7 @@ ChangeLog
 
 ### Changed
 - Minor UI fixes.
+- Font antialiased fixes for chrome/firefox.
 - Hover effects for nav-items (mobile/desktop)
 - Scrolling content on help popup no longer scrolls title.
 - Removed id as prop requirement for help/profile.
