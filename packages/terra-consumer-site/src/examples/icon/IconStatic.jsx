@@ -13,11 +13,6 @@ import IconColorHeartRate from 'terra-consumer-icon/lib/icon/IconColorHeartRate'
 import IconColorBloodGlucose from 'terra-consumer-icon/lib/icon/IconColorBloodGlucose';
 import IconColorBloodPressure from 'terra-consumer-icon/lib/icon/IconColorBloodPressure';
 import IconColorPulseOximetry from 'terra-consumer-icon/lib/icon/IconColorPulseOximetry';
-import IconNoData from 'terra-consumer-icon/lib/icon/IconNoData';
-import IconNoMatchingResults from 'terra-consumer-icon/lib/icon/IconNoMatchingResults';
-import IconNotAuthorized from 'terra-consumer-icon/lib/icon/IconNotAuthorized';
-import IconSensitiveData from 'terra-consumer-icon/lib/icon/IconSensitiveData';
-import IconErrorPage from 'terra-consumer-icon/lib/icon/IconErrorPage';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -101,41 +96,6 @@ const IconAll = () => (
         <td>color-pulse-oximetry</td>
         <td>
           import IconColorPulseOximetry from 'terra-consumer-icon/lib/icon/IconColorPulseOximetry';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconNoData height='2em' width='2em' /></td>
-        <td>no-data</td>
-        <td>
-          import IconNoData from 'terra-consumer-icon/lib/icon/IconNoData';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconNoMatchingResults height='2em' width='2em' /></td>
-        <td>no-matching-results</td>
-        <td>
-          import IconNoMatchingResults from 'terra-consumer-icon/lib/icon/IconNoMatchingResults';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconNotAuthorized height='2em' width='2em' /></td>
-        <td>not-authorized</td>
-        <td>
-          import IconNotAuthorized from 'terra-consumer-icon/lib/icon/IconNotAuthorized';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconSensitiveData height='2em' width='2em' /></td>
-        <td>sensitive-data</td>
-        <td>
-          import IconSensitiveData from 'terra-consumer-icon/lib/icon/IconSensitiveData';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconErrorPage height='2em' width='2em' /></td>
-        <td>error-page</td>
-        <td>
-          import IconErrorPage from 'terra-consumer-icon/lib/icon/IconErrorPage';
         </td>
       </tr>
     </Table.Rows>

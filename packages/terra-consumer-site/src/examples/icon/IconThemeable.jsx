@@ -2,7 +2,6 @@
 /* eslint-disable */
 import React from 'react';
 import Table from 'terra-table';
-import IconOutlineIncentives from 'terra-consumer-icon/lib/icon/IconOutlineIncentives';
 import IconOutlineFootsteps from 'terra-consumer-icon/lib/icon/IconOutlineFootsteps';
 import IconOutlineRunning from 'terra-consumer-icon/lib/icon/IconOutlineRunning';
 import IconOutlineDonutChart from 'terra-consumer-icon/lib/icon/IconOutlineDonutChart';
@@ -46,6 +45,12 @@ import IconOutlineProductivity from 'terra-consumer-icon/lib/icon/IconOutlinePro
 import IconOutlineUsersHouse from 'terra-consumer-icon/lib/icon/IconOutlineUsersHouse';
 import IconOutlineCertificate from 'terra-consumer-icon/lib/icon/IconOutlineCertificate';
 import IconOutlineSquareHeartRate from 'terra-consumer-icon/lib/icon/IconOutlineSquareHeartRate';
+import IconOutlineIncentives from 'terra-consumer-icon/lib/icon/IconOutlineIncentives';
+import IconOutlineNoData from 'terra-consumer-icon/lib/icon/IconOutlineNoData';
+import IconOutlineNoMatchingResults from 'terra-consumer-icon/lib/icon/IconOutlineNoMatchingResults';
+import IconOutlineNotAuthorized from 'terra-consumer-icon/lib/icon/IconOutlineNotAuthorized';
+import IconOutlineSensitiveData from 'terra-consumer-icon/lib/icon/IconOutlineSensitiveData';
+import IconOutlineErrorPage from 'terra-consumer-icon/lib/icon/IconOutlineErrorPage';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -54,13 +59,6 @@ const IconAll = () => (
       <Table.HeaderCell content={'Code'} key={'code'} />
     </Table.Header>
     <Table.Rows>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconOutlineIncentives height='2em' width='2em' /></td>
-        <td>outline-incentives</td>
-        <td>
-          import IconOutlineIncentives from 'terra-consumer-icon/lib/icon/IconOutlineIncentives';
-        </td>
-      </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineFootsteps height='2em' width='2em' /></td>
         <td>outline-footsteps</td>
@@ -360,6 +358,48 @@ const IconAll = () => (
         <td>outline-square-heart-rate</td>
         <td>
           import IconOutlineSquareHeartRate from 'terra-consumer-icon/lib/icon/IconOutlineSquareHeartRate';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineIncentives height='2em' width='2em' /></td>
+        <td>outline-incentives</td>
+        <td>
+          import IconOutlineIncentives from 'terra-consumer-icon/lib/icon/IconOutlineIncentives';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineNoData height='2em' width='2em' /></td>
+        <td>outline-no-data</td>
+        <td>
+          import IconOutlineNoData from 'terra-consumer-icon/lib/icon/IconOutlineNoData';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineNoMatchingResults height='2em' width='2em' /></td>
+        <td>outline-no-matching-results</td>
+        <td>
+          import IconOutlineNoMatchingResults from 'terra-consumer-icon/lib/icon/IconOutlineNoMatchingResults';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineNotAuthorized height='2em' width='2em' /></td>
+        <td>outline-not-authorized</td>
+        <td>
+          import IconOutlineNotAuthorized from 'terra-consumer-icon/lib/icon/IconOutlineNotAuthorized';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineSensitiveData height='2em' width='2em' /></td>
+        <td>outline-sensitive-data</td>
+        <td>
+          import IconOutlineSensitiveData from 'terra-consumer-icon/lib/icon/IconOutlineSensitiveData';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineErrorPage height='2em' width='2em' /></td>
+        <td>outline-error-page</td>
+        <td>
+          import IconOutlineErrorPage from 'terra-consumer-icon/lib/icon/IconOutlineErrorPage';
         </td>
       </tr>
     </Table.Rows>

@@ -12,7 +12,7 @@ const SvgIcon = (customProps) => {
   );
 };
 
-SvgIcon.displayName = "IconErrorPage";
+SvgIcon.displayName = "IconOutlineErrorPage";
 SvgIcon.defaultProps = {"viewBox":"0 0 48 48","xmlns":"http://www.w3.org/2000/svg"};
 
 export default SvgIcon;
