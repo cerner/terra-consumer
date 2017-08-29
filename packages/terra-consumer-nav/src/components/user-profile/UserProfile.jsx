@@ -7,7 +7,6 @@ import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import ProfileLinks from './ProfileLinks';
-import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -40,11 +39,7 @@ const propTypes = {
   /**
    * The content of the each profile items.
    */
-  profileLinks: PropTypes.arrayOf(
-    PropTypes.shape(
-      navElementShape,
-    ),
-  ),
+  profileLinks: PropTypes.array,
   /**
    * A function used as a callback to render modal and popup content.
    */
@@ -65,9 +60,9 @@ const defaultProps = {
 const UserProfile = ({
   userName, avatar, id, signoutUrl, signinUrl, isSignIn, profileLinks, handleClick, intl, ...customProps
 }) => {
-  let ret;
+  let profileContent;
   if (isSignIn) {
-    ret = (
+    profileContent = (
       <Button className={cx('popup-button')} href={signinUrl}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
@@ -77,7 +72,7 @@ const UserProfile = ({
       </Button>
     );
   } else {
-    const content = (
+    const popupContent = (
       <div>
         <ProfileLinks linkItems={profileLinks} />
         <Button className={cx('link', 'signout-border')} href={signoutUrl}>
@@ -88,8 +83,8 @@ const UserProfile = ({
 
     const title = intl.formatMessage({ id: 'nav_profile_title' });
 
-    ret = (
-      <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
+    profileContent = (
+      <Button className={cx('popup-button')} onClick={() => handleClick({ title, popupContent })}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<span>{userName}</span>}
@@ -102,7 +97,7 @@ const UserProfile = ({
 
   return (
     <div {...customProps} className={cx('profile')}>
-      {ret}
+      {profileContent}
     </div>
   );
 };

@@ -12,21 +12,14 @@ const cx = classNames.bind(styles);
 class NavHelpContent extends React.Component {
   constructor() {
     super();
-    this.state = ({ openTogglers: [] });
+    this.state = ({ togglers: {} });
 
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle(toggleIndex) {
-    const newState = Object.assign([], this.state.openTogglers);
-    const index = newState.findIndex(elem => elem === toggleIndex);
-    if (index !== -1) {
-      newState.splice(index, 1);
-    } else {
-      newState.push(toggleIndex);
-    }
     this.setState({
-      openTogglers: newState,
+      togglers: { ...this.state.togglers, [toggleIndex]: !this.state.togglers[toggleIndex] },
     });
   }
 
@@ -35,7 +28,7 @@ class NavHelpContent extends React.Component {
 
     const contentList = customProps.helpContent.map((content, index) => {
       let contentElement;
-      const isOpen = this.state.openTogglers.some(elem => elem === index);
+      const isOpen = this.state.togglers[index];
       const toggleIcon = isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
 
       if (content.children.length > 0) {

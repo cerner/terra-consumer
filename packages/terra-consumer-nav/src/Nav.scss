@@ -4,9 +4,8 @@
 :local {
   .nav {
     background: inherit;
-    height: 100%;
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
-    padding-bottom: 60px;
     padding-top: var(--terra-consumer--nav-padding-top, 25px);
     position: relative;
     top: 0;
