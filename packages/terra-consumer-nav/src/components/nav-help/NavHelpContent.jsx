@@ -12,35 +12,46 @@ const cx = classNames.bind(styles);
 class NavHelpContent extends React.Component {
   constructor() {
     super();
-    this.state = ({ isOpen: false });
+    this.state = ({ openTogglers: [] });
 
     this.handleToggle = this.handleToggle.bind(this);
   }
 
-  handleToggle() {
-    this.setState({ isOpen: !this.state.isOpen });
+  handleToggle(toggleIndex) {
+    const newState = Object.assign([], this.state.openTogglers);
+    const index = newState.findIndex(elem => elem === toggleIndex);
+    if (index !== -1) {
+      newState.splice(index, 1);
+    } else {
+      newState.push(toggleIndex);
+    }
+    this.setState({
+      openTogglers: newState,
+    });
   }
 
   render() {
     const { ...customProps } = this.props;
-    const toggleIcon = this.state.isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
 
-    const contentList = customProps.helpContent.map((content, i) => {
+    const contentList = customProps.helpContent.map((content, index) => {
       let contentElement;
+      const isOpen = this.state.openTogglers.some(elem => elem === index);
+      const toggleIcon = isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
+
       if (content.children.length > 0) {
         contentElement = (<Button
           key={`${content.text}`}
-          onClick={this.handleToggle}
-          className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')}
+          onClick={() => this.handleToggle(index)}
+          className={cx('help-item')}
         >
           <Arrange
             className={cx('help-item-text')}
             align="stretch"
-            fitStart={<div className={cx('icon')}>{content.icon}</div>}
+            fitStart={<div>{content.icon}</div>}
             fill={<div className={cx('item-text-padding')}>{content.text}</div>}
-            fitEnd={<div className={cx('icon')}>{toggleIcon}</div>}
+            fitEnd={<div>{toggleIcon}</div>}
           />
-          <Toggler isOpen={this.state.isOpen} isAnimated className={cx('toggler-padding')}>
+          <Toggler isOpen={isOpen} isAnimated className={cx('toggler-padding')}>
             { content.children.map(element => (
               <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
                 <span className={cx('help-subitem')}>
@@ -51,7 +62,7 @@ class NavHelpContent extends React.Component {
           </Toggler>
         </Button>);
       } else {
-        contentElement = (<Button key={`${content.text}`} href={content.url} className={i > 0 ? cx('help-item', 'help-item-border') : cx('help-item')} >
+        contentElement = (<Button key={`${content.text}`} href={content.url} className={cx('help-item')} >
           <Arrange
             className={cx('help-item-text')}
             align="center"

@@ -13,6 +13,14 @@
     text-align: left;
     text-decoration: none;
     width: 100%;
+
+    &:hover {
+      color: #000;
+      text-decoration: underline;
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        color: #fff;
+      }
+    }
   }
 
   .toggler {

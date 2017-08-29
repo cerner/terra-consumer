@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`UserProfile should render a default avatar when none is provided 1`] = `
+<div
+  name="Test user"
+  profileLinks={
+    Array [
+      Object {
+        "icon": <IconOutlineQuestionMark
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+    />,
+        "text": "Account",
+        "url": "http://localhost:8080/",
+      },
+      Object {
+        "icon": <IconOutlineQuestionMark
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+    />,
+        "text": "Notifications",
+        "url": "http://localhost:8080/",
+      },
+    ]
+  }
+/>
+`;
+
 exports[`UserProfile should render a user profile with avatar,name and popup button 1`] = `
 <div
   avatar={
@@ -9,14 +35,12 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  name="Frank Lampard"
+  name="Anthony Martial"
   profileLinks={
     Array [
       Object {
         "icon": <IconOutlineQuestionMark
-          height={16}
           viewBox="0 0 48 48"
-          width={16}
           xmlns="http://www.w3.org/2000/svg"
     />,
         "text": "Account",
@@ -24,9 +48,7 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
       },
       Object {
         "icon": <IconOutlineQuestionMark
-          height={16}
           viewBox="0 0 48 48"
-          width={16}
           xmlns="http://www.w3.org/2000/svg"
     />,
         "text": "Notifications",
@@ -35,5 +57,12 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
     ]
   }
   signoutUrl="http://localhost:8080/"
+/>
+`;
+
+exports[`UserProfile should render as a signin link when specified 1`] = `
+<div
+  isSignIn={true}
+  signinUrl="google.com"
 />
 `;

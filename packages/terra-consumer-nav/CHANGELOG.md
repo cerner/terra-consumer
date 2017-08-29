@@ -1,6 +1,21 @@
 ChangeLog
 =========
 
+# 0.1.0-BETA.4 - (August 29, 2017)
+
+### Added
+- Profile now has option to display sign-in link.
+- Profile now overlays items on long navigation lists.
+
+### Changed
+- Minor UI fixes.
+- Hover effects for nav-items (mobile/desktop)
+- Scrolling content on help popup no longer scrolls title.
+- Removed id as prop requirement for help/profile.
+- Multiple help togglers do not open simultaneously, although there can be more than one open at a time.
+
+-----------------
+
 # 0.1.0-BETA.3 - (August 25, 2017)
 
 ### Added

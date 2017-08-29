@@ -28,22 +28,11 @@ const propTypes = {
    * An array of objects to be displayed as nav link options.
    */
   navItems: PropTypes.array.isRequired,
-  /**
-   * An array of nav items to be displayed on the user profile/ settings menu/popup.
-   */
-  profileLinks: PropTypes.array.isRequired,
-  /**
-   * User name to be displayed in the profile in navigation.
-   */
-  userName: PropTypes.string.isRequired,
-  /**
-   * Avatar to be displayed in user profile in navigation.
-   */
-  avatar: PropTypes.PropTypes.element,
-  /**
-   * The path signout button would redirect to.
-   */
-  signoutUrl: PropTypes.string.isRequired,
+
+  profile: PropTypes.shape({
+    signinUrl: PropTypes.string,
+    avatar: PropTypes.element,
+  }),
   /**
    * An object defining the logo to be displayed
    */
@@ -74,8 +63,7 @@ const propTypes = {
 const defaultProps = {
   quickLinks: [],
   navItems: [],
-  profileLinks: [],
-  avatar: null,
+  profile: {},
   logo: {},
 };
 
@@ -110,8 +98,10 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { quickLinks, navItems, profileLinks, userName, avatar, signoutUrl, logo, isMobileNavOpen, onRequestClose, ...customProps } = this.props;
+    const { quickLinks, navItems, profile, logo, isMobileNavOpen, onRequestClose, ...customProps } = this.props;
     const profileId = 'profile-popup-button';
+
+    const willRenderProfile = profile.userName || profile.avatar || profile.signinUrl;
 
     const defaultElement = (
       <Modal
@@ -138,7 +128,7 @@ class Nav extends React.Component {
     );
 
     return (
-      <div className={cx('nav')}>
+      <div id="terra-consumer-nav">
         <div {...customProps} className={cx('nav', customProps.className)} aria-hidden={!isMobileNavOpen}>
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
           <NavLogo {...logo} />
@@ -146,14 +136,14 @@ class Nav extends React.Component {
             {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
           </QuickLinks>
           <NavItems navItems={navItems} />
-          <UserProfile
-            profileLinks={profileLinks}
-            name={userName}
-            avatar={avatar}
-            id={profileId}
-            signoutUrl={signoutUrl}
-            handleClick={(modalContent) => { this.toggleModal(modalContent); }}
-          />
+          { willRenderProfile &&
+            <UserProfile
+              {...profile}
+              id={profileId}
+              handleClick={(modalContent) => { this.toggleModal(modalContent); }}
+              isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
+            />
+          }
         </div>
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
       </div>

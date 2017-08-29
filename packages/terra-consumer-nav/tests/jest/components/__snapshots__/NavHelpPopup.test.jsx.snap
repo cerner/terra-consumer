@@ -38,8 +38,12 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
         variant="default"
       />
     </div>
-    <div>
-       This is a test content
+    <div
+      className="popup-body"
+    >
+      <div>
+         This is a test content
+      </div>
     </div>
   </div>
 </Popup>
@@ -61,8 +65,12 @@ exports[`Popup should render a popup without header(title & close button) 1`] = 
   targetRef={[Function]}
 >
   <div>
-    <div>
-       This is a test content
+    <div
+      className="popup-body"
+    >
+      <div>
+         This is a test content
+      </div>
     </div>
   </div>
 </Popup>

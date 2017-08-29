@@ -7,37 +7,34 @@
   }
 
   .layout {
-    background: #eee;
+    background: linear-gradient(#ddd, #999);
     display: flex;
-    max-height: 100vh;
+    font-size: 14px;
+    height: 100vh;
+    left: 0;
     max-width: 100vw;
     overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100vw;
   }
 
   .nav-container {
-    color: #000;
-    max-width: $terra-consumer--nav-container-width;
-    padding-top: 30px;
-    z-index: 200;
-
-    @media (max-width: $terra-medium-breakpoint) {
-      padding-top: 0;
-    }
+    width: $terra-consumer--nav-container-width;
   }
 
   .main-container {
-    bottom: 0;
+    height: 100vh;
     left: $terra-consumer--nav-container-width;
-    max-height: 100vh;
-    overflow: auto;
-    padding-right: 20px;
+    max-width: calc(100vw - #{$terra-consumer--nav-container-width});
+    overflow: scroll;
     position: absolute;
-    top: 5px;
+    text-align: left;
     width: calc(100vw - #{$terra-consumer--nav-container-width});
-    @media (max-width: $terra-medium-breakpoint) {
-      left: 0;
-      padding-left: 20px;
-      width: 100%;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      left: 20px;
+      max-width: 100vw;
+      width: 100vw;
     }
   }
 
@@ -61,14 +58,27 @@
     }
   }
 
-  .help-button {
-    margin: 15px 0;
+  .footer {
+    padding-bottom: 30px;
+    padding-right: 40px;
+    padding-top: 20px;
     text-align: right;
+    visibility: hidden;
+    width: inherit;
 
-    @media screen and (min-width: $terra-medium-breakpoint) {
-      bottom: 0;
-      position: fixed;
-      right: 15px;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      visibility: visible;
+    }
+  }
+
+
+  .help-button-desktop {
+    bottom: 15px;
+    position: fixed;
+    right: 15px;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: none;
     }
   }
 }

@@ -75,7 +75,7 @@ const NavItem = ({
     </NavToggler>)
   :
   (<div className={activeClass}>
-    <a href={url} target={target} className={cx('nav-item')}>
+    <a href={url} target={target} className={cx('nav-item', 'nav-item-link')}>
       {itemText}
     </a>
   </div>);

@@ -55,3 +55,4 @@ target
 lib
 props-table
 package-lock.json
+*.tgz

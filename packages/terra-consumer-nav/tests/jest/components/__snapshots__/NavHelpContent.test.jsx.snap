@@ -23,9 +23,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         </div>
       }
       fitEnd={
-        <div
-          className="icon"
-        >
+        <div>
           <IconChevronDown
             className="icon"
             data-name="Layer 1"
@@ -36,9 +34,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         </div>
       }
       fitStart={
-        <div
-          className="icon"
-        >
+        <div>
           <IconOutlineQuestionMark
             height={16}
             viewBox="0 0 48 48"
@@ -65,7 +61,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
     </Toggle>
   </Button>
   <Button
-    className="help-item help-item-border"
+    className="help-item"
     href="http://localhost:8080/"
     isBlock={false}
     isCompact={false}

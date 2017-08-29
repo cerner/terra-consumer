@@ -20,6 +20,16 @@
     padding-left: 20px;
   }
 
+  .nav-item-link {
+    &:hover {
+      color: #000;
+      text-decoration: underline;
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        color: #fff;
+      }
+    }
+  }
+
   .nav-item-wrapper {
     padding-bottom: 20px;
 

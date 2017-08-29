@@ -32,7 +32,7 @@ const propTypes = {
   /**
    * A unique id set to the help button that will be referred in help menu/popup .
    */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   /**
    * Injected react-intl formatting api
    */
@@ -40,6 +40,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  id: '--terra-consumer--nav-help-button',
   helpNavs: [],
 };
 

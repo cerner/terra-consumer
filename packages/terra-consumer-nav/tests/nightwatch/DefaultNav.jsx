@@ -39,6 +39,7 @@ const DefaultNav = () => {
         {
           text: 'Messaging',
           badgeValue: 2,
+          icon: <IconPerson />,
           subItems: [
             {
               url: '#inbox',
@@ -80,20 +81,24 @@ const DefaultNav = () => {
         altText: 'Placeholder logo',
         isCard: true,
       },
-      profileLinks: [
-        {
-          text: 'Account',
-          icon: (<IconOutlineQuestionMark />),
-          url: 'http://localhost:8080/',
-        },
-        {
-          text: 'Notifications',
-          icon: (<IconOutlineQuestionMark />),
-          url: 'http://localhost:8080/',
-        },
-      ],
-      userName: 'John Snow',
-      signoutUrl: 'http://localhost:8080/',
+      profile: {
+        profileLinks: [
+          {
+            text: 'Account',
+            icon: (<IconOutlineQuestionMark />),
+            url: 'http://localhost:8080/',
+          },
+          {
+            text: 'Notifications',
+            icon: (<IconOutlineQuestionMark />),
+            url: 'http://localhost:8080/',
+          },
+        ],
+        // comment out userName to see signin
+        userName: 'John Snow',
+        signinUrl: 'http://localhost:8080/',
+        signoutUrl: 'http://localhost:8080/',
+      },
     },
 
     helpItems: [
@@ -110,7 +115,10 @@ const DefaultNav = () => {
         text: 'Get Support ID',
         url: 'http://localhost:8080/',
         icon: (<IconOutlineQuestionMark />),
-        children: [],
+        children: [{
+          text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
+          url: 'http://localhost:8080/',
+        }],
       },
     ],
     locale: 'en-US',

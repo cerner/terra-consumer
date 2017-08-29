@@ -9,7 +9,7 @@ const helpItems = [
   {
     text: 'Technical Questions',
     url: 'http://localhost:8080/',
-    icon: (<IconOutlineQuestionMark height={16} width={16} />),
+    icon: (<IconOutlineQuestionMark />),
     children: [{
       text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
       uri: 'http://localhost:8080/',
@@ -18,7 +18,7 @@ const helpItems = [
   {
     text: 'Get Support ID',
     url: 'http://localhost:8080/',
-    icon: (<IconOutlineQuestionMark height={16} width={16} />),
+    icon: (<IconOutlineQuestionMark />),
     children: [],
   },
 ];

@@ -4,15 +4,21 @@
 :local {
   .nav {
     background: inherit;
-    left: 0;
-    max-height: 100vh;
-    min-height: 100vh;
+    height: 100%;
     overflow-y: auto;
+    padding-bottom: 60px;
+    padding-top: var(--terra-consumer--nav-padding-top, 25px);
     position: relative;
+    top: 0;
     width: inherit;
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100vw;
+    }
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      height: 100vh;
+      padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
     }
   }
 
@@ -47,8 +53,10 @@
       top: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--terra-consumer--mobile-close-button-hover-background, none);
+      border-radius: 3px;
       color: var(--terra-consumer--mobile-close-button-hover-color, #ccc);
     }
   }
