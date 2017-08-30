@@ -16,27 +16,54 @@
     }
   }
 
-  .nav-item-text {
-    padding-left: 5px;
+  .nav-item-wrapper.nav-item-icon {
+    .nav-item-no-icon {
+      padding-left: 15px;
+    }
   }
 
+  .nav-item-text,
+  .nav-item-no-icon {
+    display: flex;
+  }
+
+  /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
   .nav-item-wrapper {
     padding-bottom: 20px;
+
+    .nav-item-text {
+      padding-left: 20px;
+    }
+
+    .nav-item-link {
+      &:hover,
+      &:focus {
+        color: #000;
+        text-decoration: underline;
+        @media screen and (max-width: $terra-medium-breakpoint) {
+          color: #fff;
+        }
+      }
+    }
 
     .nav-item-wrapper {
       margin-top: 15px;
       padding-bottom: 0;
-      padding-left: 20px;
+      padding-left: 35px;
+
+      .nav-item-text {
+        padding-left: 10px;
+      }
     }
   }
 
   // colors here need callouts, on the way. using estimated from mockups
   .badge {
+    align-self: center;
     background: var(--terra-consumer--badge-background, #fff);
     border-radius: 10px;
     color: var(--terra-consumer--badge-text-color, inherit);
-    display: inline-block;
-    margin-left: 10px;
+    margin: 0 10px;
     padding: 0 7px;
     @media screen and (max-width: $terra-medium-breakpoint) {
       background: var(--terra-consumer--mobile-badge-background, #aaa);

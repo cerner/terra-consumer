@@ -2,21 +2,18 @@
 
 :local {
   .profile {
-    background: inherit;
+    background: none;
     bottom: 0;
-    height: auto;
-    left: 0;
     position: fixed;
-    width: inherit;
+    width: var(--terra-consumer--profile-width, $terra-consumer--nav-container-width);
+
+    @media screen and (max-width: $terra-tiny-breakpoint) {
+      width: 100%;
+    }
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       background: inherit;
     }
-  }
-
-  .icon {
-    height: 16px;
-    width: 16px;
   }
 
   .link {
@@ -69,7 +66,7 @@
     font-family: inherit;
     font-size: 16px;
     padding: 20px 25px;
-    text-align: center;
+    text-align: left;
     width: inherit;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
@@ -80,6 +77,7 @@
       background: inherit;
       color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
       cursor: pointer;
+      text-decoration: underline;
       @media screen and (max-width: $terra-medium-breakpoint) {
         color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
       }
@@ -94,9 +92,8 @@
     }
   }
 
-  .profile-text-padding {
-    padding-left: 10px;
-    text-align: left;
+  .avatar {
+    padding-right: 10px;
   }
 
   .link-text-style {

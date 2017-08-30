@@ -2,12 +2,11 @@
 
 exports[`Nav should render a default component 1`] = `
 <div
-  className="nav"
+  id="terra-consumer-nav"
 >
   <div
     aria-hidden={true}
     className="nav"
-    profileId="profile-popup-button"
   >
     <Button
       className="close-button"
@@ -49,10 +48,9 @@ exports[`Nav should render a default component 1`] = `
       }
     />
     <InjectIntl(UserProfile)
-      avatar={null}
       handleClick={[Function]}
       id="profile-popup-button"
-      name="John Snow"
+      profileId="profile-popup-button"
       profileLinks={
         Array [
           Object {
@@ -66,6 +64,7 @@ exports[`Nav should render a default component 1`] = `
         ]
       }
       signoutUrl="http://localhost:8080/"
+      userName="John Snow"
     />
   </div>
   <ResponsiveElement

@@ -32,7 +32,7 @@ const propTypes = {
   /**
    * A unique id set to the help button that will be referred in help menu/popup .
    */
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   /**
    * Injected react-intl formatting api
    */
@@ -40,6 +40,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  id: 'terra-consumer-nav-help-button',
   helpNavs: [],
 };
 
@@ -69,7 +70,7 @@ class NavHelp extends React.Component {
         className={cx('nav-help')}
       >
         <Arrange
-          fill={<div className={cx('icon')} ><IconOutlineQuestionMark /></div>}
+          fill={<IconOutlineQuestionMark />}
           fitEnd={<div className={cx('button-text-padding')}><FormattedMessage id="nav_help" /></div>}
           align="stretch"
         />
@@ -106,7 +107,7 @@ class NavHelp extends React.Component {
     return (
       <div {...customProps}>
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
-        {!this.state.isOpen && helpButton}
+        {helpButton}
       </div>
     );
   }

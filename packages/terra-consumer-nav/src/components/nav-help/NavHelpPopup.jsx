@@ -65,7 +65,9 @@ const NavHelpPopup = ({
     >
       <div>
         {popupHeader}
-        {popupContent}
+        <div className={cx('popup-body')}>
+          {popupContent}
+        </div>
       </div>
     </TerraPopup>
   );

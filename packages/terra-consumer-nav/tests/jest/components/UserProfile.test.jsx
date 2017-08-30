@@ -6,12 +6,12 @@ import UserProfile from '../../../src/components/user-profile/ProfileLinks';
 const profileLinks = [
   {
     text: 'Account',
-    icon: (<IconOutlineQuestionMark height={16} width={16} />),
+    icon: (<IconOutlineQuestionMark />),
     url: 'http://localhost:8080/',
   },
   {
     text: 'Notifications',
-    icon: (<IconOutlineQuestionMark height={16} width={16} />),
+    icon: (<IconOutlineQuestionMark />),
     url: 'http://localhost:8080/',
   },
 ];
@@ -21,10 +21,20 @@ describe('UserProfile', () => {
   it('should render a user profile with avatar,name and popup button', () => {
     const wrapper = shallow(<UserProfile
       profileLinks={profileLinks}
-      name="Frank Lampard"
+      name="Anthony Martial"
       avatar={<IconPerson />}
       signoutUrl="http://localhost:8080/"
     />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render a default avatar when none is provided', () => {
+    const wrapper = shallow(<UserProfile name="Test user" profileLinks={profileLinks} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render as a signin link when specified', () => {
+    const wrapper = shallow(<UserProfile isSignIn signinUrl="google.com" />);
     expect(wrapper).toMatchSnapshot();
   });
 });

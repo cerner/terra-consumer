@@ -16,17 +16,19 @@ const testData = {
     altText: 'test',
     isCard: false,
   },
-  profileLinks: [{
-    text: 'Account',
-    url: 'http://localhost:8080/',
+  profile: {
+    profileLinks: [{
+      text: 'Account',
+      url: 'http://localhost:8080/',
+    },
+    {
+      text: 'Notifications',
+      url: 'http://localhost:8080/',
+    }],
+    userName: 'John Snow',
+    profileId: 'profile-popup-button',
+    signoutUrl: 'http://localhost:8080/',
   },
-  {
-    text: 'Notifications',
-    url: 'http://localhost:8080/',
-  }],
-  userName: 'John Snow',
-  profileId: 'profile-popup-button',
-  signoutUrl: 'http://localhost:8080/',
   isMobileNavOpen: false,
   onRequestClose: () => {},
 };
@@ -41,8 +43,8 @@ describe('Nav', () => {
   });
 
   // Structure Tests
-  it('should have the class nav', () => {
+  it('should have the id terra-consumer-nav', () => {
     const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('nav');
+    expect(wrapper.prop('id')).toContain('terra-consumer-nav');
   });
 });

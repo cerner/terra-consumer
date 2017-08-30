@@ -8,7 +8,7 @@ const propTypes = {
   /**
    *  The url of the logo to be shown.
    */
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   /**
    *  The alternate text that is read by screen readers or displayed if the image fails to load.
    */
@@ -33,7 +33,7 @@ const NavLogo = ({
   ...customProps
 }) => {
   const image = <img className={cx('img')} src={url} alt={altText} />;
-  const domNode = isCard ? Card : 'div';
+  const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',
     customProps.className,

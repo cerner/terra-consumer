@@ -5,7 +5,6 @@ import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import Layout from './Layout';
 
-
 const DefaultNav = () => {
   const props = {
     nav: {
@@ -31,14 +30,18 @@ const DefaultNav = () => {
       ],
       navItems: [
         {
+          url: 'localhost:8080',
+          text: 'Home',
+        },
+        {
           url: '?react_perf#/tests/nav-tests/default',
           text: 'Dashboard',
           icon: <IconPerson />,
-          isActive: false,
         },
         {
           text: 'Messaging',
           badgeValue: 2,
+          icon: <IconPerson />,
           subItems: [
             {
               url: '#inbox',
@@ -49,52 +52,79 @@ const DefaultNav = () => {
             {
               url: '#sent',
               text: 'Sent',
-              isActive: false,
               badgeValue: 1,
             },
           ],
         },
         {
-          url: '/?react_perf',
           text: 'Health Record',
-          isActive: false,
-        },
-        {
-          text: 'See test data',
+          badgeValue: 0,
+          icon: <IconPerson />,
           subItems: [
             {
-              url: '#inbox2',
-              text: 'Inbox',
-              isActive: false,
+              url: '#health',
+              text: 'Health',
+              icon: <IconPerson />,
             },
             {
-              url: '#sent2',
-              text: 'Sent',
-              isActive: false,
+              url: '#record',
+              text: 'Record',
+              icon: <IconPerson />,
+            },
+          ],
+        },
+        {
+          text: 'Test Data',
+          subItems: [
+            {
+              url: '#test',
+              text: 'Test',
+              icon: <IconPerson />,
+            },
+            {
+              url: '#data',
+              text: 'Data',
+              icon: <IconPerson />,
+            },
+          ],
+        },
+        {
+          text: 'More Tests',
+          subItems: [
+            {
+              url: '#more',
+              text: 'More',
+            },
+            {
+              url: '#tests',
+              text: 'Tests',
             },
           ],
         },
       ],
       logo: {
-        url: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
+        // url: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
         altText: 'Placeholder logo',
         isCard: true,
       },
-      profileLinks: [
-        {
-          text: 'Account',
-          icon: (<IconOutlineQuestionMark />),
-          url: 'http://localhost:8080/',
-        },
-        {
-          text: 'Notifications',
-          icon: (<IconOutlineQuestionMark />),
-          url: 'http://localhost:8080/',
-        },
-      ],
-      userName: 'John Snow',
-      avatar: (<IconPerson />),
-      signoutUrl: 'http://localhost:8080/',
+      profile: {
+        profileLinks: [
+          {
+            text: 'Account',
+            icon: (<IconOutlineQuestionMark />),
+            url: 'http://localhost:8080/',
+          },
+          {
+            text: 'Notifications',
+            icon: (<IconOutlineQuestionMark />),
+            url: 'http://localhost:8080/',
+          },
+        ],
+        // comment out userName to see signin
+        userName: 'John Snow',
+        signinUrl: 'http://localhost:8080/',
+        signoutUrl: 'http://localhost:8080/',
+      },
     },
 
     helpItems: [
@@ -111,7 +141,10 @@ const DefaultNav = () => {
         text: 'Get Support ID',
         url: 'http://localhost:8080/',
         icon: (<IconOutlineQuestionMark />),
-        children: [],
+        children: [{
+          text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
+          url: 'http://localhost:8080/',
+        }],
       },
     ],
     locale: 'en-US',

@@ -3,6 +3,8 @@
 :local {
   body {
     font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     margin: 0;
   }
 
@@ -14,7 +16,6 @@
     left: 0;
     max-width: 100vw;
     overflow: hidden;
-    padding-top: 30px;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -22,9 +23,6 @@
 
   .nav-container {
     width: $terra-consumer--nav-container-width;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      margin-top: -30px;
-    }
   }
 
   .main-container {

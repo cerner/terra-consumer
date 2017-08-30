@@ -35,3 +35,14 @@ exports[`Nav Logo should render a default component 1`] = `
   />
 </div>
 `;
+
+exports[`Nav Logo should render a div regardless of isCard when no url is provided 1`] = `
+<div
+  className="logo-container"
+>
+  <img
+    alt="test"
+    className="img"
+  />
+</div>
+`;

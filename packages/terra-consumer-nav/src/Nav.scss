@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900');
 @import './variables';
 
 :local {
   .nav {
     background: inherit;
-    left: 0;
-    max-height: 100vh;
-    min-height: 100vh;
+    max-height: calc(100vh - 60px);
     overflow-y: auto;
+    padding-top: var(--terra-consumer--nav-padding-top, 25px);
     position: relative;
+    top: 0;
     width: inherit;
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100vw;
+    }
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      height: 100vh;
+      padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
     }
   }
 
@@ -47,9 +52,11 @@
       top: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: var(--terra-consumer--mobile-close-button-hover-background, none);
-      color: var(--terra-consumer--mobile-close-button-hover-color, #777);
+      border-radius: 3px;
+      color: var(--terra-consumer--mobile-close-button-hover-color, #ccc);
     }
   }
 }
