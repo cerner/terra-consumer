@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'terra-button';
 import classNames from 'classnames/bind';
+import SmartLink from '../SmartLink/SmartLink';
 import styles from './QuickLink.scss';
 
 const cx = classNames.bind(styles);
@@ -19,17 +19,21 @@ const propTypes = {
    * The text displayed on the link.
    */
   text: PropTypes.string.isRequired,
+  target: PropTypes.string,
 };
 
 const QuickLink = ({
   url,
   icon,
   text,
+  target,
   ...customProps
 }) => {
   const classIcon = <span className={cx('quicklink-icon')}>{icon}</span>;
   return (
-    <Button {...customProps} className={cx('quicklink', customProps.className)} icon={classIcon} href={url} text={text} key={text} />
+    // <p>Hello</p>
+    <SmartLink {...customProps} url={url} target={target} text={text} key={text} icon={classIcon} className={cx('quicklink', customProps.className)} />
+    // <Button {...customProps} className={cx('quicklink', customProps.className)} icon={classIcon} href={url} text={text} key={text} />
   );
 };
 

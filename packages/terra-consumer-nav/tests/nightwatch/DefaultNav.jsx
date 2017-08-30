@@ -12,26 +12,31 @@ const DefaultNav = () => {
       quickLinks: [
         {
           url: '/?react_perf',
+          type: 'EXTERNAL',
           icon: <IconPerson />,
           text: 'Create Appointment',
         },
         {
           url: '/?react_perf',
+          type: 'EXTERNAL',
           icon: (<IconOutlineQuestionMark />),
           text: 'Send Message',
         },
         {
           url: '/?react_perf',
+          type: 'EXTERNAL',
           text: 'Refill Medications',
         },
         {
           url: '/?react_perf',
+          type: 'EXTERNAL',
           text: 'Log Daily Fitness',
         },
       ],
       navItems: [
         {
           url: '?react_perf#/tests/nav-tests/default',
+          type: 'EXTERNAL',
           text: 'Dashboard',
           icon: <IconPerson />,
           isActive: false,
@@ -42,12 +47,14 @@ const DefaultNav = () => {
           subItems: [
             {
               url: '#inbox',
+              type: 'EXTERNAL',
               text: 'Inbox',
               isActive: true,
               badgeValue: 1,
             },
             {
               url: '#sent',
+              type: 'EXTERNAL',
               text: 'Sent',
               isActive: false,
               badgeValue: 1,
@@ -56,6 +63,7 @@ const DefaultNav = () => {
         },
         {
           url: '/?react_perf',
+          type: 'EXTERNAL',
           text: 'Health Record',
           isActive: false,
         },
@@ -64,11 +72,13 @@ const DefaultNav = () => {
           subItems: [
             {
               url: '#inbox2',
+              type: 'EXTERNAL',
               text: 'Inbox',
               isActive: false,
             },
             {
               url: '#sent2',
+              type: 'EXTERNAL',
               text: 'Sent',
               isActive: false,
             },
@@ -77,6 +87,7 @@ const DefaultNav = () => {
       ],
       logo: {
         url: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
+        type: 'EXTERNAL',
         altText: 'Placeholder logo',
         isCard: true,
       },
@@ -85,11 +96,13 @@ const DefaultNav = () => {
           text: 'Account',
           icon: (<IconOutlineQuestionMark />),
           url: 'http://localhost:8080/',
+          type: 'EXTERNAL',
         },
         {
           text: 'Notifications',
           icon: (<IconOutlineQuestionMark />),
           url: 'http://localhost:8080/',
+          type: 'EXTERNAL',
         },
       ],
       userName: 'John Snow',
@@ -101,15 +114,18 @@ const DefaultNav = () => {
       {
         text: 'Technical Questions',
         url: 'http://localhost:8080/',
+        type: 'EXTERNAL',
         icon: (<IconOutlineQuestionMark />),
         children: [{
           text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
           url: 'http://localhost:8080/',
+          type: 'EXTERNAL',
         }],
       },
       {
         text: 'Get Support ID',
         url: 'http://localhost:8080/',
+        type: 'EXTERNAL',
         icon: (<IconOutlineQuestionMark />),
         children: [],
       },
