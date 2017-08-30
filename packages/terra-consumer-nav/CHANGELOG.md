@@ -1,5 +1,12 @@
 ChangeLog
 =========
+# 0.1.0-BETA.4 - (August 30, 2017)
+
+### Changed
+- Updated translation directory name and location.
+- Updated traslation message key names following terra-core.
+
+-----------------
 
 # 0.1.0-BETA.4 - (August 29, 2017)
 
