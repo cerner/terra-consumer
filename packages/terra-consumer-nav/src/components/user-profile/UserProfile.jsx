@@ -54,7 +54,7 @@ const defaultProps = {
   avatar: <IconPerson />,
   profileLinks: [],
   isSignIn: false,
-  id: '--terra-conumser--nav-profile-button',
+  id: 'terra-conumser-nav-profile-button',
 };
 
 const UserProfile = ({

@@ -14,7 +14,8 @@
     text-decoration: none;
     width: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: #000;
       text-decoration: underline;
       @media screen and (max-width: $terra-medium-breakpoint) {

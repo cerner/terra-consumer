@@ -54,13 +54,14 @@ const NavItem = ({
     <Arrange
       fitStart={icon ? <span className={cx('nav-item-icon')}>{icon}</span> : null}
       fill={
-        <div className={cx(icon && 'nav-item-text')}>
+        <div className={cx(icon ? 'nav-item-text' : 'nav-item-no-icon')}>
           {text}
           { badgeValue > 0 &&
             <div className={cx('badge')}>{badgeValue}</div>
           }
         </div>
       }
+      align="center"
     />
   );
 

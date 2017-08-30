@@ -40,7 +40,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  id: '--terra-consumer--nav-help-button',
+  id: 'terra-consumer-nav-help-button',
   helpNavs: [],
 };
 
