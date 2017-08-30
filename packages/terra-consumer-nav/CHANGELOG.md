@@ -1,14 +1,7 @@
 ChangeLog
 =========
+
 # 0.1.0-BETA.4 - (August 30, 2017)
-
-### Changed
-- Updated translation directory name and location.
-- Updated traslation message key names following terra-core.
-
------------------
-
-# 0.1.0-BETA.4 - (August 29, 2017)
 
 ### Added
 - Profile now has option to display sign-in link.
@@ -21,6 +14,8 @@ ChangeLog
 - Scrolling content on help popup no longer scrolls title.
 - Removed id as prop requirement for help/profile.
 - Multiple help togglers do not open simultaneously, although there can be more than one open at a time.
+- Updated translation directory name and location.
+- Updated traslation message key names following terra-core.
 
 -----------------
 

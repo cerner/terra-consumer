@@ -81,7 +81,7 @@ const UserProfile = ({
       </div>
     );
 
-  const title = intl.formatMessage({ id: 'Terra.Consumer.UserProfile.Modal.title' });
+    const title = intl.formatMessage({ id: 'Terra.Consumer.UserProfile.Modal.title' });
 
     profileContent = (
       <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
