@@ -12,6 +12,7 @@ import QuickLink from './components/quick-links/QuickLink';
 import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
 import UserProfile from './components/user-profile/UserProfile';
+import NavHelp from './components/nav-help/NavHelp';
 
 const cx = classNames.bind(styles);
 
@@ -45,20 +46,7 @@ const propTypes = {
   /**
    * An object defining the logo to be displayed
    */
-  logo: PropTypes.shape({
-    /**
-     * The location where the image to be displayed is stored.
-     */
-    path: PropTypes.string,
-    /**
-     * Alternate text used be screen readers.
-     */
-    altText: PropTypes.string,
-    /**
-     * Whether or not the logo should be placed on top of a white card.
-     */
-    isCard: PropTypes.bool,
-  }),
+  logo: PropTypes.object.isRequired,
   /**
    * Whether or not the nav should be visible on a mobile device.
    */
@@ -160,6 +148,7 @@ class Nav extends React.Component {
 }
 
 Nav.propTypes = propTypes;
+Nav.Help = NavHelp;
 Nav.defaultProps = defaultProps;
 
 export default Nav;

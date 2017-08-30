@@ -5,6 +5,7 @@ import Arrange from 'terra-arrange';
 import styles from './NavItem.scss';
 import NavToggler from '../nav-toggler/NavToggler';
 import navItemShape from '../../NavPropShapes';
+import SmartLink from '../SmartLink/SmartLink';
 
 const cx = classNames.bind(styles);
 
@@ -75,9 +76,11 @@ const NavItem = ({
     </NavToggler>)
   :
   (<div className={activeClass}>
-    <a href={url} target={target} className={cx('nav-item')}>
+    {/* <p>Hello</p> */}
+    <SmartLink url={url} target={target} text={text} buttonVariant="link" className={cx('nav-item')} />
+    {/* <a href={url} target={target} className={cx('nav-item')}>
       {itemText}
-    </a>
+    </a> */}
   </div>);
 
   return (
