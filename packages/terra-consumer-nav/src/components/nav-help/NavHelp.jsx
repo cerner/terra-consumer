@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
-import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
 import Modal from '../modal/Modal';
 import navElementShape from '../../NavPropShapes';
@@ -63,6 +63,7 @@ class NavHelp extends React.Component {
 
   render() {
     const { helpNavs, id, intl, ...customProps } = this.props;
+    const helpText = intl.formatMessage({ id: 'Terra.Consumer.NavHelp.help' });
     const helpButton = (
       <Button
         id={id}
@@ -71,7 +72,7 @@ class NavHelp extends React.Component {
       >
         <Arrange
           fill={<IconOutlineQuestionMark />}
-          fitEnd={<div className={cx('button-text-padding')}><FormattedMessage id="nav_help" /></div>}
+          fitEnd={<div className={cx('button-text-padding')}>{helpText}</div>}
           align="stretch"
         />
       </Button>
@@ -82,7 +83,7 @@ class NavHelp extends React.Component {
     const defaultElement = (
       <Modal
         isModalOpen={this.state.isOpen}
-        title={intl.formatMessage({ id: 'nav_help' })}
+        title={helpText}
         onRequestClose={this.togglePopup}
       >
         {popupContent}
@@ -91,7 +92,7 @@ class NavHelp extends React.Component {
 
     const popup = (
       <NavHelpPopup
-        title={intl.formatMessage({ id: 'nav_help' })}
+        title={helpText}
         hasHeader
         isOpen={this.state.isOpen}
         targetRef={() => document.getElementById(id)}

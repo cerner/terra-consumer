@@ -5,10 +5,10 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
   locale="en-US"
   messages={
     Object {
-      "nav_help": "Help",
-      "nav_profile_title": "Settings",
-      "nav_signin": "Sign In",
-      "nav_signout": "Sign Out",
+      "Terra.Consumer.NavHelp.help": "Help",
+      "Terra.Consumer.UserProfile.Modal.title": "Settings",
+      "Terra.Consumer.UserProfile.signin": "Sign In",
+      "Terra.Consumer.UserProfile.signout": "Sign Out",
     }
   }
 >

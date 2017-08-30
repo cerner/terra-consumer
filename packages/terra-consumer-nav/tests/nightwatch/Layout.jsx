@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
 import { I18nProvider, i18nLoader } from 'terra-i18n';
-import Messages from '../../src/i18n/translations/messages.json';
 import Nav from '../../src/Nav';
 import NavHelp from '../../src/components/nav-help/NavHelp';
 import styles from './Layout.scss';
@@ -13,7 +12,7 @@ const cx = classNames.bind(styles);
 const propTypes = {
   nav: PropTypes.object,
   helpItems: PropTypes.array,
-  locale: PropTypes.oneOf(['en', 'en-GB', 'en-US', 'es']).isRequired,
+  locale: PropTypes.string.isRequired,
 };
 
 class Layout extends React.Component {
@@ -42,10 +41,15 @@ class Layout extends React.Component {
 
   render() {
     const { nav, helpItems, locale, ...customProps } = this.props;
+
+    if (!this.state.areTranslationsLoaded) {
+      return null;
+    }
+
     return (
       <I18nProvider
         locale={this.state.locale}
-        messages={Object.assign({}, this.state.messages, Messages[this.state.locale])}
+        messages={this.state.messages}
       >
         <div className={cx('layout', customProps.className)} {...customProps}>
           <div className={cx('nav-container')}>

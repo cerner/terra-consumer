@@ -66,7 +66,7 @@ const UserProfile = ({
       <Button className={cx('popup-button')} href={signinUrl}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
-          fill={<FormattedMessage id="nav_signin" />}
+          fill={<FormattedMessage id="Terra.Consumer.UserProfile.signin" />}
           align="center"
         />
       </Button>
@@ -76,12 +76,12 @@ const UserProfile = ({
       <div>
         <ProfileLinks linkItems={profileLinks} />
         <Button className={cx('link', 'signout-border')} href={signoutUrl}>
-          <FormattedMessage id="nav_signout" />
+          <FormattedMessage id="Terra.Consumer.UserProfile.signout" />
         </Button>
       </div>
     );
 
-    const title = intl.formatMessage({ id: 'nav_profile_title' });
+  const title = intl.formatMessage({ id: 'Terra.Consumer.UserProfile.Modal.title' });
 
     profileContent = (
       <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
