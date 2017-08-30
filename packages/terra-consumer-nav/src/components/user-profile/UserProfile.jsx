@@ -72,7 +72,7 @@ const UserProfile = ({
       </Button>
     );
   } else {
-    const popupContent = (
+    const content = (
       <div>
         <ProfileLinks linkItems={profileLinks} />
         <Button className={cx('link', 'signout-border')} href={signoutUrl}>
@@ -84,7 +84,7 @@ const UserProfile = ({
     const title = intl.formatMessage({ id: 'nav_profile_title' });
 
     profileContent = (
-      <Button className={cx('popup-button')} onClick={() => handleClick({ title, popupContent })}>
+      <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<span>{userName}</span>}
