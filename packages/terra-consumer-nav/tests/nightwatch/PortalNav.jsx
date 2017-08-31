@@ -5,36 +5,19 @@ import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import Layout from './Layout';
 
-const DefaultNav = () => {
+const PortalNav = () => {
   const props = {
     nav: {
-      quickLinks: [
-        {
-          url: '/?react_perf',
-          icon: <IconPerson />,
-          text: 'Create Appointment',
-        },
-        {
-          url: '/?react_perf',
-          icon: (<IconOutlineQuestionMark />),
-          text: 'Send Message',
-        },
-        {
-          url: '/?react_perf',
-          text: 'Refill Medications',
-        },
-        {
-          url: '/?react_perf',
-          text: 'Log Daily Fitness',
-        },
-      ],
       navItems: [
         {
+          // any link that doesn't use react router link is external
+          isExternal: true,
           url: 'localhost:8080',
           text: 'Home',
         },
         {
-          url: '?react_perf#/tests/nav-tests/default',
+          isExternal: true,
+          url: '/',
           text: 'Dashboard',
           icon: <IconPerson />,
         },
@@ -44,12 +27,14 @@ const DefaultNav = () => {
           icon: <IconPerson />,
           subItems: [
             {
+              isExternal: true,
               url: '#inbox',
-              text: 'Inbox',
-              isActive: true,
+              text: 'ACTIVE LINK',
               badgeValue: 1,
+              isActive: true,
             },
             {
+              isExternal: true,
               url: '#sent',
               text: 'Sent',
               badgeValue: 1,
@@ -62,11 +47,13 @@ const DefaultNav = () => {
           icon: <IconPerson />,
           subItems: [
             {
+              isExternal: true,
               url: '#health',
               text: 'Health',
               icon: <IconPerson />,
             },
             {
+              isExternal: true,
               url: '#record',
               text: 'Record',
               icon: <IconPerson />,
@@ -77,11 +64,13 @@ const DefaultNav = () => {
           text: 'Test Data',
           subItems: [
             {
+              isExternal: true,
               url: '#test',
               text: 'Test',
               icon: <IconPerson />,
             },
             {
+              isExternal: true,
               url: '#data',
               text: 'Data',
               icon: <IconPerson />,
@@ -92,10 +81,12 @@ const DefaultNav = () => {
           text: 'More Tests',
           subItems: [
             {
+              isExternal: true,
               url: '#more',
               text: 'More',
             },
             {
+              isExternal: true,
               url: '#tests',
               text: 'Tests',
             },
@@ -103,18 +94,20 @@ const DefaultNav = () => {
         },
       ],
       logo: {
-        // url: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
+        url: 'http://placeholder.pics/svg/250x100/FF0606-FFFFFF',
         altText: 'Placeholder logo',
         isCard: true,
       },
       profile: {
         profileLinks: [
           {
+            isExternal: true,
             text: 'Account',
             icon: (<IconOutlineQuestionMark />),
             url: 'http://localhost:8080/',
           },
           {
+            isExternal: true,
             text: 'Notifications',
             icon: (<IconOutlineQuestionMark />),
             url: 'http://localhost:8080/',
@@ -130,29 +123,36 @@ const DefaultNav = () => {
     helpItems: [
       {
         text: 'Technical Questions',
-        url: 'http://localhost:8080/',
         icon: (<IconOutlineQuestionMark />),
         children: [{
           text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-          url: 'http://localhost:8080/',
         }],
       },
       {
         text: 'Get Support ID',
-        url: 'http://localhost:8080/',
         icon: (<IconOutlineQuestionMark />),
         children: [{
           text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-          url: 'http://localhost:8080/',
         }],
+      },
+      {
+        isExternal: true,
+        text: 'Link',
+        url: 'http://localhost:8080/',
+        icon: (<IconOutlineQuestionMark />),
+      },
+      {
+        isExternal: true,
+        text: 'Another link',
+        url: 'http://localhost:8080/',
       },
     ],
     locale: 'en-US',
   };
 
   return (
-    <Layout {...props} id="layout" />
+    <Layout {...props} id="layout" mainContent="This is portal content" />
   );
 };
 
-export default DefaultNav;
+export default PortalNav;

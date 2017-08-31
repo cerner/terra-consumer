@@ -7,7 +7,7 @@ module.exports = resizeTo(['small', 'tiny', 'medium', 'large', 'huge', 'enormous
   '@tags': ['nav'],
   'Displays a default nav': (browser) => {
     browser
-      .url(`${browser.launchUrl}/#/tests/nav-tests/default`)
+      .url(`${browser.launchUrl}/#/tests/nav-tests/portal`)
       .assert.elementPresent('#layout');
       // .assert.containsText('body', 'Cannot GET /tests/nav-tests/default');
   },

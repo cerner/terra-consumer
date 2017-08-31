@@ -13,6 +13,7 @@ const propTypes = {
   nav: PropTypes.object,
   helpItems: PropTypes.array,
   locale: PropTypes.string.isRequired,
+  mainContent: PropTypes.node,
 };
 
 class Layout extends React.Component {
@@ -40,7 +41,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { nav, helpItems, locale, ...customProps } = this.props;
+    const { nav, helpItems, locale, mainContent, ...customProps } = this.props;
 
     if (!this.state.areTranslationsLoaded) {
       return null;
@@ -64,7 +65,7 @@ class Layout extends React.Component {
               <IconMenu />
             </button>
             {/* Added a div to test the HelpButton relative to page content */}
-            <div style={{ background: '#fff', height: '100%', width: 'inherit' }}>I am in the main content</div>
+            <div style={{ background: '#fff', height: '100%', width: 'inherit' }}>{mainContent}</div>
             <div className={cx('footer')}>
               <NavHelp helpNavs={helpItems} id="nav-help-button" />
             </div>

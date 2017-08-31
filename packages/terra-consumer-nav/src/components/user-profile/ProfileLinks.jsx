@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'terra-button';
 import classNames from 'classnames/bind';
+import SmartLink from '../smart-link/SmartLink';
 import navElementShape from '../../NavPropShapes';
 import styles from './UserProfile.scss';
 
@@ -26,12 +26,13 @@ const ProfileLinks = ({
 }) => (
   <div {...customProps}>
     { linkItems.map(linkItem =>
-      <Button
+      <SmartLink
         key={linkItem.text}
-        href={linkItem.url}
+        url={linkItem.url}
+        isExternal={linkItem.isExternal}
         className={cx('link', 'profile-item-border')}
-        text={linkItem.text}
-      />)
+      >{linkItem.text}
+      </SmartLink>)
     }
   </div>
 );

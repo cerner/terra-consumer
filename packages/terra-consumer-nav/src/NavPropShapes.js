@@ -22,6 +22,10 @@ export const navItemShape = {
    */
   isActive: PropTypes.bool,
   /**
+   * Whether or not the link is external.
+   */
+  isExternal: PropTypes.bool,
+  /**
    * An optional badge. When supplied, displays the value inline, styled alongside the text.
    */
   badgeValue: PropTypes.number,

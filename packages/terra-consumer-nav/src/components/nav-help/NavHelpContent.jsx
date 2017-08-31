@@ -5,6 +5,7 @@ import classNames from 'classnames/bind';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import Toggler from 'terra-toggle';
+import SmartLink from '../smart-link/SmartLink';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
@@ -31,7 +32,7 @@ class NavHelpContent extends React.Component {
       const isOpen = this.state.togglers[index];
       const toggleIcon = isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
 
-      if (content.children.length > 0) {
+      if (content.children && content.children.length > 0) {
         contentElement = (<Button
           key={`${content.text}`}
           onClick={() => this.handleToggle(index)}
@@ -55,16 +56,22 @@ class NavHelpContent extends React.Component {
           </Toggler>
         </Button>);
       } else {
-        contentElement = (<Button key={`${content.text}`} href={content.url} className={cx('help-item')} >
-          <Arrange
-            className={cx('help-item-text')}
-            align="center"
-            fitStart={<div className={cx('icon')}>{content.icon}</div>}
-            fill={<div className={cx('item-text-padding')}>{content.text}</div>}
-          />
-        </Button>);
+        contentElement = (
+          <SmartLink
+            className={cx('help-item')}
+            key={`${content.text}`}
+            url={content.url}
+            isExternal={content.isExternal}
+          >
+            <Arrange
+              className={cx('help-item-text')}
+              align="center"
+              fitStart={<div className={cx('icon')}>{content.icon}</div>}
+              fill={<div className={cx('item-text-padding')}>{content.text}</div>}
+            />
+          </SmartLink>
+        );
       }
-
       return contentElement;
     });
 

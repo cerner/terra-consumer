@@ -66,6 +66,7 @@ class NavItems extends Component {
           text={element.text}
           icon={element.icon}
           isActive={element.isActive}
+          isExternal={element.isExternal}
           badgeValue={element.badgeValue}
           className={element.icon && 'nav-item-icon'}
           {...toggleProps}

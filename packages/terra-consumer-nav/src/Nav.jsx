@@ -8,8 +8,6 @@ import ResponsiveElement from 'terra-responsive-element';
 import NavItems from './components/nav-items/NavItems';
 import Modal from './components/modal/Modal';
 import NavLogo from './components/nav-logo/NavLogo';
-import QuickLink from './components/quick-links/QuickLink';
-import QuickLinks from './components/quick-links/QuickLinks';
 import styles from './Nav.scss';
 import UserProfile from './components/user-profile/UserProfile';
 
@@ -132,9 +130,6 @@ class Nav extends React.Component {
         <div {...customProps} className={cx('nav', customProps.className)} aria-hidden={!isMobileNavOpen}>
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
           <NavLogo {...logo} />
-          <QuickLinks>
-            {quickLinks.map(element => <QuickLink {...element} key={element.text} />)}
-          </QuickLinks>
           <NavItems navItems={navItems} />
           { willRenderProfile &&
             <UserProfile

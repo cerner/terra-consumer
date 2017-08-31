@@ -103,7 +103,7 @@ module.exports = {
     filename: '[name].js',
     path: path.join(__dirname, 'dist'),
   },
-  devtool: 'cheap-source-map',
+  devtool: 'source-map',
   devServer: {
     host: '0.0.0.0',
     disableHostCheck: true,

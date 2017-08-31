@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 const NavTests = () => (
   <div>
     <ul>
-      <li><Link to="/tests/nav-tests/default">Nav - Default</Link></li>
+      <li><Link to="/tests/nav-tests/portal">PortalNav</Link></li>
     </ul>
   </div>
 );

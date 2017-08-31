@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
 import styles from './NavItem.scss';
 import NavToggler from '../nav-toggler/NavToggler';
+import SmartLink from '../smart-link/SmartLink';
 import navItemShape from '../../NavPropShapes';
 
 const cx = classNames.bind(styles);
@@ -43,12 +44,11 @@ const NavItem = ({
   toggleId,
   handleToggle,
   isOpen,
+  isExternal,
   children,
   ...customProps
 }) => {
-  const activeClass = cx({
-    active: isActive,
-  });
+  const activeClass = cx('active');
 
   const itemText = (
     <Arrange
@@ -64,7 +64,6 @@ const NavItem = ({
       align="center"
     />
   );
-
   const currentItem = (children && children.length > 0) ?
     (<NavToggler
       header={itemText}
@@ -74,12 +73,18 @@ const NavItem = ({
     >
       {children}
     </NavToggler>)
-  :
-  (<div className={activeClass}>
-    <a href={url} target={target} className={cx('nav-item', 'nav-item-link')}>
-      {itemText}
-    </a>
-  </div>);
+    :
+    (<div className={isActive ? activeClass : ''}>
+      <SmartLink
+        url={url}
+        target={target}
+        isExternal={isExternal}
+        activeClass={activeClass}
+        className={cx('nav-item', 'nav-item-link')}
+      >
+        {itemText}
+      </SmartLink>
+    </div>);
 
   return (
     <div {...customProps} className={cx('nav-item-wrapper', customProps.className)}>
