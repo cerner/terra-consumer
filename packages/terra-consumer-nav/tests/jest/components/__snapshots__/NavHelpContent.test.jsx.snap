@@ -60,15 +60,11 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
       </p>
     </Toggle>
   </Button>
-  <Button
+  <SmartLink
     className="help-item"
-    href="http://localhost:8080/"
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isReversed={false}
-    type="button"
-    variant="default"
+    isExternal={false}
+    target="_self"
+    url="http://localhost:8080/"
   >
     <Arrange
       align="center"
@@ -93,6 +89,6 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         </div>
       }
     />
-  </Button>
+  </SmartLink>
 </div>
 `;

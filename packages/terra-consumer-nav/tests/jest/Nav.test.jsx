@@ -2,10 +2,6 @@ import React from 'react';
 import Nav from '../../src/Nav';
 
 const testData = {
-  quickLinks: [{
-    url: '/test',
-    text: 'test',
-  }],
   navItems: [{
     url: '#test',
     text: 'test',
