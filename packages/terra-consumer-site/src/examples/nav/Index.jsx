@@ -10,12 +10,14 @@ import { version } from 'terra-consumer-nav/package.json';
 import NavSrc from '!raw-loader!terra-consumer-nav/src/Nav';
 
 // Example Files
+import PortalNav from './PortalNav';
 
 const NavExamples = () => (
   <div>
     <div id="version">Version: {version}</div>
     <Markdown id="readme" src={ReadMe} />
     <PropsTable id="props" src={NavSrc} />
+    <PortalNav />
   </div>
 );
 
