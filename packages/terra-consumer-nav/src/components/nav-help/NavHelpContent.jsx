@@ -59,7 +59,7 @@ class NavHelpContent extends React.Component {
         contentElement = (
           <SmartLink
             className={cx('help-item')}
-            key={`${content.text}`}
+            key={content.text}
             url={content.url}
             isExternal={content.isExternal}
           >
