@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from 'terra-button';
 
 class SimpleModal extends React.Component {
@@ -28,4 +29,7 @@ class SimpleModal extends React.Component {
   }
 }
 
+SimpleModal.propTypes = {
+  children: PropTypes.node,
+};
 export default SimpleModal;
