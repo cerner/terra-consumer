@@ -109,6 +109,7 @@ const PortalNav = () => {
             text: 'Account',
             subItems: [],
             isActive: false,
+            isExternal: true,
             icon: 'icon-cog',
           },
           {
@@ -119,6 +120,7 @@ const PortalNav = () => {
             text: 'Notifications',
             subItems: [],
             isActive: false,
+            isExternal: true,
             icon: 'icon-message-send',
           },
           {
@@ -129,6 +131,7 @@ const PortalNav = () => {
             text: 'Patient Information',
             subItems: [],
             isActive: false,
+            isExternal: true,
             icon: 'icon-demographics',
           },
           {
@@ -139,6 +142,7 @@ const PortalNav = () => {
             text: 'Access Logs',
             subItems: [],
             isActive: false,
+            isExternal: true,
             icon: 'icon-client-access-logs',
           },
           {
@@ -149,6 +153,7 @@ const PortalNav = () => {
             text: 'Help',
             subItems: [],
             isActive: false,
+            isExternal: true,
             icon: 'icon-client-question-alt',
           },
           {
@@ -156,6 +161,7 @@ const PortalNav = () => {
             attrs: null,
             target: '_self',
             url: '#',
+            isExternal: true,
             text: 'English (United States)',
             subItems:
             [{
@@ -166,6 +172,7 @@ const PortalNav = () => {
               text: '&#8235;\u0627\u0644\u0639\u0631\u0628\u064a\u0651\u0629&#8236;',
               subItems: [],
               isActive: false,
+              isExternal: true,
               icon: null,
             },
             {
@@ -176,6 +183,7 @@ const PortalNav = () => {
               text: '&#8234;Espa\u00f1ol&#8236;',
               subItems: [],
               isActive: false,
+              isExternal: true,
               icon: null,
             },
             {
@@ -186,6 +194,7 @@ const PortalNav = () => {
               text: '&#8234;English (United Kingdom)&#8236;',
               subItems: [],
               isActive: false,
+              isExternal: true,
               icon: null,
             },
             {
@@ -196,6 +205,7 @@ const PortalNav = () => {
               text: '&#8234;Fran\u00e7ais (France)&#8236;',
               subItems: [],
               isActive: false,
+              isExternal: true,
               icon: null,
             }],
             isActive: false,
