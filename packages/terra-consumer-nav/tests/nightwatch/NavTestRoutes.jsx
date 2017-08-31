@@ -5,12 +5,14 @@ import { Route } from 'react-router';
 import NavTests from './NavTests';
 
 // Test Cases
-import DefaultNav from './DefaultNav';
+import PortalNav from './PortalNav';
+import DexNav from './DexNav';
 
 const routes = (
   <div>
     <Route path="/tests/nav-tests" component={NavTests} />
-    <Route path="/tests/nav-tests/default" component={DefaultNav} />
+    <Route path="/tests/nav-tests/portal" component={PortalNav} />
+    <Route path="/tests/nav-tests/dex" component={DexNav} />
   </div>
 );
 

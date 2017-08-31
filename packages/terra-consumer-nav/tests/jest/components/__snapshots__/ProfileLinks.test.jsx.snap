@@ -2,27 +2,21 @@
 
 exports[`Profile Link items should render a list of profile link items 1`] = `
 <div>
-  <Button
+  <SmartLink
     className="link profile-item-border"
-    href="http://localhost:8080/"
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isReversed={false}
-    text="Account"
-    type="button"
-    variant="default"
-  />
-  <Button
+    isExternal={false}
+    target="_self"
+    url="http://localhost:8080/"
+  >
+    Account
+  </SmartLink>
+  <SmartLink
     className="link profile-item-border"
-    href="http://localhost:8080/"
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isReversed={false}
-    text="Notifications"
-    type="button"
-    variant="default"
-  />
+    isExternal={false}
+    target="_self"
+    url="http://localhost:8080/"
+  >
+    Notifications
+  </SmartLink>
 </div>
 `;

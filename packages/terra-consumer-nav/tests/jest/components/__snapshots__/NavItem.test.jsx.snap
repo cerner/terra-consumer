@@ -7,9 +7,12 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
   <div
     className=""
   >
-    <a
+    <SmartLink
+      activeClass="active"
       className="nav-item nav-item-link"
-      href="#testPath"
+      isExternal={false}
+      target="_self"
+      url="#testPath"
     >
       <Arrange
         align="center"
@@ -22,7 +25,7 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
         }
         fitStart={null}
       />
-    </a>
+    </SmartLink>
   </div>
 </div>
 `;
@@ -34,9 +37,12 @@ exports[`Nav Item should apply custom classes 1`] = `
   <div
     className=""
   >
-    <a
+    <SmartLink
+      activeClass="active"
       className="nav-item nav-item-link"
-      href="#testPath"
+      isExternal={false}
+      target="_self"
+      url="#testPath"
     >
       <Arrange
         align="center"
@@ -49,7 +55,7 @@ exports[`Nav Item should apply custom classes 1`] = `
         }
         fitStart={null}
       />
-    </a>
+    </SmartLink>
   </div>
 </div>
 `;
@@ -61,9 +67,12 @@ exports[`Nav Item should render a default component 1`] = `
   <div
     className=""
   >
-    <a
+    <SmartLink
+      activeClass="active"
       className="nav-item nav-item-link"
-      href="#testPath"
+      isExternal={false}
+      target="_self"
+      url="#testPath"
     >
       <Arrange
         align="center"
@@ -76,7 +85,7 @@ exports[`Nav Item should render a default component 1`] = `
         }
         fitStart={null}
       />
-    </a>
+    </SmartLink>
   </div>
 </div>
 `;
