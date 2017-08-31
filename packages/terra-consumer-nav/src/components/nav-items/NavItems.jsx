@@ -51,7 +51,8 @@ class NavItems extends Component {
       let toggleProps = {};
       let subNavs = [];
       if (element.subItems) {
-        subNavs = element.subItems.map(item => <NavItem key={item.text} {...item} />);
+        // eslint-disable-next-line react/no-array-index-key
+        subNavs = element.subItems.map((item, index) => <NavItem key={index} {...item} />);
         toggleProps = {
           isOpen: this.state.openToggle === i,
           handleToggle: this.handleToggle,
@@ -77,7 +78,7 @@ class NavItems extends Component {
     });
 
     return (
-      <div {...customProps} className={cx('nav-items-contatiner', customProps.className)}>
+      <div {...customProps} className={cx(customProps.className)}>
         {content}
       </div>
     );

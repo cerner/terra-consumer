@@ -13,6 +13,7 @@ import NavExamples from './examples/nav/Index';
 import TestLinks from './TestLinks';
 import NavigationTestLinks from 'terra-consumer-nav/tests/nightwatch/NavTestRoutes';
 import IconTestRoutes from 'terra-consumer-icon/tests/nightwatch/IconTestRoutes';
+import LayoutTestRoutes from 'terra-consumer-layout/tests/nightwatch/LayoutTestRoutes';
 
 ReactDOM.render((
   <Router history={hashHistory}>
@@ -25,6 +26,6 @@ ReactDOM.render((
     <Route path="/tests" component={TestLinks} />
     { IconTestRoutes }
     { NavigationTestLinks }
-
+    { LayoutTestRoutes }
   </Router>
 ), document.getElementById('root'));

@@ -1,0 +1,88 @@
+@import './variables';
+
+:root {
+  --terra-consumer-body-background: url('http://www.planwallpaper.com/static/images/design-background-wallpaper-i16.jpg');
+  --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
+  --terra-consumer-nav-item-color: #fff;
+
+  --terra-consumer-nav-background: rgba(255, 255, 255, 0.25);
+  --terra-consumer-nav-width: 300px;
+  --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
+
+  --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
+  --terra-consumer-profile-link-background: var(--terra-consumer-body-background);
+  --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
+}
+
+:local {
+  body {
+    background: var(--terra-consumer-body-background);
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+  }
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .nav-container {
+    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
+    color: var(--terra-consumer-nav-text-color);
+  }
+
+  .main-container {
+    color: #fff;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .nav-burger {
+    background: none;
+    border: 0;
+    box-shadow: 0;
+    color: #fff;
+    font-size: 20px;
+    left: 15px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    visibility: hidden;
+    z-index: 1;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      visibility: visible;
+    }
+
+    &:hover,
+    &:focus {
+      color: #ccc;
+      cursor: pointer;
+    }
+  }
+
+  .title {
+    padding-left: 15px;
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      position: absolute;
+      text-align: center;
+    }
+  }
+
+  .help-button-desktop {
+    bottom: 15px;
+    position: fixed;
+    right: 15px;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: none;
+    }
+  }
+}
