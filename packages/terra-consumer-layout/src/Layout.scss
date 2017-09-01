@@ -15,29 +15,26 @@
 }
 
 :local {
-  body {
-
-  }
-
   .layout {
-    display: flex;
-    min-height: 100vh;
- // TEST
+
+    backface-visibility: hidden;
     background: var(--terra-consumer-body-background);
+
     background-attachment: fixed;
     background-size: cover;
+    display: flex;
     font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     margin: 0;
-    backface-visibility: hidden;
+    min-height: 100vh;
     transform: translate3d(0,0,0);
   }
 
   .nav-container {
     background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
     color: var(--terra-consumer-nav-text-color);
-
+    height: auto;
   }
 
   .main-container {
@@ -81,13 +78,14 @@
     }
   }
 
-  .help-button-desktop {
-    bottom: 15px;
-    position: fixed;
-    right: 15px;
+  .help-button {
+    margin: 15px;
+    text-align: right;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      display: none;
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      bottom: 15px;
+      position: fixed;
+      right: 15px;
     }
   }
 }

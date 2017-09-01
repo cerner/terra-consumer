@@ -25,7 +25,9 @@
 
   .nav {
     background: inherit;
+    height: 100%;
     overflow-y: auto;
+    padding-bottom: 60px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
     position: relative;
     top: 0;
@@ -37,10 +39,13 @@
     }
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      height: calc(100% - 60px);
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
       position: absolute;
     }
+  }
+
+  .nav.no-profile {
+    padding-bottom: 0;
   }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
@@ -48,7 +53,7 @@
       background: var(--terra-consumer--mobile-nav-background, rgba(255, 255, 255, 0.25));
       box-shadow: 0 1px 3px #383f42;
       display: block;
-      opacity: 0.95;
+      height: 100%;;
       z-index: 100;
     }
 

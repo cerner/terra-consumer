@@ -121,7 +121,11 @@ class Nav extends React.Component {
 
     return (
       <div className={cx(isMobileNavOpen && 'container')}>
-        <div {...customProps} className={cx('nav', customProps.className)} aria-hidden={!isMobileNavOpen}>
+        <div
+          {...customProps}
+          className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
+          aria-hidden={!isMobileNavOpen}
+        >
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
           <NavLogo {...logo} />
           <NavItems navItems={navItems} />

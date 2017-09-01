@@ -2,7 +2,7 @@
 
 :local {
   .item {
-    color: var(--terra-consumer-nav-item-color, #3d3d3d);
+    color: var(--terra-consumer-nav-item-color, #fff);
     display: flex;
     font-size: 16px;
     line-height: 20px;
@@ -16,10 +16,12 @@
   }
 
   .link {
+    display: block;
     text-decoration: none;
 
     &:hover,
     &:focus {
+      background: rgba(255, 255, 255, 0.4);
       color: var(--terra-consumer-nav-item-color);
       text-decoration: underline;
     }
@@ -38,20 +40,15 @@
     }
   }
 
-  // colors here need callouts, on the way. using estimated from mockups
   .badge {
     align-self: center;
-    background: #fff;
+    background: var(--terra-consumer-badge-background, #fff);
     border-radius: 10px;
-    color: #3d3d3d;
+    color: var(--terra-consumer-badge-color, #3d3d3d);
     display: inline-block;
     font-size: 12px;
     margin: 0 10px;
-    padding: 0 7px;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      background: #aaa;
-      color: #fff;
-    }
+    padding: 0 10px;
   }
 
   .active {
@@ -61,24 +58,18 @@
     font-weight: 900;
     position: relative;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      background: inherit;
-    }
-
     &::before {
       // background: #383f42; // NOTE: should this be theme-able?
       background: var(--terra-consumer-nav-item-color, #383f42);
       border-radius: 3px;
-      bottom: -1px;
+      bottom: -0;
       content: '';
       left: 0;
       position: absolute;
-      top: -1px;
+      top: -0;
       width: 4px;
       @media screen and (max-width: $terra-medium-breakpoint) {
         background: #fff;
-        bottom: 2px;
-        top: 2px;
       }
     }
   }
