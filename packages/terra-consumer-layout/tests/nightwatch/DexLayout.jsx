@@ -5,24 +5,6 @@ import AppShellExample from './AppShellExample';
 
 const data = {
   nav: {
-    quickLinks: [
-      {
-        url: '/?react_perf',
-        text: 'Create Appointment',
-      },
-      {
-        url: '/?react_perf',
-        text: 'Send Message',
-      },
-      {
-        url: '/?react_perf',
-        text: 'Refill Medications',
-      },
-      {
-        url: '/?react_perf',
-        text: 'Log Daily Fitness',
-      },
-    ],
     navItems: [
       {
         url: 'localhost:8080',
@@ -31,6 +13,11 @@ const data = {
       {
         url: '?react_perf#/tests/nav-tests/default',
         text: 'Dashboard',
+      },
+      {
+        url: 'http://google.com',
+        text: 'Google External',
+        target: '_blank',
       },
       {
         text: 'Messaging',
@@ -90,9 +77,9 @@ const data = {
       },
     ],
     logo: {
-      url: 'http://www.vectortemplates.com/raster/batman-logo-big.gif',
+      url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
       altText: 'Client Logo',
-      isCard: true,
+      isCard: false,
     },
     profile: {
       profileLinks: [

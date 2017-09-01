@@ -43,7 +43,6 @@ class Layout extends React.Component {
         <main className={cx('main-container')}>
           <button className={cx('nav-burger')} onClick={this.toggleNav}><IconMenu /></button>
           {this.props.children}
-          <div style={{ padding: '100px 0', border: '1px dashed white' }} />
           <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
         </main>
       </div>
