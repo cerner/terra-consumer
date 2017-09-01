@@ -29,6 +29,7 @@ const ProfileLinks = ({
       <SmartLink
         key={linkItem.text}
         url={linkItem.url}
+        target={linkItem.target}
         isExternal={linkItem.isExternal}
         className={cx('link', 'profile-item-border')}
       >{linkItem.text}
