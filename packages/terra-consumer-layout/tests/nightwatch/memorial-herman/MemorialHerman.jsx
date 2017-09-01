@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Layout from '../../src/Layout';
-import AppShellExample from './AppShellExample';
+import Layout from '../../../src/Layout';
+import AppShellExample from '../AppShellExample';
 
 const data = {
   nav: {
@@ -90,8 +90,8 @@ const data = {
       },
     ],
     logo: {
-      url: 'http://www.vectortemplates.com/raster/batman-logo-big.gif',
-      altText: 'Client Logo',
+      url: 'http://photos.prnewswire.com/prnfull/20140923/147994',
+      altText: 'Memorial Herman Logo',
       isCard: true,
     },
     profile: {

@@ -1,7 +1,7 @@
 @import './variables';
 
 :root {
-  --terra-consumer-body-background: url('http://www.planwallpaper.com/static/images/design-background-wallpaper-i16.jpg');
+  --terra-consumer-body-background: url('https://wallpapercave.com/wp/5ynt7Gb.jpg');
   --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
   --terra-consumer-nav-item-color: #fff;
 
@@ -16,6 +16,13 @@
 
 :local {
   body {
+
+  }
+
+  .layout {
+    display: flex;
+    min-height: 100vh;
+ // TEST
     background: var(--terra-consumer-body-background);
     background-attachment: fixed;
     background-size: cover;
@@ -23,16 +30,14 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
-  }
-
-  .layout {
-    display: flex;
-    min-height: 100vh;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0);
   }
 
   .nav-container {
     background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
     color: var(--terra-consumer-nav-text-color);
+
   }
 
   .main-container {

@@ -16,18 +16,12 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-   * An array of objects to be displayed as quick link options.
-   */
-  quickLinks: PropTypes.arrayOf(
-    PropTypes.shape({
-      text: PropTypes.string.isRequired,
-    }),
-  ),
-  /**
    * An array of objects to be displayed as nav link options.
    */
   navItems: PropTypes.array.isRequired,
-
+  /**
+  * Object representing all the profile information
+  */
   profile: PropTypes.shape({
     signinUrl: PropTypes.string,
     avatar: PropTypes.element,
@@ -60,7 +54,6 @@ const propTypes = {
 };
 
 const defaultProps = {
-  quickLinks: [],
   navItems: [],
   profile: {},
   logo: {},
@@ -97,7 +90,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { quickLinks, navItems, profile, logo, isMobileNavOpen, onRequestClose, ...customProps } = this.props;
+    const { navItems, profile, logo, isMobileNavOpen, onRequestClose, ...customProps } = this.props;
     const profileId = 'profile-popup-button';
 
     const willRenderProfile = profile.userName || profile.avatar || profile.signinUrl;

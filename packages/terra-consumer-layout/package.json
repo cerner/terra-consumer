@@ -2,7 +2,7 @@
   "name": "terra-consumer-layout",
   "main": "lib/Layout.js",
   "version": "0.0.0",
-  "description": "{insert description}",
+  "description": "A re-usable layout component that puts together our navigation",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cerner/terra-consumer.git"

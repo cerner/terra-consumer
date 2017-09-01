@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { I18nProvider, i18nLoader } from 'terra-i18n';
 import { BrowserRouter } from 'react-router-dom';
 

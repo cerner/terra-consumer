@@ -63,7 +63,7 @@ const data = {
           {
             isExternal: true,
             url: '#inbox',
-            text: 'Inbox',
+            text: 'An Active Link',
             isActive: true,
             badgeValue: 1,
           },
@@ -128,7 +128,7 @@ const data = {
       },
     ],
     logo: {
-      url: 'https://dsa.missouri.edu/wp-content/uploads/2016/07/cerner-white.png',
+      url: 'http://photos.prnewswire.com/prnfull/20140210/DC61972LOGO',
       altText: 'Placeholder logo',
       isCard: true,
     },
@@ -283,7 +283,7 @@ const data = {
 export default () => (
   <AppShellExample>
     <Layout {...data}>
-      <div style={{ background: '#fff', height: '100%', width: 'inherit' }}>I am in the main content</div>
+      <div>I am in the main content</div>
     </Layout>
   </AppShellExample>
 );

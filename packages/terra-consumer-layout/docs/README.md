@@ -1,6 +1,6 @@
 # Terra Consumer Layout
 
-{insert description}
+A re-usable layout component that puts together our navigation
 
 ## Getting Started
 
