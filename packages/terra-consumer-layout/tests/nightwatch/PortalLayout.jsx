@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import Layout from '../../src/Layout';
@@ -14,7 +15,6 @@ const data = {
         text: 'Home',
       },
       {
-        isExternal: true,
         url: '/',
         text: 'Dashboard',
         icon: <IconPerson />,
@@ -277,13 +277,24 @@ const data = {
       text: 'Another link',
       url: 'http://localhost:8080/',
     },
+    {
+      text: 'Nav Link',
+      url: '/test',
+    },
   ],
 };
-
+const content = (
+  <div>
+    <Route exact path="/" render={() => <h1>Home, sweet home!</h1>} />
+    <Route exact path="/test" render={() => <h1>Test Link! Works</h1>} />
+  </div>
+    );
 export default () => (
   <AppShellExample>
-    <Layout {...data}>
-      <div>I am in the main content</div>
-    </Layout>
+    <BrowserRouter>
+      <Layout {...data}>
+        <div>{content}</div>
+      </Layout>
+    </BrowserRouter>
   </AppShellExample>
 );
