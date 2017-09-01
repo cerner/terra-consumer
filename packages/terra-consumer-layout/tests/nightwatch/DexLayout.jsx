@@ -66,6 +66,11 @@ const data = {
           },
         ],
       },
+      {
+        url: 'http://google.com',
+        text: 'Google External',
+        target: '_blank',
+      },
     ],
     logo: {
       url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
@@ -81,6 +86,11 @@ const data = {
         {
           text: 'Notifications',
           url: '/notifications',
+        },
+        {
+          url: 'http://google.com',
+          text: 'Google External',
+          target: '_blank',
         },
       ],
         // comment out userName to see signin
@@ -105,13 +115,9 @@ const data = {
     },
     {
       isExternal: true,
-      text: 'Link',
-      url: 'http://localhost:8080/',
-    },
-    {
-      isExternal: true,
-      text: 'Another link',
-      url: 'http://localhost:8080/',
+      url: 'http://google.com',
+      text: 'Google External',
+      target: '_blank',
     },
   ],
 };
