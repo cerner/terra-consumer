@@ -88,6 +88,11 @@ const data = {
           },
         ],
       },
+      {
+        url: 'http://google.com',
+        text: 'Google External',
+        target: '_blank',
+      },
     ],
     logo: {
       url: 'http://www.vectortemplates.com/raster/batman-logo-big.gif',

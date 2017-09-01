@@ -66,6 +66,7 @@ class NavItems extends Component {
           url={element.url}
           text={element.text}
           icon={element.icon}
+          target={element.target}
           isActive={element.isActive}
           isExternal={element.isExternal}
           badgeValue={element.badgeValue}
