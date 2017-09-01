@@ -109,6 +109,11 @@ const data = {
           text: 'Notifications',
           url: 'http://localhost:8080/',
         },
+        {
+        url: 'http://google.com',
+        text: 'Google External',
+        target: '_blank',
+      },
       ],
       // comment out userName to see signin
       userName: 'John Snow',
@@ -134,6 +139,11 @@ const data = {
         url: 'http://localhost:8080/',
       }],
     },
+          {
+        url: 'http://google.com',
+        text: 'Google External',
+        target: '_blank',
+      },
   ],
 };
 

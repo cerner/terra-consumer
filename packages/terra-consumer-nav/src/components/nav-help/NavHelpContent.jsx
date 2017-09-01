@@ -61,6 +61,7 @@ class NavHelpContent extends React.Component {
             className={cx('help-item')}
             key={content.text}
             url={content.url}
+            target={content.target}
             isExternal={content.isExternal}
           >
             <Arrange
