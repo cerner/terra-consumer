@@ -19,6 +19,8 @@
     display: block;
     text-decoration: none;
 
+    &:active {}
+
     &:hover,
     &:focus {
       background: rgba(255, 255, 255, 0.4);
@@ -59,7 +61,6 @@
     position: relative;
 
     &::before {
-      // background: #383f42; // NOTE: should this be theme-able?
       background: var(--terra-consumer-nav-item-color, #383f42);
       border-radius: 3px;
       bottom: -0;
