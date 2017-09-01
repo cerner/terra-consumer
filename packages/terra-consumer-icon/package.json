@@ -27,8 +27,7 @@
     "jsdom": "^9.11.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
     "svgo": "^0.7.2",
-    "terra-props-table": "^1.2.0",
-    "terra-toolkit": "^1.2.2"
+    "terra-props-table": "^1.2.0"
   },
   "peerDependencies": {
     "react": "^15.4.2",
@@ -57,9 +56,8 @@
     "lint:js": "$(cd ..; npm bin)/eslint --ext .js,.jsx . --ignore-path ../../.eslintignore",
     "lint:scss": "$(cd ..; npm bin)/stylelint src/**/*.scss",
     "props-table": "echo \"Info: no pops table\" && exit 0",
-    "test": "npm run test:spec && npm run test:nightwatch-default",
-    "test:spec": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
-    "test:all": "npm run test:nightwatch-default && npm run test:nightwatch-chrome && npm run test:nightwatch-firefox && npm run test:nightwatch-safari",
-    "test:nightwatch": "nightwatch"
+    "test": "npm run test:jest && npm run test:nightwatch",
+    "test:jest": "$(cd ..; npm bin)/jest --config ../../jestconfig.json",
+    "test:nightwatch": "$(cd ..; npm bin)/nightwatch -c ../../nightwatch.conf.js"
   }
 }

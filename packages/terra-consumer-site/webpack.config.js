@@ -15,7 +15,7 @@ const rtl = require('postcss-rtl');
 module.exports = {
   entry: {
     'babel-polyfill': 'babel-polyfill',
-    'terra-core': path.resolve(path.join(__dirname, 'src', 'Index')),
+    'terra-consumer': path.resolve(path.join(__dirname, 'src/Index')),
   },
   module: {
     loaders: [{
@@ -36,7 +36,7 @@ module.exports = {
           options: {
             sourceMap: true,
             importLoaders: 2,
-            localIdentName: '[path]___[name]__[local]___[hash:base64:5]',
+            localIdentName: '[name]__[local]___[hash:base64:5]',
           },
         }, {
           loader: 'postcss-loader',
@@ -78,8 +78,8 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'src', 'index.html'),
-      chunks: ['babel-polyfill', 'terra-core'],
+      template: path.join(__dirname, 'src/index.html'),
+      chunks: ['babel-polyfill', 'terra-consumer'],
     }),
     new I18nAggregatorPlugin({
       baseDirectory: __dirname,
@@ -88,14 +88,13 @@ module.exports = {
     new webpack.NamedChunksPlugin(),
   ],
   resolve: {
+    // See https://github.com/facebook/react/issues/8026
     extensions: ['.js', '.jsx'],
     modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
-
-    // See https://github.com/facebook/react/issues/8026
     alias: {
-      react: path.resolve(__dirname, 'node_modules', 'react'),
-      'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
       moment: path.resolve(__dirname, 'node_modules/moment'),
+      react: path.resolve(__dirname, 'node_modules/react'),
+      'react-intl': path.resolve(__dirname, 'node_modules/react-intl'),
       'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
     },
   },
@@ -103,7 +102,7 @@ module.exports = {
     filename: '[name].js',
     path: path.join(__dirname, 'dist'),
   },
-  devtool: 'source-map',
+  devtool: 'cheap-source-map',
   devServer: {
     host: '0.0.0.0',
     disableHostCheck: true,

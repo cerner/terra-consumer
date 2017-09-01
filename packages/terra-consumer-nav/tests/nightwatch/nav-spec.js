@@ -1,14 +1,13 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint-disable no-unused-expressions */
+// eslint-disable-next-line import/no-extraneous-dependencies
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-
-const resizeTo = require('./utils').resizeTo;
-
-module.exports = resizeTo(['small', 'tiny', 'medium', 'large', 'huge', 'enormous'], {
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   '@tags': ['nav'],
   'Displays a portal nav': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/nav-tests/portal`)
-      .assert.elementPresent('#layout');
+      .expect.element('#layout').to.be.present;
       // .assert.containsText('body', 'Cannot GET /tests/nav-tests/default');
   },
 });

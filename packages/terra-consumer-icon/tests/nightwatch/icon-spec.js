@@ -1,17 +1,8 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
+/* eslint-disable no-unused-expressions */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+const resizeTo = require('terra-toolkit/lib/nightwatch/responsive-helpers').resizeTo;
 
-module.exports = {
-  before: (browser, done) => {
-    const size = browser.globals.breakpoints.medium;
-    browser.resizeWindow(size[0], size[1], done);
-  },
-
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-consumer-icon', done);
-  },
-
+module.exports = resizeTo(['tiny', 'small', 'medium', 'large', 'huge', 'enormous'], {
   'Displays a default icon with aria-hidden equal to true': (browser) => {
     browser
       .url(`${browser.launchUrl}/#/tests/icon-tests/default`)
@@ -39,4 +30,4 @@ module.exports = {
       .waitForElementPresent('#icon-default', 1000)
       .expect.element('#icon-default').to.have.attribute('focusable').which.contains('false');
   },
-};
+});
