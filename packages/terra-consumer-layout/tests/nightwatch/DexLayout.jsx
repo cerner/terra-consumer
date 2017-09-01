@@ -7,29 +7,20 @@ const data = {
   nav: {
     navItems: [
       {
-        url: 'localhost:8080',
-        text: 'Home',
-      },
-      {
-        url: '?react_perf#/tests/nav-tests/default',
+        url: '/',
         text: 'Dashboard',
-      },
-      {
-        url: 'http://google.com',
-        text: 'Google External',
-        target: '_blank',
       },
       {
         text: 'Messaging',
         badgeValue: 2,
         subItems: [
           {
-            url: '#inbox',
+            url: '/inbox',
             text: 'Inbox',
             badgeValue: 1,
           },
           {
-            url: '#sent',
+            url: '/sent',
             text: 'Sent',
             badgeValue: 1,
           },
@@ -40,11 +31,11 @@ const data = {
         badgeValue: 0,
         subItems: [
           {
-            url: '#health',
+            url: '/health',
             text: 'Health',
           },
           {
-            url: '#record',
+            url: '/record',
             text: 'Record',
           },
         ],
@@ -53,11 +44,11 @@ const data = {
         text: 'Test Data',
         subItems: [
           {
-            url: '#test',
+            url: '/test',
             text: 'Test',
           },
           {
-            url: '#data',
+            url: '/data',
             text: 'Data',
           },
         ],
@@ -66,11 +57,11 @@ const data = {
         text: 'More Tests',
         subItems: [
           {
-            url: '#more',
+            url: '/more',
             text: 'More',
           },
           {
-            url: '#tests',
+            url: '/tests',
             text: 'Tests',
           },
         ],
@@ -78,21 +69,21 @@ const data = {
     ],
     logo: {
       url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
-      altText: 'Client Logo',
+      altText: 'Placeholder logo',
       isCard: false,
     },
     profile: {
       profileLinks: [
         {
           text: 'Account',
-          url: 'http://localhost:8080/',
+          url: '/account',
         },
         {
           text: 'Notifications',
-          url: 'http://localhost:8080/',
+          url: '/notifications',
         },
       ],
-      // comment out userName to see signin
+        // comment out userName to see signin
       userName: 'John Snow',
       signinUrl: 'http://localhost:8080/',
       signoutUrl: 'http://localhost:8080/',
@@ -102,19 +93,25 @@ const data = {
   helpItems: [
     {
       text: 'Technical Questions',
-      url: 'http://localhost:8080/',
       children: [{
         text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-        url: 'http://localhost:8080/',
       }],
     },
     {
       text: 'Get Support ID',
-      url: 'http://localhost:8080/',
       children: [{
         text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
-        url: 'http://localhost:8080/',
       }],
+    },
+    {
+      isExternal: true,
+      text: 'Link',
+      url: 'http://localhost:8080/',
+    },
+    {
+      isExternal: true,
+      text: 'Another link',
+      url: 'http://localhost:8080/',
     },
   ],
 };
