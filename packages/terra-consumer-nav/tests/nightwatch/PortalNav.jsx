@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 // NOTE: swap these for deploy/development
 // import Nav from '../../lib/Nav';
@@ -9,14 +10,15 @@ const PortalNav = () => {
   const props = {
     nav: {
       navItems: [
+
         {
+
           // any link that doesn't use react router link is external
           isExternal: true,
           url: 'localhost:8080',
           text: 'Home',
         },
         {
-          isExternal: true,
           url: '/',
           text: 'Dashboard',
           icon: <IconPerson />,
@@ -243,12 +245,23 @@ const PortalNav = () => {
         text: 'Another link',
         url: 'http://localhost:8080/',
       },
+      {
+        text: 'Nav Link',
+        url: '/test',
+      },
     ],
     locale: 'en-US',
   };
-
+  const content = (
+    <div>
+      <Route exact path="/" render={() => <h1>Home, sweet home!</h1>} />
+      <Route exact path="/test" render={() => <h1>Test Link! Works</h1>} />
+    </div>
+    );
   return (
-    <Layout {...props} id="layout" mainContent="This is portal content" />
+    <BrowserRouter>
+      <Layout {...props} id="layout" mainContent={content} />
+    </BrowserRouter>
   );
 };
 
