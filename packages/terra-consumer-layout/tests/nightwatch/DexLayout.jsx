@@ -69,6 +69,7 @@ const data = {
       {
         url: 'http://google.com',
         text: 'Google External',
+        isExternal: true,
         target: '_blank',
       },
     ],
@@ -90,6 +91,7 @@ const data = {
         {
           url: 'http://google.com',
           text: 'Google External',
+          isExternal: true,
           target: '_blank',
         },
       ],
