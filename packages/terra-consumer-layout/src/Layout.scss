@@ -33,7 +33,13 @@
   .nav-container {
     background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
     color: var(--terra-consumer-nav-text-color);
-    height: auto;
+    min-height: 100vh;
+    z-index: 99;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: block;
+      margin-bottom: 60px;
+      position: fixed;
+    }
   }
 
   .main-container {
