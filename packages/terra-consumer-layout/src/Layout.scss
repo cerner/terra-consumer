@@ -33,7 +33,7 @@
   .nav-container {
     background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
     color: var(--terra-consumer-nav-text-color);
-    height: auto;
+    min-height: 100vh;
   }
 
   .main-container {
@@ -65,28 +65,18 @@
     }
   }
 
-  .title {
-    padding-left: 15px;
-    padding-top: 15px;
-    position: relative;
-    width: 100%;
-
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      position: absolute;
-      text-align: center;
-    }
-  }
-
   .help-button {
     margin: 15px;
     text-align: right;
 
     @media screen and (min-width: $terra-medium-breakpoint) {
       bottom: 15px;
+      margin: 0;
       position: fixed;
       right: 15px;
     }
   }
+
   .skip-to-main-content {
     height: 1px;
     left: -1000px;
@@ -102,7 +92,7 @@
     }
   }
 
- .skip-container {
-   text-align: center;
+  .skip-container {
+    text-align: center;
   }
 }

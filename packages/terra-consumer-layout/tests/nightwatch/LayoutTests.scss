@@ -1,0 +1,7 @@
+@import '../../src/variables';
+
+h1 {
+  @media screen and (max-width: $terra-medium-breakpoint) {
+    margin-top: 40px;
+  }
+}
