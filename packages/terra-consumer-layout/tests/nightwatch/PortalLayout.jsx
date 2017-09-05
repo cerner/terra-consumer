@@ -385,7 +385,16 @@ const data = {
 
 const content = (
   <div>
-    <Route exact path="/" render={() => <h1>Home, sweet home!</h1>} />
+    <Route
+      exact
+      path="/"
+      render={() => (
+        <div>
+          {/* eslint-disable */}
+          { Array.apply(null, { length: 1000 }).map((n, i) => <span key={i}>Testing </span>) }
+        </div>
+      )}
+    />
     <Route exact path="/test" render={() => <h1>Test Link! Works</h1>} />
   </div>
 );
@@ -395,7 +404,7 @@ export default () => (
     <BrowserRouter>
       <Layout {...data}>
         <div>{content}</div>
-        <div style={{ padding: '500px 0', border: '1px dashed white' }} />
+        {/* <div style={{ padding: '500px 0', border: '1px dashed white' }} /> */}
       </Layout>
     </BrowserRouter>
   </AppShellExample>

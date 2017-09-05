@@ -31,6 +31,14 @@
     color: #fff;
     flex-grow: 1;
     text-align: left;
+    white-space: break-word;
+  }
+
+  @media screen and (max-width: $terra-medium-breakpoint) {
+    .nav-open.main-container {
+      overflow: hidden;
+      position: fixed;
+    }
   }
 
   .nav-burger {

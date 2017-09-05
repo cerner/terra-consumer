@@ -55,7 +55,7 @@ class Layout extends React.Component {
             isMobileNavOpen={this.state.isMobileNavOpen}
             onRequestClose={this.toggleNav}
           />
-          <main id="main-container" className={cx('main-container')}>
+          <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
             <button className={cx('nav-burger')} onClick={this.toggleNav}><IconMenu /></button>
             {this.props.children}
             <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
