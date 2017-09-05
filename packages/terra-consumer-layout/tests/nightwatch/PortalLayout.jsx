@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import Layout from '../../src/Layout';
+import './LayoutTests.scss';
 import AppShellExample from './AppShellExample';
 
 const data = {
@@ -381,12 +382,14 @@ const data = {
     },
   ],
 };
+
 const content = (
   <div>
     <Route exact path="/" render={() => <h1>Home, sweet home!</h1>} />
     <Route exact path="/test" render={() => <h1>Test Link! Works</h1>} />
   </div>
-    );
+);
+
 export default () => (
   <AppShellExample>
     <BrowserRouter>
