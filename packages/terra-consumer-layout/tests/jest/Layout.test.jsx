@@ -1,24 +1,18 @@
 import React from 'react';
+import { I18nProvider } from 'terra-i18n';
+import messages from '../../translations/en-US.json';
 import Layout from '../../src/Layout';
 
 describe('Layout', () => {
-  const defaultRender = <Layout />;
+  const defaultRender = (
+    <I18nProvider locale="en-US" messages={messages}>
+      <Layout />
+    </I18nProvider>
+  );
 
   // Snapshot Tests
   it('should render a default component', () => {
     const wrapper = shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
-  });
-
-  // Prop Tests
-  it('should use the default value when no value is given', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.find('.layout').text()).toEqual('defualt');
-  });
-
-  // Structure Tests
-  it('should have the class layout', () => {
-    const wrapper = shallow(defaultRender);
-    expect(wrapper.prop('className')).toContain('layout');
   });
 });

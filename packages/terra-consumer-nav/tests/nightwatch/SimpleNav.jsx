@@ -215,6 +215,7 @@ const nav = {
 
 export default () => (
   <I18nShell>
-    <Nav {...nav} isMobileNavOpen onRequestClose={() => alert('Callback to close')} />
+    {/* eslint-disable no-alert */}
+    <Nav {...nav} isMobileNavOpen onRequestClose={() => alert('Callback to close')} id="nav" />
   </I18nShell>
 );

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render a default component 1`] = `
+<IntlProvider
+  locale="en-US"
+  messages={
+    Object {
+      "Terra.Consumer.Layout.skipcontent": "Skip to Main Content",
+    }
+  }
+>
+  <div>
+    <InjectIntl(Layout) />
+  </div>
+</IntlProvider>
+`;

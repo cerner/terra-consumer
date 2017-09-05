@@ -120,7 +120,7 @@ class Nav extends React.Component {
     );
 
     return (
-      <div className={cx(isMobileNavOpen && 'mobile-panel')}>
+      <div className={cx(isMobileNavOpen && 'mobile-panel')} id="terra-consumer-nav">
         <div
           {...customProps}
           className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
