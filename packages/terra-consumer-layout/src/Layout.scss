@@ -5,7 +5,6 @@
   --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
   --terra-consumer-nav-item-color: #fff;
 
-  --terra-consumer-nav-background: rgba(255, 255, 255, 0.25);
   --terra-consumer-nav-width: 300px;
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
 
@@ -16,10 +15,8 @@
 
 :local {
   .layout {
-
     backface-visibility: hidden;
     background: var(--terra-consumer-body-background);
-
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -28,17 +25,6 @@
     -webkit-font-smoothing: antialiased;
     margin: 0;
     min-height: 100vh;
-  }
-
-  .nav-container {
-    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
-    color: var(--terra-consumer-nav-text-color);
-    min-height: 100vh;
-    z-index: 99;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      display: block;
-      position: fixed;
-    }
   }
 
   .main-container {

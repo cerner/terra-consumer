@@ -9,7 +9,13 @@ import styles from './Layout.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+  /**
+  * Object of configuration for the side navigation and profile.
+  */
   nav: PropTypes.object.isRequired,
+  /**
+  * Array of links to show for the content of the help button
+  */
   helpItems: PropTypes.array,
   /**
    * Injected react-intl formatting api
@@ -44,13 +50,11 @@ class Layout extends React.Component {
           </a>
         </div>
         <div className={cx('layout', customProps.className)} {...customProps}>
-          <div className={cx('nav-container')}>
-            <Nav
-              {...nav}
-              isMobileNavOpen={this.state.isMobileNavOpen}
-              onRequestClose={this.toggleNav}
-            />
-          </div>
+          <Nav
+            {...nav}
+            isMobileNavOpen={this.state.isMobileNavOpen}
+            onRequestClose={this.toggleNav}
+          />
           <main id="main-container" className={cx('main-container')}>
             <button className={cx('nav-burger')} onClick={this.toggleNav}><IconMenu /></button>
             {this.props.children}
