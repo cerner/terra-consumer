@@ -4,7 +4,7 @@
 :local {
   /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
   @media screen and (max-width: $terra-medium-breakpoint) {
-    .container {
+    .mobile-panel {
       &::before {
         background: var(--terra-consumer-body-background);
         background-attachment: fixed;
@@ -24,7 +24,8 @@
   }
 
   .nav {
-    background: inherit;
+    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.25));
+    color: var(--terra-consumer-nav-text-color);
     height: 100%;
     overflow-y: auto;
     padding-bottom: 60px;
@@ -40,7 +41,8 @@
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
-      position: absolute;
+      position: fixed;
+      display: block;
     }
   }
 

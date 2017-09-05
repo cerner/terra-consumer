@@ -120,7 +120,7 @@ class Nav extends React.Component {
     );
 
     return (
-      <div className={cx(isMobileNavOpen && 'container')}>
+      <div className={cx(isMobileNavOpen && 'mobile-panel')}>
         <div
           {...customProps}
           className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
