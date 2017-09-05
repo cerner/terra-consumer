@@ -2,8 +2,8 @@
 /* eslint-disable */
 import React from 'react';
 import Table from 'terra-table';
-import IconColorIncentives from 'ICON_TARGET_PATH/IconColorIncentives';
-import IconColorFootsteps from 'ICON_TARGET_PATH/IconColorFootsteps';
+import IconColorIncentives from 'ICON_TARGET_PATH/IconAbnormal';
+import IconColorFootsteps from 'ICON_TARGET_PATH/IconAlert';
 
 const IconCustom = () => (
   <div>  <Table isStriped={false} >

@@ -12,6 +12,7 @@ import { version } from 'terra-consumer-icon/package.json';
 // Example Files
 import IconStatic from './IconStatic';
 import IconThemeable from './IconThemeable';
+import IconCustom from './IconCustom';
 
 const IconExamples = () => (
   <div>
@@ -22,6 +23,9 @@ const IconExamples = () => (
     <br />
     <h2 id="themeable_icons">Themeable Icons</h2>
     <IconThemeable />
+    <br />
+    <h2 id="custom_icons">Custom Icons</h2>
+    <IconCustom />
   </div>
 );
 

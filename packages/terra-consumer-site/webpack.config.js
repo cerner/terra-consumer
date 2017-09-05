@@ -12,6 +12,7 @@ const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 const CustomProperties = require('postcss-custom-properties');
 const rtl = require('postcss-rtl');
 
+const ICON_TARGET_PATH = 'terra-icon/lib/icon';
 module.exports = {
   entry: {
     'babel-polyfill': 'babel-polyfill',
@@ -86,6 +87,9 @@ module.exports = {
       supportedLocales: i18nSupportedLocales,
     }),
     new webpack.NamedChunksPlugin(),
+    new webpack.NormalModuleReplacementPlugin(/(.*)ICON_TARGET_PATH(\.*)/, function (resource) {
+      resource.request = resource.request.replace(/ICON_TARGET_PATH/, `${ICON_TARGET_PATH}`);
+    }),
   ],
   resolve: {
     extensions: ['.js', '.jsx'],
