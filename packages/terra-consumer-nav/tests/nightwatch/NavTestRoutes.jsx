@@ -12,7 +12,7 @@ const routes = (
   <div>
     <Route path="/tests/nav-tests" component={NavTests} />
     <Route path="/tests/nav-tests/simple-nav" component={SimpleNav} />
-    <Route path="/tests/nav-tests/help" component={HelpButtonTest} />
+    <Route path="/tests/nav-tests/help-button" component={HelpButtonTest} />
   </div>
 );
 
