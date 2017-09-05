@@ -41,7 +41,8 @@
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
-      position: absolute;
+      position: fixed;
+      display: block;
     }
   }
 
