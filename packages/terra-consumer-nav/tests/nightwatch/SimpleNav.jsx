@@ -162,27 +162,25 @@ const nav = {
         text: 'English (United States)',
         subItems: [
           {
-            badgeValue: null,
-            // attrs: { 'data-locale': 'ar' },
+            'data-locale': 'ar',
             isExternal: true,
             url: '#1',
             text: '\u0627\u0644\u0639\u0631\u0628\u064a\u0651\u0629',
           },
           {
-            badgeValue: null,
-            // attrs: { 'data-locale': 'es' },
+            'data-locale': 'es',
             isExternal: true,
             url: '#2',
             text: 'Espa\u00f1ol',
           },
           {
-            // attrs: { 'data-locale': 'en-gb' },
+            'data-locale': 'en-gb',
             isExternal: true,
             url: '#3',
             text: 'English (United Kingdom)',
           },
           {
-            // attrs: { 'data-locale': 'fr-fr' },
+            'data-locale': 'fr-fr',
             isExternal: true,
             url: '#4',
             text: 'Fran\u00e7ais (France)',
