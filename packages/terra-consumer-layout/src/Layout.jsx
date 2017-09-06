@@ -42,13 +42,13 @@ class Layout extends React.Component {
   render() {
     const { nav, helpItems, intl, ...customProps } = this.props;
     return (
-      <div>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', height: '100vh' }}>
         <div className={cx('skip-container')}>
           <a className={cx('skip-to-main-content')} href="#main-container" id="skip-maincontent-link">
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
         </div>
-        <div className={cx('layout', customProps.className)} {...customProps}>
+        <div className={cx('layout', customProps.className)} {...customProps} style={{ flexGrow: 1 }}>
           <Nav
             {...nav}
             isMobileNavOpen={this.state.isMobileNavOpen}
@@ -57,8 +57,10 @@ class Layout extends React.Component {
           <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
             <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
             {this.props.children}
-            <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
           </main>
+        </div>
+        <div style={{ color: 'black', textAlign: 'center', position: 'relative' }}>
+          <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
         </div>
       </div>
     );
