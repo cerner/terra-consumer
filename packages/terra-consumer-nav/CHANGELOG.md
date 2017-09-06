@@ -12,6 +12,9 @@ ChangeLog
 - Updated hover effects of nav items and profile links.
 - Stop using terra-button for nav close modal, profile button, and help button
 
+### Changed
+- Made Nav and Nav-Container width consistent in all places used.
+
 ------------------
 
 # 0.1.0-BETA.5 - (September 06, 2017)
