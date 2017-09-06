@@ -11,16 +11,12 @@ const propTypes = { ...navElementShape };
 const ProfileLink = ({
   text,
   url,
-  icon,
   target,
-  isActive,
   isExternal,
-  badgeValue,
   ...customProps
 }) => (
   <SmartLink
     {...customProps}
-    key={text}
     url={url}
     target={target}
     isExternal={isExternal}

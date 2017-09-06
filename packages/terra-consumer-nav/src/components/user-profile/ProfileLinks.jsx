@@ -61,12 +61,27 @@ class ProfileLinks extends React.Component {
               />
             </Button>
             <Toggler isOpen={isOpen} isAnimated className={cx('toggler', isOpen && 'open')}>
-              {linkItem.subItems.map(subItem => (<ProfileLink key={subItem.text} {...subItem} />))}
+              {linkItem.subItems.map(subItem =>
+                (<ProfileLink
+                  key={subItem.text}
+                  url={subItem.url}
+                  text={subItem.text}
+                  target={subItem.target}
+                  isExternal={subItem.isExternal}
+                />),
+              )}
             </Toggler>
           </div>
         );
       }
-      return <ProfileLink {...linkItem} key={linkItem.text} />;
+      return (
+        <ProfileLink
+          key={linkItem.text}
+          url={linkItem.url}
+          text={linkItem.text}
+          target={linkItem.target}
+          isExternal={linkItem.isExternal}
+        />);
     });
 
     return (
