@@ -1,5 +1,8 @@
 ChangeLog
 =========
+1.2.1 - (September 05, 2017)
+----------
+Updated terra-core packages
 
 1.2.0 - (August 30, 2017)
 -----------------
