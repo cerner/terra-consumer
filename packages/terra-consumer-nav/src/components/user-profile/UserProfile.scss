@@ -46,6 +46,27 @@
     }
   }
 
+  .toggler-border {
+    border-bottom: 1px solid #dedfe0;
+
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      border-bottom: 0;
+      border-top: 1px solid #dedfe0;
+    }
+  }
+
+  .toggler {
+    padding: 0;
+
+    .link {
+      padding: 15px 30px;
+
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
+  }
+
   .popup-button {
     background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.25));
     border: 0;
