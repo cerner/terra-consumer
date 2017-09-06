@@ -2,7 +2,7 @@
 
 exports[`Nav Items should apply custom classes 1`] = `
 <div
-  className="nav-items-contatiner test-class"
+  className="test-class"
 >
   <NavItem
     badgeValue={0}
@@ -16,7 +16,7 @@ exports[`Nav Items should apply custom classes 1`] = `
 
 exports[`Nav Items should render a default component 1`] = `
 <div
-  className="nav-items-contatiner"
+  className=""
 >
   <NavItem
     badgeValue={0}

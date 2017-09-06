@@ -1,0 +1,97 @@
+@import './variables';
+
+:root {
+  --terra-consumer-body-background: url('https://wallpapercave.com/wp/5ynt7Gb.jpg');
+  --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
+  --terra-consumer-nav-item-color: #fff;
+
+  --terra-consumer-nav-width: 300px;
+  --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
+
+  --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
+  --terra-consumer-profile-link-background: var(--terra-consumer-body-background);
+  --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
+}
+
+:local {
+  .layout {
+    backface-visibility: hidden;
+    background: var(--terra-consumer-body-background);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  .main-container {
+    color: #fff;
+    flex-grow: 1;
+    text-align: left;
+    white-space: break-word;
+  }
+  
+  @media screen and (max-width: $terra-medium-breakpoint) {
+    .nav-open.main-container {
+      overflow: hidden;
+      position: fixed;
+    }
+  }
+
+  .nav-burger {
+    background: none;
+    border: 0;
+    box-shadow: 0;
+    color: #fff;
+    font-size: 20px;
+    left: 15px;
+    padding: 0;
+    position: absolute;
+    top: 10px;
+    visibility: hidden;
+    z-index: 1;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      visibility: visible;
+    }
+
+    &:hover,
+    &:focus {
+      color: #ccc;
+      cursor: pointer;
+    }
+  }
+
+  .help-button {
+    margin: 15px;
+    text-align: right;
+
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      bottom: 15px;
+      margin: 0;
+      position: fixed;
+      right: 15px;
+    }
+  }
+
+  .skip-to-main-content {
+    height: 1px;
+    left: -1000px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px;
+
+    &:focus {
+      height: auto;
+      position: static;
+      width: auto;
+    }
+  }
+
+  .skip-container {
+    text-align: center;
+  }
+}

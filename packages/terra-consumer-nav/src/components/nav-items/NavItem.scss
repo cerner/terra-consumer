@@ -1,86 +1,71 @@
 @import '../../variables';
 
 :local {
-  .nav-items-contatiner {
-    margin: 20px 25px;
-  }
-
-  .nav-item {
-    color: var(--terra-consumer--nav-item-color, #3d3d3d);
-    display: block;
+  .item {
+    color: var(--terra-consumer-nav-item-color, #fff);
+    display: flex;
     font-size: 16px;
     line-height: 20px;
+    padding: 7px 0 7px 25px;
+    position: relative;
     text-decoration: none;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      color: var(--terra-consumer--mobile-nav-item-color, #fff);
-    }
   }
 
-  .nav-item-wrapper.nav-item-icon {
-    .nav-item-no-icon {
-      padding-left: 15px;
-    }
+  .icon {
+    padding-right: 20px;
   }
 
-  .nav-item-text,
-  .nav-item-no-icon {
-    display: flex;
+  .link {
+    display: block;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, 0.4);
+      color: var(--terra-consumer-nav-item-color);
+      text-decoration: underline;
+    }
   }
 
   /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
-  .nav-item-wrapper {
-    padding-bottom: 20px;
-
-    .nav-item-text {
-      padding-left: 20px;
-    }
-
-    .nav-item-link {
-      &:hover,
-      &:focus {
-        color: #000;
-        text-decoration: underline;
-        @media screen and (max-width: $terra-medium-breakpoint) {
-          color: #fff;
-        }
+  .nested {
+    .link {
+      .item {
+        padding-left: 60px;
       }
-    }
 
-    .nav-item-wrapper {
-      margin-top: 15px;
-      padding-bottom: 0;
-      padding-left: 35px;
-
-      .nav-item-text {
-        padding-left: 10px;
+      .icon {
+        padding-right: 10px;
       }
     }
   }
 
-  // colors here need callouts, on the way. using estimated from mockups
   .badge {
     align-self: center;
-    background: var(--terra-consumer--badge-background, #fff);
+    background: var(--terra-consumer-badge-background, #fff);
     border-radius: 10px;
-    color: var(--terra-consumer--badge-text-color, inherit);
+    color: var(--terra-consumer-badge-color, #3d3d3d);
+    display: inline-block;
+    font-size: 12px;
     margin: 0 10px;
-    padding: 0 7px;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      background: var(--terra-consumer--mobile-badge-background, #aaa);
-      color: var(--terra-consumer--mobile-badge-text-color, #fff);
-    }
+    padding: 0 10px;
   }
 
   .active {
+    background: var(--terra-consumer-nav-active-item-background, rgba(255, 255, 255, 0.5));
+    background-attachment: fixed;
+    background-size: cover;
     font-weight: 900;
+    position: relative;
 
     &::before {
-      background: #383f42; // NOTE: should this be theme-able?
+      background: var(--terra-consumer-nav-item-color, #383f42);
       border-radius: 3px;
+      bottom: -0;
       content: '';
-      height: 20px;
       left: 0;
       position: absolute;
+      top: -0;
       width: 4px;
       @media screen and (max-width: $terra-medium-breakpoint) {
         background: #fff;
