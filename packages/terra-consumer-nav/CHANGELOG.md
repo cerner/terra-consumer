@@ -10,6 +10,7 @@ ChangeLog
 - Updated profile link to match rest of nav-items
 - mobile nav now matches styles of desktop nav
 - when nav is open on mobile, the main content can no longer scroll freely
+- Updated terra-core packages
 
 ### Removed
 - Removed QuickLinks

@@ -2,6 +2,10 @@ Changelog
 =========
 
 
+0.3.2 - (September 05, 2017)
+----------
+Updated terra-core packages
+
 0.3.1 - (August 31, 2017)
 ----------
 Added placeholder for nav example
