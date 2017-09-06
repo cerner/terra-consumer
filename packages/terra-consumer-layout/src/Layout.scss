@@ -5,7 +5,7 @@
   --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
   --terra-consumer-nav-item-color: #fff;
 
-  --terra-consumer-nav-width: 300px;
+  --terra-consumer-nav-width: 320px;
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
 
   --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
@@ -56,8 +56,12 @@
   }
 
   .help-button {
-    margin: 15px;
+    padding: 20px;
+    position: fixed;
+    position: sticky;
+    right: 0;
     text-align: right;
+    top: 90%;
 
     @media screen and (min-width: $terra-medium-breakpoint) {
       bottom: 15px;
