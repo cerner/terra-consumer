@@ -98,11 +98,11 @@
     "stylelint-config-sass-guidelines": "^3.0.0",
     "stylelint-scss": "1.5.1",
     "stylelint-suitcss": "^1.0.0",
-    "terra-i18n": "^1.4.0",
+    "terra-i18n": "^1.5.0",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "terra-props-table": "^1.3.0"
+    "terra-props-table": "^1.5.0"
   }
 }
