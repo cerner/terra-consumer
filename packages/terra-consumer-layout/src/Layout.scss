@@ -28,12 +28,11 @@
   }
 
   .main-container {
-    color: #fff;
     flex-grow: 1;
     text-align: left;
     white-space: break-word;
   }
-  
+
   @media screen and (max-width: $terra-medium-breakpoint) {
     .nav-open.main-container {
       overflow: hidden;
@@ -42,25 +41,16 @@
   }
 
   .nav-burger {
-    background: none;
-    border: 0;
-    box-shadow: 0;
-    color: #fff;
+    display: block;
     font-size: 20px;
     left: 15px;
     padding: 0;
     position: absolute;
     top: 10px;
-    visibility: hidden;
     z-index: 1;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      visibility: visible;
-    }
 
-    &:hover,
-    &:focus {
-      color: #ccc;
-      cursor: pointer;
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      display: none;
     }
   }
 
