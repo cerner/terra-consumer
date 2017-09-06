@@ -23,7 +23,6 @@
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    margin: 0;
     min-height: 100vh;
   }
 
@@ -31,6 +30,7 @@
     flex-grow: 1;
     text-align: left;
     white-space: break-word;
+    margin: var(--terra-consumer-layout-margin, 0);
   }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
