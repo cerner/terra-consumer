@@ -42,9 +42,17 @@
   }
 
   .nav-burger {
+    display: block;
+    font-size: 20px;
     left: 15px;
+    padding: 0;
+    position: absolute;
     top: 10px;
     z-index: 1;
+
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      display: none;
+    }
   }
 
   .help-button {

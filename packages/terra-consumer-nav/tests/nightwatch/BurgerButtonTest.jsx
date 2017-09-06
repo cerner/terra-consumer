@@ -5,9 +5,21 @@ import I18nShell from './I18nShell';
 /* eslint-disable no-alert */
 const alertFunction = () => { alert('You clicked the burger'); };
 
+const styles = {
+  paddingLeft: '15px',
+  paddingTop: '5px',
+};
+
+const styles2 = Object.assign({}, styles, { fontSize: '24px' });
+const styles3 = Object.assign({}, styles2, { color: '#f00' });
+
 export default () => (
   <I18nShell>
-    <Nav.Burger handleClick={alertFunction} style={{ left: '15px', top: '10px' }} />
-    <p style={{ paddingTop: '40px', paddingLeft: '15px' }}>Make sure to make your screen size tablet/mobile so you can see me!</p>
+    <p>Default sized burger</p>
+    <Nav.Burger handleClick={alertFunction} style={styles} />
+    <p>Custom sized burger</p>
+    <Nav.Burger handleClick={alertFunction} style={styles2} />
+    <p>Custom styled burger</p>
+    <Nav.Burger handleClick={alertFunction} style={styles3} />
   </I18nShell>
 );
