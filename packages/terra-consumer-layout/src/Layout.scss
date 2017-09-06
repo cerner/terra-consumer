@@ -29,9 +29,9 @@
 
   .main-container {
     flex-grow: 1;
+    margin: var(--terra-consumer-layout-margin, 0);
     text-align: left;
     white-space: break-word;
-    margin: var(--terra-consumer-layout-margin, 0);
   }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
