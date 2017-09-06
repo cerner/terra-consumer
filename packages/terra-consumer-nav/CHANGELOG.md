@@ -6,6 +6,9 @@ ChangeLog
 ### Added
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
 
+### Changed
+- Changed logo height to be max of 120 px for both mobile and desktop
+
 ------------------
 
 # 0.1.0-BETA.5 - (September 06, 2017)
