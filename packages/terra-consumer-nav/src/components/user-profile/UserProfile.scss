@@ -47,7 +47,7 @@
   }
 
   .popup-button {
-    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
+    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.25));
     border: 0;
     border-radius: 0;
     color: var(--terra-consumer-profile-link-color, #3d3d3d);
@@ -57,10 +57,6 @@
     padding: 20px 25px;
     text-align: left;
     width: inherit;
-
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      margin-top: 0;
-    }
 
     &:hover,
     &:focus {

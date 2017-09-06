@@ -19,9 +19,8 @@
     display: block;
     text-decoration: none;
 
-    &:hover,
-    &:focus {
-      background: rgba(255, 255, 255, 0.4);
+    &:hover {
+      background: var(--terra-consumer-link-hover-background, rgba(255, 255, 255, 0.4));
       color: var(--terra-consumer-nav-item-color);
       text-decoration: underline;
     }
