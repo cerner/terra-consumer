@@ -1,6 +1,6 @@
 ChangeLog
 =========
 
-1.0.0 - (<!--- Insert date using June 28, 2017 format. --->)
+# 0.1.0-BETA.1 - (September 06, 2017)
 -----------------
-Initial stable release
+Initial beta release for the layout component
