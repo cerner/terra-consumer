@@ -1,0 +1,24 @@
+@import '../../variables';
+
+:local {
+  .burger {
+    background: var(--terra-consumer-burger-background, none);
+    border: var(--terra-consumer-burger-border, 0);
+    box-shadow: 0;
+    color: var(--terra-consumer-burger-color, #fff);
+    display: block;
+    font-size: 20px;
+    padding: 0;
+    position: absolute;
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background: var(--terra-consumer-burger-hover-background, none);
+      color: var(--terra-consumer-burger-hover-color, #ccc);
+      cursor: pointer;
+    }
+  }
+}

@@ -6,6 +6,7 @@ ChangeLog
 ### Added
 - Added SmartLink handling external links and react router links
 - Added Dex integration example
+- Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
 
 ### Changed
 - Removed QuickLink

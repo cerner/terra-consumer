@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Nav from 'terra-consumer-nav';
-import IconMenu from 'terra-icon/lib/icon/IconMenu';
 import { injectIntl, intlShape } from 'react-intl';
 import styles from './Layout.scss';
 
@@ -56,7 +55,7 @@ class Layout extends React.Component {
             onRequestClose={this.toggleNav}
           />
           <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
-            <button className={cx('nav-burger')} onClick={this.toggleNav}><IconMenu /></button>
+            <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
             {this.props.children}
             <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
           </main>
