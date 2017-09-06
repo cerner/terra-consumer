@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.5 - (September 5, 2017)
+# 0.1.0-BETA.5 - (September 06, 2017)
 ### Added
 - Added SmartLink handling external links and react router links
 - Added Dex integration example
