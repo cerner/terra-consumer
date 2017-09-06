@@ -2,6 +2,7 @@
 
 exports[`Nav should render a default component 1`] = `
 <div
+  className=""
   id="terra-consumer-nav"
 >
   <div

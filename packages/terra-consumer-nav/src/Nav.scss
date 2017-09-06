@@ -2,31 +2,59 @@
 @import './variables';
 
 :local {
+  /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
+  @media screen and (max-width: $terra-medium-breakpoint) {
+    .mobile-panel {
+      &::before {
+        background: var(--terra-consumer-body-background);
+        background-attachment: fixed;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: var(--terra-consumer-nav-width, 320px);
+        z-index: 100;
+
+        @media screen and (max-width: $terra-tiny-breakpoint) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .nav {
-    background: inherit;
-    max-height: calc(100vh - 60px);
+    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.25));
+    color: var(--terra-consumer-nav-text-color);
+    height: 100%;
     overflow-y: auto;
-    padding-top: var(--terra-consumer--nav-padding-top, 25px);
-    position: relative;
+    padding-bottom: 60px;
+    padding-top: var(--terra-consumer-nav-padding-top, 25px);
     top: 0;
-    width: inherit;
+    width: var(--terra-consumer-nav-width, 320px);
+    z-index: 2;
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100vw;
     }
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      height: 100vh;
+      overflow: auto;
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
+      position: absolute;
     }
+  }
+
+  .nav.no-profile {
+    padding-bottom: 0;
   }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
     .nav[aria-hidden='false'] {
-      background: var(--terra-consumer--mobile-nav-background, #383f42);
-      box-shadow: 0 1px 3px;
+      background: var(--terra-consumer--mobile-nav-background, rgba(255, 255, 255, 0.25));
+      box-shadow: 0 1px 3px #383f42;
       display: block;
-      opacity: 0.95;
+      height: 100%;
       z-index: 100;
     }
 
@@ -38,9 +66,9 @@
   .close-button {
     display: none;
     @media screen and (max-width: $terra-medium-breakpoint) {
-      background: var(--terra-consumer--mobile-close-button-background, none);
+      background: var(--terra-consumer-mobile-close-button-background, none);
       border: 0;
-      color: var(--terra-consumer--mobile-close-button-color, #fff);
+      color: var(--terra-consumer-mobile-close-button-color, #fff);
       display: block;
       font-size: 16px;
       line-height: 16px;
@@ -54,9 +82,9 @@
 
     &:hover,
     &:focus {
-      background: var(--terra-consumer--mobile-close-button-hover-background, none);
+      background: var(--terra-consumer-mobile-close-button-hover-background, none);
       border-radius: 3px;
-      color: var(--terra-consumer--mobile-close-button-hover-color, #ccc);
+      color: var(--terra-consumer-mobile-close-button-hover-color, #ccc);
     }
   }
 }

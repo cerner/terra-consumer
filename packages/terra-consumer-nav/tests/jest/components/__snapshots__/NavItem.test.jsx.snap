@@ -2,90 +2,78 @@
 
 exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
 <div
-  className="nav-item-wrapper"
+  className=""
 >
-  <div
-    className=""
+  <SmartLink
+    activeClass="active"
+    className="link"
+    isExternal={false}
+    target="_self"
+    url="#testPath"
   >
-    <SmartLink
-      activeClass="active"
-      className="nav-item nav-item-link"
-      isExternal={false}
-      target="_self"
-      url="#testPath"
+    <div
+      className="item"
     >
-      <Arrange
-        align="center"
-        fill={
-          <div
-            className="nav-item-no-icon"
-          >
-            testIcon
-          </div>
-        }
-        fitStart={null}
-      />
-    </SmartLink>
-  </div>
+      <div
+        className="label"
+      >
+        <div>
+          testIcon
+        </div>
+      </div>
+    </div>
+  </SmartLink>
 </div>
 `;
 
 exports[`Nav Item should apply custom classes 1`] = `
 <div
-  className="nav-item-wrapper test-class"
+  className=""
 >
-  <div
-    className=""
+  <SmartLink
+    activeClass="active"
+    className="link test-class"
+    isExternal={false}
+    target="_self"
+    url="#testPath"
   >
-    <SmartLink
-      activeClass="active"
-      className="nav-item nav-item-link"
-      isExternal={false}
-      target="_self"
-      url="#testPath"
+    <div
+      className="item"
     >
-      <Arrange
-        align="center"
-        fill={
-          <div
-            className="nav-item-no-icon"
-          >
-            testIcon
-          </div>
-        }
-        fitStart={null}
-      />
-    </SmartLink>
-  </div>
+      <div
+        className="label"
+      >
+        <div>
+          testIcon
+        </div>
+      </div>
+    </div>
+  </SmartLink>
 </div>
 `;
 
 exports[`Nav Item should render a default component 1`] = `
 <div
-  className="nav-item-wrapper"
+  className=""
 >
-  <div
-    className=""
+  <SmartLink
+    activeClass="active"
+    className="link"
+    isExternal={false}
+    target="_self"
+    url="#testPath"
   >
-    <SmartLink
-      activeClass="active"
-      className="nav-item nav-item-link"
-      isExternal={false}
-      target="_self"
-      url="#testPath"
+    <div
+      className="item"
     >
-      <Arrange
-        align="center"
-        fill={
-          <div
-            className="nav-item-no-icon"
-          >
-            testIcon
-          </div>
-        }
-        fitStart={null}
-      />
-    </SmartLink>
-  </div>
+      <div
+        className="label"
+      >
+        <div>
+          testIcon
+        </div>
+      </div>
+    </div>
+  </SmartLink>
 </div>
 `;

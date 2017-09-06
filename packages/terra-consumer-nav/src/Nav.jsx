@@ -8,6 +8,7 @@ import ResponsiveElement from 'terra-responsive-element';
 import NavItems from './components/nav-items/NavItems';
 import Modal from './components/modal/Modal';
 import NavLogo from './components/nav-logo/NavLogo';
+import NavHelp from './components/nav-help/NavHelp';
 import styles from './Nav.scss';
 import UserProfile from './components/user-profile/UserProfile';
 
@@ -18,7 +19,9 @@ const propTypes = {
    * An array of objects to be displayed as nav link options.
    */
   navItems: PropTypes.array.isRequired,
-
+  /**
+  * Object representing all the profile information
+  */
   profile: PropTypes.shape({
     signinUrl: PropTypes.string,
     avatar: PropTypes.element,
@@ -117,8 +120,12 @@ class Nav extends React.Component {
     );
 
     return (
-      <div id="terra-consumer-nav">
-        <div {...customProps} className={cx('nav', customProps.className)} aria-hidden={!isMobileNavOpen}>
+      <div className={cx(isMobileNavOpen && 'mobile-panel')} id="terra-consumer-nav">
+        <div
+          {...customProps}
+          className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
+          aria-hidden={!isMobileNavOpen}
+        >
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
           <NavLogo {...logo} />
           <NavItems navItems={navItems} />
@@ -139,5 +146,6 @@ class Nav extends React.Component {
 
 Nav.propTypes = propTypes;
 Nav.defaultProps = defaultProps;
+Nav.Help = NavHelp;
 
 export default Nav;

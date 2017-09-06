@@ -2,27 +2,25 @@
 
 :local {
   .profile {
-    background: none;
+    background: var(--terra-consumer-profile-link-background);
+    background-attachment: fixed;
+    background-size: cover;
     bottom: 0;
     position: fixed;
-    width: var(--terra-consumer--profile-width, $terra-consumer--nav-container-width);
+    width: var(--terra-consumer-profile-link-width, 300px);
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100%;
     }
-
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      background: inherit;
-    }
   }
 
   .link {
-    background: var(--terra-consumer--nav-profile-item-background, #fff);
+    background: #fff;
     border: 0;
     border-radius: 0;
-    color: var(--terra-consumer--nav-profile-item-text-color, #383f42);
+    color: #383f42;
+    cursor: pointer;
     display: block;
-    font-family: inherit;
     font-size: 14px;
     line-height: 18px;
     padding: 20px;
@@ -30,66 +28,45 @@
     text-decoration: none;
     width: 100%;
 
-    &:hover {
-      background: var(--terra-consumer--nav-profile-item-hover-background, #eee);
-      cursor: pointer;
-    }
-
+    &:hover,
     &:focus {
-      background: var(--terra-consumer--nav-profile-item-background, #eee);
+      background: #eee;
     }
   }
 
   .signout-border {
-    border-top: 1px solid var(--terra-consumer--nav-profile-item-border-color, #dedfe0);
-    margin: 0;
-    visibility: visible;
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      border-top: 0;
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      border-top: 1px solid #dedfe0;
     }
   }
 
   .profile-item-border {
-    border-bottom: 0;
-    margin: 0;
-
     @media screen and (max-width: $terra-medium-breakpoint) {
-      border-bottom: 1px solid var(--terra-consumer--nav-profile-item-border-color, #dedfe0);
-      margin: 0;
+      border-bottom: 1px solid #dedfe0;
     }
   }
 
   .popup-button {
-    background: inherit;
+    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.5));
     border: 0;
     border-radius: 0;
-    color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
-    font-family: inherit;
+    color: var(--terra-consumer-profile-link-color, #3d3d3d);
+    cursor: pointer;
     font-size: 16px;
+    margin-top: 3px;
     padding: 20px 25px;
     text-align: left;
     width: inherit;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
+      margin-top: 0;
     }
 
-    &:hover {
-      background: inherit;
-      color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
-      cursor: pointer;
-      text-decoration: underline;
-      @media screen and (max-width: $terra-medium-breakpoint) {
-        color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
-      }
-    }
-
+    &:hover,
     &:focus {
-      background: inherit;
-      color: var(--terra-consumer--desktop-nav-profile-button-color, #3d3d3d);
-      @media screen and (max-width: $terra-medium-breakpoint) {
-        color: var(--terra-consumer--mobile-nav-profile-button-color, #fff);
-      }
+      background: rgba(255, 255, 255, 0.4);
+      color: var(--terra-consumer-profile-link-color, #3d3d3d);
+      text-decoration: underline;
     }
   }
 

@@ -8,6 +8,7 @@ const TestLinks = () => (
     <ul className={styles['site-nav']}>
       <li><Link to="/tests/icon-tests">Icon Tests</Link></li>
       <li><Link to="/tests/nav-tests">Nav Tests</Link></li>
+      <li><Link to="/tests/layout-tests">Layout Tests</Link></li>
     </ul>
   </div>
 );

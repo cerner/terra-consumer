@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Arrange from 'terra-arrange';
 import styles from './NavItem.scss';
 import NavToggler from '../nav-toggler/NavToggler';
 import SmartLink from '../smart-link/SmartLink';
@@ -50,47 +49,42 @@ const NavItem = ({
 }) => {
   const activeClass = cx('active');
 
+  const itemLabel = (<div>
+    {text}
+    { badgeValue > 0 &&
+      <div className={cx('badge')}>{badgeValue}</div>
+    }
+  </div>);
+
   const itemText = (
-    <Arrange
-      fitStart={icon ? <span className={cx('nav-item-icon')}>{icon}</span> : null}
-      fill={
-        <div className={cx(icon ? 'nav-item-text' : 'nav-item-no-icon')}>
-          {text}
-          { badgeValue > 0 &&
-            <div className={cx('badge')}>{badgeValue}</div>
-          }
-        </div>
-      }
-      align="center"
-    />
+    <div className={cx('item')}>
+      { icon && <div className={cx('icon')}>{icon}</div> }
+      <div className={cx('label')}>{itemLabel}</div>
+    </div>
   );
-  const currentItem = (children && children.length > 0) ?
+  return (children && children.length > 0) ?
     (<NavToggler
+      {...customProps}
       header={itemText}
       handleToggle={open => handleToggle(toggleId, open)}
       isOpen={isOpen}
-      className={cx('nav-item')}
+      className={cx('nested', customProps.className)}
     >
       {children}
     </NavToggler>)
     :
     (<div className={isActive ? activeClass : ''}>
       <SmartLink
+        {...customProps}
         url={url}
         target={target}
         isExternal={isExternal}
         activeClass={activeClass}
-        className={cx('nav-item', 'nav-item-link')}
+        className={cx('link', customProps.className)}
       >
         {itemText}
       </SmartLink>
     </div>);
-
-  return (
-    <div {...customProps} className={cx('nav-item-wrapper', customProps.className)}>
-      {currentItem}
-    </div>
-  );
 };
 
 NavItem.propTypes = propTypes;
