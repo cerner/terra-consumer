@@ -30,8 +30,7 @@
 
     &:hover,
     &:focus {
-      background: #eee;
-      text-decoration: underline;
+      background: #cfd0d1;
     }
   }
 
@@ -74,12 +73,13 @@
 
   /* stylelint-disable selector-max-compound-selectors */
   .open {
-    .toggler-wrapper {
-      background: rgba(0, 0, 0, 0.1);
-    }
-
+    .toggler-wrapper,
     .toggler .link {
-      background: rgba(0, 0, 0, 0.1);
+      background: #f3f3f3;
+
+      &:hover {
+        background: #cfd0d1;
+      }
     }
   }
 
