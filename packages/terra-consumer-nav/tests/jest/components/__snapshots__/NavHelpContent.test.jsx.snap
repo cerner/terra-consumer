@@ -62,6 +62,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
   </Button>
   <SmartLink
     className="help-item"
+    handleClick={[Function]}
     isExternal={false}
     target="_self"
     url="http://localhost:8080/"

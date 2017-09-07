@@ -7,6 +7,7 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
   <SmartLink
     activeClass="active"
     className="link"
+    handleClick={[Function]}
     isExternal={false}
     target="_self"
     url="#testPath"
@@ -33,6 +34,7 @@ exports[`Nav Item should apply custom classes 1`] = `
   <SmartLink
     activeClass="active"
     className="link test-class"
+    handleClick={[Function]}
     isExternal={false}
     target="_self"
     url="#testPath"
@@ -59,6 +61,7 @@ exports[`Nav Item should render a default component 1`] = `
   <SmartLink
     activeClass="active"
     className="link"
+    handleClick={[Function]}
     isExternal={false}
     target="_self"
     url="#testPath"
