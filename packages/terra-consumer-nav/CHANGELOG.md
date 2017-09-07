@@ -22,6 +22,7 @@ ChangeLog
 - mobile nav now matches styles of desktop nav
 - when nav is open on mobile, the main content can no longer scroll freely
 - Updated terra-core packages
+- Fix nav 100% height in IE
 
 ### Removed
 - Removed QuickLinks
