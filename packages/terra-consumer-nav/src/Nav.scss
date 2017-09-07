@@ -51,9 +51,11 @@
       overflow: auto;
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
       position: absolute;
+      
+      /*stylelint-disable function-url-quotes*/
       @-moz-document url-prefix() {
+        height: 80% !important;
         min-height: 93vh;
-        height:80% !important;
         overflow-y: auto;
       }
     }
