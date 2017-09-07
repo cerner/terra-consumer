@@ -15,7 +15,7 @@ const rtl = require('postcss-rtl');
 module.exports = {
   entry: {
     'babel-polyfill': 'babel-polyfill',
-    'terra-core': path.resolve(path.join(__dirname, 'src', 'Index')),
+    'terra-consumer': path.resolve(path.join(__dirname, 'src', 'Index')),
   },
   module: {
     loaders: [{
@@ -79,7 +79,7 @@ module.exports = {
     new ExtractTextPlugin('[name]-[hash].css'),
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'index.html'),
-      chunks: ['babel-polyfill', 'terra-core'],
+      chunks: ['babel-polyfill', 'terra-consumer'],
     }),
     new I18nAggregatorPlugin({
       baseDirectory: __dirname,
