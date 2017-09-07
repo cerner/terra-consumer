@@ -2,7 +2,8 @@
 
 exports[`Nav should render a default component 1`] = `
 <div
-  className="container"
+  aria-hidden={true}
+  className="mobile-panel"
   id="terra-consumer-nav"
 >
   <div

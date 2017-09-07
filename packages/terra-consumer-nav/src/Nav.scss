@@ -11,12 +11,14 @@
         background-size: cover;
         content: '';
         height: 100%;
+        left: calc(-1*var(--terra-consumer-nav-width, 320px));
         position: absolute;
         top: 0;
+        transition: left 0.5s ease;
         width: var(--terra-consumer-nav-width, 320px);
         z-index: 100;
-
         @media screen and (max-width: $terra-tiny-breakpoint) {
+          left: -100vw;
           width: 100%;
         }
       }
@@ -44,13 +46,22 @@
     user-select: none;
     width: var(--terra-consumer-nav-width, 320px);
     z-index: 2;
+
     @media screen and (max-width: $terra-tiny-breakpoint) {
+      left: -100vw;
       width: 100vw;
     }
 
     @media screen and (max-width: $terra-medium-breakpoint) {
+      left: calc(-1*var(--terra-consumer-nav-width, 320px));
       overflow: auto;
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
+      position: absolute;
+
+      @media screen and (max-width: $terra-tiny-breakpoint) {
+        left: -100vw;
+      }
+      transition: left 0.5s ease;
     }
   }
 
@@ -58,17 +69,48 @@
     padding-bottom: 0;
   }
 
+
   @media screen and (max-width: $terra-medium-breakpoint) {
     .nav[aria-hidden='false'] {
       background: var(--terra-consumer--mobile-nav-background, rgba(255, 255, 255, 0.25));
       box-shadow: 0 1px 3px #383f42;
       display: block;
       height: 100%;
+      left: 0;
+      transition: left 0.5s ease;
       z-index: 100;
     }
 
     .nav[aria-hidden='true'] {
-      display: none;
+      background: var(--terra-consumer--mobile-nav-background, rgba(255, 255, 255, 0.25));
+      box-shadow: 0 1px 3px #383f42;
+      display: block;
+      height: 100%;
+      left: calc(-1*var(--terra-consumer-nav-width, 320px));
+      transition: left 0.35s ease;
+      z-index: 100;
+
+      @media screen and (max-width: $terra-tiny-breakpoint) {
+        left: -100vw;
+      }
+    }
+
+    .mobile-panel[aria-hidden='false'] {
+      &::before {
+        left: 0;
+        transition: left 0.5s ease;
+      }
+    }
+
+    .mobile-panel[aria-hidden='true'] {
+      &::before {
+        left: calc(-1*var(--terra-consumer-nav-width, 320px));
+
+        @media screen and (max-width: $terra-tiny-breakpoint) {
+          left: -100vw;
+        }
+        transition: left 0.35s ease;
+      }
     }
   }
 
