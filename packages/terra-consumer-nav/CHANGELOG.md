@@ -5,6 +5,7 @@ ChangeLog
 
 ### Added
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
+- Added the ability to have toggle content in profile links.
 
 ### Changed
 - Changed logo height to be max of 120 px for both mobile and desktop
