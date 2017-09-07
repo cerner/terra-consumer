@@ -33,26 +33,32 @@ class Layout extends React.Component {
 
     this.toggleNav = this.toggleNav.bind(this);
     this.setReference = this.setReference.bind(this);
+    this.captureEscapeKey = this.captureEscapeKey.bind(this);
     this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
-  // Add event listener for clicks when component mounts
   componentDidMount() {
     document.addEventListener('mousedown', this.handleClickOutside);
+    document.addEventListener('keypress', this.captureEscapeKey);
   }
 
-  // Remove event listener before breakdown of react component
   componentWillUnmount() {
     document.removeEventListener('mousedown', this.handleClickOutside);
+    document.removeEventListener('keypress', this.captureEscapeKey);
   }
 
-  // set reference node without document.getElementById or ReactDOM
   setReference(node) {
     this.referenceNode = node;
   }
 
+  captureEscapeKey(event) {
+    if (event.keyCode === 27 && this.state.isMobileNavOpen) {
+      this.toggleNav();
+    }
+  }
+
   handleClickOutside(event) {
-    if (this.referenceNode && !this.referenceNode.contains(event.target) && this.state.isMobileNavOpen) {
+    if (this.state.isMobileNavOpen && this.referenceNode && !this.referenceNode.contains(event.target)) {
       this.toggleNav();
     }
   }
@@ -73,6 +79,7 @@ class Layout extends React.Component {
           </a>
         </div>
         <div className={cx('layout', customProps.className)} {...customProps}>
+          {/* Have to set the ref on an html element to use .contains() */}
           <div ref={this.setReference}>
             <Nav
               {...nav}

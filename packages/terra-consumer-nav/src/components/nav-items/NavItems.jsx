@@ -19,6 +19,10 @@ const propTypes = {
       },
     ),
   ),
+  /**
+   * Function to be applied on all nav links, excluding toggle headers.
+  */
+  handleClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -45,14 +49,14 @@ class NavItems extends Component {
   }
 
   render() {
-    const { navItems, ...customProps } = this.props;
+    const { navItems, handleClick, ...customProps } = this.props;
 
     const content = navItems.map((element, i) => {
       let toggleProps = {};
       let subNavs = [];
       if (element.subItems) {
         // eslint-disable-next-line react/no-array-index-key
-        subNavs = element.subItems.map((item, index) => <NavItem key={index} {...item} />);
+        subNavs = element.subItems.map((item, index) => <NavItem key={index} {...item} handleClick={handleClick} />);
         toggleProps = {
           isOpen: this.state.openToggle === i,
           handleToggle: this.handleToggle,
@@ -70,6 +74,7 @@ class NavItems extends Component {
           isActive={element.isActive}
           isExternal={element.isExternal}
           badgeValue={element.badgeValue}
+          handleClick={handleClick}
           {...toggleProps}
         >
           {subNavs}

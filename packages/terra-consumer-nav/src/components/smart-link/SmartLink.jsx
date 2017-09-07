@@ -7,12 +7,14 @@ const propTypes = {
   target: PropTypes.string,
   isExternal: PropTypes.bool,
   activeClass: PropTypes.string,
+  handleClick: PropTypes.func,
   children: PropTypes.node.isRequired,
 };
 
 const defaultProps = {
   isExternal: false,
   target: '_self',
+  handleClick: () => {},
 };
 
 const SmartLink = ({
@@ -20,17 +22,21 @@ const SmartLink = ({
   target,
   isExternal,
   activeClass,
+  handleClick,
   children,
   ...customProps
 }) => (
   (isExternal || target === '_blank') ?
-    <a {...customProps} target={target} href={url}>{children}</a> :
+    <a {...customProps} onClick={handleClick} target={target} href={url}>{children}</a> :
     <NavLink
       {...customProps}
       exact
       activeClassName={activeClass}
       to={url}
-    >{children}</NavLink>
+      onClick={handleClick}
+    >
+      {children}
+    </NavLink>
   );
 
 SmartLink.propTypes = propTypes;
