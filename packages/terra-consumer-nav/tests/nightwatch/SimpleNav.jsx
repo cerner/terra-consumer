@@ -4,8 +4,7 @@ import Nav from '../../src/Nav';
 import I18nShell from './I18nShell';
 
 const nav = {
-  navItems: [
-    {
+  navItems: [ {
       // any link that doesn't use react router link is external
       isExternal: true,
       url: 'localhost:8080',
@@ -21,8 +20,7 @@ const nav = {
       text: 'Messaging',
       badgeValue: 2,
       icon: <IconPerson />,
-      subItems: [
-        {
+      subItems: [ {
           isExternal: true,
           url: '#inbox',
           text: 'Inbox',
@@ -70,8 +68,7 @@ const nav = {
       text: 'Health Record',
       badgeValue: 0,
       icon: <IconPerson />,
-      subItems: [
-        {
+      subItems: [ {
           isExternal: true,
           url: '#health',
           text: 'Health',
@@ -87,8 +84,7 @@ const nav = {
     },
     {
       text: 'Test Data',
-      subItems: [
-        {
+      subItems: [ {
           isExternal: true,
           url: '#test',
           text: 'Test',
@@ -104,8 +100,7 @@ const nav = {
     },
     {
       text: 'More Tests',
-      subItems: [
-        {
+      subItems: [ {
           isExternal: true,
           url: '#more',
           text: 'More',
@@ -124,9 +119,7 @@ const nav = {
     isCard: true,
   },
   profile: {
-    profileLinks:
-    [
-      {
+    profileLinks: [ {
         isExternal: true,
         url: 'http://localhost:8080/',
         text: 'Account',
@@ -160,8 +153,7 @@ const nav = {
         isExternal: true,
         url: '#',
         text: 'English (United States)',
-        subItems: [
-          {
+        subItems: [ {
             'data-locale': 'ar',
             isExternal: true,
             url: '#1',
@@ -186,8 +178,9 @@ const nav = {
             text: 'Fran\u00e7ais (France)',
           },
         ],
-      }],
-      // comment out userName to see signin
+      }
+    ],
+    // comment out userName to see signin
     userName: 'John Snow',
     signinUrl: 'http://localhost:8080/',
     signoutUrl: 'http://localhost:8080/',
