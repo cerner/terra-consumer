@@ -9,6 +9,7 @@ import NavItems from './components/nav-items/NavItems';
 import Modal from './components/modal/Modal';
 import NavLogo from './components/nav-logo/NavLogo';
 import NavHelp from './components/nav-help/NavHelp';
+import NavBurgerButton from './components/nav-burger-button/NavBurgerButton';
 import styles from './Nav.scss';
 import UserProfile from './components/user-profile/UserProfile';
 
@@ -147,5 +148,6 @@ class Nav extends React.Component {
 Nav.propTypes = propTypes;
 Nav.defaultProps = defaultProps;
 Nav.Help = NavHelp;
+Nav.Burger = NavBurgerButton;
 
 export default Nav;
