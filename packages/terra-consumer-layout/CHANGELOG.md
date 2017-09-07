@@ -1,15 +1,18 @@
 ChangeLog
 =========
 
+# 0.1.0-BETA.2 - (September 07, 2017)
 
-.6 Beta
+### Added
+- Theme-able padding for main container
+- Ability to close open mobile nav by clicking escape key
+- Ability to close open mobile nav by tapping elsewhere on the screen.
+
+### Removed
+- Removed unneeded terra-consumer--nav-container-width variable
+
 -----------------
-Initial stable release
-9/6/17:
- - Removed uneeded terra-consumer--nav-container-width variable
- - Added themeable padding for main container
 
 # 0.1.0-BETA.1 - (September 06, 2017)
------------------
-Initial beta release for the layout component
 
+Initial beta release for the layout component
