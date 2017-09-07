@@ -24,7 +24,7 @@ exports[`Nav should render a default component 1`] = `
       isReversed={false}
       onClick={[Function]}
       type="button"
-      variant="default"
+      variant="link"
     />
     <NavLogo
       altText="test"
