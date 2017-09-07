@@ -34,6 +34,12 @@
     white-space: break-word;
   }
 
+  .main-content {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      min-height: calc(100vh - 40px);
+    }
+  }
+
   @media screen and (max-width: $terra-medium-breakpoint) {
     .nav-open.main-container {
       overflow: hidden;
@@ -56,16 +62,17 @@
   }
 
   .help-button {
+    bottom: 0;
     padding: 20px;
     position: fixed;
     position: sticky;
     right: 0;
     text-align: right;
-    top: 90%;
 
     @media screen and (min-width: $terra-medium-breakpoint) {
       bottom: 15px;
       margin: 0;
+      padding: 0;
       position: fixed;
       right: 15px;
     }
