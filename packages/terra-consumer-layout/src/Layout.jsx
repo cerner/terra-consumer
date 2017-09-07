@@ -30,7 +30,31 @@ class Layout extends React.Component {
     this.state = {
       isMobileNavOpen: false,
     };
+
     this.toggleNav = this.toggleNav.bind(this);
+    this.setReference = this.setReference.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  // Add event listener for clicks when component mounts
+  componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  // Remove event listener before breakdown of react component
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  // set reference node without document.getElementById or ReactDOM
+  setReference(node) {
+    this.referenceNode = node;
+  }
+
+  handleClickOutside(event) {
+    if (this.referenceNode && !this.referenceNode.contains(event.target) && this.state.isMobileNavOpen) {
+      this.toggleNav();
+    }
   }
 
   toggleNav() {
@@ -49,11 +73,13 @@ class Layout extends React.Component {
           </a>
         </div>
         <div className={cx('layout', customProps.className)} {...customProps}>
-          <Nav
-            {...nav}
-            isMobileNavOpen={this.state.isMobileNavOpen}
-            onRequestClose={this.toggleNav}
-          />
+          <div ref={this.setReference}>
+            <Nav
+              {...nav}
+              isMobileNavOpen={this.state.isMobileNavOpen}
+              onRequestClose={this.toggleNav}
+            />
+          </div>
           <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
             <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
             {this.props.children}
