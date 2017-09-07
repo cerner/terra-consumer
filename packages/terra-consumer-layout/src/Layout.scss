@@ -36,7 +36,7 @@
 
   .main-content {
     @media screen and (max-width: $terra-medium-breakpoint) {
-      min-height: calc(100vh - 40px);
+      min-height: calc(100vh - 120px);
     }
   }
 
@@ -62,11 +62,8 @@
   }
 
   .help-button {
-    bottom: 0;
-    padding: 20px;
-    position: fixed;
-    position: sticky;
-    right: 0;
+    margin: 15px;
+    position: static;
     text-align: right;
 
     @media screen and (min-width: $terra-medium-breakpoint) {
