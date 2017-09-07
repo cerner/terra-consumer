@@ -9,6 +9,7 @@ ChangeLog
 
 ### Changed
 - Changed logo height to be max of 120 px for both mobile and desktop
+- Updated hover effects of nav items and profile links.
 
 ------------------
 
