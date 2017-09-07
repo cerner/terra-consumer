@@ -9,7 +9,7 @@ import Toggler from 'terra-toggle';
 import navElementShape from '../../NavPropShapes';
 import ProfileLink from './ProfileLink';
 import styles from './UserProfile.scss';
-//
+
 const cx = classNames.bind(styles);
 
 const propTypes = {
@@ -52,7 +52,7 @@ class ProfileLinks extends React.Component {
         const isOpen = this.state.togglers[index];
         const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
         return (
-          <div key={linkItem.text}>
+          <div key={linkItem.text} className={cx(isOpen && 'open')}>
             <Button onClick={() => { this.handleToggle(index); }} className={cx('link', 'toggler-wrapper')}>
               <Arrange
                 align="stretch"
@@ -60,7 +60,7 @@ class ProfileLinks extends React.Component {
                 fitEnd={<div>{toggleIcon}</div>}
               />
             </Button>
-            <Toggler isOpen={isOpen} isAnimated className={cx('toggler', isOpen && 'open')}>
+            <Toggler isOpen={isOpen} isAnimated className={cx('toggler')}>
               {linkItem.subItems.map(subItem => (<ProfileLink key={subItem.text} {...subItem} />))}
             </Toggler>
           </div>

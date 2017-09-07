@@ -31,6 +31,7 @@
     &:hover,
     &:focus {
       background: #eee;
+      text-decoration: underline;
     }
   }
 
@@ -53,6 +54,10 @@
       border-bottom: 0;
       border-top: 1px solid #dedfe0;
     }
+
+    &:active {
+      color: inherit;
+    }
   }
 
   .toggler {
@@ -64,6 +69,17 @@
       &:not(:last-child) {
         border-bottom: 0;
       }
+    }
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  .open {
+    .toggler-wrapper {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .toggler .link {
+      background: rgba(0, 0, 0, 0.1);
     }
   }
 
