@@ -8,6 +8,12 @@ import styles from './Layout.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
+
+  /**
+  * Object of configuration for the site alert.
+  */
+  siteAlert: PropTypes.string,
+
   /**
   * Object of configuration for the side navigation and profile.
   */
@@ -40,15 +46,20 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { nav, helpItems, intl, ...customProps } = this.props;
+    const { nav, helpItems, siteAlert, intl, ...customProps } = this.props;
     return (
       <div>
+        {
+            siteAlert
+              ? <div className={cx('site-alert')}>{ siteAlert }</div>
+              : null
+        }
         <div className={cx('skip-container')}>
           <a className={cx('skip-to-main-content')} href="#main-container" id="skip-maincontent-link">
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
         </div>
-        <div className={cx('layout', customProps.className)} {...customProps}>
+        <div className={cx('layout', { 'site-alert-active': siteAlert }, customProps.className)} {...customProps}>
           <Nav
             {...nav}
             isMobileNavOpen={this.state.isMobileNavOpen}

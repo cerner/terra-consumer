@@ -7,6 +7,7 @@ import './LayoutTests.scss';
 import AppShellExample from './AppShellExample';
 
 const data = {
+  siteAlert: 'This is a custom site alert',
   nav: {
     navItems: [
       {

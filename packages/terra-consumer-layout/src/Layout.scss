@@ -14,6 +14,20 @@
 }
 
 :local {
+
+  .site-alert {
+    position: fixed;
+    background: var(--terra-consumer-site-alert-background, #000);
+    color: var(--terra-consumer-site-alert-color, #FFF);
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: var(--terra-consumer-site-alert-height, 30px);
+    text-align: center;
+    line-height: var(--terra-consumer-site-alert-height, 30px);
+    z-index: 100;
+  }
+
   .layout {
     backface-visibility: hidden;
     background: var(--terra-consumer-body-background);
@@ -63,6 +77,10 @@
       margin: 0;
       position: fixed;
       right: 15px;
+
+      :global(.site-alert-active) & {
+        bottom: calc(var(--terra-consumer-site-alert-height, 30px) + 15px);
+      }
     }
   }
 

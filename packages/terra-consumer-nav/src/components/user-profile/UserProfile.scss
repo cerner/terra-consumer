@@ -9,6 +9,13 @@
     position: fixed;
     width: var(--terra-consumer-profile-link-width, 300px);
 
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      :global(.site-alert-active) & {
+        bottom: var(--terra-consumer-site-alert-height, 30px)
+      }
+    }
+
+
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100%;
     }
