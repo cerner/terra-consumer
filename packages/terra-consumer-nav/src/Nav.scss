@@ -29,7 +29,12 @@
   .nav {
     background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.25));
     color: var(--terra-consumer-nav-text-color);
+    /* nav is relative positioned and its height depends on the height of the main content next to it.
+     * height: 100% makes sure nav height >= content height
+    */
     height: 100%;
+    // makes sure nav cover the window height on IE if the content next to it is shorter than window height
+    min-height: 100vh;
     overflow-y: auto;
     padding-bottom: 60px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);

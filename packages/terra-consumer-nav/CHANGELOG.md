@@ -7,6 +7,9 @@ ChangeLog
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
 - Added the ability to have toggle content in profile links.
 
+### Changed
+- Changed logo height to be max of 120 px for both mobile and desktop
+
 ------------------
 
 # 0.1.0-BETA.5 - (September 06, 2017)
@@ -20,6 +23,7 @@ ChangeLog
 - mobile nav now matches styles of desktop nav
 - when nav is open on mobile, the main content can no longer scroll freely
 - Updated terra-core packages
+- Fix nav 100% height in IE
 
 ### Removed
 - Removed QuickLinks
