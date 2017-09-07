@@ -1,6 +1,9 @@
 ChangeLog
 =========
 
+# 0.1.0-BETA.7 - (September XX, 2017)
+- Stop using terra-button for nav close modal, profile button, and help button
+
 # 0.1.0-BETA.6 - (September 06, 2017)
 
 ### Added
