@@ -36,6 +36,12 @@
 
   .main-content {
     @media screen and (max-width: $terra-medium-breakpoint) {
+      /* Set a min height for the content to keep the help button sticky to the
+       * bottom of the screen when the content does not fill the viewport.
+       * Help button with margin has height of 80 px. Height of help button and
+       * some extra space subtracted from viewport height to stop scrolling in
+       * empty layout.
+       */
       min-height: calc(100vh - 120px);
     }
   }
@@ -63,13 +69,11 @@
 
   .help-button {
     margin: 15px;
-    position: static;
     text-align: right;
 
     @media screen and (min-width: $terra-medium-breakpoint) {
       bottom: 15px;
       margin: 0;
-      padding: 0;
       position: fixed;
       right: 15px;
     }
