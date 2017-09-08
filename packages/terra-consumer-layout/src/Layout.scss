@@ -29,6 +29,7 @@
 
   .main-container {
     flex-grow: 1;
+    padding: var(--terra-consumer-layout-padding, 10px);
     text-align: left;
     white-space: break-word;
   }
