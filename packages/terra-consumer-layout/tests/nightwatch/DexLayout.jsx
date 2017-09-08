@@ -4,6 +4,7 @@ import Layout from '../../src/Layout';
 import AppShellExample from './AppShellExample';
 
 const data = {
+  siteAlert: 'This is a custom site alert',
   nav: {
     navItems: [
       {
