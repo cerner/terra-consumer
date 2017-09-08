@@ -117,7 +117,7 @@ class Nav extends React.Component {
     );
 
     return (
-      <div className={cx('container')} id="terra-consumer-nav">
+      <div id="terra-consumer-nav">
         <div
           {...customProps}
           className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
