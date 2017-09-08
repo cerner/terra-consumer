@@ -11,6 +11,7 @@ ChangeLog
 - Changed logo height to be max of 120 px for both mobile and desktop
 - Updated hover effects of nav items and profile links.
 - Stop using terra-button for nav close modal, profile button, and help button
+- Made Nav and Nav-Container width consistent in all places used.
 
 ------------------
 
