@@ -47,14 +47,9 @@
     }
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      height: calc(100% - 60px) !important;
       overflow: auto;
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
-      position: absolute;
-      /*stylelint-disable function-url-quotes*/
-      @-moz-document url-prefix() {
-        min-height: max-content;
-      }
+      position: relative;
     }
   }
 
