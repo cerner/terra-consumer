@@ -141,6 +141,12 @@ const nav = {
       {
         isExternal: true,
         url: 'http://localhost:8080/',
+        text: 'Support',
+        icon: 'icon-message-send',
+      },
+      {
+        isExternal: true,
+        url: 'http://localhost:8080/',
         text: 'Patient Information',
         icon: 'icon-demographics',
       },
