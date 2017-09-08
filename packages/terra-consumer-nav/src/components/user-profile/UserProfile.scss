@@ -31,6 +31,7 @@
     &:hover,
     &:focus {
       background: #eee;
+      text-decoration: underline;
     }
   }
 
@@ -43,6 +44,42 @@
   .profile-item-border {
     @media screen and (max-width: $terra-medium-breakpoint) {
       border-bottom: 1px solid #dedfe0;
+    }
+  }
+
+  .toggler-wrapper {
+    border-bottom: 1px solid #dedfe0;
+
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      border-bottom: 0;
+      border-top: 1px solid #dedfe0;
+    }
+
+    &:active {
+      color: inherit;
+    }
+  }
+
+  .toggler {
+    padding: 0;
+
+    .link {
+      padding: 15px 30px;
+
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  /* stylelint-disable selector-max-compound-selectors */
+  .open {
+    .toggler-wrapper {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .toggler .link {
+      background: rgba(0, 0, 0, 0.1);
     }
   }
 
