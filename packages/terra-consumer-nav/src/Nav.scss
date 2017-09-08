@@ -42,21 +42,18 @@
     user-select: none;
     width: var(--terra-consumer-nav-width, 320px);
     z-index: 2;
-
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100vw;
     }
 
     @media screen and (max-width: $terra-medium-breakpoint) {
+      height: calc(100% - 60px) !important;
       overflow: auto;
       padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
       position: absolute;
-      
       /*stylelint-disable function-url-quotes*/
       @-moz-document url-prefix() {
-        height: 80% !important;
-        min-height: 93vh;
-        overflow-y: auto;
+        min-height: max-content;
       }
     }
   }
