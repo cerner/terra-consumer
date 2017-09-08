@@ -28,6 +28,37 @@
     min-height: 100vh;
   }
 
+  .nav {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      &::before {
+        background: var(--terra-consumer-body-background);
+        background-attachment: fixed;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: var(--terra-consumer-nav-width, 320px);
+        z-index: 100;
+        /* stylelint-disable max-nesting-depth */
+        @media screen and (max-width: $terra-tiny-breakpoint) {
+          width: 100vw;
+        }
+      }
+      transform: translateX(-320px);
+      @media screen and (max-width: $terra-tiny-breakpoint) {
+        transform: translateX(-100vw);
+      }
+      transition: transform 0.35s ease;
+      will-change: transform;
+
+      .open & {
+        transform: translateX(0);
+        transition-duration: 0.5s;
+      }
+    }
+  }
+
   .main-container {
     flex-grow: 1;
     min-height: 100%;

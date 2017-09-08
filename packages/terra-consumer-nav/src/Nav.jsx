@@ -45,10 +45,6 @@ const propTypes = {
     isCard: PropTypes.bool,
   }),
   /**
-   * Whether or not the nav should be visible on a mobile device.
-   */
-  isMobileNavOpen: PropTypes.bool.isRequired,
-  /**
    * Callback function: should be used to close the nav on mobile devices.
    */
   onRequestClose: PropTypes.func.isRequired,
@@ -91,7 +87,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { navItems, profile, logo, isMobileNavOpen, onRequestClose, ...customProps } = this.props;
+    const { navItems, profile, logo, onRequestClose, ...customProps } = this.props;
     const profileId = 'profile-popup-button';
 
     const willRenderProfile = profile.userName || profile.avatar || profile.signinUrl;
@@ -121,11 +117,10 @@ class Nav extends React.Component {
     );
 
     return (
-      <div className={cx('mobile-panel')} aria-hidden={!isMobileNavOpen} id="terra-consumer-nav">
+      <div className={cx('container')} id="terra-consumer-nav">
         <div
           {...customProps}
           className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
-          aria-hidden={!isMobileNavOpen}
         >
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
           <NavLogo {...logo} />
