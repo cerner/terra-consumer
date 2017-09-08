@@ -7,7 +7,7 @@
     background-size: cover;
     bottom: 0;
     position: fixed;
-    width: var(--terra-consumer-profile-link-width, 300px);
+    width: var(--terra-consumer-profile-link-width, 320px);
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100%;

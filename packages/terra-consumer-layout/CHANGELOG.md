@@ -1,7 +1,10 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.2 - (September 07, 2017)
+# 0.1.0-BETA.2 - (September 08, 2017)
+
+### Changed
+ - Fixed the help-button alignment issue.
 
 ### Added
 - Theme-able padding for main container
@@ -9,7 +12,7 @@ ChangeLog
 - Ability to close open mobile nav by tapping elsewhere on the screen.
 
 ### Removed
-- Removed unneeded terra-consumer--nav-container-width variable
+- Removed unused terra-consumer--nav-container-width variable
 
 -----------------
 

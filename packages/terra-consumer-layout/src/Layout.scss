@@ -5,7 +5,7 @@
   --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
   --terra-consumer-nav-item-color: #fff;
 
-  --terra-consumer-nav-width: 300px;
+  --terra-consumer-nav-width: 320px;
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
 
   --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
@@ -33,6 +33,18 @@
     padding: var(--terra-consumer-layout-padding, 10px);
     text-align: left;
     white-space: break-word;
+  }
+
+  .main-content {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      /* Set a min height for the content to keep the help button sticky to the
+       * bottom of the screen when the content does not fill the viewport.
+       * Help button with margin has height of 80 px. Height of help button and
+       * some extra space subtracted from viewport height to stop scrolling in
+       * empty layout.
+       */
+      min-height: calc(100vh - 120px);
+    }
   }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
