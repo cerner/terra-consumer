@@ -9,6 +9,7 @@ import BurgerButtonTest from './BurgerButtonTest';
 import HelpButtonTest from './HelpButtonTest';
 import SimpleNav from './SimpleNav';
 import NavLogoTest from './NavLogoTest';
+import SimpleNavWithTextLogo from './SimpleNavWithTextLogo';
 
 const routes = (
   <div>
@@ -16,6 +17,7 @@ const routes = (
     <Route path="/tests/nav-tests/burger-button" component={BurgerButtonTest} />
     <Route path="/tests/nav-tests/help-button" component={HelpButtonTest} />
     <Route path="/tests/nav-tests/simple-nav" component={SimpleNav} />
+    <Route path="/tests/nav-tests/simple-nav-logo-text" component={SimpleNavWithTextLogo} />
     <Route path="/tests/nav-tests/logo" component={NavLogoTest} />
   </div>
 );
