@@ -27,6 +27,17 @@
     min-height: 100vh;
   }
 
+  .nav {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      transform: translateX(-320px);
+      will-change: transform;
+
+      .open & {
+        transform: transalateX(0);
+      }
+    }
+  }
+
   .main-container {
     flex-grow: 1;
     padding: var(--terra-consumer-layout-padding, 10px);

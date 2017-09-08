@@ -48,13 +48,15 @@ class Layout extends React.Component {
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
         </div>
-        <div className={cx('layout', customProps.className)} {...customProps}>
-          <Nav
-            {...nav}
-            isMobileNavOpen={this.state.isMobileNavOpen}
-            onRequestClose={this.toggleNav}
-          />
-          <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
+        <div className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)} {...customProps}>
+          <nav className={cx('nav')}>
+            <Nav
+              {...nav}
+              isMobileNavOpen={this.state.isMobileNavOpen}
+              onRequestClose={this.toggleNav}
+            />
+          </nav>
+          <main id="main-container" className={cx('main-container')}>
             <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
             {this.props.children}
             <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
