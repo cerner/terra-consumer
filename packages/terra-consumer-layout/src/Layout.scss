@@ -43,16 +43,6 @@
     }
   }
 
-  .overlay-container {
-    display: none;
-    height: 100%;
-    width: 100%;
-
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      display: block;
-    }
-  }
-
   .nav-burger {
     display: block;
     font-size: 20px;
