@@ -9,6 +9,7 @@ ChangeLog
 
 ### Changed
 - Changed logo height to be max of 120 px for both mobile and desktop
+- Stop using terra-button for nav close modal, profile button, and help button
 
 ------------------
 
