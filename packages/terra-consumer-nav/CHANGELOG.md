@@ -1,11 +1,5 @@
 ChangeLog
 =========
-# 0.1.0-BETA.7 - (September 08, 2017)
-
-### Changed
-- Fixed modal content scrolling issue.
-
-------------------
 
 # 0.1.0-BETA.6 - (September 08, 2017)
 
@@ -16,10 +10,10 @@ ChangeLog
 ### Changed
 - Fix scroll side nav in mobile in Firefox and IE
 - Changed logo height to be max of 120 px for both mobile and desktop
-- Changed logo height to be max of 120 px for both mobile and desktop
 - Updated hover effects of nav items and profile links.
 - Stop using terra-button for nav close modal, profile button, and help button
 - Made Nav and Nav-Container width consistent in all places used.
+- Fixed modal content scrolling issue.
 
 ------------------
 
