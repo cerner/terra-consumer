@@ -1,5 +1,11 @@
 ChangeLog
 =========
+# 0.1.0-BETA.7 - (September 08, 2017)
+
+### Changed
+- Fixed modal content scrolling issue.
+
+------------------
 
 # 0.1.0-BETA.6 - (September 08, 2017)
 

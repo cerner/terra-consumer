@@ -5,6 +5,7 @@
     background: var(--terra-consumer--modal-background, #fff);
     border-radius: 5px;
     left: 20px;
+    max-height: calc(100% - 80px);
     overflow: auto;
     position: absolute;
     right: 20px;
@@ -12,6 +13,7 @@
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       left: 10px;
+      max-height: calc(100% - 70px);
       right: 10px;
     }
   }
