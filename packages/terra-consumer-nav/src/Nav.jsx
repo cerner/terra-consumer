@@ -129,7 +129,7 @@ class Nav extends React.Component {
         >
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
           <NavLogo {...logo} />
-          <NavItems navItems={navItems} />
+          <NavItems navItems={navItems} handleClick={onRequestClose} />
           { willRenderProfile &&
             <UserProfile
               {...profile}

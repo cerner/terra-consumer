@@ -29,6 +29,7 @@
 
   .main-container {
     flex-grow: 1;
+    min-height: 100%;
     padding: var(--terra-consumer-layout-padding, 10px);
     text-align: left;
     white-space: break-word;
@@ -50,6 +51,7 @@
     .nav-open.main-container {
       overflow: hidden;
       position: fixed;
+      width: 100%;
     }
   }
 

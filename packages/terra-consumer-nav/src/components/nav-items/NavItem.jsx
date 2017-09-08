@@ -23,6 +23,10 @@ const propTypes = {
    */
   isOpen: PropTypes.bool,
   /**
+   * Function to be applied to the generated link.
+   */
+  handleClick: PropTypes.func,
+  /**
    * Items to be displayed within the toggler.
    */
   children: PropTypes.node,
@@ -44,6 +48,7 @@ const NavItem = ({
   handleToggle,
   isOpen,
   isExternal,
+  handleClick,
   children,
   ...customProps
 }) => {
@@ -80,6 +85,7 @@ const NavItem = ({
         target={target}
         isExternal={isExternal}
         activeClass={activeClass}
+        handleClick={handleClick}
         className={cx('link', customProps.className)}
       >
         {itemText}
