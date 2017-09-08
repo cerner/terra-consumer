@@ -8,6 +8,7 @@ import NavTests from './NavTests';
 import BurgerButtonTest from './BurgerButtonTest';
 import HelpButtonTest from './HelpButtonTest';
 import SimpleNav from './SimpleNav';
+import NavLogoTest from './NavLogoTest';
 
 const routes = (
   <div>
@@ -15,6 +16,7 @@ const routes = (
     <Route path="/tests/nav-tests/burger-button" component={BurgerButtonTest} />
     <Route path="/tests/nav-tests/help-button" component={HelpButtonTest} />
     <Route path="/tests/nav-tests/simple-nav" component={SimpleNav} />
+    <Route path="/tests/nav-tests/logo" component={NavLogoTest} />
   </div>
 );
 

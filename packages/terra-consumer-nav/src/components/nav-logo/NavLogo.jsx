@@ -32,14 +32,19 @@ const NavLogo = ({
   isCard,
   ...customProps
 }) => {
-  const image = <img className={cx('img')} src={url} alt={altText} />;
+  let logoContent;
+  if (url) {
+    logoContent = <img className={cx('img')} src={url} alt={altText} />;
+  } else {
+    logoContent = (<p className={cx('logo-text')}>{altText}</p>);
+  }
   const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',
     customProps.className,
   );
 
-  return React.createElement(domNode, { ...customProps, className: logoClassNames }, image);
+  return React.createElement(domNode, { ...customProps, className: logoClassNames }, logoContent);
 };
 
 NavLogo.propTypes = propTypes;
