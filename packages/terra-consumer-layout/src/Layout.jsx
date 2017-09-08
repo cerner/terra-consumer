@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Nav from 'terra-consumer-nav';
+import ResponsiveElement from 'terra-responsive-element';
+import Overlay from 'terra-overlay';
 import { injectIntl, intlShape } from 'react-intl';
 import styles from './Layout.scss';
 
@@ -32,35 +34,6 @@ class Layout extends React.Component {
     };
 
     this.toggleNav = this.toggleNav.bind(this);
-    this.setReference = this.setReference.bind(this);
-    this.captureEscapeKey = this.captureEscapeKey.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
-  }
-
-  componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
-    document.addEventListener('keypress', this.captureEscapeKey);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
-    document.removeEventListener('keypress', this.captureEscapeKey);
-  }
-
-  setReference(node) {
-    this.referenceNode = node;
-  }
-
-  captureEscapeKey(event) {
-    if (event.keyCode === 27 && this.state.isMobileNavOpen) {
-      this.toggleNav();
-    }
-  }
-
-  handleClickOutside(event) {
-    if (this.state.isMobileNavOpen && this.referenceNode && !this.referenceNode.contains(event.target)) {
-      this.toggleNav();
-    }
   }
 
   toggleNav() {
@@ -71,6 +44,15 @@ class Layout extends React.Component {
 
   render() {
     const { nav, helpItems, intl, ...customProps } = this.props;
+    const overlay = (
+      <Overlay
+        onRequestClose={this.toggleNav}
+        isOpen={this.state.isMobileNavOpen}
+        backgroundStyle="clear"
+        isRelativeToContainer
+      />
+    );
+
     return (
       <div>
         <div className={cx('skip-container')}>
@@ -79,15 +61,13 @@ class Layout extends React.Component {
           </a>
         </div>
         <div className={cx('layout', customProps.className)} {...customProps}>
-          {/* Have to set the ref on an html element to use .contains() */}
-          <div ref={this.setReference}>
-            <Nav
-              {...nav}
-              isMobileNavOpen={this.state.isMobileNavOpen}
-              onRequestClose={this.toggleNav}
-            />
-          </div>
+          <Nav
+            {...nav}
+            isMobileNavOpen={this.state.isMobileNavOpen}
+            onRequestClose={this.toggleNav}
+          />
           <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
+            <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
             {this.props.children}
             <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />

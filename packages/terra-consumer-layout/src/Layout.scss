@@ -29,6 +29,7 @@
 
   .main-container {
     flex-grow: 1;
+    min-height: 100vh;
     padding: var(--terra-consumer-layout-padding, 10px);
     text-align: left;
     white-space: break-word;
@@ -39,6 +40,16 @@
       overflow: hidden;
       position: fixed;
       width: 100%;
+    }
+  }
+
+  .overlay-container {
+    display: none;
+    height: 100%;
+    width: 100%;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: block;
     }
   }
 
