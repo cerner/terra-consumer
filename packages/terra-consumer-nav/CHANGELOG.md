@@ -9,7 +9,7 @@ ChangeLog
 
 ### Changed
 - Changed logo height to be max of 120 px for both mobile and desktop
-- Fix scroll side nav in mobile in Firefox
+- Fix scroll side nav in mobile in Firefox and IE
 
 ------------------
 
