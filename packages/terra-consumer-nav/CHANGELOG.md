@@ -1,15 +1,19 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.6 - (September 06, 2017)
+# 0.1.0-BETA.6 - (September 08, 2017)
 
 ### Added
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
 - Added the ability to have toggle content in profile links.
 
 ### Changed
-- Changed logo height to be max of 120 px for both mobile and desktop
 - Fix scroll side nav in mobile in Firefox and IE
+- Changed logo height to be max of 120 px for both mobile and desktop
+- Changed logo height to be max of 120 px for both mobile and desktop
+- Updated hover effects of nav items and profile links.
+- Stop using terra-button for nav close modal, profile button, and help button
+- Made Nav and Nav-Container width consistent in all places used.
 
 ------------------
 

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import Button from 'terra-button';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import { injectIntl, intlShape } from 'react-intl';
 import ResponsiveElement from 'terra-responsive-element';
@@ -65,7 +64,7 @@ class NavHelp extends React.Component {
     const { helpNavs, id, intl, ...customProps } = this.props;
     const helpText = intl.formatMessage({ id: 'Terra.Consumer.NavHelp.help' });
     const helpButton = (
-      <Button
+      <button
         id={id}
         onClick={this.togglePopup}
         className={cx('nav-help')}
@@ -75,7 +74,7 @@ class NavHelp extends React.Component {
           fitEnd={<div className={cx('button-text-padding')}>{helpText}</div>}
           align="stretch"
         />
-      </Button>
+      </button>
     );
 
     const popupContent = <NavHelpContent helpContent={helpNavs} />;
