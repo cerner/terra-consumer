@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
-import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
@@ -63,35 +62,35 @@ const UserProfile = ({
   let profileContent;
   if (isSignIn) {
     profileContent = (
-      <Button className={cx('popup-button')} href={signinUrl}>
+      <button className={cx('popup-button')} href={signinUrl}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<FormattedMessage id="Terra.Consumer.UserProfile.signin" />}
           align="center"
         />
-      </Button>
+      </button>
     );
   } else {
     const content = (
       <div>
         <ProfileLinks linkItems={profileLinks} />
-        <Button className={cx('link', 'signout-border')} href={signoutUrl}>
+        <button className={cx('link', 'signout-border')} href={signoutUrl}>
           <FormattedMessage id="Terra.Consumer.UserProfile.signout" />
-        </Button>
+        </button>
       </div>
     );
 
     const title = intl.formatMessage({ id: 'Terra.Consumer.UserProfile.Modal.title' });
 
     profileContent = (
-      <Button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
+      <button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<span>{userName}</span>}
           fitEnd={<IconEllipses className={cx('icon')} id={id} />}
           align="center"
         />
-      </Button>
+      </button>
     );
   }
 
