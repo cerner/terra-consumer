@@ -117,23 +117,22 @@ class Nav extends React.Component {
     );
 
     return (
-      <div id="terra-consumer-nav">
-        <div
-          {...customProps}
-          className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
-        >
-          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
-          <NavLogo {...logo} />
-          <NavItems navItems={navItems} handleClick={onRequestClose} />
-          { willRenderProfile &&
-            <UserProfile
-              {...profile}
-              id={profileId}
-              handleClick={(modalContent) => { this.toggleModal(modalContent); }}
-              isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
-            />
-          }
-        </div>
+      <div
+        {...customProps}
+        id="terra-consumer-nav"
+        className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
+      >
+        <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
+        <NavLogo {...logo} />
+        <NavItems navItems={navItems} />
+        { willRenderProfile &&
+          <UserProfile
+            {...profile}
+            id={profileId}
+            handleClick={(modalContent) => { this.toggleModal(modalContent); }}
+            isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
+          />
+        }
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
       </div>
     );

@@ -30,13 +30,14 @@
   }
 
   .nav {
-    position: relative;
+    position: fixed;
     box-shadow: 0 1px 3px #383f42;
     min-width: var(--terra-consumer-nav-width);
     width: var(--terra-consumer-nav-width);
-    overflow-y: auto;
     z-index: 100;
-
+    bottom: 0;
+    top: 0;
+    //will-change: transform;
 
     &::before,
     &::after {
@@ -60,19 +61,18 @@
       background-size: cover;
     }
 
-   @media screen and (max-width: $terra-medium-breakpoint) {
-      transform: translateX(-300px);
-      transition: transform 0.35s ease;
-      will-change: transform;
-
-      .open & {
-        transform: translateX(0);
-        transition-duration: 0.5s;
-      }
+    @media screen and (min-width: $terra-medium-breakpoint) {
+      position: relative;
     }
 
-    @media screen and (max-width: $terra-tiny-breakpoint) {
-      transform: translateX(-100vw);
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      transform: translate3d(-100%,0,0);
+      transition: transform 0.35s ease;
+
+      .open & {
+        transform: translate3d(0,0,0);
+        transition-duration: 0.5s;
+      }
     }
   }
 
@@ -82,27 +82,14 @@
     padding: var(--terra-consumer-layout-padding, 10px);
     text-align: left;
     white-space: break-word;
-  }
-
-  .main-content {
     @media screen and (max-width: $terra-medium-breakpoint) {
-      /* Set a min height for the content to keep the help button sticky to the
-       * bottom of the screen when the content does not fill the viewport.
-       * Help button with margin has height of 80 px. Height of help button and
-       * some extra space subtracted from viewport height to stop scrolling in
-       * empty layout.
-       */
-      min-height: calc(100vh - 120px);
+      .open & {
+        overflow: hidden;
+        position: fixed;
+      }
     }
   }
 
-  @media screen and (max-width: $terra-medium-breakpoint) {
-    .nav-open.main-container {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
-    }
-  }
 
   .nav-burger {
     display: block;
