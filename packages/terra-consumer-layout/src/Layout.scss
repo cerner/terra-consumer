@@ -37,7 +37,6 @@
     z-index: 100;
     bottom: 0;
     top: 0;
-    //will-change: transform;
 
     &::before,
     &::after {
@@ -68,10 +67,23 @@
     @media screen and (max-width: $terra-medium-breakpoint) {
       transform: translate3d(-100%,0,0);
       transition: transform 0.35s ease;
+      will-change: transform;
+
 
       .open & {
         transform: translate3d(0,0,0);
         transition-duration: 0.5s;
+      }
+
+      @supports (-moz-transform: translate3d(0,0,0)) {
+        transform: none;
+        display: none;
+        will-change: unset;
+
+        .open & {
+          transform: none;
+          display: block;
+        }
       }
     }
   }
