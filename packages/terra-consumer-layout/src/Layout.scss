@@ -75,6 +75,8 @@
         transition-duration: 0.5s;
       }
 
+      // Firefox has a bug where transforms cause background-attachment:fixed
+      // to behave as scroll. Only known solution is to not use transforms.
       @supports (-moz-transform: translate3d(0,0,0)) {
         transform: none;
         display: none;
