@@ -8,8 +8,13 @@
      * height: 100% makes sure nav height >= content height
     */
     // makes sure nav cover the window height on IE if the content next to it is shorter than window height
+    padding-bottom: 70px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
     user-select: none;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      padding-bottom: 0;
+    }
   }
 
   .profile {
