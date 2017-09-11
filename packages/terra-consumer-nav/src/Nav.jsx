@@ -126,7 +126,7 @@ class Nav extends React.Component {
       >
         <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
         <NavLogo {...logo} />
-        <NavItems navItems={navItems} />
+        <NavItems navItems={navItems} handleClick={onRequestClose} />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
         <div className={cx('profile')}>
           <UserProfile
