@@ -4,7 +4,7 @@
   .toggle-header {
     background-color: transparent;
     border: 0;
-    color: inherit;
+    color: var(--terra-consumer-nav-link-color, #fff);
     cursor: pointer;
     display: block;
     font-size: inherit;
@@ -17,10 +17,7 @@
 
     &:hover {
       background: var(--terra-consumer-toggler-hover-background, rgba(255, 255, 255, 0.4));
-      color: var(--terra-consumer-nav-item-color);
-      @media screen and (max-width: $terra-medium-breakpoint) {
-        color: #fff;
-      }
+      color: var(--terra-consumer-nav-link-color);
     }
   }
 

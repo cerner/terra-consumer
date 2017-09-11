@@ -69,6 +69,11 @@ class Nav extends React.Component {
     };
 
     this.toggleModal = this.toggleModal.bind(this);
+    this.handleOpenProfile = this.handleOpenProfile.bind(this);
+  }
+
+  handleOpenProfile(modalContent) {
+    this.toggleModal(modalContent);
   }
 
   toggleModal(modalObject) {
@@ -89,9 +94,6 @@ class Nav extends React.Component {
   render() {
     const { navItems, profile, logo, onRequestClose, ...customProps } = this.props;
     const profileId = 'profile-popup-button';
-
-    const willRenderProfile = profile.userName || profile.avatar || profile.signinUrl;
-
     const defaultElement = (
       <Modal
         isModalOpen={this.state.isModalOpen}
@@ -120,20 +122,20 @@ class Nav extends React.Component {
       <div
         {...customProps}
         id="terra-consumer-nav"
-        className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
+        className={cx('nav', customProps.className)}
       >
-        <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} />
+        <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
         <NavLogo {...logo} />
         <NavItems navItems={navItems} />
-        { willRenderProfile &&
+        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
+        <div className={cx('profile')}>
           <UserProfile
             {...profile}
             id={profileId}
-            handleClick={(modalContent) => { this.toggleModal(modalContent); }}
+            handleClick={this.handleOpenProfile}
             isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
           />
-        }
-        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
+        </div>
       </div>
     );
   }
@@ -143,5 +145,6 @@ Nav.propTypes = propTypes;
 Nav.defaultProps = defaultProps;
 Nav.Help = NavHelp;
 Nav.Burger = NavBurgerButton;
+Nav.UserProfile = UserProfile;
 
 export default Nav;

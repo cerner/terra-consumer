@@ -2,12 +2,6 @@
 @import './variables';
 
 :local {
-  /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
-
-  .container {
-    min-height: 100%;
-  }
-
   .nav {
     color: var(--terra-consumer-nav-text-color);
     /* nav is relative positioned and its height depends on the height of the main content next to it.
@@ -16,13 +10,6 @@
     // makes sure nav cover the window height on IE if the content next to it is shorter than window height
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
     user-select: none;
-    padding-bottom: 70px;
-
-    @media screen and (max-width: $terra-medium-breakpoint) {
-      max-height: 100vh;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-    }
   }
 
   .profile {

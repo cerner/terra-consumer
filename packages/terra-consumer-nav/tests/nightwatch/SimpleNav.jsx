@@ -204,8 +204,6 @@ const nav = {
 export default () => (
   <I18nShell>
     {/* eslint-disable no-alert */}
-    <div style={{ width: '320px' }}>
-      <Nav {...nav} onRequestClose={() => alert('Callback to close')} id="nav" />
-    </div>
+    <Nav {...nav} onRequestClose={() => alert('Callback to close')} id="nav" />
   </I18nShell>
 );

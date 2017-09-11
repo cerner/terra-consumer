@@ -1,36 +1,26 @@
 @import './variables';
 
 :root {
-<<<<<<< HEAD
-  --terra-consumer-body-background: url('https://wallpapercave.com/wp/5ynt7Gb.jpg');
-  --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
-  --terra-consumer-nav-item-color: #fff;
-  --terra-base-color: #FFF;
-
-=======
   // Body
   --terra-consumer-body-background-image: url('http://media.hwto.net/wp-content/uploads/2014/10/2048az_6u1FfdGx.jpg');
   --terra-consumer-body-background-color: #1d2c55;
 
   // Nav
   --terra-consumer-nav-background-color: rgba(0, 0, 0, 0.5);
->>>>>>> fixing lint issues
   --terra-consumer-nav-width: 320px;
+  --terra-consumer-nav-link-color: #fff;
+  --terra-consumer-nav-active-link-background: var(--terra-consumer-body-background-image);
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
 
+  // profile
+  --terra-consumer-profile-link-border-background: var(--terra-consumer-body-background-image);
+  --terra-consumer-profile-link-background: var(--terra-consumer-nav-background-color);
   --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
-<<<<<<< HEAD
-  --terra-consumer-profile-link-background: var(--terra-consumer-body-background);
-  --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
-  --terra-consumer-logo-text-color: var(--terra-consumer-nav-item-color);
-=======
-  --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
->>>>>>> fixing lint issues
+  --terra-consumer-profile-link-color: var(--terra-consumer-nav-link-color);
 }
 
+
 :local {
-<<<<<<< HEAD
-=======
   .wrap {
     background-attachment: fixed;
     background-color: var(--terra-consumer-body-background-color);
@@ -43,12 +33,7 @@
     }
   }
 
->>>>>>> fixing lint issues
   .layout {
-    backface-visibility: hidden;
-    background: var(--terra-consumer-body-background);
-    background-attachment: fixed;
-    background-size: cover;
     display: flex;
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
@@ -62,8 +47,6 @@
     position: relative;
     width: var(--terra-consumer-nav-width);
     z-index: 100;
-    bottom: 0;
-    top: 0;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       background-color: var(--terra-consumer-body-background-color);
@@ -73,9 +56,9 @@
       transform: translate3d(0, 0, 0);
       transition: transform 0.35s ease;
       will-change: transform;
-
       @media screen and (max-width: $terra-tiny-breakpoint) {
         margin-left: -100%;
+        min-width: 0;
         width: 100%;
       }
     }
@@ -90,6 +73,7 @@
       top: 0;
       z-index: -1;
     }
+  }
 
   @media screen and (max-width: $terra-medium-breakpoint) {
     .open nav {
@@ -99,6 +83,7 @@
       }
       transition-duration: 0.5s;
     }
+  }
 
   .main-container {
     flex-grow: 1;
@@ -108,51 +93,27 @@
     .main-container-inner {
       padding: var(--terra-consumer-layout-padding, 10px);
     }
+  }
 
-    @media screen and (min-width: $terra-medium-breakpoint) {
-      position: relative;
-    }
 
+  .open .main-container {
     @media screen and (max-width: $terra-medium-breakpoint) {
-      transform: translate3d(-100%,0,0);
-      transition: transform 0.35s ease;
-      will-change: transform;
-
-
-      .open & {
-        transform: translate3d(0,0,0);
-        transition-duration: 0.5s;
-      }
-
-      // Firefox has a bug where transforms cause background-attachment:fixed
-      // to behave as scroll. Only known solution is to not use transforms.
-      @supports (-moz-transform: translate3d(0,0,0)) {
-        transform: none;
-        display: none;
-        will-change: unset;
-
-        .open & {
-          transform: none;
-          display: block;
-        }
-      }
+      overflow: hidden;
+      position: fixed;
     }
   }
 
-  .main-container {
-    flex-grow: 1;
-    min-height: 100%;
-    padding: var(--terra-consumer-layout-padding, 10px);
-    text-align: left;
-    white-space: break-word;
+  .main-content {
     @media screen and (max-width: $terra-medium-breakpoint) {
-      .open & {
-        overflow: hidden;
-        position: fixed;
-      }
+      /* Set a min height for the content to keep the help button sticky to the
+       * bottom of the screen when the content does not fill the viewport.
+       * Help button with margin has height of 80 px. Height of help button and
+       * some extra space subtracted from viewport height to stop scrolling in
+       * empty layout.
+       */
+      min-height: calc(100vh - 120px);
     }
   }
-
 
   .nav-burger {
     display: block;
