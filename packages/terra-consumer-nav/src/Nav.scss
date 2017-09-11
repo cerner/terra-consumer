@@ -6,14 +6,14 @@
   @media screen and (max-width: $terra-medium-breakpoint) {
     .mobile-panel {
       &::before {
-        background: var(--terra-consumer-body-background);
+        background: var(--terra-consumer-mobile-panel-background);
         background-attachment: fixed;
         background-size: cover;
         content: '';
         height: 100%;
         position: absolute;
         top: 0;
-        width: var(--terra-consumer-nav-width, 320px);
+        width: var(--terra-consumer-mobile-panel-width, 320px);
         z-index: 100;
 
         @media screen and (max-width: $terra-tiny-breakpoint) {
@@ -60,7 +60,7 @@
 
   @media screen and (max-width: $terra-medium-breakpoint) {
     .nav[aria-hidden='false'] {
-      background: var(--terra-consumer--mobile-nav-background, rgba(255, 255, 255, 0.25));
+      background: var(--terra-consumer-mobile-nav-background, rgba(255, 255, 255, 0.25));
       box-shadow: 0 1px 3px #383f42;
       display: block;
       height: 100%;

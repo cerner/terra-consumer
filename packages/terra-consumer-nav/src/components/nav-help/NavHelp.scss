@@ -2,11 +2,11 @@
 
 :local {
   .nav-help {
-    background-color: var(--terra-consumer--nav-help-button-background, #fff);
+    background-color: var(--terra-consumer-nav-help-background, #fff);
     border: 0;
     border-radius: 20px;
     box-shadow: 0 1px 1px #666;
-    color: var(--terra-consumer--nav-help-button-color, #3d3d3d);
+    color: var(--terra-consumer-nav-help-color, #3d3d3d);
     display: inline-block;
     font-family: inherit;
     font-size: 16px;
@@ -14,12 +14,12 @@
     padding: 6px 13px;
 
     &:hover {
-      background: var(--terra-consumer--nav-help-button-hover-background, #eee);
+      background: var(--terra-consumer-nav-help-hover-background, #eee);
       cursor: pointer;
     }
 
     &:focus {
-      background: var(--terra-consumer--nav-help-button-focus-background, #eee);
+      background: var(--terra-consumer-nav-help-focus-background, #eee);
     }
 
     &:active {
@@ -28,9 +28,9 @@
   }
 
   .help-item {
-    background: var(--terra-consumer--nav-help-item-background, #fff);
+    background: var(--terra-consumer-nav-help-item-background, #fff);
     border: 0;
-    border-bottom: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
+    border-bottom: 1px solid var(--terra-consumer-help-item-border-bottom, #dedfe0);
     border-radius: 0;
     display: block;
     font-family: inherit;
@@ -39,24 +39,24 @@
     width: 100%;
 
     &:hover {
-      background: var(--terra-consumer--nav-help-item-hover-background, #eee);
+      background: var(--terra-consumer-nav-help-item-hover-background, #eee);
       cursor: pointer;
     }
 
     &:focus {
-      background: var(--terra-consumer--nav-help-item-focus-background, #eee);
+      background: var(--terra-consumer-nav-help-item-focus-background, #eee);
     }
   }
 
   .help-item-text {
-    color: var(--terra-consumer--nav-help-item-text-color, #383f42);
+    color: var(--terra-consumer-nav-help-item-text-color, #383f42);
     font-size: 14px;
     line-height: 18px;
     text-align: left;
   }
 
   .help-subitem {
-    color: var(--terra-consumer--nav-help-subitem-text-color, #64696c);
+    color: var(--terra-consumer-nav-help-subitem-text-color, #64696c);
     font-size: 14px;
     line-height: 18px;
     text-decoration: none;

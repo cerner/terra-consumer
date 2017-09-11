@@ -3,7 +3,10 @@
 :root {
   --terra-consumer-body-background: url('https://wallpapercave.com/wp/5ynt7Gb.jpg');
   --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
+  --terra-consumer-mobile-panel-background: var(--terra-consumer-body-background);
+  --terra-consumer-body-layout-background: var(--terra-consumer-body-background);
   --terra-consumer-nav-item-color: #fff;
+  --terra-consumer-toggle-header-hover-color: var(--terra-consumer-nav-item-color);
 
   --terra-consumer-nav-width: 320px;
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
@@ -11,13 +14,14 @@
   --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
   --terra-consumer-profile-link-background: var(--terra-consumer-body-background);
   --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
-  --terra-consumer-logo-text-color: var(--terra-consumer-nav-item-color);
+  --terra-consumer-nav-item-hover-color: var(--terra-consumer-nav-item-color);
+  --terra-consumer-profile-background: var(--terra-consumer-body-background);
 }
 
 :local {
   .layout {
     backface-visibility: hidden;
-    background: var(--terra-consumer-body-background);
+    background: var(--terra-consumer-body-layout-background);
     background-attachment: fixed;
     background-size: cover;
     display: flex;
@@ -31,7 +35,7 @@
   .main-container {
     flex-grow: 1;
     min-height: 100%;
-    padding: var(--terra-consumer-layout-padding, 10px);
+    padding: var(--terra-consumer-layout-main-container-padding, 10px);
     text-align: left;
     white-space: break-word;
   }

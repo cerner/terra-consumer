@@ -2,7 +2,7 @@
 
 :local {
   .item {
-    color: var(--terra-consumer-nav-item-color, #fff);
+    color: var(--terra-consumer-item-color, #fff);
     display: flex;
     font-size: 16px;
     line-height: 20px;
@@ -21,7 +21,7 @@
 
     &:hover {
       background: var(--terra-consumer-link-hover-background, rgba(255, 255, 255, 0.4));
-      color: var(--terra-consumer-nav-item-color);
+      // color: var(--terra-consumer-link-item-hover-color);
     }
   }
 
@@ -50,14 +50,14 @@
   }
 
   .active {
-    background: var(--terra-consumer-nav-active-item-background, rgba(255, 255, 255, 0.5));
+    background: var(--terra-consumer-active-background, rgba(255, 255, 255, 0.5));
     background-attachment: fixed;
     background-size: cover;
     font-weight: 900;
     position: relative;
 
     &::before {
-      background: var(--terra-consumer-nav-item-color, #383f42);
+      background: var(--terra-consumer-active-before-background, #383f42);
       border-radius: 3px;
       bottom: -0;
       content: '';
