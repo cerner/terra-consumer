@@ -3,12 +3,12 @@
 :root {
   // Body
   --terra-consumer-body-background-image: url('../background.jpg');
-  --terra-consumer-body-background-color: #1d2c55;
+  --terra-consumer-body-background-color: #c7d4ea;
 
   // Nav
-  --terra-consumer-nav-background-color: rgba(0, 0, 0, 0.5);
+  --terra-consumer-nav-background-color: rgba(255, 255, 255, 0.25);
   --terra-consumer-nav-width: 320px;
-  --terra-consumer-nav-link-color: #fff;
+  --terra-consumer-nav-link-color: #000;
   --terra-consumer-nav-active-link-background: var(--terra-consumer-body-background-image);
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
 

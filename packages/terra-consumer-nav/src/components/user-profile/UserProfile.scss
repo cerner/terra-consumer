@@ -102,7 +102,6 @@
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       background: inherit;
-      color: #fff;
       margin-top: 0;
     }
 
@@ -111,9 +110,6 @@
       background: rgba(255, 255, 255, 0.4);
       color: var(--terra-consumer-profile-link-color, #3d3d3d);
       text-decoration: underline;
-      @media screen and (max-width: $terra-medium-breakpoint) {
-        color: #fff;
-      }
     }
   }
 
