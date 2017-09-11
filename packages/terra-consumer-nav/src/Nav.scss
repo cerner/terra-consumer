@@ -18,7 +18,6 @@
     user-select: none;
     padding-bottom: 70px;
 
-
     @media screen and (max-width: $terra-medium-breakpoint) {
       max-height: 100vh;
       overflow-y: auto;
@@ -26,12 +25,19 @@
     }
   }
 
-  .nav.no-profile {
-    padding-bottom: 0;
+  .profile {
+    bottom: 0;
+    position: fixed;
+    width: var(--terra-consumer-profile-link-width);
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      position: static;
+    }
   }
 
   .close-button {
     display: none;
+
     @media screen and (max-width: $terra-medium-breakpoint) {
       background: var(--terra-consumer-mobile-close-button-background, none);
       border: 0;

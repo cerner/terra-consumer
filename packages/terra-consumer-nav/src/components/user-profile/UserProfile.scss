@@ -5,6 +5,7 @@
     background: var(--terra-consumer-profile-link-background);
     background-attachment: fixed;
     background-size: cover;
+<<<<<<< HEAD
     bottom: 0;
     position: fixed;
     width: var(--terra-consumer-profile-link-width, 320px);
@@ -13,6 +14,14 @@
       width: 100%;
     }
 
+=======
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: none;
+      background-attachment: none;
+      background-size: none;
+    }
+>>>>>>> fixing lint issues
   }
 
   .link {
@@ -94,13 +103,33 @@
     margin-top: 3px;
     padding: 20px 25px;
     text-align: left;
+<<<<<<< HEAD
     width: inherit;
+=======
+    width: 100%;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background: inherit;
+      color: #fff;
+      margin-top: 0;
+    }
+>>>>>>> fixing lint issues
+
+    @media screen and (max-width: $terra-tiny-breakpoint) {
+      width: 100vw;
+    }
 
     &:hover,
     &:focus {
       background: rgba(255, 255, 255, 0.4);
       color: var(--terra-consumer-profile-link-color, #3d3d3d);
       text-decoration: underline;
+<<<<<<< HEAD
+=======
+      @media screen and (max-width: $terra-medium-breakpoint) {
+        color: #fff;
+      }
+>>>>>>> fixing lint issues
     }
   }
 
