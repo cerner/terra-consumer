@@ -29,6 +29,7 @@ exports[`Nav should render a default component 1`] = `
     url=""
   />
   <NavItems
+    handleClick={[Function]}
     navItems={
       Array [
         Object {
