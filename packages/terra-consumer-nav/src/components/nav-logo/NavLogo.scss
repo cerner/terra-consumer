@@ -6,15 +6,17 @@
     max-height: 170px;
     max-width: calc(100% - 50px});
     overflow: hidden;
-
+    text-align: center;
     @media screen and (max-width: $terra-medium-breakpoint) {
       margin: 40px 25px;
     }
   }
 
   .img {
-    color: #3d3d3d;
-    display: block;
+    color: var(--terra-consumer-logo-text-color, #3d3d3d);
+    display: inline-block;
+    font-size: 30px;
+    font-weight: normal;
     margin: auto;
     max-height: 120px;
     max-width: 100%;
