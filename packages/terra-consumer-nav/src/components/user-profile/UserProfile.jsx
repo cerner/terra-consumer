@@ -32,8 +32,6 @@ const propTypes = {
    * The path to the login page.
    */
   signinUrl: PropTypes.string,
-  isExternal: PropTypes.bool,
-  target: PropTypes.string,
   /**
    * The content of the each profile items.
    */
@@ -54,7 +52,7 @@ const defaultProps = {
 };
 
 const UserProfile = ({
-  userName, avatar, id, signoutUrl, signinUrl, isExternal, target, profileLinks, handleClick, intl, ...customProps
+  userName, avatar, id, signoutUrl, signinUrl, profileLinks, handleClick, intl, ...customProps
 }) => {
   let profileContent;
   const avatarIcon = <div className={cx('avatar')}>{avatar || <IconPerson />}</div>;
