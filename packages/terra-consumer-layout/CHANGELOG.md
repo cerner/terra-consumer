@@ -5,6 +5,7 @@ ChangeLog
 
 ### Changed
  - Fixed the help-button alignment issue.
+ - Clean up custom properties
 
 ### Added
 - Theme-able padding for main container
