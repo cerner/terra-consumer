@@ -11,9 +11,14 @@
     padding-bottom: 70px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
     user-select: none;
-
     @media screen and (max-width: $terra-medium-breakpoint) {
       padding-bottom: 0;
+    }
+  }
+
+  .modal-open {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      height: 100vh;
     }
   }
 

@@ -57,8 +57,8 @@
     position: relative;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      background: none;
       background-attachment: none;
+      background-image: none;
       background-size: none;
     }
 

@@ -4,7 +4,7 @@
   .logo-container {
     margin: 0 25px 30px;
     max-height: 170px;
-    max-width: calc(100% - 50px});
+    max-width: 100%;
     overflow: hidden;
     text-align: center;
     @media screen and (max-width: $terra-medium-breakpoint) {
