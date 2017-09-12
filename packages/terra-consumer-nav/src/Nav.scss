@@ -18,7 +18,7 @@
 
   .modal-open {
     @media screen and (max-width: $terra-medium-breakpoint) {
-      position: absolute;
+      height: 100vh;
     }
   }
 
