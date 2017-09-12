@@ -7,9 +7,10 @@ const NavTests = () => (
     <ul>
       <li><a href="/#/tests/nav-tests/burger-button">Burger Button</a></li>
       <li><a href="/#/tests/nav-tests/help-button">Help Button</a></li>
+      <li><a href="/#/tests/nav-tests/logo">Nav Logo</a></li>
+      <li><a href="/#/tests/nav-tests/profile-button">Profile Button</a></li>
       <li><a href="/#/tests/nav-tests/simple-nav">Simple Nav</a></li>
       <li><a href="/#/tests/nav-tests/simple-nav-logo-text">Simple Nav with text logo</a></li>
-      <li><a href="/#/tests/nav-tests/logo">Nav Logo</a></li>
     </ul>
   </div>
 );

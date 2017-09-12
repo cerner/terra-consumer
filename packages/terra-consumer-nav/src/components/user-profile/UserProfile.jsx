@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import Button from 'terra-button';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import ProfileLinks from './ProfileLinks';
@@ -31,10 +32,8 @@ const propTypes = {
    * The path to the login page.
    */
   signinUrl: PropTypes.string,
-  /**
-   * Determiniate of whether profile should render as signin link or profile button.
-   */
-  isSignIn: PropTypes.bool,
+  isExternal: PropTypes.bool,
+  target: PropTypes.string,
   /**
    * The content of the each profile items.
    */
@@ -50,26 +49,30 @@ const propTypes = {
 };
 
 const defaultProps = {
-  avatar: <IconPerson />,
   profileLinks: [],
-  isSignIn: false,
   id: 'terra-conumser-nav-profile-button',
 };
 
 const UserProfile = ({
-  userName, avatar, id, signoutUrl, signinUrl, isSignIn, profileLinks, handleClick, intl, ...customProps
+  userName, avatar, id, signoutUrl, signinUrl, isExternal, target, profileLinks, handleClick, intl, ...customProps
 }) => {
   let profileContent;
-  if (isSignIn) {
-    profileContent = (
-      <button className={cx('popup-button')} href={signinUrl}>
-        <Arrange
-          fitStart={<div className={cx('avatar')}>{avatar}</div>}
-          fill={<FormattedMessage id="Terra.Consumer.UserProfile.signin" />}
-          align="center"
-        />
-      </button>
-    );
+  const avatarIcon = <div className={cx('avatar')}>{avatar || <IconPerson />}</div>;
+
+  const setStaticProfile = (url, translationId) => (
+    <Button className={cx('popup-button')} href={url}>
+      <Arrange
+        fitStart={avatarIcon}
+        fill={<FormattedMessage id={translationId} />}
+        align="center"
+      />
+    </Button>
+  );
+
+  if (signinUrl && !(avatar || userName)) {
+    profileContent = setStaticProfile(signinUrl, 'Terra.Consumer.UserProfile.signin');
+  } else if (!(avatar || userName || signinUrl)) {
+    profileContent = setStaticProfile(signoutUrl, 'Terra.Consumer.UserProfile.signout');
   } else {
     const content = (
       <div>
@@ -85,7 +88,7 @@ const UserProfile = ({
     profileContent = (
       <button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
         <Arrange
-          fitStart={<div className={cx('avatar')}>{avatar}</div>}
+          fitStart={avatarIcon}
           fill={<span>{userName}</span>}
           fitEnd={<IconEllipses className={cx('icon')} id={id} />}
           align="center"

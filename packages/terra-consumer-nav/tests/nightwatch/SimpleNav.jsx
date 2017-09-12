@@ -125,6 +125,9 @@ const nav = {
     isCard: true,
   },
   profile: {
+    userName: 'John Snow',
+    signinUrl: 'http://localhost:8080/',
+    signoutUrl: 'http://localhost:8080/',
     profileLinks:
     [
       {
@@ -194,10 +197,6 @@ const nav = {
           },
         ],
       }],
-      // comment out userName to see signin
-    userName: 'John Snow',
-    signinUrl: 'http://localhost:8080/',
-    signoutUrl: 'http://localhost:8080/',
   },
 };
 
