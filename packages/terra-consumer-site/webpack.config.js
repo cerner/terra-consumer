@@ -12,20 +12,16 @@ const i18nSupportedLocales = require('terra-i18n/lib/i18nSupportedLocales');
 const CustomProperties = require('postcss-custom-properties');
 const rtl = require('postcss-rtl');
 
-const customProperties = CustomProperties();
+const customProperties = CustomProperties({ preserve: true, warnings: false });
 customProperties.setVariables({
-  preserve: true,
-  warnings: false,
   // Body
   '--terra-consumer-body-background-color': '#c7d4ea',
-
   // Nav
   '--terra-consumer-nav-background-color': 'rgba(255, 255, 255, 0.25)',
   '--terra-consumer-nav-width': '320px',
   '--terra-consumer-nav-link-color': '#3d3d3d',
   '--terra-consumer-nav-text-color': '#3d3d3d',
   '--terra-consumer-mobile-close-button-color': '#3d3d3d',
-
   // profile
   '--terra-consumer-profile-link-background': 'rgba(255, 255, 255, 0.25)',
   '--terra-consumer-profile-link-width': '320px',
