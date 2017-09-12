@@ -4,14 +4,14 @@
   --terra-consumer-body-background: url('https://wallpapercave.com/wp/5ynt7Gb.jpg');
   --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
   --terra-consumer-mobile-panel-background: var(--terra-consumer-body-background);
-  --terra-consumer-body-layout-background: var(--terra-consumer-body-background);
+  --terra-consumer-layout-background: var(--terra-consumer-body-background);
   --terra-consumer-nav-item-color: #fff;
   --terra-consumer-toggle-header-hover-color: var(--terra-consumer-nav-item-color);
 
-  --terra-consumer-nav-width: 320px;
+  --terra-consumer-mobile-panel-width: 320px;
   --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
 
-  --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
+  --terra-consumer-profile-link-width: var(--terra-consumer-mobile-panel-width);
   --terra-consumer-profile-link-background: var(--terra-consumer-body-background);
   --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
   --terra-consumer-nav-item-hover-color: var(--terra-consumer-nav-item-color);
@@ -21,7 +21,7 @@
 :local {
   .layout {
     backface-visibility: hidden;
-    background: var(--terra-consumer-body-layout-background);
+    background: var(--terra-consumer-layout-background);
     background-attachment: fixed;
     background-size: cover;
     display: flex;
