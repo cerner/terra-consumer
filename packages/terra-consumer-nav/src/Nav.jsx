@@ -122,7 +122,7 @@ class Nav extends React.Component {
       <div
         {...customProps}
         id="terra-consumer-nav"
-        className={cx('nav', customProps.className)}
+        className={cx('nav', { 'modal-open': this.state.isModalOpen }, customProps.className)}
       >
         <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
         <NavLogo {...logo} />
