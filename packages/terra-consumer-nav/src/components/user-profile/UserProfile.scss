@@ -107,8 +107,8 @@
 
     &:hover,
     &:focus {
+      background: var(--terra-consumer-profile-hover-background, rgba(255, 255, 255, 0.4));
       color: var(--terra-consumer-profile-link-color, #3d3d3d);
-      text-decoration: underline;
     }
   }
 
