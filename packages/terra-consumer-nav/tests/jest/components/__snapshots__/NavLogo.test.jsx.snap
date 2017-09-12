@@ -16,11 +16,18 @@ exports[`Nav Logo should render a Card instead of a div when specified 1`] = `
 <Card
   className="logo-container"
 >
-  <img
-    alt="testIcon"
-    className="img"
-    src="#testPath"
-  />
+  <CardBody
+    hasPaddingHorizontal={true}
+    hasPaddingVertical={true}
+  >
+     
+    <img
+      alt="testIcon"
+      className="img"
+      src="#testPath"
+    />
+     
+  </CardBody>
 </Card>
 `;
 

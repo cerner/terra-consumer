@@ -1,11 +1,15 @@
 @import '../../variables';
 
+:root {
+  --terra-card-border: none;
+  --terra-card-box-shadow: 0 1px 3px rgba(#666 , 0.3);
+}
+
 :local {
   .logo-container {
     margin: 0 25px 30px;
     max-height: 170px;
-    max-width: calc(100% - 50px});
-    overflow: hidden;
+    max-width: 100%;
     text-align: center;
     @media screen and (max-width: $terra-medium-breakpoint) {
       margin: 40px 25px;

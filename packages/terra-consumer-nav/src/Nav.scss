@@ -2,78 +2,39 @@
 @import './variables';
 
 :local {
-  /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
-  @media screen and (max-width: $terra-medium-breakpoint) {
-    .mobile-panel {
-      &::before {
-        background: var(--terra-consumer-body-background);
-        background-attachment: fixed;
-        background-size: cover;
-        content: '';
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: var(--terra-consumer-nav-width, 320px);
-        z-index: 100;
-
-        @media screen and (max-width: $terra-tiny-breakpoint) {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  .container {
-    min-height: 100%;
-  }
-
   .nav {
-    background: var(--terra-consumer-nav-background, rgba(255, 255, 255, 0.25));
     color: var(--terra-consumer-nav-text-color);
     /* nav is relative positioned and its height depends on the height of the main content next to it.
      * height: 100% makes sure nav height >= content height
     */
-    height: 100%;
     // makes sure nav cover the window height on IE if the content next to it is shorter than window height
-    min-height: 100vh;
-    overflow-y: auto;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
-    position: relative;
-    top: 0;
     user-select: none;
-    width: var(--terra-consumer-nav-width, 320px);
-    z-index: 2;
-    @media screen and (max-width: $terra-tiny-breakpoint) {
-      width: 100vw;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      padding-bottom: 0;
     }
+  }
+
+  .modal-open {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      height: 100vh;
+    }
+  }
+
+  .profile {
+    bottom: 0;
+    position: fixed;
+    width: var(--terra-consumer-profile-link-width);
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      overflow: auto;
-      padding-top: var(--terra-consumer--mobile-nav-padding-top, 0);
-    }
-  }
-
-  .nav.no-profile {
-    padding-bottom: 0;
-  }
-
-  @media screen and (max-width: $terra-medium-breakpoint) {
-    .nav[aria-hidden='false'] {
-      background: var(--terra-consumer--mobile-nav-background, rgba(255, 255, 255, 0.25));
-      box-shadow: 0 1px 3px #383f42;
-      display: block;
-      height: 100%;
-      z-index: 100;
-    }
-
-    .nav[aria-hidden='true'] {
-      display: none;
+      position: static;
     }
   }
 
   .close-button {
     display: none;
+
     @media screen and (max-width: $terra-medium-breakpoint) {
       background: var(--terra-consumer-mobile-close-button-background, none);
       border: 0;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Card from '../card/Card';
+import Card from 'terra-card';
 import styles from './NavLogo.scss';
 
 const propTypes = {
@@ -32,7 +32,9 @@ const NavLogo = ({
   isCard,
   ...customProps
 }) => {
-  const image = <img className={cx('img')} src={url} alt={altText} />;
+  const image = (isCard && !!url) ?
+    <Card.Body> <img className={cx('img')} src={url} alt={altText} /> </Card.Body> :
+    <img className={cx('img')} src={url} alt={altText} />;
   const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',

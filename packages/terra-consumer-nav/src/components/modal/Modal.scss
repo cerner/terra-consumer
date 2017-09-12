@@ -32,6 +32,10 @@
   .overlay {
     background-color: var(--terra-consumer--overlay-background, #64696c);
     opacity: 1;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      height: 100vh;
+      width: 100vw;
+    }
   }
 
   .close-button {

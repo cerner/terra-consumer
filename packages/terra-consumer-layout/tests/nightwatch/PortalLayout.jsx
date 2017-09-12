@@ -347,6 +347,11 @@ const data = {
   ],
 };
 
+const card = (<div style={{ background: '#FFF', marginBottom: '10px', color: '#000', padding: '10px', borderRadius: '5px' }}>
+  {/* eslint-disable */}
+  { Array.apply(null, { length: 100 }).map((n, i) => <span key={i}>Testing </span>) }
+</div>);
+
 const content = (
   <div>
     <Route
@@ -355,7 +360,7 @@ const content = (
       render={() => (
         <div>
           {/* eslint-disable */}
-          { Array.apply(null, { length: 1000 }).map((n, i) => <span key={i}>Testing </span>) }
+          { Array.apply(null, { length: 5 }).map((n, i) => <div key={i}>{card}</div>) }
         </div>
       )}
     />

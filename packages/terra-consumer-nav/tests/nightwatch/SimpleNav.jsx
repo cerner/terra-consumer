@@ -63,6 +63,7 @@ const nav = {
           url: '#inbox',
           text: 'An Active Link',
           badgeValue: 1,
+          isActive: true,
         },
       ],
     },
@@ -203,6 +204,6 @@ const nav = {
 export default () => (
   <I18nShell>
     {/* eslint-disable no-alert */}
-    <Nav {...nav} isMobileNavOpen onRequestClose={() => alert('Callback to close')} id="nav" />
+    <Nav {...nav} onRequestClose={() => alert('Callback to close')} id="nav" />
   </I18nShell>
 );

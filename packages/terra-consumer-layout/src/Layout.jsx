@@ -54,23 +54,26 @@ class Layout extends React.Component {
     );
 
     return (
-      <div>
+      <div className={cx('wrap')}>
         <div className={cx('skip-container')}>
           <a className={cx('skip-to-main-content')} href="#main-container" id="skip-maincontent-link">
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
         </div>
-        <div className={cx('layout', customProps.className)} {...customProps}>
-          <Nav
-            {...nav}
-            isMobileNavOpen={this.state.isMobileNavOpen}
-            onRequestClose={this.toggleNav}
-          />
-          <main id="main-container" className={cx('main-container', this.state.isMobileNavOpen && 'nav-open')}>
+        <div {...customProps} className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)}>
+          <nav className={cx('nav')}>
+            <Nav
+              {...nav}
+              onRequestClose={this.toggleNav}
+            />
+          </nav>
+          <main id="main-container" className={cx('main-container')}>
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
-            <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
-            <div className={cx('main-content')}>{this.props.children}</div>
-            <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
+            <div className={cx('main-container-inner')}>
+              <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
+              <div className={cx('main-content')}>{this.props.children}</div>
+              <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
+            </div>
           </main>
         </div>
       </div>

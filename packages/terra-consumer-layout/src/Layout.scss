@@ -1,39 +1,111 @@
 @import './variables';
 
 :root {
-  --terra-consumer-body-background: url('https://wallpapercave.com/wp/5ynt7Gb.jpg');
-  --terra-consumer-nav-active-item-background: var(--terra-consumer-body-background);
-  --terra-consumer-nav-item-color: #fff;
+  // Body
+  --terra-consumer-body-background-image: url('../background.jpg');
+  --terra-consumer-body-background-color: #c7d4ea;
 
+  // Nav
+  --terra-consumer-nav-background-color: rgba(255, 255, 255, 0.25);
   --terra-consumer-nav-width: 320px;
-  --terra-consumer-nav-text-color: var(--terra-consumer-nav-item-color);
+  --terra-consumer-nav-link-color: #3d3d3d;
+  --terra-consumer-nav-active-link-background: var(--terra-consumer-body-background-image);
+  --terra-consumer-nav-text-color: var(--terra-consumer-nav-link-color);
+  --terra-consumer-mobile-close-button-color: var(--terra-consumer-nav-link-color);
 
+  // profile
+  --terra-consumer-profile-link-border-background: var(--terra-consumer-body-background-image);
+  --terra-consumer-profile-link-background: var(--terra-consumer-nav-background-color);
   --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
-  --terra-consumer-profile-link-background: var(--terra-consumer-body-background);
-  --terra-consumer-profile-link-color: var(--terra-consumer-nav-item-color);
-  --terra-consumer-logo-text-color: var(--terra-consumer-nav-item-color);
+  --terra-consumer-profile-link-color: var(--terra-consumer-nav-link-color);
 }
 
+
 :local {
-  .layout {
-    backface-visibility: hidden;
-    background: var(--terra-consumer-body-background);
+  .wrap {
     background-attachment: fixed;
+    background-color: var(--terra-consumer-body-background-color);
+    background-image: var(--terra-consumer-body-background-image);
     background-size: cover;
+    overflow-x: hidden;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background-image: none;
+    }
+  }
+
+  .layout {
     display: flex;
     font-family: 'Roboto', sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     margin: 0;
     min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .nav {
+    min-width: var(--terra-consumer-nav-width);
+    position: relative;
+    width: var(--terra-consumer-nav-width);
+    z-index: 100;
+
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background-color: var(--terra-consumer-body-background-color);
+      box-shadow: 0 1px 3px rgba(28, 31, 33, 0.35);
+      float: left;
+      margin-left: calc(var(--terra-consumer-nav-width) * -1);
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    @media screen and (max-width: $terra-tiny-breakpoint) {
+      margin-left: -100%;
+      min-width: 0;
+      width: 100%;
+    }
+
+    &::before {
+      background-color: var(--terra-consumer-nav-background-color);
+      bottom: 0;
+      content: '';
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  .open nav {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      transform: translate3d(var(--terra-consumer-nav-width), 0, 0);
+      transition-duration: 0.5s;
+    }
+
+    @media screen and (max-width: $terra-tiny-breakpoint) {
+      transform: translate3d(100%, 0, 0);
+    }
   }
 
   .main-container {
     flex-grow: 1;
-    min-height: 100%;
-    padding: var(--terra-consumer-layout-padding, 10px);
+    max-width: 100%;
     text-align: left;
     white-space: break-word;
+
+    .main-container-inner {
+      padding: var(--terra-consumer-layout-padding, 10px);
+    }
+  }
+
+
+  .open .main-container {
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      overflow: hidden;
+      position: fixed;
+    }
   }
 
   .main-content {
@@ -45,14 +117,6 @@
        * empty layout.
        */
       min-height: calc(100vh - 120px);
-    }
-  }
-
-  @media screen and (max-width: $terra-medium-breakpoint) {
-    .nav-open.main-container {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
     }
   }
 

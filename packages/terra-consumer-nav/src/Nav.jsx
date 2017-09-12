@@ -45,10 +45,6 @@ const propTypes = {
     isCard: PropTypes.bool,
   }),
   /**
-   * Whether or not the nav should be visible on a mobile device.
-   */
-  isMobileNavOpen: PropTypes.bool.isRequired,
-  /**
    * Callback function: should be used to close the nav on mobile devices.
    */
   onRequestClose: PropTypes.func.isRequired,
@@ -73,6 +69,11 @@ class Nav extends React.Component {
     };
 
     this.toggleModal = this.toggleModal.bind(this);
+    this.handleOpenProfile = this.handleOpenProfile.bind(this);
+  }
+
+  handleOpenProfile(modalContent) {
+    this.toggleModal(modalContent);
   }
 
   toggleModal(modalObject) {
@@ -91,11 +92,8 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { navItems, profile, logo, isMobileNavOpen, onRequestClose, ...customProps } = this.props;
+    const { navItems, profile, logo, onRequestClose, ...customProps } = this.props;
     const profileId = 'profile-popup-button';
-
-    const willRenderProfile = profile.userName || profile.avatar || profile.signinUrl;
-
     const defaultElement = (
       <Modal
         isModalOpen={this.state.isModalOpen}
@@ -121,25 +119,23 @@ class Nav extends React.Component {
     );
 
     return (
-      <div className={cx(isMobileNavOpen && 'mobile-panel', 'container')} id="terra-consumer-nav">
-        <div
-          {...customProps}
-          className={cx('nav', !willRenderProfile && 'no-profile', customProps.className)}
-          aria-hidden={!isMobileNavOpen}
-        >
-          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
-          <NavLogo {...logo} />
-          <NavItems navItems={navItems} handleClick={onRequestClose} />
-          { willRenderProfile &&
-            <UserProfile
-              {...profile}
-              id={profileId}
-              handleClick={(modalContent) => { this.toggleModal(modalContent); }}
-              isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
-            />
-          }
-        </div>
+      <div
+        {...customProps}
+        id="terra-consumer-nav"
+        className={cx('nav', { 'modal-open': this.state.isModalOpen }, customProps.className)}
+      >
+        <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
+        <NavLogo {...logo} />
+        <NavItems navItems={navItems} handleClick={onRequestClose} />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
+        <div className={cx('profile')}>
+          <UserProfile
+            {...profile}
+            id={profileId}
+            handleClick={this.handleOpenProfile}
+            isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
+          />
+        </div>
       </div>
     );
   }
@@ -149,5 +145,6 @@ Nav.propTypes = propTypes;
 Nav.defaultProps = defaultProps;
 Nav.Help = NavHelp;
 Nav.Burger = NavBurgerButton;
+Nav.UserProfile = UserProfile;
 
 export default Nav;

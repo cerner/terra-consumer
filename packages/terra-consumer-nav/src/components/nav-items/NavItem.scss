@@ -2,7 +2,7 @@
 
 :local {
   .item {
-    color: var(--terra-consumer-nav-item-color, #fff);
+    color: var(--terra-consumer-nav-link-color, #fff);
     display: flex;
     font-size: 16px;
     line-height: 20px;
@@ -21,7 +21,7 @@
 
     &:hover {
       background: var(--terra-consumer-link-hover-background, rgba(255, 255, 255, 0.4));
-      color: var(--terra-consumer-nav-item-color);
+      color: var(--terra-consumer-nav-link-color);
     }
   }
 
@@ -50,14 +50,20 @@
   }
 
   .active {
-    background: var(--terra-consumer-nav-active-item-background, rgba(255, 255, 255, 0.5));
+    background: var(--terra-consumer-nav-active-link-background, rgba(255, 255, 255, 0.5));
     background-attachment: fixed;
     background-size: cover;
     font-weight: 900;
     position: relative;
 
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      background-attachment: none;
+      background-image: none;
+      background-size: none;
+    }
+
     &::before {
-      background: var(--terra-consumer-nav-item-color, #383f42);
+      background: var(--terra-consumer-nav-link-color, #383f42);
       border-radius: 3px;
       bottom: -0;
       content: '';
@@ -65,9 +71,6 @@
       position: absolute;
       top: -0;
       width: 4px;
-      @media screen and (max-width: $terra-medium-breakpoint) {
-        background: #fff;
-      }
     }
   }
 }
