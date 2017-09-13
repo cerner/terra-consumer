@@ -10,6 +10,7 @@ import HelpButtonTest from './HelpButtonTest';
 import SimpleNav from './SimpleNav';
 import NavLogoTest from './NavLogoTest';
 import SimpleNavWithTextLogo from './SimpleNavWithTextLogo';
+import SafeHtmlTest from './SafeHtmlTest';
 
 const routes = (
   <div>
@@ -19,6 +20,7 @@ const routes = (
     <Route path="/tests/nav-tests/simple-nav" component={SimpleNav} />
     <Route path="/tests/nav-tests/simple-nav-logo-text" component={SimpleNavWithTextLogo} />
     <Route path="/tests/nav-tests/logo" component={NavLogoTest} />
+    <Route path="/tests/nav-tests/safe-html" component={SafeHtmlTest} />
   </div>
 );
 
