@@ -230,6 +230,11 @@ const data = {
       url: 'http://photos.prnewswire.com/prnfull/20140210/DC61972LOGO',
       altText: 'Placeholder logo',
       isCard: true,
+      link : 
+        {
+          url: 'http://localhost:8080/',
+          isExternal: true,
+        },
     },
     profile: {
       profileLinks:
