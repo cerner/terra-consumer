@@ -24,13 +24,12 @@ const propTypes = {
   link: PropTypes.shape({
     url: PropTypes.string.isRequired,
     isExternal: PropTypes.bool,
-    }),
+  }),
 };
 
 const defaultProps = {
   altText: 'Client Logo',
   isCard: false,
-  link: null,
 };
 
 const cx = classNames.bind(styles);
@@ -42,10 +41,10 @@ const NavLogo = ({
   link,
   ...customProps
 }) => {
-  var image = (link !== null) ? 
-    <SmartLink url={link.url} isExternal={link.isExternal}> <img className={cx('img')} src={url} alt={altText} /> </SmartLink>:
-    <img className={cx('img')} src={url} alt={altText} />
-  const body = (isCard && !!url) ? <Card.Body> {image} </Card.Body>: {image}
+  const image = (link) ?
+    <SmartLink url={link.url} isExternal={link.isExternal}> <img className={cx('img')} src={url} alt={altText} /> </SmartLink> :
+    <img className={cx('img')} src={url} alt={altText} />;
+  const body = (isCard && !!url) ? <Card.Body> {image} </Card.Body> : image;
   const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',
