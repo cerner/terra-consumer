@@ -17,6 +17,7 @@ ChangeLog
 - Made Nav and Nav-Container width consistent in all places used.
 - Fixed modal content scrolling issue.
 - Refactored NavLogo for flex width and added new styles to logo text
+- Padding on nav items changed to be align with profile
 ------------------
 
 # 0.1.0-BETA.5 - (September 06, 2017)
