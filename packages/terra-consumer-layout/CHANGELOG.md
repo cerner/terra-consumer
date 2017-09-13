@@ -1,5 +1,10 @@
 ChangeLog
 
+# Unreleased
+
+### Changed
+- Fixed nav height in IE
+
 # 0.1.0-BETA.2 - (September 08, 2017)
 -----------------
 
