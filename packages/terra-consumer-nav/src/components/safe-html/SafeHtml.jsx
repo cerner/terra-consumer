@@ -5,14 +5,14 @@ const propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-const DangerousHtml = ({
+const SafeHtml = ({
   text,
   ...customProps
 }) => (
-  // eslint-disable-next-line
+  // eslint-disable-next-line react/no-danger
   <span {...customProps} dangerouslySetInnerHTML={{ __html: text }} />
 );
 
-DangerousHtml.propTypes = propTypes;
+SafeHtml.propTypes = propTypes;
 
-export default DangerousHtml;
+export default SafeHtml;

@@ -16,7 +16,7 @@ exports[`Modal should render a modal with title,close button and content 1`] = `
   <div
     className="modal-title"
   >
-    <DangerousHtml
+    <SafeHtml
       text="Modal Tittle"
     />
     <Button

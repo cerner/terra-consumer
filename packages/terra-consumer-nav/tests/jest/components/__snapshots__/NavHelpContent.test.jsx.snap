@@ -19,7 +19,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         <div
           className="item-text-padding"
         >
-          <DangerousHtml
+          <SafeHtml
             text="Technical Questions"
           />
         </div>
@@ -57,7 +57,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         <span
           className="help-subitem"
         >
-          <DangerousHtml
+          <SafeHtml
             text="Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx"
           />
         </span>
@@ -78,7 +78,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         <div
           className="item-text-padding"
         >
-          <DangerousHtml
+          <SafeHtml
             text="Get Support ID"
           />
         </div>
