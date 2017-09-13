@@ -7,67 +7,43 @@ exports[`Nav should render a default component 1`] = `
   isMobileNavOpen={false}
 >
   <div
-    aria-hidden={true}
-    className="nav"
+    className="close-button-container"
   >
-    <div
-      className="close-button-container"
-    >
-      <Button
-        className="close-button"
-        icon={
-          <IconClose
-            data-name="Layer 1"
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        }
-        isBlock={false}
-        isCompact={false}
-        isDisabled={false}
-        isReversed={false}
-        onClick={[Function]}
-        type="button"
-        variant="link"
-      />
-    </div>
-    <NavLogo
-      altText="test"
-      isCard={false}
-      url=""
-    />
-    <NavItems
-      handleClick={[Function]}
-      navItems={
-        Array [
-          Object {
-            "isActive": true,
-            "text": "test",
-            "url": "#test",
-          },
-        ]
+    <Button
+      className="close-button"
+      icon={
+        <IconClose
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
       }
-    />
-    <InjectIntl(UserProfile)
-      handleClick={[Function]}
-      id="profile-popup-button"
-      profileId="profile-popup-button"
-      profileLinks={
-        Array [
-          Object {
-            "text": "Account",
-            "url": "http://localhost:8080/",
-          },
-          Object {
-            "text": "Notifications",
-            "url": "http://localhost:8080/",
-          },
-        ]
-      }
-      signoutUrl="http://localhost:8080/"
-      userName="John Snow"
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      type="button"
+      variant="link"
     />
   </div>
+  <NavLogo
+    altText="test"
+    isCard={false}
+    url=""
+  />
+  <NavItems
+    handleClick={[Function]}
+    navItems={
+      Array [
+        Object {
+          "isActive": true,
+          "text": "test",
+          "url": "#test",
+        },
+      ]
+    }
+  />
   <ResponsiveElement
     defaultElement={
       <Modal
