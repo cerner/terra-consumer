@@ -127,11 +127,11 @@ const data = {
 export default () => (
   <AppShellExample useRouter>
     <Layout {...data}>
-      <Route exact path="/" render={() => <h1>Home, sweet home!</h1>} />
+      <Route exact path="/" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
       <Route exact path="/inbox" render={() => <h1>You have millions of unread messages</h1>} />
       <Route exact path="/sent" render={() => <h1>Opps, it is empty</h1>} />
       <Route exact path="/health" render={() => <h1>Game</h1>} />
-      <Route exact path="/record" render={() => <h1>of Thrones</h1>} />
+      <Route exact path="/record" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
     </Layout>
   </AppShellExample>
 );

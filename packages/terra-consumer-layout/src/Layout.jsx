@@ -70,7 +70,9 @@ class Layout extends React.Component {
           <main id="main-container" className={cx('main-container')}>
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <div className={cx('main-container-inner')}>
-              <Nav.Burger className={cx('nav-burger')} handleClick={this.toggleNav} />
+              <div className={cx('nav-burger')}>
+                <Nav.Burger handleClick={this.toggleNav} />
+              </div>
               <div className={cx('main-content')}>{this.props.children}</div>
               <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
             </div>

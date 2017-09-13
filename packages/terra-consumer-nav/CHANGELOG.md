@@ -16,6 +16,7 @@ ChangeLog
 - Made Nav and Nav-Container width consistent in all places used.
 - Fixed modal content scrolling issue.
 - Refactored NavLogo for flex width and added new styles to logo text
+- Put move hamburger button font size from layout scss here. Layout burger class just handles position now
 - Padding on nav items changed to be align with profile
 ------------------
 

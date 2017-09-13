@@ -124,7 +124,9 @@ class Nav extends React.Component {
         id="terra-consumer-nav"
         className={cx('nav', { 'modal-open': this.state.isModalOpen }, customProps.className)}
       >
-        <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
+        <div className={cx('close-button-container')}>
+          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
+        </div>
         <NavLogo {...logo} />
         <NavItems navItems={navItems} handleClick={onRequestClose} />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />

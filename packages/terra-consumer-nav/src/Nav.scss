@@ -32,29 +32,22 @@
     }
   }
 
-  .close-button {
+  .close-button-container {
     display: none;
-
+    margin-right: 15px;
+    margin-top: 15px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
     @media screen and (max-width: $terra-medium-breakpoint) {
-      background: var(--terra-consumer-mobile-close-button-background, none);
-      border: 0;
-      color: var(--terra-consumer-mobile-close-button-color, #fff);
       display: block;
-      font-size: 16px;
-      line-height: 16px;
-      margin-right: 15px;
-      margin-top: 15px;
-      padding: 0;
-      position: absolute;
-      right: 0;
-      top: 0;
     }
+  }
 
-    &:hover,
-    &:focus {
-      background: var(--terra-consumer-mobile-close-button-hover-background, none);
-      border-radius: 3px;
-      color: var(--terra-consumer-mobile-close-button-hover-color, #ccc);
-    }
+  .close-button {
+    color: var(--terra-consumer-mobile-close-button-color, #fff) !important;
+    font-size: 16px !important;
+    line-height: 16px !important;
   }
 }
