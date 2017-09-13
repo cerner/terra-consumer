@@ -123,9 +123,9 @@
   .nav-burger {
     display: block;
     font-size: 20px;
-    left: -13px;
     padding-bottom: 5px;
     position: relative;
+    right: 13px;
     z-index: 1;
 
     @media screen and (min-width: $terra-medium-breakpoint) {
