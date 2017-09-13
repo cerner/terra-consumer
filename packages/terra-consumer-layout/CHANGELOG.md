@@ -1,7 +1,7 @@
 ChangeLog
-=========
 
 # 0.1.0-BETA.2 - (September 08, 2017)
+-----------------
 
 ### Changed
  - Fixed the help-button alignment issue.
@@ -11,6 +11,7 @@ ChangeLog
 - Ability to close open mobile nav by clicking escape key
 - Ability to close open mobile nav by tapping elsewhere on the screen.
 - Sliding Nav
+- Made hamburger alight with main content
 
 ### Removed
 - Removed unused terra-consumer--nav-container-width variable
