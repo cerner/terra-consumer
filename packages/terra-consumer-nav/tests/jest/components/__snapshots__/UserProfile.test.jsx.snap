@@ -2,7 +2,6 @@
 
 exports[`UserProfile should render a default avatar when none is provided 1`] = `
 <div
-  name="Test user"
   profileLinks={
     Array [
       Object {
@@ -23,10 +22,11 @@ exports[`UserProfile should render a default avatar when none is provided 1`] = 
       },
     ]
   }
+  userName="Test user"
 />
 `;
 
-exports[`UserProfile should render a user profile with avatar,name and popup button 1`] = `
+exports[`UserProfile should render a user profile with avatar, name and popup button 1`] = `
 <div
   avatar={
     <IconPerson
@@ -35,7 +35,6 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
       xmlns="http://www.w3.org/2000/svg"
     />
   }
-  name="Anthony Martial"
   profileLinks={
     Array [
       Object {
@@ -57,12 +56,18 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
     ]
   }
   signoutUrl="http://localhost:8080/"
+  userName="Anthony Martial"
 />
 `;
 
-exports[`UserProfile should render as a signin link when specified 1`] = `
+exports[`UserProfile should render as a signin link when a signinUrl and no user data is provided 1`] = `
 <div
-  isSignIn={true}
   signinUrl="google.com"
+/>
+`;
+
+exports[`UserProfile should render as a signout link when no user data or signinUrl is provided 1`] = `
+<div
+  signoutUrl="google.com"
 />
 `;

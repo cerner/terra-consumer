@@ -23,10 +23,7 @@ const propTypes = {
   /**
   * Object representing all the profile information
   */
-  profile: PropTypes.shape({
-    signinUrl: PropTypes.string,
-    avatar: PropTypes.element,
-  }),
+  profile: PropTypes.object,
   /**
    * An object defining the logo to be displayed
    */
@@ -135,7 +132,6 @@ class Nav extends React.Component {
             {...profile}
             id={profileId}
             handleClick={this.handleOpenProfile}
-            isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
           />
         </div>
       </div>

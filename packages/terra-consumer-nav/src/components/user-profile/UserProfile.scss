@@ -98,6 +98,7 @@
     margin-top: 3px;
     padding: 20px 25px;
     text-align: left;
+    text-decoration: none;
     width: 100%;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
@@ -110,6 +111,10 @@
       background: var(--terra-consumer-profile-hover-background, rgba(255, 255, 255, 0.4));
       color: var(--terra-consumer-profile-link-color, #3d3d3d);
     }
+  }
+
+  .profile-text {
+    text-decoration: none;
   }
 
   .avatar {
