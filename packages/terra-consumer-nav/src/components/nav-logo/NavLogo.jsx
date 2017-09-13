@@ -42,7 +42,7 @@ const NavLogo = ({
   ...customProps
 }) => {
   const image = (link) ?
-    <SmartLink url={link.url} isExternal={link.isExternal}> <img className={cx('img')} src={url} alt={altText} /> </SmartLink> :
+    <SmartLink {...link}> <img className={cx('img')} src={url} alt={altText} /> </SmartLink> :
     <img className={cx('img')} src={url} alt={altText} />;
   const body = (isCard && !!url) ? <Card.Body> {image} </Card.Body> : image;
   const domNode = (isCard && !!url) ? Card : 'div';
