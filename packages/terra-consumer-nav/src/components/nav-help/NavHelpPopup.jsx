@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import TerraPopup from 'terra-popup';
+import DangerousHtml from '../dangerous-html/DangerousHtml';
 import styles from './NavHelpPopup.scss';
 
 const cx = classNames.bind(styles);
@@ -47,7 +48,7 @@ const NavHelpPopup = ({
 }) => {
   const popupHeader = (hasHeader &&
     <div className={cx('popup-title')}>
-      {title}
+      <DangerousHtml text={title} />
       <Button
         className={cx('close-button')}
         onClick={closePopup}

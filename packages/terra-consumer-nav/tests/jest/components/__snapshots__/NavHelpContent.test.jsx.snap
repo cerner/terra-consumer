@@ -19,7 +19,9 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         <div
           className="item-text-padding"
         >
-          Technical Questions
+          <DangerousHtml
+            text="Technical Questions"
+          />
         </div>
       }
       fitEnd={
@@ -55,7 +57,9 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         <span
           className="help-subitem"
         >
-          Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx
+          <DangerousHtml
+            text="Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx"
+          />
         </span>
       </p>
     </Toggle>
@@ -74,7 +78,9 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         <div
           className="item-text-padding"
         >
-          Get Support ID
+          <DangerousHtml
+            text="Get Support ID"
+          />
         </div>
       }
       fitStart={

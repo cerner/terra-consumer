@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import DangerousHtml from '../dangerous-html/DangerousHtml';
 import styles from './NavItem.scss';
 import NavToggler from '../nav-toggler/NavToggler';
 import SmartLink from '../smart-link/SmartLink';
@@ -55,7 +56,7 @@ const NavItem = ({
   const activeClass = cx('active');
 
   const itemLabel = (<div>
-    {text}
+    <DangerousHtml text={text} />
     { badgeValue > 0 &&
       <div className={cx('badge')}>{badgeValue}</div>
     }

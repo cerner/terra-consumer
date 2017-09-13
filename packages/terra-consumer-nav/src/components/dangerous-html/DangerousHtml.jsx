@@ -9,6 +9,7 @@ const DangerousHtml = ({
   text,
   ...customProps
 }) => (
+  // eslint-disable-next-line
   <span {...customProps} dangerouslySetInnerHTML={{ __html: text }} />
 );
 
