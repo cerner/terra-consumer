@@ -7,6 +7,7 @@ ChangeLog
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
 - Added the ability to have toggle content in profile links.
 - Added functionality to close nav when a link from the nav is selected by the user.
+- Added functionality to pass a link into the nav logo
 
 ### Changed
 - Fix scroll side nav in mobile in Firefox and IE
