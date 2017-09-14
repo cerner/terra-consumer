@@ -2,6 +2,8 @@
 @import './variables';
 
 :local {
+  --terra-consumer-nav-text-color: #3d3d3d;
+  
   .nav {
     color: var(--terra-consumer-nav-text-color);
     /* nav is relative positioned and its height depends on the height of the main content next to it.
