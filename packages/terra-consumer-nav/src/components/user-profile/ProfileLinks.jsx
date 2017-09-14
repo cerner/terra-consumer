@@ -53,13 +53,13 @@ class ProfileLinks extends React.Component {
         const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
         return (
           <div key={linkItem.text} className={cx(isOpen && 'open')}>
-            <Button onClick={() => { this.handleToggle(index); }} className={cx('link', 'toggler-wrapper')}>
+            <button onClick={() => { this.handleToggle(index); }} className={cx('link', 'toggler-wrapper')}>
               <Arrange
                 align="stretch"
                 fill={<div>{linkItem.text}</div>}
                 fitEnd={<div>{toggleIcon}</div>}
               />
-            </Button>
+            </button>
             <Toggler isOpen={isOpen} isAnimated className={cx('toggler')}>
               {linkItem.subItems.map(subItem => (<ProfileLink key={subItem.text} {...subItem} />))}
             </Toggler>

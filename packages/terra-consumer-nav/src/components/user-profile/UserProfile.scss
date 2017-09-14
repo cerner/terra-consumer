@@ -20,17 +20,22 @@
   }
 
   .link {
-    color: #383f42 !important;
-    font-size: 14px !important;
-    line-height: 18px !important;
-    padding: 20px !important;
+    background: #fff;
+    border: 0;
+    border-radius: 0;
+    color: #383f42;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px;
     text-align: left;
-    text-decoration: none !important;
+    text-decoration: none;
     width: 100%;
 
     &:hover,
     &:focus {
-      background: #cfd0d1 !important;
+      background: #cfd0d1;
     }
   }
 
