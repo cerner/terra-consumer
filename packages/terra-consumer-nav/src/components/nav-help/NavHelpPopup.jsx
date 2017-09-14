@@ -48,14 +48,13 @@ const NavHelpPopup = ({
   const popupHeader = (hasHeader &&
     <div className={cx('popup-title')}>
       {title}
-      <span className={cx('close-button-container')}>
-        <Button
-          className={cx('close-button')}
-          onClick={closePopup}
-          variant={'link'}
-          icon={<IconClose />}
-        />
-      </span>
+      <Button
+        className={cx('close-button')}
+        onClick={closePopup}
+        variant={'link'}
+        icon={<IconClose />}
+        isCompact
+      />
     </div>
   );
 
