@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Card from 'terra-card';
 import styles from './NavLogo.scss';
+import SmartLink from '../smart-link/SmartLink';
 
 const propTypes = {
   /**
@@ -17,6 +18,13 @@ const propTypes = {
    * Whether or not the logo should be placed on top of a white card.
    */
   isCard: PropTypes.bool,
+  /**
+  * Props for a smartlink
+  */
+  link: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    isExternal: PropTypes.bool,
+  }),
 };
 
 const defaultProps = {
@@ -30,18 +38,20 @@ const NavLogo = ({
   url,
   altText,
   isCard,
+  link,
   ...customProps
 }) => {
-  const image = (isCard && !!url) ?
-    <Card.Body> <img className={cx('img')} src={url} alt={altText} /> </Card.Body> :
+  const image = (link) ?
+    <SmartLink {...link}> <img className={cx('img')} src={url} alt={altText} /> </SmartLink> :
     <img className={cx('img')} src={url} alt={altText} />;
+  const body = (isCard && !!url) ? <Card.Body> {image} </Card.Body> : image;
   const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',
     customProps.className,
   );
 
-  return React.createElement(domNode, { ...customProps, className: logoClassNames }, image);
+  return React.createElement(domNode, { ...customProps, className: logoClassNames }, body);
 };
 
 NavLogo.propTypes = propTypes;
