@@ -1,5 +1,9 @@
 ChangeLog
 =========
+1.2.2 - (September 14, 2017)
+----------
+Adding outline user icon 
+
 1.2.1 - (September 06, 2017)
 ----------
 Updated terra-core packages
