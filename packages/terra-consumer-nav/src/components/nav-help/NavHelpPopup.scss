@@ -8,25 +8,24 @@
     width: 100%;
   }
 
-  .close-button {
-    background: none;
+  .close-button-container {
     border: 0;
-    color: var(--terra-consumer--popup-close-button-color, #fff);
     float: right;
-    font-size: 16px;
     margin: 0;
     padding: 0;
     padding-top: 3px;
+  }
+
+  .close-button {
+    color: var(--terra-consumer--popup-close-button-color, #fff) !important;
+    font-size: 16px;
 
     &:hover {
-      background: none;
-      color: var(--terra-consumer--popup-close-button-hover-color, #ccc);
-      cursor: pointer;
+      color: var(--terra-consumer--popup-close-button-hover-color, #ccc) !important;
     }
 
     &:focus {
-      background: none;
-      color: var(--terra-consumer--popup-close-button-hover-color, #777);
+      color: var(--terra-consumer--popup-close-button-hover-color, #777) !important;
     }
   }
 
