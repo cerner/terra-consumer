@@ -1,8 +1,6 @@
 @import '../../variables';
 
 :local {
-  --terra-consumer-nav-active-link-background: var(--terra-consumer-body-background-image);
-
   .item {
     color: var(--terra-consumer-nav-link-color, #fff);
     display: flex;
@@ -23,7 +21,6 @@
 
     &:hover {
       background: var(--terra-consumer-nav-link-hover-background, rgba(255, 255, 255, 0.4));
-      // color: var(--terra-consumer-nav-link-color);
     }
   }
 
