@@ -1,12 +1,13 @@
 ChangeLog
 
-# 0.1.0-BETA.2 - (September 08, 2017)
+# 0.1.0-BETA.2 - (September 13, 2017)
 -----------------
 
 ### Changed
+ - Fixed nav height in IE
  - Fixed the help-button alignment issue.
  - Clean up custom properties
- 
+
 ### Added
 - Theme-able padding for main container
 - Ability to close open mobile nav by clicking escape key

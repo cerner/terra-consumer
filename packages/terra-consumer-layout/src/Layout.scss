@@ -43,6 +43,7 @@
   }
 
   .nav {
+    min-height: 100vh;
     min-width: var(--terra-consumer-nav-width);
     position: relative;
     width: var(--terra-consumer-nav-width);
