@@ -19,7 +19,9 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
         className="label"
       >
         <div>
-          testIcon
+          <SafeHtml
+            text="testIcon"
+          />
         </div>
       </div>
     </div>
@@ -46,7 +48,9 @@ exports[`Nav Item should apply custom classes 1`] = `
         className="label"
       >
         <div>
-          testIcon
+          <SafeHtml
+            text="testIcon"
+          />
         </div>
       </div>
     </div>
@@ -73,7 +77,9 @@ exports[`Nav Item should render a default component 1`] = `
         className="label"
       >
         <div>
-          testIcon
+          <SafeHtml
+            text="testIcon"
+          />
         </div>
       </div>
     </div>
