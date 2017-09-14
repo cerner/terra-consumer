@@ -23,12 +23,12 @@ import IconOutlineChevronDown from 'terra-consumer-icon/lib/icon/IconOutlineChev
 import IconOutlineChevronUp from 'terra-consumer-icon/lib/icon/IconOutlineChevronUp';
 import IconOutlineAdd from 'terra-consumer-icon/lib/icon/IconOutlineAdd';
 import IconOutlineCheck from 'terra-consumer-icon/lib/icon/IconOutlineCheck';
-import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
 import IconOutlineInformation from 'terra-consumer-icon/lib/icon/IconOutlineInformation';
 import IconOutlineSuccess from 'terra-consumer-icon/lib/icon/IconOutlineSuccess';
 import IconOutlineWarning from 'terra-consumer-icon/lib/icon/IconOutlineWarning';
 import IconOutlineError from 'terra-consumer-icon/lib/icon/IconOutlineError';
 import IconOutlineFilter from 'terra-consumer-icon/lib/icon/IconOutlineFilter';
+import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
 import IconOutlineLocationPin from 'terra-consumer-icon/lib/icon/IconOutlineLocationPin';
 import IconOutlineFingerprint from 'terra-consumer-icon/lib/icon/IconOutlineFingerprint';
 import IconOutlineEyeglasses from 'terra-consumer-icon/lib/icon/IconOutlineEyeglasses';
@@ -51,6 +51,7 @@ import IconOutlineNoMatchingResults from 'terra-consumer-icon/lib/icon/IconOutli
 import IconOutlineNotAuthorized from 'terra-consumer-icon/lib/icon/IconOutlineNotAuthorized';
 import IconOutlineSensitiveData from 'terra-consumer-icon/lib/icon/IconOutlineSensitiveData';
 import IconOutlineErrorPage from 'terra-consumer-icon/lib/icon/IconOutlineErrorPage';
+import IconOutlineUserCircle from 'terra-consumer-icon/lib/icon/IconOutlineUserCircle';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -207,13 +208,6 @@ const IconAll = () => (
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
-        <td><IconOutlineCalendarSimple height='2em' width='2em' /></td>
-        <td>outline-calendar-simple</td>
-        <td>
-          import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
-        </td>
-      </tr>
-      <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineInformation height='2em' width='2em' /></td>
         <td>outline-information</td>
         <td>
@@ -246,6 +240,13 @@ const IconAll = () => (
         <td>outline-filter</td>
         <td>
           import IconOutlineFilter from 'terra-consumer-icon/lib/icon/IconOutlineFilter';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineCalendarSimple height='2em' width='2em' /></td>
+        <td>outline-calendar-simple</td>
+        <td>
+          import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
@@ -400,6 +401,13 @@ const IconAll = () => (
         <td>outline-error-page</td>
         <td>
           import IconOutlineErrorPage from 'terra-consumer-icon/lib/icon/IconOutlineErrorPage';
+        </td>
+      </tr>
+      <tr style={{ backgroundColor: '#EEEEEE' }}>
+        <td><IconOutlineUserCircle height='2em' width='2em' /></td>
+        <td>outline-user-circle</td>
+        <td>
+          import IconOutlineUserCircle from 'terra-consumer-icon/lib/icon/IconOutlineUserCircle';
         </td>
       </tr>
     </Table.Rows>
