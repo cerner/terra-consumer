@@ -17,6 +17,7 @@ ChangeLog
 - Fixed modal content scrolling issue.
 - Refactored NavLogo for flex width and added new styles to logo text
 - Put move hamburger button font size from layout scss here. Layout burger class just handles position now
+- Remove where we are passing classes to terra components
 - Padding on nav items changed to be align with profile
 ------------------
 

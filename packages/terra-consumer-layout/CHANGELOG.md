@@ -11,6 +11,7 @@ ChangeLog
 - Ability to close open mobile nav by clicking escape key
 - Ability to close open mobile nav by tapping elsewhere on the screen.
 - Sliding Nav
+- Remove where we are passing classes to terra components
 - Made hamburger alight with main content
 
 ### Removed
