@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from 'classnames/bind';
+import SafeHtml from '../safe-html/SafeHtml';
 import navElementShape from '../../NavPropShapes';
 import SmartLink from '../smart-link/SmartLink';
 import styles from './UserProfile.scss';
@@ -22,7 +23,7 @@ const ProfileLink = ({
     isExternal={isExternal}
     className={cx('link', 'profile-item-border', customProps.className)}
   >
-    {text}
+    <SafeHtml text={text} />
   </SmartLink>
 );
 

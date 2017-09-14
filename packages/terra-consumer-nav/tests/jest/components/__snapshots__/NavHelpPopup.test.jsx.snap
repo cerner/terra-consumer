@@ -19,7 +19,9 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
     <div
       className="popup-title"
     >
-      Title
+      <SafeHtml
+        text="Title"
+      />
       <Button
         className="close-button"
         icon={

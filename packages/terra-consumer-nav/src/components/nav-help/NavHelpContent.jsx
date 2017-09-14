@@ -5,6 +5,7 @@ import classNames from 'classnames/bind';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import Toggler from 'terra-toggle';
+import SafeHtml from '../safe-html/SafeHtml';
 import SmartLink from '../smart-link/SmartLink';
 import styles from './NavHelp.scss';
 
@@ -42,14 +43,14 @@ class NavHelpContent extends React.Component {
             className={cx('help-item-text')}
             align="stretch"
             fitStart={<div>{content.icon}</div>}
-            fill={<div className={cx('item-text-padding')}>{content.text}</div>}
+            fill={<div className={cx('item-text-padding')}><SafeHtml text={content.text} /></div>}
             fitEnd={<div>{toggleIcon}</div>}
           />
           <Toggler isOpen={isOpen} isAnimated className={cx('toggler-padding')}>
             { content.children.map(element => (
               <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
                 <span className={cx('help-subitem')}>
-                  {element.text}
+                  <SafeHtml text={element.text} />
                 </span>
               </p>))
             }
@@ -68,7 +69,7 @@ class NavHelpContent extends React.Component {
               className={cx('help-item-text')}
               align="center"
               fitStart={<div className={cx('icon')}>{content.icon}</div>}
-              fill={<div className={cx('item-text-padding')}>{content.text}</div>}
+              fill={<div className={cx('item-text-padding')}><SafeHtml text={content.text} /></div>}
             />
           </SmartLink>
         );

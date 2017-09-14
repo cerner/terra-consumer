@@ -1,13 +1,14 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.6 - (September 08, 2017)
+# 0.1.0-BETA.6 - (September 13, 2017)
 
 ### Added
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
 - Added the ability to have toggle content in profile links.
 - Added functionality to close nav when a link from the nav is selected by the user.
 - Added functionality to pass a link into the nav logo
+- Added a component SafeHtml to render texts with special characters using dangerouslySetInnerHTML
 
 ### Changed
 - Fix scroll side nav in mobile in Firefox and IE
@@ -19,6 +20,8 @@ ChangeLog
 - Refactored NavLogo for flex width and added new styles to logo text
 - Put move hamburger button font size from layout scss here. Layout burger class just handles position now
 - Padding on nav items changed to be align with profile
+- Rendered translated texts using component SafeHtml.
+
 ------------------
 
 # 0.1.0-BETA.5 - (September 06, 2017)
