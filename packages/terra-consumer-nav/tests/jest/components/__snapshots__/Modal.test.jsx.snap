@@ -16,7 +16,9 @@ exports[`Modal should render a modal with title,close button and content 1`] = `
   <div
     className="modal-title"
   >
-    Modal Tittle
+    <SafeHtml
+      text="Modal Tittle"
+    />
     <Button
       className="close-button"
       isBlock={false}

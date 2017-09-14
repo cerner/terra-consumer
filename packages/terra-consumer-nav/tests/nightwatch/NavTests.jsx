@@ -10,6 +10,7 @@ const NavTests = () => (
       <li><a href="/#/tests/nav-tests/simple-nav">Simple Nav</a></li>
       <li><a href="/#/tests/nav-tests/simple-nav-logo-text">Simple Nav with text logo</a></li>
       <li><a href="/#/tests/nav-tests/logo">Nav Logo</a></li>
+      <li><a href="/#/tests/nav-tests/safe-html">Safe Html</a></li>
     </ul>
   </div>
 );

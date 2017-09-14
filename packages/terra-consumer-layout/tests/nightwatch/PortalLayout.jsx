@@ -289,7 +289,7 @@ const data = {
               'data-locale': 'ar',
               isExternal: true,
               url: '#1',
-              text: '\u0627\u0644\u0639\u0631\u0628\u064a\u0651\u0629',
+              text: '&#8235;\u0627\u0644\u0639\u0631\u0628\u064a\u0651\u0629 &#8236;',
             },
             {
               'data-locale': 'es',

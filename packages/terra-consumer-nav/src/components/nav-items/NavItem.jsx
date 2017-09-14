@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import styles from './NavItem.scss';
-import NavToggler from '../nav-toggler/NavToggler';
-import SmartLink from '../smart-link/SmartLink';
 import navItemShape from '../../NavPropShapes';
+import NavToggler from '../nav-toggler/NavToggler';
+import SafeHtml from '../safe-html/SafeHtml';
+import SmartLink from '../smart-link/SmartLink';
 
 const cx = classNames.bind(styles);
 
@@ -55,7 +56,7 @@ const NavItem = ({
   const activeClass = cx('active');
 
   const itemLabel = (<div>
-    {text}
+    <SafeHtml text={text} />
     { badgeValue > 0 &&
       <div className={cx('badge')}>{badgeValue}</div>
     }
