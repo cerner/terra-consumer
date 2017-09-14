@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import Arrange from 'terra-arrange';
-import Button from 'terra-button';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import Toggler from 'terra-toggle';
