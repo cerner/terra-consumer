@@ -89,7 +89,7 @@
   }
 
   .popup-button {
-    background: var(--terra-consumer-profile-link-background, rgba(255, 255, 255, 0.25));
+    background: var(--terra-consumer-popup-button-background, rgba(255, 255, 255, 0.25));
     border: 0;
     border-radius: 0;
     color: var(--terra-consumer-profile-link-color, #3d3d3d);
@@ -107,8 +107,8 @@
 
     &:hover,
     &:focus {
-      background: var(--terra-consumer-profile-hover-background, rgba(255, 255, 255, 0.4));
-      color: var(--terra-consumer-profile-link-color, #3d3d3d);
+      background: var(--terra-consumer-popup-button-hover-hover-background, rgba(255, 255, 255, 0.4));
+      color: var(--terra-consumer-popup-button-hover-color, #3d3d3d);
     }
   }
 

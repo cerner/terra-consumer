@@ -2,7 +2,7 @@
 
 :local {
   .modal {
-    background: var(--terra-consumer--modal-background, #fff);
+    background: var(--terra-consumer-modal-background, #fff);
     border-radius: 5px;
     left: 20px;
     max-height: calc(100% - 80px);
@@ -19,7 +19,7 @@
   }
 
   .modal-title {
-    color: var(--terra-consumer--modal-title-color, #fff);
+    color: var(--terra-consumer-modal-title-color, #fff);
     font-size: 20px;
     left: 0;
     line-height: 30px;
@@ -30,7 +30,7 @@
   }
 
   .overlay {
-    background-color: var(--terra-consumer--overlay-background, #64696c);
+    background-color: var(--terra-consumer-overlay-background-color, #64696c);
     opacity: 1;
     @media screen and (max-width: $terra-medium-breakpoint) {
       height: 100vh;
@@ -41,7 +41,7 @@
   .close-button {
     background: none;
     border: 0;
-    color: var(--terra-consumer--modal-close-button-color, #fff);
+    color: var(--terra-consumer-modal-close-button-color, #fff);
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -55,13 +55,13 @@
 
     &:hover {
       background: none;
-      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      color: var(--terra-consumer-modal-close-button-hover-color, #777);
       cursor: pointer;
     }
 
     &:focus {
       background: none;
-      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      color: var(--terra-consumer-modal-close-button-focus-color, #777);
     }
   }
 }

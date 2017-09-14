@@ -1,6 +1,8 @@
 @import '../../variables';
 
 :local {
+  --terra-consumer-nav-active-link-background: var(--terra-consumer-body-background-image);
+
   .item {
     color: var(--terra-consumer-nav-link-color, #fff);
     display: flex;
@@ -20,8 +22,8 @@
     text-decoration: none;
 
     &:hover {
-      background: var(--terra-consumer-link-hover-background, rgba(255, 255, 255, 0.4));
-      color: var(--terra-consumer-nav-link-color);
+      background: var(--terra-consumer-nav-link-hover-background, rgba(255, 255, 255, 0.4));
+      // color: var(--terra-consumer-nav-link-color);
     }
   }
 
@@ -40,9 +42,9 @@
 
   .badge {
     align-self: center;
-    background: var(--terra-consumer-badge-background, #fff);
+    background: var(--terra-consumer-nav-badge-background, #fff);
     border-radius: 10px;
-    color: var(--terra-consumer-badge-color, #3d3d3d);
+    color: var(--terra-consumer-nav-badge-color, #3d3d3d);
     display: inline-block;
     font-size: 12px;
     margin: 0 10px;
@@ -50,7 +52,7 @@
   }
 
   .active {
-    background: var(--terra-consumer-nav-active-link-background, rgba(255, 255, 255, 0.5));
+    background: var(--terra-consumer-nav-active-background, rgba(255, 255, 255, 0.5));
     background-attachment: fixed;
     background-size: cover;
     font-weight: 900;
@@ -63,7 +65,7 @@
     }
 
     &::before {
-      background: var(--terra-consumer-nav-link-color, #383f42);
+      background: var(--terra-consumer-nav-active-before-background, #383f42);
       border-radius: 3px;
       bottom: -0;
       content: '';

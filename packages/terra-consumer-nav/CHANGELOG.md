@@ -19,6 +19,7 @@ ChangeLog
 - Refactored NavLogo for flex width and added new styles to logo text
 - Put move hamburger button font size from layout scss here. Layout burger class just handles position now
 - Padding on nav items changed to be align with profile
+- Clean up custom properties
 ------------------
 
 # 0.1.0-BETA.5 - (September 06, 2017)

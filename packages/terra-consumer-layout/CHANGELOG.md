@@ -5,7 +5,8 @@ ChangeLog
 
 ### Changed
  - Fixed the help-button alignment issue.
-
+ - Clean up custom properties
+ 
 ### Added
 - Theme-able padding for main container
 - Ability to close open mobile nav by clicking escape key
