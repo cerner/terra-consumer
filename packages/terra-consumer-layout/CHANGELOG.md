@@ -4,8 +4,9 @@ ChangeLog
 -----------------
 
 ### Changed
-- Fixed nav height in IE
-- Fixed the help-button alignment issue.
+ - Fixed nav height in IE
+ - Fixed the help-button alignment issue.
+ - Clean up custom properties
 
 ### Added
 - Theme-able padding for main container

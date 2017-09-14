@@ -21,6 +21,7 @@ ChangeLog
 - Put move hamburger button font size from layout scss here. Layout burger class just handles position now
 - Padding on nav items changed to be align with profile
 - Rendered translated texts using component SafeHtml.
+- Clean up custom properties
 
 ------------------
 
