@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render texts with special characters should render a html element using dangerouslySetInnerHTML with special characters  1`] = `
+<span
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "‫\\\\u0627\\\\u0644\\\\u0639\\\\u0631\\\\u0628\\\\u064a\\\\u0651\\\\u0629 ‬",
+    }
+  }
+/>
+`;
+
+exports[`Render texts with special characters should render a html element using dangerouslySetInnerHTML without any special character 1`] = `
+<span
+  dangerouslySetInnerHTML={
+    Object {
+      "__html": "English (United States)",
+    }
+  }
+/>
+`;

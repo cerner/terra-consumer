@@ -1,10 +1,11 @@
 ChangeLog
 
-# 0.1.0-BETA.2 - (September 08, 2017)
+# 0.1.0-BETA.2 - (September 13, 2017)
 -----------------
 
 ### Changed
- - Fixed the help-button alignment issue.
+- Fixed nav height in IE
+- Fixed the help-button alignment issue.
 
 ### Added
 - Theme-able padding for main container

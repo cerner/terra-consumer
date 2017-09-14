@@ -5,6 +5,7 @@ import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import Overlay from 'terra-overlay';
+import SafeHtml from '../safe-html/SafeHtml';
 import styles from './Modal.scss';
 
 const cx = classNames.bind(styles);
@@ -41,13 +42,12 @@ const Modal = ({
 }) => {
   const modalHeader = (
     <div className={cx('modal-title')}>
-      {title}
+      <SafeHtml text={title} />
       <div className={cx('close-button-container')}>
         <Button className={cx('close-button')} onClick={onRequestClose} variant={'link'}>
           <IconClose />
         </Button>
       </div>
-
     </div>
   );
 
