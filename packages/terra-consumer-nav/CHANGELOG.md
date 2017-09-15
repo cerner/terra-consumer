@@ -1,7 +1,7 @@
 ChangeLog
 =========
 
-# 0.1.0-BETA.6 - (September 13, 2017)
+# 0.1.0-BETA.6 - (September 15, 2017)
 
 ### Added
 - Added a Nav 'Hamburger' Button to be used as the button to open the nav in mobile view.
