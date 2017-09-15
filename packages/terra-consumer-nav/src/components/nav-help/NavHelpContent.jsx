@@ -42,7 +42,7 @@ class NavHelpContent extends React.Component {
           <Arrange
             className={cx('help-item-text')}
             align="stretch"
-            fitStart={content.icon && <div className={cx('icon-text-padding')}>{content.icon}</div>}
+            fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
             fill={<div><SafeHtml text={content.text} /></div>}
             fitEnd={<div>{toggleIcon}</div>}
           />
@@ -68,7 +68,7 @@ class NavHelpContent extends React.Component {
             <Arrange
               className={cx('help-item-text')}
               align="center"
-              fitStart={!content.icon ? <div /> : <div className={cx('icon-text-padding')}>{content.icon}</div>}
+              fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
               fill={<div><SafeHtml text={content.text} /></div>}
             />
           </SmartLink>
