@@ -43,9 +43,11 @@ const Modal = ({
   const modalHeader = (
     <div className={cx('modal-title')}>
       <SafeHtml text={title} />
-      <Button className={cx('close-button')} onClick={onRequestClose}>
-        <IconClose />
-      </Button>
+      <div className={cx('close-button-container')}>
+        <Button className={cx('close-button')} onClick={onRequestClose} variant={'link'}>
+          <IconClose />
+        </Button>
+      </div>
     </div>
   );
 

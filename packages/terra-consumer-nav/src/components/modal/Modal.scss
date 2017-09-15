@@ -30,38 +30,36 @@
   }
 
   .overlay {
-    background-color: var(--terra-consumer--overlay-background, #64696c);
-    opacity: 1;
+    background-color: var(--terra-consumer--overlay-background, #64696c) !important;
+    opacity: 1 !important;
     @media screen and (max-width: $terra-medium-breakpoint) {
       height: 100vh;
       width: 100vw;
     }
   }
 
-  .close-button {
-    background: none;
-    border: 0;
-    color: var(--terra-consumer--modal-close-button-color, #fff);
-    font-size: 16px;
+  .close-button-container {
     margin: 0;
     padding: 0;
     position: absolute;
     right: 20px;
-    top: 5px;
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
       right: 15px;
     }
+  }
+
+  .close-button {
+    color: var(--terra-consumer--modal-close-button-color, #fff) !important;
+    font-size: 16px !important;
 
     &:hover {
-      background: none;
-      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      color: var(--terra-consumer--modal-close-button-hover-color, #777) !important;
       cursor: pointer;
     }
 
     &:focus {
-      background: none;
-      color: var(--terra-consumer--modal-close-button-hover-color, #777);
+      color: var(--terra-consumer--modal-close-button-hover-color, #777) !important;
     }
   }
 }

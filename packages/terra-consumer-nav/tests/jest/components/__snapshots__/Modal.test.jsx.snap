@@ -19,22 +19,26 @@ exports[`Modal should render a modal with title,close button and content 1`] = `
     <SafeHtml
       text="Modal Tittle"
     />
-    <Button
-      className="close-button"
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isReversed={false}
-      onClick={[Function]}
-      type="button"
-      variant="default"
+    <div
+      className="close-button-container"
     >
-      <IconClose
-        data-name="Layer 1"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      />
-    </Button>
+      <Button
+        className="close-button"
+        isBlock={false}
+        isCompact={false}
+        isDisabled={false}
+        isReversed={false}
+        onClick={[Function]}
+        type="button"
+        variant="link"
+      >
+        <IconClose
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      </Button>
+    </div>
   </div>
   <div
     className="modal"

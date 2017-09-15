@@ -4,7 +4,7 @@
   .item {
     color: var(--terra-consumer-nav-link-color, #fff);
     display: flex;
-    font-size: 16px;
+    font-size: var(--terra-consumer-nav-link-font-size, 16px);
     line-height: 20px;
     padding: 9px 0 9px 25px;
     position: relative;
