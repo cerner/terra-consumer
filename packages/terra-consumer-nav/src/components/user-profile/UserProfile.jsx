@@ -62,21 +62,21 @@ const UserProfile = ({
   let profileContent;
   if (isSignIn) {
     profileContent = (
-      <button className={cx('popup-button')} href={signinUrl}>
+      <a className={cx('popup-button')} href={signinUrl}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<FormattedMessage id="Terra.Consumer.UserProfile.signin" />}
           align="center"
         />
-      </button>
+      </a>
     );
   } else {
     const content = (
       <div>
         <ProfileLinks linkItems={profileLinks} />
-        <button className={cx('link', 'signout-border')} href={signoutUrl}>
+        <a className={cx('link', 'signout-border')} href={signoutUrl}>
           <FormattedMessage id="Terra.Consumer.UserProfile.signout" />
-        </button>
+        </a>
       </div>
     );
 

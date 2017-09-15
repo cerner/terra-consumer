@@ -11,7 +11,7 @@ const propTypes = {
    */
   url: PropTypes.string,
   /**
-   *  The alternate text that is read by screen readers or displayed if the image fails to load.
+   *  The alternate text that is read by screen readers are displayed if the image fails to load.
    */
   altText: PropTypes.string,
   /**
@@ -41,10 +41,14 @@ const NavLogo = ({
   link,
   ...customProps
 }) => {
-  const image = (link) ?
-    <SmartLink {...link}> <img className={cx('img')} src={url} alt={altText} /> </SmartLink> :
-    <img className={cx('img')} src={url} alt={altText} />;
-  const body = (isCard && !!url) ? <Card.Body> {image} </Card.Body> : image;
+  const imgProps = {
+    className: cx('img'),
+    ...url && { src: url },
+  };
+
+  const imgTag = (<img alt={altText} {...imgProps} />);
+  const imgContent = (link) ? <SmartLink {...link}>{imgTag} </SmartLink> : imgTag;
+  const body = (isCard && !!url) ? <Card.Body> {imgContent} </Card.Body> : imgContent;
   const domNode = (isCard && !!url) ? Card : 'div';
   const logoClassNames = cx(
     'logo-container',

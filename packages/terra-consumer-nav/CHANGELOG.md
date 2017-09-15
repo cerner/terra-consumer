@@ -22,6 +22,8 @@ ChangeLog
 - Remove where we are passing classes to terra components
 - Padding on nav items changed to be align with profile
 - Rendered translated texts using component SafeHtml.
+- Signout and signin links are now 'a' tags to utilize the href attribute.
+- Fixed logo text issue in Firefox
 
 ------------------
 
