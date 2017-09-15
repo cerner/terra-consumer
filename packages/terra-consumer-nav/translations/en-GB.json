@@ -1,6 +1,6 @@
 {
-	"Terra.Consumer.NavHelp.help": "Help",
-	"Terra.Consumer.UserProfile.Modal.title": "Settings",
-	"Terra.Consumer.UserProfile.signout": "Sign Out",
-	"Terra.Consumer.UserProfile.signin": "Sign In"
+  "Terra.Consumer.NavHelp.help": "Help",
+  "Terra.Consumer.UserProfile.Modal.title": "Settings",
+  "Terra.Consumer.UserProfile.signout": "Sign Out",
+  "Terra.Consumer.UserProfile.signin": "Sign In"
 }
