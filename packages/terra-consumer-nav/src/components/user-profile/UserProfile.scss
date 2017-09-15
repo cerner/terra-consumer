@@ -114,6 +114,12 @@
 
   .avatar {
     padding-right: 10px;
+
+    svg path,
+    svg circle {
+      stroke: var(--terra-consumer-profile-link-color, #3d3d3d);
+      stroke-width: 4px;
+    }
   }
 
   .link-text-style {
