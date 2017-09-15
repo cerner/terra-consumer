@@ -4,7 +4,7 @@ import Arrange from 'terra-arrange';
 import classNames from 'classnames/bind';
 import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
-import IconPerson from 'terra-icon/lib/icon/IconPerson';
+import IconOutlineUserCircle from 'terra-consumer-icon/lib/icon/IconOutlineUserCircle';
 import ProfileLinks from './ProfileLinks';
 import styles from './UserProfile.scss';
 
@@ -50,7 +50,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  avatar: <IconPerson />,
+  avatar: <IconOutlineUserCircle />,
   profileLinks: [],
   isSignIn: false,
   id: 'terra-conumser-nav-profile-button',

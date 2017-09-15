@@ -35,7 +35,7 @@
 
     &:hover,
     &:focus {
-      background: #cfd0d1;
+      background: var(--terra-consumer-profile-link-hover-color, #cfd0d1);
     }
   }
 
