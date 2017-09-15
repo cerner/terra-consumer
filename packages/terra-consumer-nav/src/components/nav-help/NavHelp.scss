@@ -62,8 +62,12 @@
     text-decoration: none;
   }
 
-  .item-text-padding {
-    padding-left: 10px;
+  .icon-text-padding {
+    padding-right: 10px;
+  }
+
+  .icon-text-padding:empty {
+    display: none;
   }
 
   .toggler-padding {
