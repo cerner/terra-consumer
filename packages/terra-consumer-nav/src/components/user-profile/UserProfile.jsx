@@ -88,7 +88,9 @@ const UserProfile = ({
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<span>{userName}</span>}
           fitEnd={<IconEllipses className={cx('icon')} id={id} />}
-          align="center"
+          alignFitStart="top"
+          alignFill="center"
+          alignFitEnd="top"
         />
       </button>
     );
