@@ -31,7 +31,7 @@ class NavHelpContent extends React.Component {
     const contentList = customProps.helpContent.map((content, index) => {
       let contentElement;
       const isOpen = this.state.togglers[index];
-      const toggleIcon = isOpen ? <IconChevronUp className={cx('icon')} /> : <IconChevronDown className={cx('icon')} />;
+      const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
 
       if (content.children && content.children.length > 0) {
         contentElement = (<Button
@@ -42,8 +42,8 @@ class NavHelpContent extends React.Component {
           <Arrange
             className={cx('help-item-text')}
             align="stretch"
-            fitStart={<div>{content.icon}</div>}
-            fill={<div className={cx('item-text-padding')}><SafeHtml text={content.text} /></div>}
+            fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
+            fill={<div><SafeHtml text={content.text} /></div>}
             fitEnd={<div>{toggleIcon}</div>}
           />
           <Toggler isOpen={isOpen} isAnimated className={cx('toggler-padding')}>
@@ -68,8 +68,8 @@ class NavHelpContent extends React.Component {
             <Arrange
               className={cx('help-item-text')}
               align="center"
-              fitStart={<div className={cx('icon')}>{content.icon}</div>}
-              fill={<div className={cx('item-text-padding')}><SafeHtml text={content.text} /></div>}
+              fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
+              fill={<div><SafeHtml text={content.text} /></div>}
             />
           </SmartLink>
         );

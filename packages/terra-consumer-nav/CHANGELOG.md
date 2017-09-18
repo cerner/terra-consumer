@@ -1,5 +1,12 @@
 ChangeLog
 =========
+#0.1.0 - (September 15, 2017)
+
+### Changed
+- Fix padding issues
+- Fix modal close button alignment issue.
+
+------------------
 
 # 0.1.0-BETA.6 - (September 15, 2017)
 
