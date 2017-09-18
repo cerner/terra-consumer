@@ -9,6 +9,7 @@
     padding: 9px 0 9px 25px;
     position: relative;
     text-decoration: none;
+    text-transform: var(--terra-consumer-nav-link-text-transform, none);
   }
 
   .icon {

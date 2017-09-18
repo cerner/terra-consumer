@@ -8,6 +8,10 @@ ChangeLog
 
 ------------------
 
+# 0.1.0 - (September 15, 2017)
+- Change profile link image
+- Add theme variable for profile pop up link's hover color
+
 # 0.1.0-BETA.6 - (September 15, 2017)
 
 ### Added
