@@ -2,7 +2,7 @@
 
 :local {
   .item {
-    color: var(--terra-consumer-nav-link-color, #fff);
+    color: var(--terra-consumer-nav-link-color, #3d3d3d);
     display: flex;
     font-size: var(--terra-consumer-nav-link-font-size, 16px);
     line-height: 20px;
@@ -41,7 +41,7 @@
 
   .badge {
     align-self: center;
-    background: var(--terra-consumer-badge-background, #fff);
+    background: var(--terra-consumer-badge-background, #3d3d3d);
     border-radius: 10px;
     color: var(--terra-consumer-badge-color, #3d3d3d);
     display: inline-block;
