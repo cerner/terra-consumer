@@ -17,7 +17,7 @@
 
     &:hover {
       background: var(--terra-consumer-toggler-hover-background, rgba(255, 255, 255, 0.4));
-      color: var(--terra-consumer-nav-link-color);
+      color: var(--terra-consumer-nav-link-color, #3d3d3d);
     }
   }
 
