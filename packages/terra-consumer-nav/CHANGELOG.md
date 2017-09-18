@@ -1,12 +1,12 @@
 ChangeLog
 =========
-#0.1.0 - (September 15, 2017)
+#0.1.1 - (September 18, 2017)
 
 ### Changed
-- Fix padding issues
+- Fix padding issues.
 - Fix modal close button alignment issue.
 - Add fallbacks when removing root css variables
-
+- Fix profile icon and ellipses alignment.
 ------------------
 
 # 0.1.0 - (September 15, 2017)
