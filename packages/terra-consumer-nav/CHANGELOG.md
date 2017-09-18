@@ -6,6 +6,7 @@ ChangeLog
 - Fix padding issues
 - Fix modal close button alignment issue.
 - Add fallbacks when removing root css variables
+- Allow the bar above the profile in mobile to be configured independently of the background color
 
 ------------------
 
