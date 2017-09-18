@@ -5,6 +5,7 @@ ChangeLog
 ### Changed
 - Fix padding issues
 - Fix modal close button alignment issue.
+- Add fallbacks when removing root css variables
 
 ------------------
 
