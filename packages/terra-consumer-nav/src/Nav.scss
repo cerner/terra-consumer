@@ -3,7 +3,7 @@
 
 :local {
   .nav {
-    color: var(--terra-consumer-nav-text-color);
+    color: var(--terra-consumer-nav-text-color, #3d3d3d);
     /* nav is relative positioned and its height depends on the height of the main content next to it.
      * height: 100% makes sure nav height >= content height
     */
@@ -25,7 +25,7 @@
   .profile {
     bottom: 0;
     position: fixed;
-    width: var(--terra-consumer-profile-link-width);
+    width: var(--terra-consumer-profile-link-width, 320px);
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       position: static;
@@ -46,7 +46,7 @@
   }
 
   .close-button {
-    color: var(--terra-consumer-mobile-close-button-color, #fff) !important;
+    color: var(--terra-consumer-mobile-close-button-color, #3d3d3d) !important;
     font-size: 16px !important;
     line-height: 16px !important;
   }

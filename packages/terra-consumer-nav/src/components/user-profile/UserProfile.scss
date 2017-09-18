@@ -2,7 +2,7 @@
 
 :local {
   .profile {
-    background: var(--terra-consumer-profile-link-border-background);
+    background: var(--terra-consumer-profile-link-border-background, url('http://d320j1w59ws5w0.cloudfront.net/terra-consumer-background-images.jpg'));
     background-attachment: fixed;
     background-size: cover;
 
@@ -10,7 +10,7 @@
       background: none;
       background-attachment: none;
       background-size: none;
-      border-top: 3px solid var(--terra-consumer-body-background-color);
+      border-top: 3px solid var(--terra-consumer-body-background-color, #c7d4ea);
       margin-top: 5px;
     }
 

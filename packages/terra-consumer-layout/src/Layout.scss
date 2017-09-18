@@ -1,31 +1,10 @@
 @import './variables';
 
-:root {
-  // Body
-  --terra-consumer-body-background-image: url('../background.jpg');
-  --terra-consumer-body-background-color: #c7d4ea;
-
-  // Nav
-  --terra-consumer-nav-background-color: rgba(255, 255, 255, 0.25);
-  --terra-consumer-nav-width: 320px;
-  --terra-consumer-nav-link-color: #3d3d3d;
-  --terra-consumer-nav-active-link-background: var(--terra-consumer-body-background-image);
-  --terra-consumer-nav-text-color: var(--terra-consumer-nav-link-color);
-  --terra-consumer-mobile-close-button-color: var(--terra-consumer-nav-link-color);
-
-  // profile
-  --terra-consumer-profile-link-border-background: var(--terra-consumer-body-background-image);
-  --terra-consumer-profile-link-background: var(--terra-consumer-nav-background-color);
-  --terra-consumer-profile-link-width: var(--terra-consumer-nav-width);
-  --terra-consumer-profile-link-color: var(--terra-consumer-nav-link-color);
-}
-
-
 :local {
   .wrap {
     background-attachment: fixed;
-    background-color: var(--terra-consumer-body-background-color);
-    background-image: var(--terra-consumer-body-background-image);
+    background-color: var(--terra-consumer-body-background-color, #c7d4ea);
+    background-image: var(--terra-consumer-body-background-image, url('http://d320j1w59ws5w0.cloudfront.net/terra-consumer-background-images.jpg'));
     background-size: cover;
     overflow-x: hidden;
 
@@ -46,16 +25,16 @@
 
   .nav {
     min-height: 100vh;
-    min-width: var(--terra-consumer-nav-width);
+    min-width: var(--terra-consumer-nav-width, 320px);
     position: relative;
-    width: var(--terra-consumer-nav-width);
+    width: var(--terra-consumer-nav-width, 320px);
     z-index: 100;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
-      background-color: var(--terra-consumer-body-background-color);
+      background-color: var(--terra-consumer-body-background-color, #c7d4ea);
       box-shadow: 0 1px 3px rgba(28, 31, 33, 0.35);
       float: left;
-      margin-left: calc(var(--terra-consumer-nav-width) * -1);
+      margin-left: calc(var(--terra-consumer-nav-width, 320px) * -1);
       transform: translate3d(0, 0, 0);
       transition: transform 0.35s ease;
       will-change: transform;
@@ -68,7 +47,7 @@
     }
 
     &::before {
-      background-color: var(--terra-consumer-nav-background-color);
+      background-color: var(--terra-consumer-nav-background-color, rgba(255, 255, 255, 0.25));
       bottom: 0;
       content: '';
       left: 0;
@@ -81,7 +60,7 @@
 
   .open nav {
     @media screen and (max-width: $terra-medium-breakpoint) {
-      transform: translate3d(var(--terra-consumer-nav-width), 0, 0);
+      transform: translate3d(var(--terra-consumer-nav-width, 320px), 0, 0);
       transition-duration: 0.5s;
     }
 

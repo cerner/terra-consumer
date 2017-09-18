@@ -6,6 +6,7 @@ ChangeLog
 ### Changed
 - Fixed nav height in IE
 - Fixed the help-button alignment issue.
+- Add fallbacks when removing root css variables
 
 ### Added
 - Theme-able padding for main container
