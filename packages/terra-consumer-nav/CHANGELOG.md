@@ -1,18 +1,19 @@
 ChangeLog
 =========
-#0.1.0 - (September 15, 2017)
+#0.1.0 - (September 19, 2017)
 
 ### Changed
-- Fix padding issues
-- Fix modal close button alignment issue.
-- Add fallbacks when removing root css variables
+#0.1.0 - (September 19, 2017)
+
+### Changed
+- Prevent the Nav scrolling when modal is open.
+- Fixed padding issues.
+- Fixed modal close button alignment issue.
+- Added fallbacks when removing root css variables.
+- Fixed profile icon and ellipses alignment.
+- Changed profile link image.
+- Added theme variable for profile pop up link's hover color.
 - Allow the bar above the profile in mobile to be configured independently of the background color
-
-------------------
-
-# 0.1.0 - (September 15, 2017)
-- Change profile link image
-- Add theme variable for profile pop up link's hover color
 
 # 0.1.0-BETA.6 - (September 15, 2017)
 
