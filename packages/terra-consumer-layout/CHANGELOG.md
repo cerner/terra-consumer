@@ -1,7 +1,11 @@
 ChangeLog
 
-# 0.1.0-BETA.2 - (September 13, 2017)
+# 0.1.0 - (September 19, 2017)
+- Initial Stable release
+- Minor bug fixes and layout tweaks
 -----------------
+
+# 0.1.0-BETA.2 - (September 13, 2017)
 
 ### Changed
 - Fixed nav height in IE
@@ -20,6 +24,7 @@ ChangeLog
 - Removed unused terra-consumer--nav-container-width variable
 
 -----------------
+
 
 # 0.1.0-BETA.1 - (September 06, 2017)
 

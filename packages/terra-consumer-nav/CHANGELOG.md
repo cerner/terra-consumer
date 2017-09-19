@@ -1,11 +1,11 @@
 ChangeLog
 =========
-#0.1.0 - (September 19, 2017)
 
 ### Changed
-#0.1.0 - (September 19, 2017)
+# 0.1.0 - (September 19, 2017)
 
 ### Changed
+- Initial Stable Release
 - Prevent the Nav scrolling when modal is open.
 - Fixed padding issues.
 - Fixed modal close button alignment issue.
