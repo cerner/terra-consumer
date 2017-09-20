@@ -52,7 +52,6 @@ const propTypes = {
 
 const defaultProps = {
   navItems: [],
-  profile: {},
   logo: {},
 };
 
@@ -130,14 +129,16 @@ class Nav extends React.Component {
         <NavLogo {...logo} />
         <NavItems navItems={navItems} handleClick={onRequestClose} />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
-        <div className={cx('profile')}>
-          <UserProfile
-            {...profile}
-            id={profileId}
-            handleClick={this.handleOpenProfile}
-            isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
-          />
-        </div>
+        { profile &&
+          <div className={cx('profile')}>
+            <UserProfile
+              {...profile}
+              id={profileId}
+              handleClick={this.handleOpenProfile}
+              isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
+            />
+          </div>
+        }
       </div>
     );
   }
