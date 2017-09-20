@@ -7,6 +7,7 @@ ChangeLog
 
 ### Changed
 - Fixed issued to render special character like apostrophe in profile name.
+- Console error fix in UserProfile 
 
 ------------------
 
