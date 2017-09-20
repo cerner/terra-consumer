@@ -1,9 +1,12 @@
 ChangeLog
 =========
-# 0.1.1 - (September 19, 2017)
+# 0.2.0 - (September 20, 2017)
+
+### Added
+- Functionality to conditionally render profile if the object is passed or not.
 
 ### Changed
--Fixed issued to render special character like apostrophe in profile name.
+- Fixed issued to render special character like apostrophe in profile name.
 
 ------------------
 
