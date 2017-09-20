@@ -8,7 +8,7 @@
     background-size: cover;
     overflow-x: hidden;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint), screen and (orientation: landscape) {
       background-image: none;
     }
   }
@@ -30,7 +30,7 @@
     width: var(--terra-consumer-nav-width, 320px);
     z-index: 100;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint), screen and (orientation: landscape) {
       background-color: var(--terra-consumer-body-background-color, #c7d4ea);
       box-shadow: 0 1px 3px rgba(28, 31, 33, 0.35);
       float: left;
@@ -59,7 +59,7 @@
   }
 
   .open nav {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint), screen and (orientation: landscape) {
       transform: translate3d(var(--terra-consumer-nav-width, 320px), 0, 0);
       transition-duration: 0.5s;
     }
@@ -82,7 +82,7 @@
 
 
   .open .main-container {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint), screen and (orientation: landscape) {
       overflow: hidden;
       position: fixed;
       width: 100%;
@@ -90,7 +90,7 @@
   }
 
   .main-content {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint), screen and (orientation: landscape) {
       /* Set a min height for the content to keep the help button sticky to the
        * bottom of the screen when the content does not fill the viewport.
        * Help button with margin has height of 80 px. Height of help button and
@@ -109,7 +109,7 @@
     right: 13px;
     z-index: 1;
 
-    @media screen and (min-width: $terra-medium-breakpoint) {
+    @media screen and (min-width: $terra-medium-breakpoint) and (orientation: portrait) {
       display: none;
     }
   }
@@ -118,7 +118,7 @@
     margin: 15px;
     text-align: right;
 
-    @media screen and (min-width: $terra-medium-breakpoint) {
+    @media screen and (min-width: $terra-medium-breakpoint) and (orientation: portrait) {
       bottom: 15px;
       margin: 0;
       position: fixed;

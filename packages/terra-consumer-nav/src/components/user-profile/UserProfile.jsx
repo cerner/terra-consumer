@@ -89,9 +89,7 @@ const UserProfile = ({
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<SafeHtml text={userName} />}
           fitEnd={<IconEllipses className={cx('icon')} id={id} />}
-          alignFitStart="top"
           alignFill="center"
-          alignFitEnd="top"
         />
       </button>
     );
