@@ -96,7 +96,7 @@ const data = {
         },
       ],
         // comment out userName to see signin
-      userName: 'John Snow',
+      userName: 'Martin O&#39;Neil',
       signinUrl: 'http://localhost:8080/',
       signoutUrl: 'http://localhost:8080/',
     },

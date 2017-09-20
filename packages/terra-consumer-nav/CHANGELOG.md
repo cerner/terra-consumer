@@ -1,7 +1,12 @@
 ChangeLog
 =========
+# 0.1.1 - (September 19, 2017)
 
 ### Changed
+-Fixed issued to render special character like apostrophe in profile name.
+
+------------------
+
 # 0.1.0 - (September 19, 2017)
 
 ### Changed
