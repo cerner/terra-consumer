@@ -31,16 +31,34 @@ const testData = {
 
 describe('Nav', () => {
   const defaultRender = <Nav {...testData} />;
+  const wrapper = shallow(defaultRender);
 
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(defaultRender);
     expect(wrapper).toMatchSnapshot();
   });
 
   // Structure Tests
   it('should have the id terra-consumer-nav', () => {
-    const wrapper = shallow(defaultRender);
     expect(wrapper.prop('id')).toContain('terra-consumer-nav');
+  });
+
+  it('should have have the profile component', () => {
+    expect(wrapper.find('.profile').exists()).toEqual(true);
+  });
+});
+
+describe('Nav without profile', () => {
+  const { profile, ...data } = testData;
+  const wrapper = shallow(<Nav {...data} />);
+
+  // Snapshot Tests
+  it('should render a nav without a profile component', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  // Structure Tests
+  it('should have not have the profile component', () => {
+    expect(wrapper.find('.profile').exists()).toEqual(false);
   });
 });
