@@ -68,7 +68,7 @@ class Layout extends React.Component {
             />
           </nav>
           <main id="main-container" className={cx('main-container')}>
-            <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
+            <ResponsiveElement defaultElement={overlay} responsiveTo="window" large={<div />} />
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burger')}>
                 <Nav.Burger handleClick={this.toggleNav} />

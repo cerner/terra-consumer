@@ -106,7 +106,7 @@ class NavHelp extends React.Component {
 
     return (
       <div {...customProps}>
-        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
+        <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} large={popup} />
         {helpButton}
       </div>
     );
