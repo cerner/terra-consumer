@@ -99,3 +99,80 @@ exports[`Nav should render a default component 1`] = `
   </div>
 </div>
 `;
+
+exports[`Nav without profile should render a nav without a profile component 1`] = `
+<div
+  className="nav"
+  id="terra-consumer-nav"
+  isMobileNavOpen={false}
+>
+  <div
+    className="close-button-container"
+  >
+    <Button
+      className="close-button"
+      icon={
+        <IconClose
+          data-name="Layer 1"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        />
+      }
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      type="button"
+      variant="link"
+    />
+  </div>
+  <NavLogo
+    altText="test"
+    isCard={false}
+    url=""
+  />
+  <NavItems
+    handleClick={[Function]}
+    navItems={
+      Array [
+        Object {
+          "isActive": true,
+          "text": "test",
+          "url": "#test",
+        },
+      ]
+    }
+  />
+  <ResponsiveElement
+    defaultElement={
+      <Modal
+        isModalOpen={false}
+        onRequestClose={[Function]}
+        title=""
+      >
+        <div />
+      </Modal>
+    }
+    medium={
+      <Popup
+        boundingRef={null}
+        classNameArrow={null}
+        classNameContent={null}
+        classNameOverlay={null}
+        contentAttachment="top right"
+        contentHeight="240"
+        contentWidth="240"
+        isArrowDisplayed={true}
+        isHeaderDisabled={false}
+        isOpen={false}
+        onRequestClose={[Function]}
+        targetRef={[Function]}
+      >
+        <div />
+      </Popup>
+    }
+    responsiveTo="window"
+  />
+</div>
+`;

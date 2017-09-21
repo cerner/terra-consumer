@@ -6,6 +6,7 @@ import { injectIntl, intlShape, FormattedMessage } from 'react-intl';
 import IconEllipses from 'terra-icon/lib/icon/IconEllipses';
 import IconOutlineUserCircle from 'terra-consumer-icon/lib/icon/IconOutlineUserCircle';
 import ProfileLinks from './ProfileLinks';
+import SafeHtml from '../safe-html/SafeHtml';
 import styles from './UserProfile.scss';
 
 const cx = classNames.bind(styles);
@@ -86,11 +87,9 @@ const UserProfile = ({
       <button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
-          fill={<span>{userName}</span>}
+          fill={<SafeHtml text={userName} />}
           fitEnd={<IconEllipses className={cx('icon')} id={id} />}
-          alignFitStart="top"
           alignFill="center"
-          alignFitEnd="top"
         />
       </button>
     );
