@@ -25,19 +25,30 @@ const SmartLink = ({
   handleClick,
   children,
   ...customProps
-}) => (
-  (isExternal || target === '_blank') ?
-    <a {...customProps} onClick={handleClick} target={target} href={url}>{children}</a> :
+}) => {
+  if (isExternal || target === '_blank') {
+    return (
+      <a {...customProps} onClick={handleClick} target={target} href={url}>{children}</a>
+    );
+  }
+  const a = document.createElement('a');
+  a.href = url;
+    // fix for pathname quirk in IE : http://stackoverflow.com/questions/956233/javascript-pathname-ie-quirk
+  const linkPath = a.pathname[0] === '/' ? a.pathname : `/${a.pathname}`;
+
+  return (
     <NavLink
       {...customProps}
       exact
       activeClassName={activeClass}
-      to={url}
+      to={linkPath}
       onClick={handleClick}
     >
       {children}
     </NavLink>
   );
+};
+
 
 SmartLink.propTypes = propTypes;
 SmartLink.defaultProps = defaultProps;

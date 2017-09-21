@@ -4,6 +4,9 @@ ChangeLog
 ### Changed
 # 0.1.0 - (September 19, 2017)
 
+### Added
+- For react router internal links, strip the domain/host off the url before providing it to the link to prevent linking to something like http://localhost:8080/http:localhost:8080/my-page
+
 ### Changed
 - Initial Stable Release
 - Prevent the Nav scrolling when modal is open.
@@ -14,6 +17,7 @@ ChangeLog
 - Changed profile link image.
 - Added theme variable for profile pop up link's hover color.
 - Allow the bar above the profile in mobile to be configured independently of the background color
+
 
 # 0.1.0-BETA.6 - (September 15, 2017)
 
