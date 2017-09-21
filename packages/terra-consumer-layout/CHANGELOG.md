@@ -1,9 +1,11 @@
 ChangeLog
-
 # 0.1.2 - (September 22, 2017)
-- Fixed nav click not working in IE11
 
+### Changed
+- Fixed nav click not working in IE11
+- Fixed ipad - landscape issue
 -----------------
+
 
 # 0.1.1 - (September 21, 2017)
 - Fixed issued to render special characters in user name
