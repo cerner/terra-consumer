@@ -1,4 +1,6 @@
 ChangeLog
+# 0.1.1 - (September 21, 2017)
+- Fixed issued to render special characters in user name
 
 # 0.1.0 - (September 19, 2017)
 - Initial Stable release
