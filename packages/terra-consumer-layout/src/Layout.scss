@@ -103,15 +103,15 @@
   }
 
   .nav-burger {
-    display: block;
-    font-size: 20px;
-    padding-bottom: 5px;
-    position: relative;
-    right: 13px;
-    z-index: 1;
+    display: none;
 
-    @media screen and (min-width: $terra-medium-breakpoint) {
-      display: none;
+    @media screen and (max-width: $terra-medium-breakpoint) {
+      display: block;
+      font-size: 20px;
+      padding-bottom: 5px;
+      position: relative;
+      right: 13px;
+      z-index: 1;
     }
   }
 
