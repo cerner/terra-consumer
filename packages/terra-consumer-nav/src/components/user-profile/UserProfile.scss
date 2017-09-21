@@ -6,7 +6,8 @@
     background-attachment: fixed;
     background-size: cover;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint),
+      screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
       background: none;
       background-attachment: none;
       background-size: none;
