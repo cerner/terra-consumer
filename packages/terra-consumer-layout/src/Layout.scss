@@ -28,7 +28,7 @@
     min-width: var(--terra-consumer-nav-width, 320px);
     position: relative;
     width: var(--terra-consumer-nav-width, 320px);
-    z-index: 100;
+    z-index: 200;
 
     @media screen and (max-width: $terra-medium-breakpoint) {
       background-color: var(--terra-consumer-body-background-color, #c7d4ea);

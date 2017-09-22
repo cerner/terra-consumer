@@ -4,10 +4,6 @@
 :local {
   .nav {
     color: var(--terra-consumer-nav-text-color, #3d3d3d);
-    /* nav is relative positioned and its height depends on the height of the main content next to it.
-     * height: 100% makes sure nav height >= content height
-    */
-    // makes sure nav cover the window height on IE if the content next to it is shorter than window height
     padding-bottom: 70px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
     user-select: none;
