@@ -1,5 +1,11 @@
 ChangeLog
 =========
+
+# 0.2.1 - (September 21, 2017)
+- Fixed nav click not working in IE11
+
+------------------
+
 # 0.2.0 - (September 20, 2017)
 
 ### Added
@@ -7,7 +13,7 @@ ChangeLog
 
 ### Changed
 - Fixed issued to render special character like apostrophe in profile name.
-- Console error fix in UserProfile 
+- Console error fix in UserProfile
 
 ------------------
 
