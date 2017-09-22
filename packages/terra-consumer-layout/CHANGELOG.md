@@ -1,9 +1,16 @@
 ChangeLog
+# 0.1.3 - (September 22, 2017)
+
+### Changed
+- Fixed ipad - landscape issue
+
+-----------------
+
 # 0.1.2 - (September 22, 2017)
 
 ### Changed
 - Fixed nav click not working in IE11
-- Fixed ipad - landscape issue
+
 -----------------
 
 
