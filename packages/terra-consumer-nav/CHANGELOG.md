@@ -2,7 +2,10 @@ ChangeLog
 =========
 
 # 0.2.1 - (September 21, 2017)
+
+### Changed
 - Fixed nav click not working in IE11
+- Fixed ipad - landscape issue and nav-burger button missing at 992px issue
 
 ------------------
 
