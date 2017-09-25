@@ -84,7 +84,7 @@ const UserProfile = ({
     const title = intl.formatMessage({ id: 'Terra.Consumer.UserProfile.Modal.title' });
 
     profileContent = (
-      <button className={cx('popup-button')} onClick={() => handleClick({ title, content })}>
+      <button className={cx('popup-button')} onClick={() => handleClick({ title, content }, profileLinks.length)}>
         <Arrange
           fitStart={<div className={cx('avatar')}>{avatar}</div>}
           fill={<SafeHtml text={userName} />}

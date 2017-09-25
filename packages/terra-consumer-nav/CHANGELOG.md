@@ -1,6 +1,13 @@
 ChangeLog
 =========
 
+# 0.3.0 - (September 25, 2017)
+
+### Changed
+- Make it so profile pop up flexes height based off number of items in the list
+
+------------------
+
 # 0.2.2 - (September 22, 2017)
 
 ### Changed

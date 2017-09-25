@@ -4,6 +4,7 @@ import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import TerraPopup from 'terra-popup';
+import PopupHeights from 'terra-popup/lib/_PopupHeights';
 import ResponsiveElement from 'terra-responsive-element';
 import NavItems from './components/nav-items/NavItems';
 import Modal from './components/modal/Modal';
@@ -71,11 +72,11 @@ class Nav extends React.Component {
     this.handleOpenProfile = this.handleOpenProfile.bind(this);
   }
 
-  handleOpenProfile(modalContent) {
-    this.toggleModal(modalContent);
+  handleOpenProfile(modalContent, numberOfLinks) {
+    this.toggleModal(modalContent, numberOfLinks);
   }
 
-  toggleModal(modalObject) {
+  toggleModal(modalObject, numberOfLinks) {
     if (modalObject.title && modalObject.content) {
       this.setState({
         modalContent: modalObject ||
@@ -83,6 +84,7 @@ class Nav extends React.Component {
             title: '',
             content: <div />,
           },
+        numberOfLinks,
       });
     }
     this.setState({
@@ -103,13 +105,16 @@ class Nav extends React.Component {
       </Modal>
     );
 
+
+    // const PopupHeights = { 40: 40, 80: 80, 120: 120, 160: 160, 240: 240, 320: 320, 400: 400, 480: 480, 560: 560, 640: 640, 720: 720, 800: 800, 880: 880 };
+
     const popup = (
       <TerraPopup
         isOpen={this.state.isModalOpen}
         onRequestClose={this.toggleModal}
         targetRef={() => document.getElementById(profileId)}
         contentWidth="240"
-        contentHeight="240"
+        contentHeight={Object.keys(PopupHeights).find(size => parseInt(size, 10) > this.state.numberOfLinks * 60)}
         contentAttachment="top right"
         isArrowDisplayed
       >
