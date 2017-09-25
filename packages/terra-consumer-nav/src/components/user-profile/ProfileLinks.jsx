@@ -6,6 +6,7 @@ import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
 import Toggler from 'terra-toggle';
 import navElementShape from '../../NavPropShapes';
+import SafeHtml from '../safe-html/SafeHtml';
 import ProfileLink from './ProfileLink';
 import styles from './UserProfile.scss';
 
@@ -55,7 +56,7 @@ class ProfileLinks extends React.Component {
             <button onClick={() => { this.handleToggle(index); }} className={cx('link', 'toggler-wrapper')}>
               <Arrange
                 align="stretch"
-                fill={<div>{linkItem.text}</div>}
+                fill={<SafeHtml text={linkItem.text} />}
                 fitEnd={<div>{toggleIcon}</div>}
               />
             </button>
