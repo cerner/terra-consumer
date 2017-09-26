@@ -1,5 +1,10 @@
 ChangeLog
 =========
+# 0.2.3 - (September 25, 2017)
+
+### Changed
+- Language switcher fix in rtl mode
+------------------
 
 # 0.3.0 - (September 25, 2017)
 
@@ -12,7 +17,6 @@ ChangeLog
 
 ### Changed
 - Fixed ipad - landscape issue and nav-burger button missing at 992px issue
-
 ------------------
 
 # 0.2.1 - (September 21, 2017)
