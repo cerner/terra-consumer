@@ -214,7 +214,6 @@ export default class ProfilePopUpCountTester extends React.Component {
   }
 
   render() {
-    // debugger;
     const filteredProfileLinks = nav();
     filteredProfileLinks.profile.profileLinks = nav().profile.profileLinks.slice(0, this.state.count);
     return (

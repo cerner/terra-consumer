@@ -73,7 +73,8 @@ const NavHelpPopup = ({
       isHeaderDisabled
       // remove one from the numberOfLinks so we never leave a giant gap at the bottom. Rather part of the last one should show
       // so the user knows they can scroll
-      contentHeight={Object.keys(PopupHeights).find(size => size > 120 && size > (((rowCount - 1) * 58) + 50))} // Add 40px for the header
+      // 58 is how many px tall our list items are, then add 50px for the header
+      contentHeight={Object.keys(PopupHeights).find(size => size > 120 && size > (((rowCount - 1) * 58) + 50))}
     >
       <div>
         {popupHeader}

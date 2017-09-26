@@ -7,7 +7,7 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
   classNameContent={null}
   classNameOverlay={null}
   contentAttachment="middle center"
-  contentHeight="240"
+  contentHeight="160"
   contentWidth="320"
   isArrowDisplayed={false}
   isHeaderDisabled={true}
@@ -40,9 +40,7 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
         variant="link"
       />
     </div>
-    <div
-      className="popup-body"
-    >
+    <div>
       <div>
          This is a test content
       </div>
@@ -58,7 +56,7 @@ exports[`Popup should render a popup without header(title & close button) 1`] = 
   classNameContent={null}
   classNameOverlay={null}
   contentAttachment="middle center"
-  contentHeight="240"
+  contentHeight="160"
   contentWidth="320"
   isArrowDisplayed={false}
   isHeaderDisabled={true}
@@ -67,9 +65,7 @@ exports[`Popup should render a popup without header(title & close button) 1`] = 
   targetRef={[Function]}
 >
   <div>
-    <div
-      className="popup-body"
-    >
+    <div>
       <div>
          This is a test content
       </div>

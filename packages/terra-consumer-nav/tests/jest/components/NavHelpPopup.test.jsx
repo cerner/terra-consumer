@@ -17,6 +17,7 @@ describe('Popup', () => {
       contentHeight="240"
       contentAttachment="middle center"
       popupContent={popupContent}
+      rowCount={1}
     />);
     expect(wrapper).toMatchSnapshot();
   });
@@ -31,8 +32,8 @@ describe('Popup', () => {
       contentHeight="240"
       contentAttachment="middle center"
       popupContent={popupContent}
+      rowCount={1}
     />);
     expect(wrapper).toMatchSnapshot();
   });
 });
-
