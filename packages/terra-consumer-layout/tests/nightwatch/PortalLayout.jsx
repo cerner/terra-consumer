@@ -283,7 +283,7 @@ const data = {
           target: '_self',
           url: '#',
           isExternal: true,
-          text: 'English (United States)',
+          text: 'English (United States)&#x200E;',
           subItems: [
             {
               'data-locale': 'ar',
@@ -301,13 +301,13 @@ const data = {
               'data-locale': 'en-gb',
               isExternal: true,
               url: '#3',
-              text: 'English (United Kingdom)',
+              text: 'English (United Kingdom)&#x200E;',
             },
             {
               'data-locale': 'fr-fr',
               isExternal: true,
               url: '#4',
-              text: 'Fran\u00e7ais (France)',
+              text: 'Fran\u00e7ais (France)&#x200E;',
             },
           ],
         },
