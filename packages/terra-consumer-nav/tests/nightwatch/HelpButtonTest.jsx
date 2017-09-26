@@ -26,13 +26,35 @@ const helpItems = [
   },
   {
     isExternal: true,
-    text: 'Another link',
+    text: 'Another link 1',
+    url: 'http://localhost:8080/',
+  },
+  {
+    isExternal: true,
+    text: 'Another link 2',
+    url: 'http://localhost:8080/',
+  },
+  {
+    isExternal: true,
+    text: 'Another link 3',
+    url: 'http://localhost:8080/',
+  },
+  {
+    isExternal: true,
+    text: 'Another link 4',
     url: 'http://localhost:8080/',
   },
 ];
 
 export default () => (
   <I18nShell>
-    <Nav.Help helpNavs={helpItems} />
+    {
+      helpItems.map((item, index) => (
+        <div>
+          <h5>{index + 1} links</h5>
+          <Nav.Help helpNavs={helpItems.slice(0, index + 1)} />
+        </div>
+        ))
+    }
   </I18nShell>
 );

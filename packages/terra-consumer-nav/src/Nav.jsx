@@ -105,6 +105,7 @@ class Nav extends React.Component {
       </Modal>
     );
 
+    console.log(this.state.numberOfLinks);
     // Imported directly from the terra-popup package, but this is an example of what its like
     // const PopupHeights = { 40: 40, 80: 80, 120: 120, 160: 160, 240: 240, 320: 320, 400: 400, 480: 480, 560: 560, 640: 640, 720: 720, 800: 800, 880: 880 };
     const popup = (
@@ -113,8 +114,9 @@ class Nav extends React.Component {
         onRequestClose={this.toggleModal}
         targetRef={() => document.getElementById(profileId)}
         contentWidth="240"
-        // 60px is approximately how large our link items are in height
-        contentHeight={Object.keys(PopupHeights).find(size => parseInt(size, 10) > this.state.numberOfLinks * 60)}
+        // remove one from the numberOfLinks so we never leave a giant gap at the bottom. Rather part of the last one should show
+        // so the user knows they can scroll
+        contentHeight={Object.keys(PopupHeights).find(size => size > 120 && size > (((this.state.numberOfLinks - 1) * 58)))}
         contentAttachment="top right"
         isArrowDisplayed
       >

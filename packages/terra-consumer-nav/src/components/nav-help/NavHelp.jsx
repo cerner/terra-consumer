@@ -101,6 +101,7 @@ class NavHelp extends React.Component {
         classNameContent={cx('popup-content')}
         contentAttachment="middle center"
         popupContent={popupContent}
+        rowCount={helpNavs.length}
       />
     );
 

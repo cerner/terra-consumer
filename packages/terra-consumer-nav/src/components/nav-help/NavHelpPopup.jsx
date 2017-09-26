@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PopupHeights from 'terra-popup/lib/_PopupHeights';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
@@ -30,6 +31,10 @@ const propTypes = {
    * Required callback function for use by parent component to update state.
    */
   closePopup: PropTypes.func,
+  /**
+   * Number of rows in the help pop up to know what height to use
+   */
+  rowCount: PropTypes.number.isRequired,
 };
 
 const defaultProps = {
@@ -44,6 +49,7 @@ const NavHelpPopup = ({
  popupContent,
  isOpen,
  closePopup,
+ rowCount,
  ...customProps
 }) => {
   const popupHeader = (hasHeader &&
@@ -65,10 +71,13 @@ const NavHelpPopup = ({
       isOpen={isOpen}
       onRequestClose={closePopup}
       isHeaderDisabled
+      // remove one from the numberOfLinks so we never leave a giant gap at the bottom. Rather part of the last one should show
+      // so the user knows they can scroll
+      contentHeight={Object.keys(PopupHeights).find(size => size > 120 && size > (((rowCount - 1) * 58) + 50))} // Add 40px for the header
     >
       <div>
         {popupHeader}
-        <div className={cx('popup-body')}>
+        <div>
           {popupContent}
         </div>
       </div>
