@@ -4,6 +4,8 @@ ChangeLog
 
 ### Changed
 - Language switcher fix in rtl mode
+- Fix user profile signin display
+
 ------------------
 
 # 0.2.2 - (September 22, 2017)
