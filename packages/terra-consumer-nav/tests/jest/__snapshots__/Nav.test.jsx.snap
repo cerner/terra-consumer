@@ -61,7 +61,7 @@ exports[`Nav should render a default component 1`] = `
         classNameContent={null}
         classNameOverlay={null}
         contentAttachment="top right"
-        contentHeight="240"
+        contentHeight="80"
         contentWidth="240"
         isArrowDisplayed={true}
         isHeaderDisabled={false}
@@ -161,7 +161,7 @@ exports[`Nav without profile should render a nav without a profile component 1`]
         classNameContent={null}
         classNameOverlay={null}
         contentAttachment="top right"
-        contentHeight="240"
+        contentHeight="80"
         contentWidth="240"
         isArrowDisplayed={true}
         isHeaderDisabled={false}
