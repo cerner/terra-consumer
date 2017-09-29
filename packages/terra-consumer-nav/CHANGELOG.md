@@ -1,6 +1,6 @@
 ChangeLog
 =========
-# 0.2.3 - (September 25, 2017)
+# 0.2.3 - (September 29, 2017)
 
 ### Changed
 - Language switcher fix in rtl mode

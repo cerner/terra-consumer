@@ -1,5 +1,17 @@
 Changelog
 =========
+0.4.7 - (September 29, 2017)
+----------
+Updated terra-consumer packages
+
+0.4.6 - (September 22, 2017)
+----------
+Updated terra-consumer packages
+
+0.4.5 - (September 22, 2017)
+----------
+Updated terra-consumer packages
+
 0.4.4 - (September 21, 2017)
 ----------
 Updated terra-consumer packages
