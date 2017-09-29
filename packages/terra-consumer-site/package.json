@@ -1,6 +1,6 @@
 {
   "name": "terra-consumer-site",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Documentation Site for Functional Verification",
   "repository": {
     "type": "git",
@@ -37,8 +37,8 @@
     "terra-base": "^2.1.0",
     "terra-button": "^1.6.0",
     "terra-consumer-icon": "^1.2.2",
-    "terra-consumer-layout": "^0.1.3",
-    "terra-consumer-nav": "^0.2.2",
+    "terra-consumer-layout": "^0.1.4",
+    "terra-consumer-nav": "^0.2.3",
     "terra-form": "^1.6.0",
     "terra-grid": "^3.10.0",
     "terra-i18n": "^1.5.0",
