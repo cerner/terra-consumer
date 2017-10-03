@@ -5,14 +5,14 @@
     background: var(--terra-consumer-profile-link-border-background, url('http://d320j1w59ws5w0.cloudfront.net/terra-consumer-background-images.jpg'));
     background-attachment: fixed;
     background-size: cover;
+    border-top: var(--terra-consumer-profile-link-border-top, 3px solid #c7d3ea);
+    margin-top: 5px;
 
     @media screen and (max-width: $terra-medium-breakpoint),
       screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
       background: none;
       background-attachment: none;
       background-size: none;
-      border-top: var(--terra-consumer-profile-link-border-top, 3px solid #c7d3ea);
-      margin-top: 5px;
     }
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
