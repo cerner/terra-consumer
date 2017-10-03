@@ -1,5 +1,8 @@
 ChangeLog
 =========
+# Unreleased
+- Fix user profile border top
+
 # 0.2.3 - (September 29, 2017)
 
 ### Changed
