@@ -31,7 +31,7 @@
     width: var(--terra-consumer-nav-width, 320px);
     z-index: 200;
 
-    @media screen and (max-width: ($terra-medium-breakpoint - 1)) {
+    @media screen and (max-width: $terra-medium-breakpoint) {
       background-color: var(--terra-consumer-body-background-color, #c7d4ea);
       box-shadow: 0 1px 3px rgba(28, 31, 33, 0.35);
       float: left;
@@ -41,7 +41,7 @@
       will-change: transform;
     }
 
-    @media screen and (max-width: ($terra-tiny-breakpoint - 1)) {
+    @media screen and (max-width: $terra-tiny-breakpoint) {
       margin-left: -100%;
       min-width: 0;
       width: 100%;
