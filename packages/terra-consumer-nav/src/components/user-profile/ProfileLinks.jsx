@@ -24,6 +24,10 @@ const propTypes = {
       },
     ),
   ),
+  /**
+   * An optional function. When supplied, gets triggered on link click.
+   */
+  handleClick: PropTypes.func,
 };
 
 const defaultProps = {
@@ -61,7 +65,7 @@ class ProfileLinks extends React.Component {
               />
             </button>
             <Toggler isOpen={isOpen} isAnimated className={cx('toggler')}>
-              {linkItem.subItems.map(subItem => (<ProfileLink key={subItem.text} {...subItem} />))}
+              {linkItem.subItems.map(subItem => (<ProfileLink key={subItem.text} {...subItem} handleClick={this.props.handleClick} />))}
             </Toggler>
           </div>
         );
@@ -73,6 +77,7 @@ class ProfileLinks extends React.Component {
           text={linkItem.text}
           target={linkItem.target}
           isExternal={linkItem.isExternal}
+          handleClick={this.props.handleClick}
         />);
     });
 

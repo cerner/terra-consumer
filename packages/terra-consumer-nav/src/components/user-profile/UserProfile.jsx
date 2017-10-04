@@ -48,6 +48,11 @@ const propTypes = {
    * Injected react-intl formatting api
    */
   intl: intlShape.isRequired,
+  /**
+   * A function used as a callback when user clicks on any link.
+   */
+  onChildLinkClick: PropTypes.func.isRequired,
+
 };
 
 const defaultProps = {
@@ -58,7 +63,7 @@ const defaultProps = {
 };
 
 const UserProfile = ({
-  userName, avatar, id, signoutUrl, signinUrl, isSignIn, profileLinks, handleClick, intl, ...customProps
+  userName, avatar, id, signoutUrl, signinUrl, isSignIn, profileLinks, handleClick, onChildLinkClick, intl, ...customProps
 }) => {
   let profileContent;
   if (isSignIn) {
@@ -74,7 +79,7 @@ const UserProfile = ({
   } else {
     const content = (
       <div>
-        <ProfileLinks linkItems={profileLinks} />
+        <ProfileLinks linkItems={profileLinks} handleClick={onChildLinkClick} />
         <a className={cx('link', 'signout-border')} href={signoutUrl}>
           <FormattedMessage id="Terra.Consumer.UserProfile.signout" />
         </a>
