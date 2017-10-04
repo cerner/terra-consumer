@@ -49,9 +49,9 @@ const propTypes = {
    */
   intl: intlShape.isRequired,
   /**
-   * A function used as a callback when user clicks on any link.
+   * A function used as a callback when user clicks on any link in the content.
    */
-  onChildLinkClick: PropTypes.func.isRequired,
+  onLinkClick: PropTypes.func.isRequired,
 
 };
 
@@ -63,7 +63,7 @@ const defaultProps = {
 };
 
 const UserProfile = ({
-  userName, avatar, id, signoutUrl, signinUrl, isSignIn, profileLinks, handleClick, onChildLinkClick, intl, ...customProps
+  userName, avatar, id, signoutUrl, signinUrl, isSignIn, profileLinks, handleClick, onLinkClick, intl, ...customProps
 }) => {
   let profileContent;
   if (isSignIn) {
@@ -79,7 +79,7 @@ const UserProfile = ({
   } else {
     const content = (
       <div>
-        <ProfileLinks linkItems={profileLinks} handleClick={onChildLinkClick} />
+        <ProfileLinks linkItems={profileLinks} handleClick={onLinkClick} />
         <a className={cx('link', 'signout-border')} href={signoutUrl}>
           <FormattedMessage id="Terra.Consumer.UserProfile.signout" />
         </a>

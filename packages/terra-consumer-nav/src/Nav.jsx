@@ -78,7 +78,11 @@ class Nav extends React.Component {
   }
 
   handleProfileLinkClick() {
-    this.toggleModal();
+    // close our modal so they can see the new page
+    this.setState({
+      isModalOpen: false,
+    });
+    // Close the navigation panel as well
     this.props.onRequestClose();
   }
 
@@ -148,7 +152,7 @@ class Nav extends React.Component {
               {...profile}
               id={profileId}
               handleClick={this.handleOpenProfile}
-              onChildLinkClick={this.handleProfileLinkClick}
+              onLinkClick={this.handleProfileLinkClick}
               isSignIn={profile.signinUrl && !(profile.avatar || profile.userName)}
             />
           </div>

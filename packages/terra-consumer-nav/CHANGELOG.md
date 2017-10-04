@@ -1,5 +1,10 @@
 ChangeLog
 =========
+# 0.2.4 - (October 04, 2017)
+- Fixed it so when in mobile, clicking on the profile and help button links closes the modal and the nav panel
+
+------------------
+
 # 0.2.3 - (September 29, 2017)
 
 ### Changed

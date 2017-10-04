@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import classNames from 'classnames/bind';
@@ -10,6 +11,17 @@ import SmartLink from '../smart-link/SmartLink';
 import styles from './NavHelp.scss';
 
 const cx = classNames.bind(styles);
+
+const propTypes = {
+  helpContent: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    children: PropTypes.array,
+    url: PropTypes.string,
+    isExternal: PropTypes.bool,
+    target: PropTypes.string,
+  })).isRequired,
+  onLinkClick: PropTypes.func.isRequired,
+};
 
 class NavHelpContent extends React.Component {
   constructor() {
@@ -26,9 +38,9 @@ class NavHelpContent extends React.Component {
   }
 
   render() {
-    const { ...customProps } = this.props;
+    const { helpContent, onLinkClick } = this.props;
 
-    const contentList = customProps.helpContent.map((content, index) => {
+    const contentList = helpContent.map((content, index) => {
       let contentElement;
       const isOpen = this.state.togglers[index];
       const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
@@ -64,6 +76,7 @@ class NavHelpContent extends React.Component {
             url={content.url}
             target={content.target}
             isExternal={content.isExternal}
+            handleClick={onLinkClick}
           >
             <Arrange
               className={cx('help-item-text')}
@@ -84,5 +97,7 @@ class NavHelpContent extends React.Component {
     );
   }
 }
+
+NavHelpContent.propTypes = propTypes;
 
 export default NavHelpContent;
