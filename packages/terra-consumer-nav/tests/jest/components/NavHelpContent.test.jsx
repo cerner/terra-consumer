@@ -23,7 +23,7 @@ const testData = [
 describe('Content of the Help Modal/Popup', () => {
   // Snapshot Tests
   it('should render a list of items with/without toggler', () => {
-    const wrapper = shallow(<NavHelpContent helpContent={testData} />);
+    const wrapper = shallow(<NavHelpContent helpContent={testData} onLinkClick={jest.fn()} />);
     expect(wrapper).toMatchSnapshot();
   });
 });

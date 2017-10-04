@@ -80,6 +80,7 @@ exports[`Nav should render a default component 1`] = `
     <InjectIntl(UserProfile)
       handleClick={[Function]}
       id="profile-popup-button"
+      onLinkClick={[Function]}
       profileId="profile-popup-button"
       profileLinks={
         Array [
