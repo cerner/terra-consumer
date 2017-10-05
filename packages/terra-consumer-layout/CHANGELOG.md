@@ -1,8 +1,16 @@
 ChangeLog
+# 0.1.5 - (October 04, 2017)
+
+### Changed
+- Consume Latest Nav
+
+-----------------
+
 # 0.1.4 - (September 29, 2017)
 
 ### Changed
 - Language switcher fix in rtl mode
+
 -----------------
 
 # 0.1.3 - (September 22, 2017)
