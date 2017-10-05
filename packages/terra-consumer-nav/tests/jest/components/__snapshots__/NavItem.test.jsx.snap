@@ -29,6 +29,72 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
 </div>
 `;
 
+exports[`Nav Item badge should render when a number > 0 is provided 1`] = `
+<div
+  className=""
+>
+  <SmartLink
+    activeClass="active"
+    className="link"
+    handleClick={[Function]}
+    isExternal={false}
+    target="_self"
+    url="#testPath"
+  >
+    <div
+      className="item"
+    >
+      <div
+        className="label"
+      >
+        <div>
+          <SafeHtml
+            text="testIcon"
+          />
+          <SafeHtml
+            className="badge"
+            text="1"
+          />
+        </div>
+      </div>
+    </div>
+  </SmartLink>
+</div>
+`;
+
+exports[`Nav Item badge should render when a string is provided 1`] = `
+<div
+  className=""
+>
+  <SmartLink
+    activeClass="active"
+    className="link"
+    handleClick={[Function]}
+    isExternal={false}
+    target="_self"
+    url="#testPath"
+  >
+    <div
+      className="item"
+    >
+      <div
+        className="label"
+      >
+        <div>
+          <SafeHtml
+            text="testIcon"
+          />
+          <SafeHtml
+            className="badge"
+            text="!"
+          />
+        </div>
+      </div>
+    </div>
+  </SmartLink>
+</div>
+`;
+
 exports[`Nav Item should apply custom classes 1`] = `
 <div
   className=""

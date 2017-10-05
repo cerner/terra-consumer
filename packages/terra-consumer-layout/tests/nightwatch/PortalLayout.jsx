@@ -22,20 +22,20 @@ const data = {
       },
       {
         text: 'Messaging',
-        badgeValue: 2,
+        badgeValue: '!',
         icon: <IconPerson />,
         subItems: [
           {
             isExternal: true,
             url: '#inbox',
             text: 'Inbox',
-            badgeValue: 1,
+            badgeValue: "'",
           },
           {
             isExternal: true,
             url: '#sent',
             text: 'Sent',
-            badgeValue: 1,
+            badgeValue: '   ',
           },
           {
             isExternal: true,

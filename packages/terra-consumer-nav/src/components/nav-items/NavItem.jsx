@@ -54,13 +54,16 @@ const NavItem = ({
   ...customProps
 }) => {
   const activeClass = cx('active');
+  const badgeString = `${badgeValue}`;
 
-  const itemLabel = (<div>
-    <SafeHtml text={text} />
-    { badgeValue > 0 &&
-      <div className={cx('badge')}>{badgeValue}</div>
-    }
-  </div>);
+  const itemLabel = (
+    <div>
+      <SafeHtml text={text} />
+      { (!!badgeValue && badgeString.trim()) &&
+        <SafeHtml className={cx('badge')} text={badgeString} />
+      }
+    </div>
+  );
 
   const itemText = (
     <div className={cx('item')}>
@@ -68,6 +71,7 @@ const NavItem = ({
       <div className={cx('label')}>{itemLabel}</div>
     </div>
   );
+
   return (children && children.length > 0) ?
     (<NavToggler
       {...customProps}
