@@ -19,26 +19,26 @@ const nav = {
     },
     {
       text: 'Messaging',
-      badgeValue: 2,
+      badgeValue: '!', // basic string symbol test
       icon: <IconPerson />,
       subItems: [
         {
           isExternal: true,
           url: '#inbox',
           text: 'Inbox',
-          badgeValue: 1,
+          badgeValue: "'", // SafeHtml test
         },
         {
           isExternal: true,
           url: '#sent',
           text: 'Sent',
-          badgeValue: 1,
+          badgeValue: '  ', // space test, should not render badge
         },
         {
           isExternal: true,
           url: '#inbox',
           text: 'Inbox',
-          badgeValue: 1,
+          badgeValue: 1, // number test
         },
         {
           isExternal: true,

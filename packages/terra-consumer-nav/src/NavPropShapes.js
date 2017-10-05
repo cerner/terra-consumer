@@ -28,7 +28,10 @@ export const navItemShape = {
   /**
    * An optional badge. When supplied, displays the value inline, styled alongside the text.
    */
-  badgeValue: PropTypes.number,
+  badgeValue: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.string,
+  ]),
 };
 
 export const navItemShapeDefaults = {

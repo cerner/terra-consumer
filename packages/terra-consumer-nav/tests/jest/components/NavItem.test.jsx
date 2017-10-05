@@ -5,7 +5,6 @@ const testData = {
   url: '#testPath',
   text: 'testIcon',
   isActive: false,
-  badgeValue: 0,
 };
 
 const toggleData = {
@@ -25,6 +24,18 @@ describe('Nav Item', () => {
   it('should apply custom classes', () => {
     const wrapper = shallow(<NavItem {...testData} className="test-class" />);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  describe('badge', () => {
+    it('should render when a number > 0 is provided', () => {
+      const wrapper = shallow(<NavItem {...testData} badgeValue={1} />);
+      expect(wrapper).toMatchSnapshot();
+    });
+
+    it('should render when a string is provided', () => {
+      const wrapper = shallow(<NavItem {...testData} badgeValue={'!'} />);
+      expect(wrapper).toMatchSnapshot();
+    });
   });
 });
 

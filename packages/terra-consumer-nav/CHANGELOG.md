@@ -1,6 +1,18 @@
 ChangeLog
 
+# 0.2.5 - (October 05, 2017)
+
+### Added
+- Strings can now be passed as badge values.
+
+### Changed
+- Users can now pass a '0' as a badge value.
+
+------------------
+
 # 0.2.4 - (October 04, 2017)
+
+### Changed
 - Fixed it so when in mobile, clicking on the profile and help button links closes the modal and the nav panel
 - Fix user profile border top
 
