@@ -59,7 +59,7 @@ const NavItem = ({
   const itemLabel = (
     <div>
       <SafeHtml text={text} />
-      { (!!badgeValue && badgeString.trim()) &&
+      { (badgeValue !== undefined && badgeValue !== null) && badgeString.trim() &&
         <SafeHtml className={cx('badge')} text={badgeString} />
       }
     </div>

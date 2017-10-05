@@ -5,6 +5,9 @@ ChangeLog
 ### Added
 - Strings can now be passed as badge values.
 
+### Changed
+- Users can now pass a '0' as a badge value.
+
 ------------------
 
 # 0.2.4 - (October 04, 2017)
