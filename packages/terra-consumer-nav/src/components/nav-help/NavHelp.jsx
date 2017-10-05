@@ -77,7 +77,7 @@ class NavHelp extends React.Component {
       </button>
     );
 
-    const popupContent = <NavHelpContent helpContent={helpNavs} />;
+    const popupContent = <NavHelpContent helpContent={helpNavs} onLinkClick={this.togglePopup} />;
 
     const defaultElement = (
       <Modal
