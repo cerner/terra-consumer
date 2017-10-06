@@ -26,15 +26,28 @@
     }
   }
 
+  .bp {
+    position: absolute;
+  }
   /* stylelint-disable selector-max-compound-selectors, max-nesting-depth */
   .nested {
     .link {
       .item {
-        padding-left: 60px;
+        padding-left: 48px;
+      }
+
+      .label {
+        padding-right: 35px;
       }
 
       .icon {
         padding-right: 10px;
+      }
+
+      .badge {
+        position: absolute;
+        right: 5px;
+        top: 10px;
       }
     }
   }
