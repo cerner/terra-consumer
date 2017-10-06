@@ -1,4 +1,10 @@
 ChangeLog
+# 0.1.6 - (October 06, 2017)
+
+### Changed
+- Updating layout example to include badge
+
+ChangeLog
 # 0.1.5 - (October 04, 2017)
 
 ### Changed
