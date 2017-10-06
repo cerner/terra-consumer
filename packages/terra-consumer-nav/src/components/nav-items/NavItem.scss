@@ -30,7 +30,11 @@
   .nested {
     .link {
       .item {
-        padding-left: 60px;
+        padding-left: 48px;
+
+        .icon {
+          margin-right: 8px;
+        }
       }
 
       .icon {

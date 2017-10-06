@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Arrange from 'terra-arrange';
 import styles from './NavItem.scss';
 import navItemShape from '../../NavPropShapes';
 import NavToggler from '../nav-toggler/NavToggler';
@@ -66,10 +67,13 @@ const NavItem = ({
   );
 
   const itemText = (
-    <div className={cx('item')}>
-      { icon && <div className={cx('icon')}>{icon}</div> }
-      <div className={cx('label')}>{itemLabel}</div>
-    </div>
+    <Arrange
+      fitStart={<div />}
+      fill={<div className={cx('icon')}>{itemLabel}</div>}
+      fitEnd={icon && <div className={cx('icon')}>{icon}</div>}
+      align="stretch"
+      className={cx('item')}
+    />
   );
 
   return (children && children.length > 0) ?
