@@ -1,12 +1,13 @@
 ChangeLog
 
-# 0.2.5 - (October 05, 2017)
+# 0.2.5 - (October 06, 2017)
 
 ### Added
 - Strings can now be passed as badge values.
 
 ### Changed
 - Users can now pass a '0' as a badge value.
+- Fix the sub item badge alignment
 
 ------------------
 

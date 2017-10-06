@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Layout from '../../src/Layout';
 import AppShellExample from './AppShellExample';
 
@@ -9,6 +10,7 @@ const data = {
       {
         url: '/',
         text: 'Dashboard',
+        badgeValue: 1,
       },
       {
         text: 'Messaging',
@@ -45,11 +47,14 @@ const data = {
         subItems: [
           {
             url: '/test',
-            text: 'Test',
+            text: 'Tests test test Tests test testa Tes test test ',
+            icon: <IconPerson />,
+            badgeValue: 2,
           },
           {
             url: '/data',
             text: 'Data',
+            badgeValue: 2,
           },
         ],
       },
@@ -63,6 +68,7 @@ const data = {
           {
             url: '/tests',
             text: 'Tests',
+            icon: <IconPerson />,
           },
         ],
       },
