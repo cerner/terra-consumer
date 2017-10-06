@@ -12,19 +12,22 @@ exports[`Nav Item as Toggler should render a nav as a toggle component 1`] = `
     target="_self"
     url="#testPath"
   >
-    <div
+    <Arrange
+      align="stretch"
       className="item"
-    >
-      <div
-        className="label"
-      >
-        <div>
-          <SafeHtml
-            text="testIcon"
-          />
+      fill={
+        <div
+          className="icon"
+        >
+          <div>
+            <SafeHtml
+              text="testIcon"
+            />
+          </div>
         </div>
-      </div>
-    </div>
+      }
+      fitStart={<div />}
+    />
   </SmartLink>
 </div>
 `;
@@ -41,23 +44,26 @@ exports[`Nav Item badge should render when a number > 0 is provided 1`] = `
     target="_self"
     url="#testPath"
   >
-    <div
+    <Arrange
+      align="stretch"
       className="item"
-    >
-      <div
-        className="label"
-      >
-        <div>
-          <SafeHtml
-            text="testIcon"
-          />
-          <SafeHtml
-            className="badge"
-            text="1"
-          />
+      fill={
+        <div
+          className="icon"
+        >
+          <div>
+            <SafeHtml
+              text="testIcon"
+            />
+            <SafeHtml
+              className="badge"
+              text="1"
+            />
+          </div>
         </div>
-      </div>
-    </div>
+      }
+      fitStart={<div />}
+    />
   </SmartLink>
 </div>
 `;
@@ -74,23 +80,26 @@ exports[`Nav Item badge should render when a string is provided 1`] = `
     target="_self"
     url="#testPath"
   >
-    <div
+    <Arrange
+      align="stretch"
       className="item"
-    >
-      <div
-        className="label"
-      >
-        <div>
-          <SafeHtml
-            text="testIcon"
-          />
-          <SafeHtml
-            className="badge"
-            text="!"
-          />
+      fill={
+        <div
+          className="icon"
+        >
+          <div>
+            <SafeHtml
+              text="testIcon"
+            />
+            <SafeHtml
+              className="badge"
+              text="!"
+            />
+          </div>
         </div>
-      </div>
-    </div>
+      }
+      fitStart={<div />}
+    />
   </SmartLink>
 </div>
 `;
@@ -107,19 +116,22 @@ exports[`Nav Item should apply custom classes 1`] = `
     target="_self"
     url="#testPath"
   >
-    <div
+    <Arrange
+      align="stretch"
       className="item"
-    >
-      <div
-        className="label"
-      >
-        <div>
-          <SafeHtml
-            text="testIcon"
-          />
+      fill={
+        <div
+          className="icon"
+        >
+          <div>
+            <SafeHtml
+              text="testIcon"
+            />
+          </div>
         </div>
-      </div>
-    </div>
+      }
+      fitStart={<div />}
+    />
   </SmartLink>
 </div>
 `;
@@ -136,19 +148,22 @@ exports[`Nav Item should render a default component 1`] = `
     target="_self"
     url="#testPath"
   >
-    <div
+    <Arrange
+      align="stretch"
       className="item"
-    >
-      <div
-        className="label"
-      >
-        <div>
-          <SafeHtml
-            text="testIcon"
-          />
+      fill={
+        <div
+          className="icon"
+        >
+          <div>
+            <SafeHtml
+              text="testIcon"
+            />
+          </div>
         </div>
-      </div>
-    </div>
+      }
+      fitStart={<div />}
+    />
   </SmartLink>
 </div>
 `;
