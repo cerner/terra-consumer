@@ -1,4 +1,10 @@
 ChangeLog
+# 0.1.6 - (October 06, 2017)
+
+### Changed
+- Layout example to show navitem with icon
+
+ChangeLog
 # 0.1.5 - (October 04, 2017)
 
 ### Changed
