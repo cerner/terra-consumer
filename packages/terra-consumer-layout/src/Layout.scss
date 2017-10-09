@@ -8,8 +8,7 @@
     background-size: cover;
     overflow-x: hidden;
 
-    @media screen and (max-width: $terra-medium-breakpoint),
-      screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
+    @supports (-webkit-overflow-scrolling: touch) {
       background-image: none;
     }
   }
