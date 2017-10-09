@@ -8,6 +8,7 @@ ChangeLog
 ### Changed
 - Users can now pass a '0' as a badge value.
 - Fix the sub item badge alignment
+- Early mobile view fix
 
 ------------------
 
