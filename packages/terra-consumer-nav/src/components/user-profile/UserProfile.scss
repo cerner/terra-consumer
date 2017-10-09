@@ -7,11 +7,9 @@
     background-size: cover;
     margin-top: 5px;
 
-    @media screen and (max-width: $terra-medium-breakpoint),
-      screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
+    @supports (-webkit-overflow-scrolling: touch) {
       background-image: none;
     }
-
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100vw;
     }
@@ -100,8 +98,8 @@
     border-top: var(--terra-consumer-profile-link-border-top, 3px solid transparent);
     background-clip: padding-box;
 
-    @media screen and (max-width: $terra-medium-breakpoint),
-      screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
+    @supports (-webkit-overflow-scrolling: touch) {
+      background: inherit;
       margin-top: 0;
     }
 

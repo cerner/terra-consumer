@@ -3,6 +3,7 @@ ChangeLog
 
 ### Changed
 - Updating layout example to include badge
+- Early mobile view fix
 
 # 0.1.5 - (October 04, 2017)
 
