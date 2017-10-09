@@ -2,17 +2,14 @@
 
 :local {
   .profile {
-    background: var(--terra-consumer-profile-link-border-background, url('http://d320j1w59ws5w0.cloudfront.net/terra-consumer-background-images.jpg'));
+    background: var(--terra-consumer-profile-link-border-background, #c7d4ea url('http://d320j1w59ws5w0.cloudfront.net/terra-consumer-background-images.jpg'));
     background-attachment: fixed;
     background-size: cover;
-    border-top: var(--terra-consumer-profile-link-border-top, 3px solid transparent);
     margin-top: 5px;
 
     @media screen and (max-width: $terra-medium-breakpoint),
       screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
-      background: none;
-      background-attachment: none;
-      background-size: none;
+      background-image: none;
     }
 
     @media screen and (max-width: $terra-tiny-breakpoint) {
@@ -100,10 +97,11 @@
     padding: 20px 25px;
     text-align: left;
     width: 100%;
+    border-top: var(--terra-consumer-profile-link-border-top, 3px solid transparent);
+    background-clip: padding-box;
 
     @media screen and (max-width: $terra-medium-breakpoint),
       screen and (orientation: landscape) and (max-width: $terra-large-breakpoint) {
-      background: inherit;
       margin-top: 0;
     }
 
