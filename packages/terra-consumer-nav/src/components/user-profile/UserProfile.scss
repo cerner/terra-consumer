@@ -5,7 +5,7 @@
     background: var(--terra-consumer-profile-link-border-background, url('http://d320j1w59ws5w0.cloudfront.net/terra-consumer-background-images.jpg'));
     background-attachment: fixed;
     background-size: cover;
-    border-top: var(--terra-consumer-profile-link-border-top, 3px solid #c7d3ea);
+    border-top: var(--terra-consumer-profile-link-border-top, 3px solid transparent);
     margin-top: 5px;
 
     @media screen and (max-width: $terra-medium-breakpoint),
@@ -97,7 +97,6 @@
     cursor: pointer;
     display: block;
     font-size: var(--terra-consumer-profile-link-font-size, 14px);
-    margin-top: 3px;
     padding: 20px 25px;
     text-align: left;
     width: 100%;
