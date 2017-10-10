@@ -7,9 +7,10 @@
     background-size: cover;
     margin-top: 5px;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @supports (-webkit-overflow-scrolling: touch) {
       background-image: none;
     }
+
     @media screen and (max-width: $terra-tiny-breakpoint) {
       width: 100vw;
     }
