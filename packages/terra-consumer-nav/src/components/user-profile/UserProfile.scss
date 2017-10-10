@@ -98,11 +98,6 @@
     text-align: left;
     width: 100%;
 
-    @supports (-webkit-overflow-scrolling: touch) {
-      background: inherit;
-      margin-top: 0;
-    }
-
     &:hover,
     &:focus {
       background: var(--terra-consumer-profile-hover-background, rgba(255, 255, 255, 0.4));
