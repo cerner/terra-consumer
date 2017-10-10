@@ -86,8 +86,10 @@
 
   .popup-button {
     background: var(--terra-consumer-profile-link-background, rgba(255, 255, 255, 0.25));
+    background-clip: padding-box;
     border: 0;
     border-radius: 0;
+    border-top: var(--terra-consumer-profile-link-border-top, 3px solid transparent);
     color: var(--terra-consumer-profile-link-color, #3d3d3d);
     cursor: pointer;
     display: block;
@@ -95,8 +97,6 @@
     padding: 20px 25px;
     text-align: left;
     width: 100%;
-    border-top: var(--terra-consumer-profile-link-border-top, 3px solid transparent);
-    background-clip: padding-box;
 
     @supports (-webkit-overflow-scrolling: touch) {
       background: inherit;
