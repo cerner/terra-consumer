@@ -5,6 +5,11 @@ ChangeLog
 - Fixed punch through effect
 
 
+# Unreleased
+
+### Changed
+- Align media query with terra-core
+
 # 0.2.5 - (October 06, 2017)
 
 ### Added

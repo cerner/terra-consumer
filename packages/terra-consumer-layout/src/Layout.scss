@@ -30,7 +30,7 @@
     width: var(--terra-consumer-nav-width, 320px);
     z-index: 200;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       background-color: var(--terra-consumer-body-background-color, #c7d4ea);
       box-shadow: 0 1px 3px rgba(28, 31, 33, 0.35);
       float: left;
@@ -40,7 +40,7 @@
       will-change: transform;
     }
 
-    @media screen and (max-width: $terra-tiny-breakpoint) {
+    @media screen and (max-width: $terra-tiny-breakpoint - 1) {
       margin-left: -100%;
       min-width: 0;
       width: 100%;
@@ -59,12 +59,12 @@
   }
 
   .open nav {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       transform: translate3d(var(--terra-consumer-nav-width, 320px), 0, 0);
       transition-duration: 0.5s;
     }
 
-    @media screen and (max-width: $terra-tiny-breakpoint) {
+    @media screen and (max-width: $terra-tiny-breakpoint - 1) {
       transform: translate3d(100%, 0, 0);
     }
   }
@@ -82,7 +82,7 @@
 
 
   .open .main-container {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       overflow: hidden;
       position: fixed;
       width: 100%;
@@ -90,7 +90,7 @@
   }
 
   .main-content {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       /* Set a min height for the content to keep the help button sticky to the
        * bottom of the screen when the content does not fill the viewport.
        * Help button with margin has height of 80 px. Height of help button and
@@ -104,7 +104,7 @@
   .nav-burger {
     display: none;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       display: block;
       font-size: 20px;
       padding-bottom: 5px;

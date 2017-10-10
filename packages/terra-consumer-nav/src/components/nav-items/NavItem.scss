@@ -67,7 +67,7 @@
     font-weight: 900;
     position: relative;
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       background-attachment: none;
       background-image: none;
       background-size: none;

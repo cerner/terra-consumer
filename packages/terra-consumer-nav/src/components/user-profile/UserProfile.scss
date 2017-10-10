@@ -10,8 +10,7 @@
     @supports (-webkit-overflow-scrolling: touch) {
       background-image: none;
     }
-
-    @media screen and (max-width: $terra-tiny-breakpoint) {
+    @media screen and (max-width: $terra-tiny-breakpoint - 1) {
       width: 100vw;
     }
   }
@@ -43,7 +42,7 @@
   }
 
   .profile-item-border {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       border-bottom: 1px solid #dedfe0;
     }
   }

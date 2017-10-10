@@ -7,13 +7,13 @@
     padding-bottom: 70px;
     padding-top: var(--terra-consumer-nav-padding-top, 25px);
     user-select: none;
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       padding-bottom: 0;
     }
   }
 
   .modal-open {
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       height: 100vh;
       overflow: hidden;
     }
@@ -24,7 +24,7 @@
     position: fixed;
     width: var(--terra-consumer-profile-link-width, 320px);
 
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       position: static;
     }
   }
@@ -37,7 +37,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    @media screen and (max-width: $terra-medium-breakpoint) {
+    @media screen and (max-width: $terra-medium-breakpoint - 1) {
       display: block;
     }
   }
