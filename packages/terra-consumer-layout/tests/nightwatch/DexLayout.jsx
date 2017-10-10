@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Layout from '../../src/Layout';
 import AppShellExample from './AppShellExample';
+import './DexH@CTheme.scss';
 
 const data = {
   nav: {
@@ -131,13 +132,15 @@ const data = {
 };
 
 export default () => (
-  <AppShellExample useRouter>
-    <Layout {...data}>
-      <Route exact path="/" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
-      <Route exact path="/inbox" render={() => <h1>You have millions of unread messages</h1>} />
-      <Route exact path="/sent" render={() => <h1>Opps, it is empty</h1>} />
-      <Route exact path="/health" render={() => <h1>Game</h1>} />
-      <Route exact path="/record" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
-    </Layout>
-  </AppShellExample>
+  <main className="dex-theme">
+    <AppShellExample useRouter>
+      <Layout {...data}>
+        <Route exact path="/" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
+        <Route exact path="/inbox" render={() => <h1>You have millions of unread messages</h1>} />
+        <Route exact path="/sent" render={() => <h1>Opps, it is empty</h1>} />
+        <Route exact path="/health" render={() => <h1>Game</h1>} />
+        <Route exact path="/record" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
+      </Layout>
+    </AppShellExample>
+  </main>
 );

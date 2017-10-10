@@ -1,4 +1,9 @@
 ChangeLog
+# Next release
+
+### Changed
+- Fixed punch through effect
+
 # 0.1.6 - (October 06, 2017)
 
 ### Changed
