@@ -1,13 +1,6 @@
 ChangeLog
-# Next release
 
-### Changed
-- Fixed punch through effect
-- Align media query with terra-core
-
-------------------
-
-# 0.2.5 - (October 06, 2017)
+# 0.2.5 - (October 10, 2017)
 
 ### Added
 - Strings can now be passed as badge values.
@@ -16,6 +9,8 @@ ChangeLog
 - Users can now pass a '0' as a badge value.
 - Fix the sub item badge alignment
 - Early mobile view fix
+- Fixed punch through effect
+- Align media query with terra-core
 
 ------------------
 
@@ -32,14 +27,7 @@ ChangeLog
 ### Changed
 - Language switcher fix in rtl mode
 - Fix user profile signin display
-
-------------------
-
-# 0.3.0 - (September 25, 2017)
-
-### Changed
 - Make it so profile pop up flexes height based off number of items in the list
-
 ------------------
 
 # 0.2.2 - (September 22, 2017)

@@ -1,15 +1,14 @@
 ChangeLog
-# Next release
 
-### Changed
-- Fixed punch through effect
-- Align media query with terra-core
-
-# 0.1.6 - (October 06, 2017)
+# 0.1.6 - (October 10, 2017)
 
 ### Changed
 - Updating layout example to include badge
 - Early mobile view fix
+- Fixed punch through effect
+- Align media query with terra-core
+
+-----------------
 
 # 0.1.5 - (October 04, 2017)
 
