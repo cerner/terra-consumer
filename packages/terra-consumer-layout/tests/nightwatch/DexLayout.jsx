@@ -129,6 +129,16 @@ const data = {
       target: '_blank',
     },
   ],
+  alerts: {
+    alertList: [{
+      messageID: '001',
+      messageText: 'This is a test' },
+    {
+      messageID: 'null',
+      messageText: 'This is a test -null' },
+    ],
+    handleDismiss: () => {},
+  },
 };
 
 export default () => (

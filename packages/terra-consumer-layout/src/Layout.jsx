@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Alert from 'terra-alert';
+//import Cookies from 'js-cookie';
 import classNames from 'classnames/bind';
 import Nav from 'terra-consumer-nav';
 import ResponsiveElement from 'terra-responsive-element';
@@ -18,6 +20,14 @@ const propTypes = {
   * Array of links to show for the content of the help button
   */
   helpItems: PropTypes.array,
+  alerts: PropTypes.shape({
+    alertList: PropTypes.arrayOf(
+      PropTypes.shape({
+        messageID: PropTypes.string,
+        messageText: PropTypes.string }).isRequired,
+      ),
+    handleDismiss: PropTypes.func,
+  }),
   /**
    * Injected react-intl formatting api
    */
@@ -41,9 +51,19 @@ class Layout extends React.Component {
       isMobileNavOpen: !this.state.isMobileNavOpen,
     });
   }
+  // handleAlertDismiss(messageID) {
+  //   return () => {
+  //     Cookies.set(`DEX-Alert-${messageID}`, 'dismissed', { expires: 1825 });
+  //     this.setState(prevState => Object.assign(
+  //       {},
+  //       prevState,
+  //       { alerts: prevState.alerts.filter(alert => (alert.id !== messageID)) },
+  //     ));
+  //   };
+  // }
 
   render() {
-    const { nav, helpItems, intl, ...customProps } = this.props;
+    const { nav, helpItems, intl, alerts, ...customProps } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}
@@ -68,6 +88,17 @@ class Layout extends React.Component {
             />
           </nav>
           <main id="main-container" className={cx('main-container')}>
+            {alerts.alertList.map(
+              alert => (
+                <Alert
+                  key={`alert-${alert.messageID}`}
+                  type={Alert.Opts.Types.WARNING}
+                  onDismiss={alerts.handleDismiss}
+                >
+                  {alert.messageText}
+                </Alert>
+              ),
+            )}
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burger')}>
