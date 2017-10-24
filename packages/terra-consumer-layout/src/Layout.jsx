@@ -19,16 +19,15 @@ const propTypes = {
   * Array of links to show for the content of the help button
   */
   helpItems: PropTypes.array,
-  alerts: PropTypes.shape({
-    alertList: PropTypes.arrayOf(
+  /**
+  * Alert banner
+  */
+  siteAlert: PropTypes.arrayOf(
       PropTypes.shape({
-        messageID: PropTypes.string,
-        messageText: PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.element]),
+        alertId: PropTypes.string,
+        alertMessage: PropTypes.node,
+        handleDismiss: PropTypes.func,
       }).isRequired),
-    handleDismiss: PropTypes.func,
-  }),
   /**
    * Injected react-intl formatting api
    */
@@ -53,7 +52,7 @@ class Layout extends React.Component {
     });
   }
   render() {
-    const { nav, helpItems, intl, alerts, ...customProps } = this.props;
+    const { nav, helpItems, intl, siteAlert, ...customProps } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}
@@ -78,14 +77,14 @@ class Layout extends React.Component {
             />
           </nav>
           <main id="main-container" className={cx('main-container')}>
-            {alerts.alertList.map(
+            {siteAlert.map(
               alert => (
                 <Alert
-                  key={`alert-${alert.messageID}`}
+                  key={`alert-${alert.alertId}`}
                   type={Alert.Opts.Types.WARNING}
-                  onDismiss={alerts.handleDismiss}
+                  onDismiss={alert.handleDismiss}
                 >
-                  {alert.messageText}
+                  {alert.alertMessage}
                 </Alert>
               ),
             )}

@@ -129,16 +129,17 @@ const data = {
       target: '_blank',
     },
   ],
-  alerts: {
-    alertList: [{
-      messageID: '001',
-      messageText: 'Alert Banner text' },
+  // alertBanner
+  siteAlert: [
     {
-      messageID: 'null',
-      messageText: <a href="">Link text </a> },
-    ],
-    handleDismiss: () => {},
-  },
+      alertId: '001',
+      alertMessage: 'Alert Banner text',
+      handleDismiss: () => {} },
+    {
+      alertId: 'null',
+      alertMessage: <a href="">Link text </a>,
+      handleDismiss: () => {} },
+  ],
 };
 
 export default () => (
