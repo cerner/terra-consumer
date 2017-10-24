@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Alert from 'terra-alert';
-//import Cookies from 'js-cookie';
 import classNames from 'classnames/bind';
 import Nav from 'terra-consumer-nav';
 import ResponsiveElement from 'terra-responsive-element';
@@ -24,8 +23,10 @@ const propTypes = {
     alertList: PropTypes.arrayOf(
       PropTypes.shape({
         messageID: PropTypes.string,
-        messageText: PropTypes.string }).isRequired,
-      ),
+        messageText: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.element]),
+      }).isRequired),
     handleDismiss: PropTypes.func,
   }),
   /**
@@ -51,17 +52,6 @@ class Layout extends React.Component {
       isMobileNavOpen: !this.state.isMobileNavOpen,
     });
   }
-  // handleAlertDismiss(messageID) {
-  //   return () => {
-  //     Cookies.set(`DEX-Alert-${messageID}`, 'dismissed', { expires: 1825 });
-  //     this.setState(prevState => Object.assign(
-  //       {},
-  //       prevState,
-  //       { alerts: prevState.alerts.filter(alert => (alert.id !== messageID)) },
-  //     ));
-  //   };
-  // }
-
   render() {
     const { nav, helpItems, intl, alerts, ...customProps } = this.props;
     const overlay = (

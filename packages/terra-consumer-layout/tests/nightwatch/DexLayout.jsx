@@ -132,10 +132,10 @@ const data = {
   alerts: {
     alertList: [{
       messageID: '001',
-      messageText: 'This is a test' },
+      messageText: 'Alert Banner text' },
     {
       messageID: 'null',
-      messageText: 'This is a test -null' },
+      messageText: <a href="">Link text </a> },
     ],
     handleDismiss: () => {},
   },
