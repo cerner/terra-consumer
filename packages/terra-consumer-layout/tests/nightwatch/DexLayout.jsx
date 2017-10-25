@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import Alert from 'terra-alert';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Layout from '../../src/Layout';
 import AppShellExample from './AppShellExample';
@@ -129,29 +130,50 @@ const data = {
       target: '_blank',
     },
   ],
-  // alertBanner
-  siteAlert: [
-    {
-      alertId: '001',
-      alertMessage: 'Alert Banner text',
-      handleDismiss: () => {} },
-    {
-      alertId: 'null',
-      alertMessage: <a href="">Link text </a>,
-      handleDismiss: () => {} },
-  ],
 };
 
-export default () => (
-  <main className="dex-theme">
-    <AppShellExample useRouter>
-      <Layout {...data}>
-        <Route exact path="/" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
-        <Route exact path="/inbox" render={() => <h1>You have millions of unread messages</h1>} />
-        <Route exact path="/sent" render={() => <h1>Opps, it is empty</h1>} />
-        <Route exact path="/health" render={() => <h1>Game</h1>} />
-        <Route exact path="/record" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
-      </Layout>
-    </AppShellExample>
-  </main>
-);
+export default class DexLayout extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      alerts: ['001', '002'],
+    };
+
+    this.generateAlerts = this.generateAlerts.bind(this);
+    this.dismissAlert = this.dismissAlert.bind(this);
+  }
+
+  generateAlerts() {
+    const alertList = [];
+    this.state.alerts.map((alert) => {
+      alertList.push(
+        <Alert key={alert} onDismiss={() => { this.dismissAlert(alert); }} >
+          This is a test.
+        </Alert>);
+      return null;
+    });
+    return alertList;
+  }
+
+  dismissAlert(alertId) {
+    this.setState(prevState => ({
+      alerts: prevState.alerts.filter(alert => alert !== alertId),
+    }));
+  }
+
+  render() {
+    return (
+      <main className="dex-theme">
+        <AppShellExample useRouter>
+          <Layout {...data} siteAlert={<div>{this.generateAlerts()}</div>}>
+            <Route exact path="/" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
+            <Route exact path="/inbox" render={() => <h1>You have millions of unread messages</h1>} />
+            <Route exact path="/sent" render={() => <h1>Opps, it is empty</h1>} />
+            <Route exact path="/health" render={() => <h1>Game</h1>} />
+            <Route exact path="/record" render={() => <h1 style={{ color: 'white' }}>of Thrones more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content more content</h1>} />
+          </Layout>
+        </AppShellExample>
+      </main>
+    );
+  }
+}

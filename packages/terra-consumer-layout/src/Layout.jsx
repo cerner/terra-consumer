@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Alert from 'terra-alert';
 import classNames from 'classnames/bind';
 import Nav from 'terra-consumer-nav';
 import ResponsiveElement from 'terra-responsive-element';
@@ -22,12 +21,7 @@ const propTypes = {
   /**
   * Alert banner
   */
-  siteAlert: PropTypes.arrayOf(
-      PropTypes.shape({
-        alertId: PropTypes.string,
-        alertMessage: PropTypes.node,
-        handleDismiss: PropTypes.func,
-      }).isRequired),
+  siteAlert: PropTypes.element,
   /**
    * Injected react-intl formatting api
    */
@@ -77,17 +71,7 @@ class Layout extends React.Component {
             />
           </nav>
           <main id="main-container" className={cx('main-container')}>
-            {siteAlert.map(
-              alert => (
-                <Alert
-                  key={`alert-${alert.alertId}`}
-                  type={Alert.Opts.Types.WARNING}
-                  onDismiss={alert.handleDismiss}
-                >
-                  {alert.alertMessage}
-                </Alert>
-              ),
-            )}
+            {siteAlert}
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burger')}>
