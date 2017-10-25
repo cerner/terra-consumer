@@ -145,12 +145,11 @@ export default class DexLayout extends React.Component {
 
   generateAlerts() {
     const alertList = [];
-    this.state.alerts.map((alert) => {
+    this.state.alerts.forEach((alert) => {
       alertList.push(
         <Alert key={alert} onDismiss={() => { this.dismissAlert(alert); }} >
           This is a test.
         </Alert>);
-      return null;
     });
     return alertList;
   }
