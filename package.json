@@ -36,9 +36,6 @@
       "\\.(css|scss)$": "identity-obj-proxy"
     }
   },
-  "devDependencies": {
-    "terra-alert": "^1.9.1"
-  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "npm run compile && npm run start",
