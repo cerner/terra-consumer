@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Alert from 'terra-alert';
