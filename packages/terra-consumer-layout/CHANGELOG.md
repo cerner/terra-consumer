@@ -1,5 +1,12 @@
 ChangeLog
 
+# 0.1.7 - (October 27, 2017)
+
+### Changed
+- Make font-family a custom property
+
+-----------------
+
 # 0.1.6 - (October 10, 2017)
 
 ### Changed
