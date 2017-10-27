@@ -3,10 +3,10 @@ ChangeLog
 # 0.1.7 - (October 26, 2017)
 
 ### Changed
-- Updating layout component to include terra-alert component
-- Updating DexLayout to include site alert example
-- terra-alert component used for site alert
 
+- Prod:Updating layout component to include terra-alert component
+- Tests: - terra-alert component used for site alert
+         - Updating DexLayout to include site alert example
 -----------------
 
 # 0.1.6 - (October 10, 2017)

@@ -62,6 +62,7 @@ class Layout extends React.Component {
           <a className={cx('skip-to-main-content')} href="#main-container" id="skip-maincontent-link">
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
+          {siteAlert}
         </div>
         <div {...customProps} className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)}>
           <nav className={cx('nav')}>
@@ -71,7 +72,6 @@ class Layout extends React.Component {
             />
           </nav>
           <main id="main-container" className={cx('main-container')}>
-            {siteAlert}
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burger')}>
