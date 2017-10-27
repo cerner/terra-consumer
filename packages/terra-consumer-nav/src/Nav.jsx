@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import TerraPopup from 'terra-popup';
-import PopupHeights from 'terra-popup/lib/_PopupHeights';
+import PopupHeights from 'terra-popup/lib/PopupHeights';
 import ResponsiveElement from 'terra-responsive-element';
 import NavItems from './components/nav-items/NavItems';
 import Modal from './components/modal/Modal';

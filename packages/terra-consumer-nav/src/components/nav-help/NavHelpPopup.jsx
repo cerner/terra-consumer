@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PopupHeights from 'terra-popup/lib/_PopupHeights';
+import PopupHeights from 'terra-popup/lib/PopupHeights';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
