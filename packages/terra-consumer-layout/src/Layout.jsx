@@ -21,10 +21,10 @@ const propTypes = {
   /**
    * A center justified logo in header for mobile.
    */
-  mobileLogo: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.element,
-  ]),
+  mobileLogo: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    altText: PropTypes.string.isRequired,
+  }),
   /**
    * Injected react-intl formatting api
    */
@@ -79,7 +79,11 @@ class Layout extends React.Component {
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burgerbar')}>
                 <Nav.Burger handleClick={this.toggleNav} />
-                {mobileLogo && <div className={cx('mobile-logo')}>{mobileLogo}</div>}
+                {mobileLogo &&
+                  <div className={cx('mobile-logo')}>
+                    <img src={mobileLogo.url} alt={mobileLogo.altText} />
+                  </div>
+                }
               </div>
               <div className={cx('main-content')}>{this.props.children}</div>
               <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />

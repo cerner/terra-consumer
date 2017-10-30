@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Layout from '../../src/Layout';
 import AppShellExample from './AppShellExample';
-import Logo from './Logo';
 import './DexH@CTheme.scss';
 
 const data = {
@@ -131,7 +130,10 @@ const data = {
     },
   ],
 
-  mobileLogo: <Logo />,
+  mobileLogo: {
+    url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
+    altText: 'Placeholder logo',
+  },
 };
 
 export default () => (
