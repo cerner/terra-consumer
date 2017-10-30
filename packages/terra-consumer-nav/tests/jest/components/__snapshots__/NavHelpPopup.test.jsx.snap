@@ -2,6 +2,7 @@
 
 exports[`Popup should render a pop with title,close button and content 1`] = `
 <Popup
+  attachmentBehavior="auto"
   boundingRef={null}
   classNameArrow={null}
   classNameContent={null}
@@ -10,6 +11,7 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
   contentHeight="160"
   contentWidth="320"
   isArrowDisplayed={false}
+  isContentFocusDisabled={false}
   isHeaderDisabled={true}
   isOpen={false}
   onRequestClose={[Function]}
@@ -51,6 +53,7 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
 
 exports[`Popup should render a popup without header(title & close button) 1`] = `
 <Popup
+  attachmentBehavior="auto"
   boundingRef={null}
   classNameArrow={null}
   classNameContent={null}
@@ -59,6 +62,7 @@ exports[`Popup should render a popup without header(title & close button) 1`] = 
   contentHeight="160"
   contentWidth="320"
   isArrowDisplayed={false}
+  isContentFocusDisabled={false}
   isHeaderDisabled={true}
   isOpen={false}
   onRequestClose={[Function]}
