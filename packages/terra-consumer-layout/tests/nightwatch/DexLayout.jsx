@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import Layout from '../../src/Layout';
 import AppShellExample from './AppShellExample';
+import Logo from './Logo';
 import './DexH@CTheme.scss';
 
 const data = {
@@ -129,6 +130,8 @@ const data = {
       target: '_blank',
     },
   ],
+
+  mobileLogo: <Logo />,
 };
 
 export default () => (

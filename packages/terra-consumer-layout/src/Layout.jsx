@@ -19,6 +19,13 @@ const propTypes = {
   */
   helpItems: PropTypes.array,
   /**
+   * A center justified logo in header for mobile.
+   */
+  mobileLogo: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.element,
+  ]),
+  /**
    * Injected react-intl formatting api
    */
   intl: intlShape.isRequired,
@@ -43,7 +50,7 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { nav, helpItems, intl, ...customProps } = this.props;
+    const { nav, helpItems, mobileLogo, intl, ...customProps } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}
@@ -70,8 +77,9 @@ class Layout extends React.Component {
           <main id="main-container" className={cx('main-container')}>
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <div className={cx('main-container-inner')}>
-              <div className={cx('nav-burger')}>
+              <div className={cx('nav-burgerbar')}>
                 <Nav.Burger handleClick={this.toggleNav} />
+                {mobileLogo && <div className={cx('mobile-logo')}>{mobileLogo}</div>}
               </div>
               <div className={cx('main-content')}>{this.props.children}</div>
               <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
