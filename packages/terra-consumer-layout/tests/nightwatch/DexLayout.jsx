@@ -137,7 +137,7 @@ export default class DexLayout extends React.Component {
   constructor() {
     super();
     this.state = {
-      alerts: ['001','002'],
+      alerts: ['001', '002'],
     };
 
     this.generateAlerts = this.generateAlerts.bind(this);
