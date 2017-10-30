@@ -1,10 +1,7 @@
 ChangeLog
 
 # 0.2.6 - (October 27, 2017)
-
-### Changed
-- Fixed lint errors in Travis build.
-- Changed path while importing 'PopupHeights' because 1.12.0 version of terra-popup got installed.
+- Upgrade and fix pop up dependency
 
 ------------------
 

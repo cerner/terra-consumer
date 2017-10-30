@@ -137,7 +137,7 @@ export default class DexLayout extends React.Component {
   constructor() {
     super();
     this.state = {
-      alerts: ['001', '002'],
+      alerts: ['001'],
     };
 
     this.generateAlerts = this.generateAlerts.bind(this);
@@ -146,9 +146,9 @@ export default class DexLayout extends React.Component {
 
   generateAlerts() {
     return this.state.alerts.map(alert =>
-      <div style={{ marginBottom: 4 }}>
+      <div>
         <Alert key={alert} type={Alert.Opts.Types.ERROR} onDismiss={() => { this.dismissAlert(alert); }} >
-          <div style={{ textAlign: 'left' }}>Alert Banner Text</div>
+          <div>Alert Banner Text</div>
         </Alert>
       </div>,
     );

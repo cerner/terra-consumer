@@ -1,17 +1,13 @@
 ChangeLog
 
 
-# 0.1.8 - (October 27, 2017)
+# 0.1.7 - (October 27, 2017)
 
 ### Changed
 
 - Updating layout component to include a react element (siteAlert)
 - Tests: - terra-alert component used for site alert
          - Updating DexLayout to include site alert example
------------------
-# 0.1.7 - (October 27, 2017)
-- Upgrade and fix pop up dependency
-
 -----------------
 
 # 0.1.6 - (October 10, 2017)
