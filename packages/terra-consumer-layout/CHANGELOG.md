@@ -4,7 +4,7 @@ ChangeLog
 
 ### Changed
 
-- Prod:Updating layout component to include terra-alert component
+- Updating layout component to include a react element (siteAlert)
 - Tests: - terra-alert component used for site alert
          - Updating DexLayout to include site alert example
 -----------------
