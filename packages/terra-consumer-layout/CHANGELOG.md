@@ -1,5 +1,8 @@
 ChangeLog
 
+# 0.1.7 - (October 27, 2017)
+- Upgrade and fix pop up dependency
+
 # 0.1.6 - (October 10, 2017)
 
 ### Changed

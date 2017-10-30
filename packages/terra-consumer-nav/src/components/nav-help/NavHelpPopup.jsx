@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PopupHeights from 'terra-popup/lib/_PopupHeights';
 import classNames from 'classnames/bind';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
-import TerraPopup from 'terra-popup';
+import Popup from 'terra-popup';
 import SafeHtml from '../safe-html/SafeHtml';
 import styles from './NavHelpPopup.scss';
 
@@ -66,7 +65,7 @@ const NavHelpPopup = ({
   );
 
   return (
-    <TerraPopup
+    <Popup
       {...customProps}
       isOpen={isOpen}
       onRequestClose={closePopup}
@@ -74,7 +73,7 @@ const NavHelpPopup = ({
       // remove one from the numberOfLinks so we never leave a giant gap at the bottom. Rather part of the last one should show
       // so the user knows they can scroll
       // 58 is how many px tall our list items are, then add 50px for the header
-      contentHeight={Object.keys(PopupHeights).find(size => size > 120 && size > (((rowCount - 1) * 58) + 50))}
+      contentHeight={Object.keys(Popup.Opts.heights).find(size => size > 120 && size > (((rowCount - 1) * 58) + 50))}
     >
       <div>
         {popupHeader}
@@ -82,7 +81,7 @@ const NavHelpPopup = ({
           {popupContent}
         </div>
       </div>
-    </TerraPopup>
+    </Popup>
   );
 };
 
