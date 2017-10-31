@@ -1,7 +1,10 @@
 ChangeLog
 
-# 0.1.7 - (October 27, 2017)
+# 0.2.0 - (October 31, 2017)
 - Upgrade and fix pop up dependency
+- Add capability for center justified logo showing up in mobile viewports.
+
+------------------
 
 # 0.1.6 - (October 10, 2017)
 
