@@ -111,17 +111,17 @@
       position: relative;
       right: 13px;
       z-index: 1;
+    }
+  }
 
-      .mobile-logo {
-        display: flex;
-        justify-content: center;
-        width: 100%;
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 
-        img {
-          max-height: 35px;
-          max-width: 150px;
-        }
-      }
+    img {
+      max-height: 35px;
+      max-width: 150px;
     }
   }
 
