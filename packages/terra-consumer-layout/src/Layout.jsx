@@ -19,9 +19,24 @@ const propTypes = {
   */
   helpItems: PropTypes.array,
   /**
+
   * Alert banner
   */
   siteAlert: PropTypes.element,
+
+   * A center justified logo in header for mobile.
+   */
+  logo: PropTypes.shape({
+    /**
+     * A center justified logo in header for mobile.
+     */
+    mobileLogo: PropTypes.shape({
+      url: PropTypes.string.isRequired,
+      altText: PropTypes.string.isRequired,
+    }),
+    navLogo: PropTypes.object,
+  }),
+
   /**
    * Injected react-intl formatting api
    */
@@ -46,7 +61,9 @@ class Layout extends React.Component {
     });
   }
   render() {
-    const { nav, helpItems, intl, siteAlert, ...customProps } = this.props;
+
+    const { nav, helpItems, logo, siteAlert, intl, ...customProps } = this.props;
+
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}
@@ -55,6 +72,11 @@ class Layout extends React.Component {
         isRelativeToContainer
       />
     );
+
+    let navConfig = nav;
+    if (logo && logo.navLogo) {
+      navConfig = Object.assign({}, nav, { logo: logo.navLogo });
+    }
 
     return (
       <div className={cx('wrap')}>
@@ -69,15 +91,20 @@ class Layout extends React.Component {
         <div {...customProps} className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)}>
           <nav className={cx('nav')}>
             <Nav
-              {...nav}
+              {...navConfig}
               onRequestClose={this.toggleNav}
             />
           </nav>
           <main id="main-container" className={cx('main-container')}>
             <ResponsiveElement defaultElement={overlay} responsiveTo="window" medium={<div />} />
             <div className={cx('main-container-inner')}>
-              <div className={cx('nav-burger')}>
+              <div className={cx('nav-burgerbar')}>
                 <Nav.Burger handleClick={this.toggleNav} />
+                {logo && logo.mobileLogo &&
+                  <div className={cx('mobile-logo')}>
+                    <img src={logo.mobileLogo.url} alt={logo.mobileLogo.altText} />
+                  </div>
+                }
               </div>
               <div className={cx('main-content')}>{this.props.children}</div>
               <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
