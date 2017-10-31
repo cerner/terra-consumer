@@ -80,11 +80,6 @@ const data = {
         target: '_blank',
       },
     ],
-    logo: {
-      url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
-      altText: 'Placeholder logo',
-      isCard: false,
-    },
     profile: {
       profileLinks: [
         {
@@ -130,9 +125,16 @@ const data = {
     },
   ],
 
-  mobileLogo: {
-    url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
-    altText: 'Placeholder logo',
+  logo: {
+    mobileLogo: {
+      url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
+      altText: 'Placeholder logo',
+    },
+    navLogo: {
+      url: 'https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/Olympic-logo.png',
+      altText: 'Placeholder logo',
+      isCard: false,
+    },
   },
 };
 
