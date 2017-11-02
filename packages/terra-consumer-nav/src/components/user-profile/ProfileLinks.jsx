@@ -64,7 +64,7 @@ class ProfileLinks extends React.Component {
                 fitEnd={<div>{toggleIcon}</div>}
               />
             </button>
-            <Toggler isOpen={isOpen} isAnimated className={cx('toggler')}>
+            <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler')}>
               {linkItem.subItems.map(subItem => (<ProfileLink key={subItem.text} {...subItem} handleClick={handleClick} />))}
             </Toggler>
           </div>

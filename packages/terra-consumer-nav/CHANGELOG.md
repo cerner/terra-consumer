@@ -3,6 +3,7 @@ ChangeLog
 
 ### Changed
 - Fixed border on mobile navigation
+- Used auto height popup
 
 ------------------
 
