@@ -1,5 +1,10 @@
 ChangeLog
 
+# 0.2.2 - (November 03, 2017)
+- Fixes the nav hamburger button when there's no logo on mobile.
+
+------------------
+
 # 0.2.1 - (November 02, 2017)
 - Fixes center logo in mobile viewports.
 
