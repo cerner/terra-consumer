@@ -109,8 +109,13 @@
       font-size: 20px;
       padding-bottom: 5px;
       position: relative;
-      right: 13px;
       z-index: 1;
+    }
+
+    button {
+      position: absolute;
+      padding-left: 0;
+      padding-top: 0;
     }
   }
 
