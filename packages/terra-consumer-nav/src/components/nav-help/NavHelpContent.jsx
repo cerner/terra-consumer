@@ -58,14 +58,14 @@ class NavHelpContent extends React.Component {
             fill={<div><SafeHtml text={content.text} /></div>}
             fitEnd={<div>{toggleIcon}</div>}
           />
-        <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
+          <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
             { content.children.map(element => (
               <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
                 <span className={cx('help-subitem')}>
                   <SafeHtml text={element.text} />
                 </span>
               </p>))
-            }
+          }
           </Toggler>
         </Button>);
       } else {
