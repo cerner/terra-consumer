@@ -90,11 +90,11 @@ class Layout extends React.Component {
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burgerbar')}>
                 <Nav.Burger handleClick={this.toggleNav} />
-                {logo && logo.mobileLogo &&
-                  <div className={cx('mobile-logo')}>
+                <div className={cx('mobile-logo')}>
+                  {logo && logo.mobileLogo &&
                     <img src={logo.mobileLogo.url} alt={logo.mobileLogo.altText} />
-                  </div>
-                }
+                  }
+                </div>
               </div>
               <div className={cx('main-content')}>{this.props.children}</div>
               <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />
