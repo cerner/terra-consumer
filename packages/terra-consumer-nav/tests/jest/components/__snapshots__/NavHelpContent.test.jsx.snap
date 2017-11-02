@@ -48,7 +48,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
     />
     <Toggle
       className="toggler-padding"
-      isAnimated={true}
+      isAnimated={false}
       isOpen={false}
     >
       <p
