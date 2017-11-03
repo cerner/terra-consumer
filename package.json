@@ -56,10 +56,11 @@
     "nightwatch": "nightwatch",
     "pretest": "npm run lint",
     "props-table": "lerna run props-table",
-    "postinstall": "npm run compile && npm run bootstrap",
+    "postinstall": "npm run compile && npm run bootstrap && cd storybook && npm install",
     "publish": "check-installed-dependencies && npm run compile && npm test && npm run props-table && lerna publish",
     "start": "cd packages/terra-consumer-site && npm run start",
     "start:express": "node scripts/express/app.js",
+    "storybook": "cd storybook && npm run storybook",
     "test": "npm run jest && npm run nightwatch"
   },
   "devDependencies": {
