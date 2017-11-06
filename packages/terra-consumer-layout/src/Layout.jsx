@@ -62,10 +62,8 @@ class Layout extends React.Component {
           <a className={cx('skip-to-main-content')} href="#main-container" id="skip-maincontent-link">
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
-          <span>
-            {siteAlert}
-          </span>
         </div>
+        {siteAlert}
         <div {...customProps} className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)}>
           <nav className={cx('nav')}>
             <Nav
