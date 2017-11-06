@@ -101,16 +101,27 @@
     }
   }
 
-  .nav-burger {
+  .nav-burgerbar {
     display: none;
 
     @media screen and (max-width: $terra-medium-breakpoint - 1) {
-      display: block;
+      display: flex;
       font-size: 20px;
       padding-bottom: 5px;
       position: relative;
       right: 13px;
       z-index: 1;
+    }
+  }
+
+  .mobile-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    img {
+      max-height: 35px;
+      max-width: 150px;
     }
   }
 
