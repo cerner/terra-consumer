@@ -1,4 +1,9 @@
 ChangeLog
+# 0.2.7 - (November 2, 2017)
+### Changed
+- Fixed border on mobile navigation
+
+------------------
 
 
 # 0.2.6 - (October 31, 2017)
