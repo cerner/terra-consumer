@@ -1,7 +1,7 @@
 {
   "name": "terra-consumer-layout",
   "main": "lib/Layout.js",
-  "version": "0.1.7",
+  "version": "0.2.2",
   "description": "A re-usable layout component that puts together our navigation",
   "repository": {
     "type": "git",
