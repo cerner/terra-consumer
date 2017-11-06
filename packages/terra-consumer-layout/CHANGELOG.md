@@ -1,5 +1,20 @@
 ChangeLog
 
+# 0.2.3 - (November 06, 2017)
+
+### Changed
+
+- Updating layout component to include a react element (siteAlert)
+- Tests: - terra-alert component used for site alert
+         - Updating DexLayout to include site alert example
+         
+------------------
+
+# 0.2.2 - (November 03, 2017)
+- Fixes the nav hamburger button when there's no logo on mobile.
+
+------------------
+
 # 0.2.1 - (November 02, 2017)
 - Fixes center logo in mobile viewports.
 
@@ -9,7 +24,7 @@ ChangeLog
 - Upgrade and fix pop up dependency
 - Add capability for center justified logo showing up in mobile viewports.
 
-------------------
+-----------------
 
 # 0.1.6 - (October 10, 2017)
 

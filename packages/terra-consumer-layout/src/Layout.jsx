@@ -19,7 +19,12 @@ const propTypes = {
   */
   helpItems: PropTypes.array,
   /**
-   * A center justified logo in header for mobile.
+
+  * Alert banner
+  */
+  siteAlert: PropTypes.element,
+
+   /* A center justified logo in header for mobile.
    */
   logo: PropTypes.shape({
     /**
@@ -31,6 +36,7 @@ const propTypes = {
     }),
     navLogo: PropTypes.object,
   }),
+
   /**
    * Injected react-intl formatting api
    */
@@ -54,9 +60,8 @@ class Layout extends React.Component {
       isMobileNavOpen: !this.state.isMobileNavOpen,
     });
   }
-
   render() {
-    const { nav, helpItems, logo, intl, ...customProps } = this.props;
+    const { nav, helpItems, logo, siteAlert, intl, ...customProps } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}
@@ -78,6 +83,7 @@ class Layout extends React.Component {
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
         </div>
+        {siteAlert}
         <div {...customProps} className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)}>
           <nav className={cx('nav')}>
             <Nav
@@ -90,11 +96,11 @@ class Layout extends React.Component {
             <div className={cx('main-container-inner')}>
               <div className={cx('nav-burgerbar')}>
                 <Nav.Burger handleClick={this.toggleNav} />
-                {logo && logo.mobileLogo &&
-                  <div className={cx('mobile-logo')}>
+                <div className={cx('mobile-logo')}>
+                  {logo && logo.mobileLogo &&
                     <img src={logo.mobileLogo.url} alt={logo.mobileLogo.altText} />
-                  </div>
-                }
+                  }
+                </div>
               </div>
               <div className={cx('main-content')}>{this.props.children}</div>
               <Nav.Help className={cx('help-button')} helpNavs={helpItems} id="nav-help-button" />

@@ -1,7 +1,7 @@
 {
   "name": "terra-consumer-layout",
   "main": "lib/Layout.js",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A re-usable layout component that puts together our navigation",
   "repository": {
     "type": "git",
@@ -39,6 +39,9 @@
     "terra-icon": "^1.5.0",
     "terra-overlay": "^1.7.0",
     "terra-responsive-element": "^1.7.0"
+  },
+  "devDependencies": {
+    "terra-alert": "^1.9.1"
   },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
