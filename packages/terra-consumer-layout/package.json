@@ -40,6 +40,9 @@
     "terra-overlay": "^1.7.0",
     "terra-responsive-element": "^1.7.0"
   },
+  "devDependencies": {
+    "terra-alert": "^1.9.1"
+  },
   "scripts": {
     "compile": "npm run compile:clean && npm run compile:build",
     "compile:clean": "$(cd ..; npm bin)/rimraf lib",

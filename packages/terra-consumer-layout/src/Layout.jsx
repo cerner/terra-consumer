@@ -19,7 +19,12 @@ const propTypes = {
   */
   helpItems: PropTypes.array,
   /**
-   * A center justified logo in header for mobile.
+
+  * Alert banner
+  */
+  siteAlert: PropTypes.element,
+
+   /* A center justified logo in header for mobile.
    */
   logo: PropTypes.shape({
     /**
@@ -31,6 +36,7 @@ const propTypes = {
     }),
     navLogo: PropTypes.object,
   }),
+
   /**
    * Injected react-intl formatting api
    */
@@ -54,9 +60,8 @@ class Layout extends React.Component {
       isMobileNavOpen: !this.state.isMobileNavOpen,
     });
   }
-
   render() {
-    const { nav, helpItems, logo, intl, ...customProps } = this.props;
+    const { nav, helpItems, logo, siteAlert, intl, ...customProps } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}
@@ -78,6 +83,7 @@ class Layout extends React.Component {
             {intl.formatMessage({ id: 'Terra.Consumer.Layout.skipcontent' })}
           </a>
         </div>
+        {siteAlert}
         <div {...customProps} className={cx('layout', { open: this.state.isMobileNavOpen }, customProps.className)}>
           <nav className={cx('nav')}>
             <Nav
