@@ -3,7 +3,34 @@ ChangeLog
 # 0.2.4 - (November 07, 2017)
 
 ### Changed
-- Make font-family a custom property
+
+- Make font-family a custom property.
+
+------------------
+
+# 0.2.3 - (November 06, 2017)
+
+### Changed
+
+- Updating layout component to include a react element (siteAlert)
+- Tests: - terra-alert component used for site alert
+         - Updating DexLayout to include site alert example
+
+------------------
+
+# 0.2.2 - (November 03, 2017)
+- Fixes the nav hamburger button when there's no logo on mobile.
+
+------------------
+
+# 0.2.1 - (November 02, 2017)
+- Fixes center logo in mobile viewports.
+
+------------------
+
+# 0.2.0 - (October 31, 2017)
+- Upgrade and fix pop up dependency
+- Add capability for center justified logo showing up in mobile viewports.
 
 -----------------
 
