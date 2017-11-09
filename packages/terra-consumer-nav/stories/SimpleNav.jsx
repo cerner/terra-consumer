@@ -1,6 +1,6 @@
 import React from 'react';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
-import Nav from 'terra-consumer-nav';
+import Nav from '../src/Nav';
 
 const nav = {
   navItems: [

@@ -2,17 +2,17 @@
 /* eslint-disable */
 import React from 'react';
 import Table from 'terra-table';
-import IconColorIncentives from 'terra-consumer-icon/lib/icon/IconColorIncentives';
-import IconColorFootsteps from 'terra-consumer-icon/lib/icon/IconColorFootsteps';
-import IconColorRunning from 'terra-consumer-icon/lib/icon/IconColorRunning';
-import IconColorAward49 from 'terra-consumer-icon/lib/icon/IconColorAward49';
-import IconUiColor1CalendarGrid61 from 'terra-consumer-icon/lib/icon/IconUiColor1CalendarGrid61';
-import IconColorWeightScale from 'terra-consumer-icon/lib/icon/IconColorWeightScale';
-import IconColorPeakFlow from 'terra-consumer-icon/lib/icon/IconColorPeakFlow';
-import IconColorHeartRate from 'terra-consumer-icon/lib/icon/IconColorHeartRate';
-import IconColorBloodGlucose from 'terra-consumer-icon/lib/icon/IconColorBloodGlucose';
-import IconColorBloodPressure from 'terra-consumer-icon/lib/icon/IconColorBloodPressure';
-import IconColorPulseOximetry from 'terra-consumer-icon/lib/icon/IconColorPulseOximetry';
+import IconColorIncentives from '../src/icon/IconColorIncentives';
+import IconColorFootsteps from '../src/icon/IconColorFootsteps';
+import IconColorRunning from '../src/icon/IconColorRunning';
+import IconColorAward49 from '../src/icon/IconColorAward49';
+import IconUiColor1CalendarGrid61 from '../src/icon/IconUiColor1CalendarGrid61';
+import IconColorWeightScale from '../src/icon/IconColorWeightScale';
+import IconColorPeakFlow from '../src/icon/IconColorPeakFlow';
+import IconColorHeartRate from '../src/icon/IconColorHeartRate';
+import IconColorBloodGlucose from '../src/icon/IconColorBloodGlucose';
+import IconColorBloodPressure from '../src/icon/IconColorBloodPressure';
+import IconColorPulseOximetry from '../src/icon/IconColorPulseOximetry';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>

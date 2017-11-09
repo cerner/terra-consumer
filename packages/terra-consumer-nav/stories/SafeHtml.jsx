@@ -1,5 +1,5 @@
 import React from 'react';
-import SafeHtml from 'terra-consumer-nav/lib/components/safe-html/SafeHtml';
+import SafeHtml from '../src/components/safe-html/SafeHtml';
 
 const textWithSpecChars = '&#8235;\u0627\u0644\u0639\u0631\u0628\u064a\u0651\u0629 &#8236;';
 const textWithoutSpecChar = 'English (United States)';

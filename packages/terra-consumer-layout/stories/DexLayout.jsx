@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
-import Layout from 'terra-consumer-layout';
+import Layout from '../src/Layout';
 import './DexTheme.scss';
 
 const data = {

@@ -31,6 +31,7 @@
     "terra-toolkit": "^1.2.2"
   },
   "peerDependencies": {
+    "@storybook/react": "^3.2.14",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.1.0"

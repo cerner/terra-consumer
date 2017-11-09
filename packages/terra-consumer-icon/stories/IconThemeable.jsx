@@ -2,56 +2,56 @@
 /* eslint-disable */
 import React from 'react';
 import Table from 'terra-table';
-import IconOutlineFootsteps from 'terra-consumer-icon/lib/icon/IconOutlineFootsteps';
-import IconOutlineRunning from 'terra-consumer-icon/lib/icon/IconOutlineRunning';
-import IconOutlineDonutChart from 'terra-consumer-icon/lib/icon/IconOutlineDonutChart';
-import IconOutlineAwardRibbon from 'terra-consumer-icon/lib/icon/IconOutlineAwardRibbon';
-import IconOutlineLink from 'terra-consumer-icon/lib/icon/IconOutlineLink';
-import IconOutlineCalendarDays from 'terra-consumer-icon/lib/icon/IconOutlineCalendarDays';
-import IconOutlineVitalsCircle from 'terra-consumer-icon/lib/icon/IconOutlineVitalsCircle';
-import IconOutlineWeightScale from 'terra-consumer-icon/lib/icon/IconOutlineWeightScale';
-import IconOutlineNav from 'terra-consumer-icon/lib/icon/IconOutlineNav';
-import IconOutlineCog from 'terra-consumer-icon/lib/icon/IconOutlineCog';
-import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
-import IconChatBubble from 'terra-consumer-icon/lib/icon/IconChatBubble';
-import IconOutlineUserEdit from 'terra-consumer-icon/lib/icon/IconOutlineUserEdit';
-import IconOutlineUserLock from 'terra-consumer-icon/lib/icon/IconOutlineUserLock';
-import IconDataSync from 'terra-consumer-icon/lib/icon/IconDataSync';
-import IconOutlineChevronRight from 'terra-consumer-icon/lib/icon/IconOutlineChevronRight';
-import IconOutlineChevronLeft from 'terra-consumer-icon/lib/icon/IconOutlineChevronLeft';
-import IconOutlineChevronDown from 'terra-consumer-icon/lib/icon/IconOutlineChevronDown';
-import IconOutlineChevronUp from 'terra-consumer-icon/lib/icon/IconOutlineChevronUp';
-import IconOutlineAdd from 'terra-consumer-icon/lib/icon/IconOutlineAdd';
-import IconOutlineCheck from 'terra-consumer-icon/lib/icon/IconOutlineCheck';
-import IconOutlineInformation from 'terra-consumer-icon/lib/icon/IconOutlineInformation';
-import IconOutlineSuccess from 'terra-consumer-icon/lib/icon/IconOutlineSuccess';
-import IconOutlineWarning from 'terra-consumer-icon/lib/icon/IconOutlineWarning';
-import IconOutlineError from 'terra-consumer-icon/lib/icon/IconOutlineError';
-import IconOutlineFilter from 'terra-consumer-icon/lib/icon/IconOutlineFilter';
-import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
-import IconOutlineLocationPin from 'terra-consumer-icon/lib/icon/IconOutlineLocationPin';
-import IconOutlineFingerprint from 'terra-consumer-icon/lib/icon/IconOutlineFingerprint';
-import IconOutlineEyeglasses from 'terra-consumer-icon/lib/icon/IconOutlineEyeglasses';
-import IconOutlineHeartBeat from 'terra-consumer-icon/lib/icon/IconOutlineHeartBeat';
-import IconOutlineNeedle from 'terra-consumer-icon/lib/icon/IconOutlineNeedle';
-import IconOutlineApple from 'terra-consumer-icon/lib/icon/IconOutlineApple';
-import IconOutlineRunningShoe from 'terra-consumer-icon/lib/icon/IconOutlineRunningShoe';
-import IconOutlineMeditation from 'terra-consumer-icon/lib/icon/IconOutlineMeditation';
-import IconOutlineLifesaver from 'terra-consumer-icon/lib/icon/IconOutlineLifesaver';
-import IconOutlineCigarette from 'terra-consumer-icon/lib/icon/IconOutlineCigarette';
-import IconOutlineMartini from 'terra-consumer-icon/lib/icon/IconOutlineMartini';
-import IconOutlineGrowth from 'terra-consumer-icon/lib/icon/IconOutlineGrowth';
-import IconOutlineProductivity from 'terra-consumer-icon/lib/icon/IconOutlineProductivity';
-import IconOutlineUsersHouse from 'terra-consumer-icon/lib/icon/IconOutlineUsersHouse';
-import IconOutlineCertificate from 'terra-consumer-icon/lib/icon/IconOutlineCertificate';
-import IconOutlineSquareHeartRate from 'terra-consumer-icon/lib/icon/IconOutlineSquareHeartRate';
-import IconOutlineIncentives from 'terra-consumer-icon/lib/icon/IconOutlineIncentives';
-import IconOutlineNoData from 'terra-consumer-icon/lib/icon/IconOutlineNoData';
-import IconOutlineNoMatchingResults from 'terra-consumer-icon/lib/icon/IconOutlineNoMatchingResults';
-import IconOutlineNotAuthorized from 'terra-consumer-icon/lib/icon/IconOutlineNotAuthorized';
-import IconOutlineSensitiveData from 'terra-consumer-icon/lib/icon/IconOutlineSensitiveData';
-import IconOutlineErrorPage from 'terra-consumer-icon/lib/icon/IconOutlineErrorPage';
-import IconOutlineUserCircle from 'terra-consumer-icon/lib/icon/IconOutlineUserCircle';
+import IconOutlineFootsteps from '../src/icon/IconOutlineFootsteps';
+import IconOutlineRunning from '../src/icon/IconOutlineRunning';
+import IconOutlineDonutChart from '../src/icon/IconOutlineDonutChart';
+import IconOutlineAwardRibbon from '../src/icon/IconOutlineAwardRibbon';
+import IconOutlineLink from '../src/icon/IconOutlineLink';
+import IconOutlineCalendarDays from '../src/icon/IconOutlineCalendarDays';
+import IconOutlineVitalsCircle from '../src/icon/IconOutlineVitalsCircle';
+import IconOutlineWeightScale from '../src/icon/IconOutlineWeightScale';
+import IconOutlineNav from '../src/icon/IconOutlineNav';
+import IconOutlineCog from '../src/icon/IconOutlineCog';
+import IconOutlineQuestionMark from '../src/icon/IconOutlineQuestionMark';
+import IconChatBubble from '../src/icon/IconChatBubble';
+import IconOutlineUserEdit from '../src/icon/IconOutlineUserEdit';
+import IconOutlineUserLock from '../src/icon/IconOutlineUserLock';
+import IconDataSync from '../src/icon/IconDataSync';
+import IconOutlineChevronRight from '../src/icon/IconOutlineChevronRight';
+import IconOutlineChevronLeft from '../src/icon/IconOutlineChevronLeft';
+import IconOutlineChevronDown from '../src/icon/IconOutlineChevronDown';
+import IconOutlineChevronUp from '../src/icon/IconOutlineChevronUp';
+import IconOutlineAdd from '../src/icon/IconOutlineAdd';
+import IconOutlineCheck from '../src/icon/IconOutlineCheck';
+import IconOutlineInformation from '../src/icon/IconOutlineInformation';
+import IconOutlineSuccess from '../src/icon/IconOutlineSuccess';
+import IconOutlineWarning from '../src/icon/IconOutlineWarning';
+import IconOutlineError from '../src/icon/IconOutlineError';
+import IconOutlineFilter from '../src/icon/IconOutlineFilter';
+import IconOutlineCalendarSimple from '../src/icon/IconOutlineCalendarSimple';
+import IconOutlineLocationPin from '../src/icon/IconOutlineLocationPin';
+import IconOutlineFingerprint from '../src/icon/IconOutlineFingerprint';
+import IconOutlineEyeglasses from '../src/icon/IconOutlineEyeglasses';
+import IconOutlineHeartBeat from '../src/icon/IconOutlineHeartBeat';
+import IconOutlineNeedle from '../src/icon/IconOutlineNeedle';
+import IconOutlineApple from '../src/icon/IconOutlineApple';
+import IconOutlineRunningShoe from '../src/icon/IconOutlineRunningShoe';
+import IconOutlineMeditation from '../src/icon/IconOutlineMeditation';
+import IconOutlineLifesaver from '../src/icon/IconOutlineLifesaver';
+import IconOutlineCigarette from '../src/icon/IconOutlineCigarette';
+import IconOutlineMartini from '../src/icon/IconOutlineMartini';
+import IconOutlineGrowth from '../src/icon/IconOutlineGrowth';
+import IconOutlineProductivity from '../src/icon/IconOutlineProductivity';
+import IconOutlineUsersHouse from '../src/icon/IconOutlineUsersHouse';
+import IconOutlineCertificate from '../src/icon/IconOutlineCertificate';
+import IconOutlineSquareHeartRate from '../src/icon/IconOutlineSquareHeartRate';
+import IconOutlineIncentives from '../src/icon/IconOutlineIncentives';
+import IconOutlineNoData from '../src/icon/IconOutlineNoData';
+import IconOutlineNoMatchingResults from '../src/icon/IconOutlineNoMatchingResults';
+import IconOutlineNotAuthorized from '../src/icon/IconOutlineNotAuthorized';
+import IconOutlineSensitiveData from '../src/icon/IconOutlineSensitiveData';
+import IconOutlineErrorPage from '../src/icon/IconOutlineErrorPage';
+import IconOutlineUserCircle from '../src/icon/IconOutlineUserCircle';
 const IconAll = () => (
   <div>  <Table isStriped={false} >
     <Table.Header>
@@ -64,350 +64,350 @@ const IconAll = () => (
         <td><IconOutlineFootsteps height='2em' width='2em' /></td>
         <td>outline-footsteps</td>
         <td>
-          import IconOutlineFootsteps from 'terra-consumer-icon/lib/icon/IconOutlineFootsteps';
+          import IconOutlineFootsteps from '../src/icon/IconOutlineFootsteps';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineRunning height='2em' width='2em' /></td>
         <td>outline-running</td>
         <td>
-          import IconOutlineRunning from 'terra-consumer-icon/lib/icon/IconOutlineRunning';
+          import IconOutlineRunning from '../src/icon/IconOutlineRunning';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineDonutChart height='2em' width='2em' /></td>
         <td>outline-donut-chart</td>
         <td>
-          import IconOutlineDonutChart from 'terra-consumer-icon/lib/icon/IconOutlineDonutChart';
+          import IconOutlineDonutChart from '../src/icon/IconOutlineDonutChart';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineAwardRibbon height='2em' width='2em' /></td>
         <td>outline-award-ribbon</td>
         <td>
-          import IconOutlineAwardRibbon from 'terra-consumer-icon/lib/icon/IconOutlineAwardRibbon';
+          import IconOutlineAwardRibbon from '../src/icon/IconOutlineAwardRibbon';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineLink height='2em' width='2em' /></td>
         <td>outline-link</td>
         <td>
-          import IconOutlineLink from 'terra-consumer-icon/lib/icon/IconOutlineLink';
+          import IconOutlineLink from '../src/icon/IconOutlineLink';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineCalendarDays height='2em' width='2em' /></td>
         <td>outline-calendar-days</td>
         <td>
-          import IconOutlineCalendarDays from 'terra-consumer-icon/lib/icon/IconOutlineCalendarDays';
+          import IconOutlineCalendarDays from '../src/icon/IconOutlineCalendarDays';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineVitalsCircle height='2em' width='2em' /></td>
         <td>outline-vitals-circle</td>
         <td>
-          import IconOutlineVitalsCircle from 'terra-consumer-icon/lib/icon/IconOutlineVitalsCircle';
+          import IconOutlineVitalsCircle from '../src/icon/IconOutlineVitalsCircle';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineWeightScale height='2em' width='2em' /></td>
         <td>outline-weight-scale</td>
         <td>
-          import IconOutlineWeightScale from 'terra-consumer-icon/lib/icon/IconOutlineWeightScale';
+          import IconOutlineWeightScale from '../src/icon/IconOutlineWeightScale';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineNav height='2em' width='2em' /></td>
         <td>outline-nav</td>
         <td>
-          import IconOutlineNav from 'terra-consumer-icon/lib/icon/IconOutlineNav';
+          import IconOutlineNav from '../src/icon/IconOutlineNav';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineCog height='2em' width='2em' /></td>
         <td>outline-cog</td>
         <td>
-          import IconOutlineCog from 'terra-consumer-icon/lib/icon/IconOutlineCog';
+          import IconOutlineCog from '../src/icon/IconOutlineCog';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineQuestionMark height='2em' width='2em' /></td>
         <td>outline-question-mark</td>
         <td>
-          import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
+          import IconOutlineQuestionMark from '../src/icon/IconOutlineQuestionMark';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconChatBubble height='2em' width='2em' /></td>
         <td>chat-bubble</td>
         <td>
-          import IconChatBubble from 'terra-consumer-icon/lib/icon/IconChatBubble';
+          import IconChatBubble from '../src/icon/IconChatBubble';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineUserEdit height='2em' width='2em' /></td>
         <td>outline-user-edit</td>
         <td>
-          import IconOutlineUserEdit from 'terra-consumer-icon/lib/icon/IconOutlineUserEdit';
+          import IconOutlineUserEdit from '../src/icon/IconOutlineUserEdit';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineUserLock height='2em' width='2em' /></td>
         <td>outline-user-lock</td>
         <td>
-          import IconOutlineUserLock from 'terra-consumer-icon/lib/icon/IconOutlineUserLock';
+          import IconOutlineUserLock from '../src/icon/IconOutlineUserLock';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconDataSync height='2em' width='2em' /></td>
         <td>data-sync</td>
         <td>
-          import IconDataSync from 'terra-consumer-icon/lib/icon/IconDataSync';
+          import IconDataSync from '../src/icon/IconDataSync';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineChevronRight height='2em' width='2em' /></td>
         <td>outline-chevron-right</td>
         <td>
-          import IconOutlineChevronRight from 'terra-consumer-icon/lib/icon/IconOutlineChevronRight';
+          import IconOutlineChevronRight from '../src/icon/IconOutlineChevronRight';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineChevronLeft height='2em' width='2em' /></td>
         <td>outline-chevron-left</td>
         <td>
-          import IconOutlineChevronLeft from 'terra-consumer-icon/lib/icon/IconOutlineChevronLeft';
+          import IconOutlineChevronLeft from '../src/icon/IconOutlineChevronLeft';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineChevronDown height='2em' width='2em' /></td>
         <td>outline-chevron-down</td>
         <td>
-          import IconOutlineChevronDown from 'terra-consumer-icon/lib/icon/IconOutlineChevronDown';
+          import IconOutlineChevronDown from '../src/icon/IconOutlineChevronDown';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineChevronUp height='2em' width='2em' /></td>
         <td>outline-chevron-up</td>
         <td>
-          import IconOutlineChevronUp from 'terra-consumer-icon/lib/icon/IconOutlineChevronUp';
+          import IconOutlineChevronUp from '../src/icon/IconOutlineChevronUp';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineAdd height='2em' width='2em' /></td>
         <td>outline-add</td>
         <td>
-          import IconOutlineAdd from 'terra-consumer-icon/lib/icon/IconOutlineAdd';
+          import IconOutlineAdd from '../src/icon/IconOutlineAdd';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineCheck height='2em' width='2em' /></td>
         <td>outline-check</td>
         <td>
-          import IconOutlineCheck from 'terra-consumer-icon/lib/icon/IconOutlineCheck';
+          import IconOutlineCheck from '../src/icon/IconOutlineCheck';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineInformation height='2em' width='2em' /></td>
         <td>outline-information</td>
         <td>
-          import IconOutlineInformation from 'terra-consumer-icon/lib/icon/IconOutlineInformation';
+          import IconOutlineInformation from '../src/icon/IconOutlineInformation';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineSuccess height='2em' width='2em' /></td>
         <td>outline-success</td>
         <td>
-          import IconOutlineSuccess from 'terra-consumer-icon/lib/icon/IconOutlineSuccess';
+          import IconOutlineSuccess from '../src/icon/IconOutlineSuccess';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineWarning height='2em' width='2em' /></td>
         <td>outline-warning</td>
         <td>
-          import IconOutlineWarning from 'terra-consumer-icon/lib/icon/IconOutlineWarning';
+          import IconOutlineWarning from '../src/icon/IconOutlineWarning';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineError height='2em' width='2em' /></td>
         <td>outline-error</td>
         <td>
-          import IconOutlineError from 'terra-consumer-icon/lib/icon/IconOutlineError';
+          import IconOutlineError from '../src/icon/IconOutlineError';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineFilter height='2em' width='2em' /></td>
         <td>outline-filter</td>
         <td>
-          import IconOutlineFilter from 'terra-consumer-icon/lib/icon/IconOutlineFilter';
+          import IconOutlineFilter from '../src/icon/IconOutlineFilter';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineCalendarSimple height='2em' width='2em' /></td>
         <td>outline-calendar-simple</td>
         <td>
-          import IconOutlineCalendarSimple from 'terra-consumer-icon/lib/icon/IconOutlineCalendarSimple';
+          import IconOutlineCalendarSimple from '../src/icon/IconOutlineCalendarSimple';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineLocationPin height='2em' width='2em' /></td>
         <td>outline-location-pin</td>
         <td>
-          import IconOutlineLocationPin from 'terra-consumer-icon/lib/icon/IconOutlineLocationPin';
+          import IconOutlineLocationPin from '../src/icon/IconOutlineLocationPin';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineFingerprint height='2em' width='2em' /></td>
         <td>outline-fingerprint</td>
         <td>
-          import IconOutlineFingerprint from 'terra-consumer-icon/lib/icon/IconOutlineFingerprint';
+          import IconOutlineFingerprint from '../src/icon/IconOutlineFingerprint';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineEyeglasses height='2em' width='2em' /></td>
         <td>outline-eyeglasses</td>
         <td>
-          import IconOutlineEyeglasses from 'terra-consumer-icon/lib/icon/IconOutlineEyeglasses';
+          import IconOutlineEyeglasses from '../src/icon/IconOutlineEyeglasses';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineHeartBeat height='2em' width='2em' /></td>
         <td>outline-heart-beat</td>
         <td>
-          import IconOutlineHeartBeat from 'terra-consumer-icon/lib/icon/IconOutlineHeartBeat';
+          import IconOutlineHeartBeat from '../src/icon/IconOutlineHeartBeat';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineNeedle height='2em' width='2em' /></td>
         <td>outline-needle</td>
         <td>
-          import IconOutlineNeedle from 'terra-consumer-icon/lib/icon/IconOutlineNeedle';
+          import IconOutlineNeedle from '../src/icon/IconOutlineNeedle';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineApple height='2em' width='2em' /></td>
         <td>outline-apple</td>
         <td>
-          import IconOutlineApple from 'terra-consumer-icon/lib/icon/IconOutlineApple';
+          import IconOutlineApple from '../src/icon/IconOutlineApple';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineRunningShoe height='2em' width='2em' /></td>
         <td>outline-running-shoe</td>
         <td>
-          import IconOutlineRunningShoe from 'terra-consumer-icon/lib/icon/IconOutlineRunningShoe';
+          import IconOutlineRunningShoe from '../src/icon/IconOutlineRunningShoe';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineMeditation height='2em' width='2em' /></td>
         <td>outline-meditation</td>
         <td>
-          import IconOutlineMeditation from 'terra-consumer-icon/lib/icon/IconOutlineMeditation';
+          import IconOutlineMeditation from '../src/icon/IconOutlineMeditation';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineLifesaver height='2em' width='2em' /></td>
         <td>outline-lifesaver</td>
         <td>
-          import IconOutlineLifesaver from 'terra-consumer-icon/lib/icon/IconOutlineLifesaver';
+          import IconOutlineLifesaver from '../src/icon/IconOutlineLifesaver';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineCigarette height='2em' width='2em' /></td>
         <td>outline-cigarette</td>
         <td>
-          import IconOutlineCigarette from 'terra-consumer-icon/lib/icon/IconOutlineCigarette';
+          import IconOutlineCigarette from '../src/icon/IconOutlineCigarette';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineMartini height='2em' width='2em' /></td>
         <td>outline-martini</td>
         <td>
-          import IconOutlineMartini from 'terra-consumer-icon/lib/icon/IconOutlineMartini';
+          import IconOutlineMartini from '../src/icon/IconOutlineMartini';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineGrowth height='2em' width='2em' /></td>
         <td>outline-growth</td>
         <td>
-          import IconOutlineGrowth from 'terra-consumer-icon/lib/icon/IconOutlineGrowth';
+          import IconOutlineGrowth from '../src/icon/IconOutlineGrowth';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineProductivity height='2em' width='2em' /></td>
         <td>outline-productivity</td>
         <td>
-          import IconOutlineProductivity from 'terra-consumer-icon/lib/icon/IconOutlineProductivity';
+          import IconOutlineProductivity from '../src/icon/IconOutlineProductivity';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineUsersHouse height='2em' width='2em' /></td>
         <td>outline-users-house</td>
         <td>
-          import IconOutlineUsersHouse from 'terra-consumer-icon/lib/icon/IconOutlineUsersHouse';
+          import IconOutlineUsersHouse from '../src/icon/IconOutlineUsersHouse';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineCertificate height='2em' width='2em' /></td>
         <td>outline-certificate</td>
         <td>
-          import IconOutlineCertificate from 'terra-consumer-icon/lib/icon/IconOutlineCertificate';
+          import IconOutlineCertificate from '../src/icon/IconOutlineCertificate';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineSquareHeartRate height='2em' width='2em' /></td>
         <td>outline-square-heart-rate</td>
         <td>
-          import IconOutlineSquareHeartRate from 'terra-consumer-icon/lib/icon/IconOutlineSquareHeartRate';
+          import IconOutlineSquareHeartRate from '../src/icon/IconOutlineSquareHeartRate';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineIncentives height='2em' width='2em' /></td>
         <td>outline-incentives</td>
         <td>
-          import IconOutlineIncentives from 'terra-consumer-icon/lib/icon/IconOutlineIncentives';
+          import IconOutlineIncentives from '../src/icon/IconOutlineIncentives';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineNoData height='2em' width='2em' /></td>
         <td>outline-no-data</td>
         <td>
-          import IconOutlineNoData from 'terra-consumer-icon/lib/icon/IconOutlineNoData';
+          import IconOutlineNoData from '../src/icon/IconOutlineNoData';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineNoMatchingResults height='2em' width='2em' /></td>
         <td>outline-no-matching-results</td>
         <td>
-          import IconOutlineNoMatchingResults from 'terra-consumer-icon/lib/icon/IconOutlineNoMatchingResults';
+          import IconOutlineNoMatchingResults from '../src/icon/IconOutlineNoMatchingResults';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineNotAuthorized height='2em' width='2em' /></td>
         <td>outline-not-authorized</td>
         <td>
-          import IconOutlineNotAuthorized from 'terra-consumer-icon/lib/icon/IconOutlineNotAuthorized';
+          import IconOutlineNotAuthorized from '../src/icon/IconOutlineNotAuthorized';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineSensitiveData height='2em' width='2em' /></td>
         <td>outline-sensitive-data</td>
         <td>
-          import IconOutlineSensitiveData from 'terra-consumer-icon/lib/icon/IconOutlineSensitiveData';
+          import IconOutlineSensitiveData from '../src/icon/IconOutlineSensitiveData';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineErrorPage height='2em' width='2em' /></td>
         <td>outline-error-page</td>
         <td>
-          import IconOutlineErrorPage from 'terra-consumer-icon/lib/icon/IconOutlineErrorPage';
+          import IconOutlineErrorPage from '../src/icon/IconOutlineErrorPage';
         </td>
       </tr>
       <tr style={{ backgroundColor: '#EEEEEE' }}>
         <td><IconOutlineUserCircle height='2em' width='2em' /></td>
         <td>outline-user-circle</td>
         <td>
-          import IconOutlineUserCircle from 'terra-consumer-icon/lib/icon/IconOutlineUserCircle';
+          import IconOutlineUserCircle from '../src/icon/IconOutlineUserCircle';
         </td>
       </tr>
     </Table.Rows>

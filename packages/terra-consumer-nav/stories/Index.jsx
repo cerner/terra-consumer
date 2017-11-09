@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import Nav from 'terra-consumer-nav';
+import NavBurger from '../src/components/nav-burger-button/NavBurgerButton';
 import HelpButton from './HelpButton';
 import SimpleNav from './SimpleNav';
 import TextLogo from './TextLogo';
@@ -10,7 +10,7 @@ import NavLogo from './NavLogo';
 
 storiesOf('Nav', module)
   .add('Burger Menu', () => (
-    <Nav.Burger handleClick={action('clicked')} />
+    <NavBurger handleClick={action('clicked')} />
   ))
   .add('Help Button', () => (
     <HelpButton />
@@ -21,7 +21,7 @@ storiesOf('Nav', module)
   .add('SafeHtml', () => (
     <SafeHtml />
   ))
-  .add('NavLogo', () => (
+  .add('Nav Logo', () => (
     <NavLogo />
   ))
   .add('Simple Nav', () => (

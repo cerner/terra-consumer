@@ -1,6 +1,6 @@
 import React from 'react';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
-import Nav from 'terra-consumer-nav';
+import Nav from '../src/components/nav-help/NavHelp';
 
 const helpItems = [
   {

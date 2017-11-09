@@ -50,11 +50,12 @@ module.exports = {
   },
   plugins: [
     new I18nAggregatorPlugin({
-      baseDirectory: __dirname,
+      baseDirectory: path.resolve(__dirname, '../'),
+      customTransDir: path.resolve(__dirname, '../packages'),
       supportedLocales: i18nSupportedLocales,
     }),
   ],
   resolve: {
-    modules: [path.resolve(__dirname, 'aggregated-translations'), 'node_modules'],
+    modules: [path.resolve(__dirname, '../aggregated-translations'), 'node_modules'],
   },
 };

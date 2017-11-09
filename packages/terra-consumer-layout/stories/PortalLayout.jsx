@@ -2,8 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
-import Layout from 'terra-consumer-layout';
-// import './LayoutTests.scss';
+import Layout from '../src/Layout';
 
 const data = {
   nav: {

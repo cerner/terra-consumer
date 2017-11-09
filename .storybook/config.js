@@ -7,10 +7,9 @@ addDecorator(story => <Base locale="en-US">{story()}</Base>);
 
 /* eslint-disable global-require */
 function loadStories() {
-  require('./stories/terra-consumer-nav/Index.jsx');
-  require('./stories/terra-consumer-layout/Index.jsx');
-  require('./stories/terra-consumer-icon/Index.jsx');
-  // You can require as many stories as you need.
+  require('../packages/terra-consumer-nav/stories/Index.jsx');
+  require('../packages/terra-consumer-icon/stories/Index.jsx');
+  require('../packages/terra-consumer-layout/stories/Index.jsx');
 }
 
 configure(loadStories, module);

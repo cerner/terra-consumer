@@ -1,5 +1,5 @@
 import React from 'react';
-import NavLogo from 'terra-consumer-nav/lib/components/nav-logo/NavLogo';
+import NavLogo from '../src/components/nav-logo/NavLogo';
 
 const logoWithOutURL = {
   url: '',
