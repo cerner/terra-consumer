@@ -1,5 +1,13 @@
 ChangeLog
 
+# 0.2.4 - (November 10, 2017)
+
+### Changed
+
+- Make font-family a custom property.
+
+------------------
+
 # 0.2.3 - (November 06, 2017)
 
 ### Changed
@@ -7,7 +15,7 @@ ChangeLog
 - Updating layout component to include a react element (siteAlert)
 - Tests: - terra-alert component used for site alert
          - Updating DexLayout to include site alert example
-         
+
 ------------------
 
 # 0.2.2 - (November 03, 2017)

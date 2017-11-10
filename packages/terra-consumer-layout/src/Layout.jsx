@@ -5,6 +5,7 @@ import Nav from 'terra-consumer-nav';
 import ResponsiveElement from 'terra-responsive-element';
 import Overlay from 'terra-overlay';
 import { injectIntl, intlShape } from 'react-intl';
+import 'terra-base/lib/baseStyles';
 import styles from './Layout.scss';
 
 const cx = classNames.bind(styles);
