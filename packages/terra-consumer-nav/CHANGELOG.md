@@ -2,6 +2,7 @@ ChangeLog
 # 0.2.7 - (November 2, 2017)
 ### Changed
 - Fixed border on mobile navigation
+- Used auto height popup
 
 ------------------
 
