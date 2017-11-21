@@ -2,6 +2,8 @@ import React from 'react';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import ProfileLinks from '../../../src/components/user-profile/ProfileLinks';
 
+const customOnClickMock = jest.fn();
+
 const testData = [
   {
     text: 'Account',
