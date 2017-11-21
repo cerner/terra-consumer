@@ -171,26 +171,34 @@ const nav = {
           {
             'data-locale': 'ar',
             isExternal: true,
-            url: '#1',
+            url: '/#/tests/nav-tests/simple-nav',
             text: '\u0627\u0644\u0639\u0631\u0628\u064a\u0651\u0629',
+            /* eslint-disable no-alert */
+            customOnClick: () => { alert('Set locale to ar'); },
           },
           {
             'data-locale': 'es',
             isExternal: true,
-            url: '#2',
+            url: '/#/tests/nav-tests/simple-nav',
             text: 'Espa\u00f1ol',
+            /* eslint-disable no-alert */
+            customOnClick: () => { alert('Set locale to es'); },
           },
           {
             'data-locale': 'en-gb',
             isExternal: true,
-            url: '#3',
+            url: '/#/tests/nav-tests/simple-nav',
             text: 'English (United Kingdom)',
+            /* eslint-disable no-alert */
+            customOnClick: () => { alert('Set locale to en-gb'); },
           },
           {
             'data-locale': 'fr-fr',
             isExternal: true,
-            url: '#4',
+            url: '/#/tests/nav-tests/simple-nav',
             text: 'Fran\u00e7ais (France)',
+            /* eslint-disable no-alert */
+            customOnClick: () => { alert('Set locale to fr-fr'); },
           },
         ],
       }],

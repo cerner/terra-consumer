@@ -10,5 +10,59 @@ exports[`Profile Link items should render a list of profile link items 1`] = `
     text="Notifications"
     url="http://localhost:8080/"
   />
+  <div
+    className=""
+  >
+    <button
+      className="link toggler-wrapper"
+      onClick={[Function]}
+    >
+      <Arrange
+        align="stretch"
+        fill={
+          <SafeHtml
+            text="English (United States)"
+          />
+        }
+        fitEnd={
+          <div>
+            <IconChevronDown
+              className=""
+              data-name="Layer 1"
+              isBidi={true}
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </div>
+        }
+      />
+    </button>
+    <Toggle
+      className="toggler"
+      isAnimated={false}
+      isOpen={false}
+    >
+      <ProfileLink
+        customOnClick={[Function]}
+        data-locale="ar"
+        text="العربيّة"
+      />
+      <ProfileLink
+        customOnClick={[Function]}
+        data-locale="es"
+        text="Español"
+      />
+      <ProfileLink
+        customOnClick={[Function]}
+        data-locale="en-gb"
+        text="English (United Kingdom)"
+      />
+      <ProfileLink
+        customOnClick={[Function]}
+        data-locale="fr-fr"
+        text="Français (France)"
+      />
+    </Toggle>
+  </div>
 </div>
 `;

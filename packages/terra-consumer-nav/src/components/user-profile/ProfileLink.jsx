@@ -13,6 +13,7 @@ const propTypes = {
   * An optional function. When supplied, gets triggered on link click.
   */
   handleClick: PropTypes.func,
+  customOnClick: PropTypes.func,
   ...navElementShape,
 };
 
@@ -22,19 +23,23 @@ const ProfileLink = ({
   target,
   isExternal,
   handleClick,
+  customOnClick,
   ...customProps
-}) => (
-  <SmartLink
-    {...customProps}
-    url={url}
-    target={target}
-    isExternal={isExternal}
-    className={cx('link', 'profile-item-border', customProps.className)}
-    handleClick={handleClick}
-  >
-    <SafeHtml text={text} />
-  </SmartLink>
-);
+}) => {
+  const onClick = () => { handleClick(); customOnClick(); };
+  return (
+    <SmartLink
+      {...customProps}
+      url={url}
+      target={target}
+      isExternal={isExternal}
+      className={cx('link', 'profile-item-border', customProps.className)}
+      handleClick={onClick}
+    >
+      <SafeHtml text={text} />
+    </SmartLink>
+  );
+};
 
 ProfileLink.propTypes = propTypes;
 

@@ -1,11 +1,21 @@
 ChangeLog
-# 0.2.7 - (November 2, 2017)
+# 0.2.9 - (November 21, 2017)
+### Added
+- Added custom callback functions to profile links for click events
+
+------------------
+
+# 0.2.8 - (Nov 10, 2017)
 ### Changed
-- Fixed border on mobile navigation
 - Used auto height popup
 
 ------------------
 
+# 0.2.7 - (November 2, 2017)
+### Changed
+- Fixed border on mobile navigation
+
+------------------
 
 # 0.2.6 - (October 31, 2017)
 
@@ -47,6 +57,7 @@ ChangeLog
 
 ### Changed
 - Fixed ipad - landscape issue and nav-burger button missing at 992px issue
+
 ------------------
 
 # 0.2.1 - (September 21, 2017)
