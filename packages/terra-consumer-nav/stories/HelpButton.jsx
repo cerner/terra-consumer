@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
 import NavHelp from '../src/components/nav-help/NavHelp';
 
