@@ -7,6 +7,7 @@ Cerner Corporation
 - Muhammad M Khan [@Mahmud-Khan]
 - Alex Bezek [@alex-bezek]
 - Jim Pruetting [@jpruetting]
+- Yaonan Zhong [@zhongyn]
 
 [@mhemesath]: https://github.com/mhemesath
 [@KevinJJackson]: https://github.com/KevinJJackson
@@ -15,3 +16,4 @@ Cerner Corporation
 [@amf9t2]: https://github.com/amf9t2
 [@Mahmud-Khan]:https://github.com/Mahmud-Khan
 [@jpruetting]:https://github.com/jpruetting
+[@zhongyn]:https://github.com/zhongyn
