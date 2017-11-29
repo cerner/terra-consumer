@@ -1,6 +1,7 @@
 import React from 'react';
+// eslint-disable-next-line
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
-import Nav from '../src/components/nav-help/NavHelp';
+import NavHelp from '../src/components/nav-help/NavHelp';
 
 const helpItems = [
   {
@@ -31,5 +32,5 @@ const helpItems = [
 ];
 
 export default () => (
-  <Nav.Help helpNavs={helpItems} />
+  <NavHelp helpNavs={helpItems} />
 );

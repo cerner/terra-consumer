@@ -51,7 +51,7 @@ module.exports = {
   plugins: [
     new I18nAggregatorPlugin({
       baseDirectory: path.resolve(__dirname, '../'),
-      customTransDir: path.resolve(__dirname, '../packages'),
+      translationsDirectoryRouters: ['packages'],
       supportedLocales: i18nSupportedLocales,
     }),
   ],

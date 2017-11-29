@@ -201,5 +201,5 @@ const nav = {
 };
 
 export default () => (
-  <Nav {...nav} id="nav" />
+  <Nav {...nav} id="nav" onRequestClose={() => {}} />
 );

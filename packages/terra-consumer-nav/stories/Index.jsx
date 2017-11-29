@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions';
 import NavBurger from '../src/components/nav-burger-button/NavBurgerButton';
 import HelpButton from './HelpButton';
 import SimpleNav from './SimpleNav';
-import TextLogo from './TextLogo';
 import SafeHtml from './SafeHtml';
 import NavLogo from './NavLogo';
 
@@ -14,9 +13,6 @@ storiesOf('Nav', module)
   ))
   .add('Help Button', () => (
     <HelpButton />
-  ))
-  .add('Text Logo', () => (
-    <TextLogo />
   ))
   .add('SafeHtml', () => (
     <SafeHtml />
