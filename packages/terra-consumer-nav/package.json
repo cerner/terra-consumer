@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/cerner/terra-consumer#readme",
   "peerDependencies": {
+    "@storybook/addon-actions": "^3.3.0-alpha.4",
+    "@storybook/react": "^3.2.14",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.1.0",
