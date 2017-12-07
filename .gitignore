@@ -56,3 +56,4 @@ lib
 props-table
 package-lock.json
 *.tgz
+storybook-static
