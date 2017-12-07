@@ -45,7 +45,7 @@
     "compile": "lerna run compile",
     "compile:heroku": "cd packages/terra-consumer-site && npm run compile:heroku",
     "danger": "danger",
-    "deploy": "lerna run --scope terra-consumer-site deploy",
+    "deploy": "npm run build-storybook && gh-pages -d storybook-static",
     "heroku-prebuild": "npm install rimraf && npm install -g lerna@2.0.0-rc.4 && lerna init",
     "heroku-postbuild": "npm install --only=dev && npm run compile:heroku",
     "jest": "jest",
@@ -61,6 +61,7 @@
     "start": "cd packages/terra-consumer-site && npm run start",
     "start:express": "node scripts/express/app.js",
     "storybook": "start-storybook -p 8081 -c .storybook",
+    "build-storybook": "build-storybook -c .storybook",
     "test": "npm run jest && npm run nightwatch"
   },
   "devDependencies": {
@@ -85,6 +86,7 @@
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "express": "^4.15.2",
+    "gh-pages": "^1.1.0",
     "glob": "^7.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^20.0.4",
