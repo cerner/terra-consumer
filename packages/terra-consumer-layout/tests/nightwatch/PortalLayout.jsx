@@ -331,7 +331,7 @@ const data = {
       text: 'Get Support ID',
       icon: (<IconOutlineQuestionMark />),
       children: [{
-        text: 'Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx',
+        text: 'abcdefghiJ01234Cerner56789Mnopqrstuvwxyz',
       }],
     },
     {

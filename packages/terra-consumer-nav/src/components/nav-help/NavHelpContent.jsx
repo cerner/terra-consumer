@@ -46,10 +46,10 @@ class NavHelpContent extends React.Component {
       const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
 
       if (content.children && content.children.length > 0) {
-        contentElement = (<Button
-          key={`${content.text}`}
+        const helpItemStyle = cx('help-item', index > 0 ? 'help-item-border' : '');
+        contentElement = (<div key={`${content.text}`} ><Button
           onClick={() => this.handleToggle(index)}
-          className={cx('help-item')}
+          className={helpItemStyle}
         >
           <Arrange
             className={cx('help-item-text')}
@@ -58,6 +58,7 @@ class NavHelpContent extends React.Component {
             fill={<div><SafeHtml text={content.text} /></div>}
             fitEnd={<div>{toggleIcon}</div>}
           />
+        </Button>
           <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
             { content.children.map(element => (
               <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
@@ -67,11 +68,12 @@ class NavHelpContent extends React.Component {
               </p>))
           }
           </Toggler>
-        </Button>);
+        </div>);
       } else {
+        const helpItemStyle = cx('help-item', index > 0 ? 'help-item-border' : '');
         contentElement = (
           <SmartLink
-            className={cx('help-item')}
+            className={helpItemStyle}
             key={content.text}
             url={content.url}
             target={content.target}

@@ -30,7 +30,6 @@
   .help-item {
     background: var(--terra-consumer--nav-help-item-background, #fff);
     border: 0;
-    border-bottom: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
     border-radius: 0;
     display: block;
     font-family: inherit;
@@ -48,6 +47,10 @@
     }
   }
 
+  .help-item-border {
+    border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
+  }
+
   .help-item-text {
     color: var(--terra-consumer--nav-help-item-text-color, #383f42);
     font-size: 14px;
@@ -59,6 +62,7 @@
     color: var(--terra-consumer--nav-help-subitem-text-color, #64696c);
     font-size: 14px;
     line-height: 18px;
+    overflow-wrap: break-word;
     text-decoration: none;
   }
 
@@ -75,8 +79,7 @@
   }
 
   .toggler-content-alignment {
-    padding-right: 20px;
-    padding-top: 20px;
+    padding: 0 40px 20px 20px;
     text-align: left;
   }
 

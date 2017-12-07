@@ -2,50 +2,52 @@
 
 exports[`Content of the Help Modal/Popup should render a list of items with/without toggler 1`] = `
 <div>
-  <Button
-    className="help-item"
-    isBlock={false}
-    isCompact={false}
-    isDisabled={false}
-    isReversed={false}
-    onClick={[Function]}
-    type="button"
-    variant="default"
-  >
-    <Arrange
-      align="stretch"
-      className="help-item-text"
-      fill={
-        <div>
-          <SafeHtml
-            text="Technical Questions"
-          />
-        </div>
-      }
-      fitEnd={
-        <div>
-          <IconChevronDown
-            className=""
-            data-name="Layer 1"
-            isBidi={true}
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
-      }
-      fitStart={
-        <div
-          className="icon-text-padding"
-        >
-          <IconOutlineQuestionMark
-            height={16}
-            viewBox="0 0 48 48"
-            width={16}
-            xmlns="http://www.w3.org/2000/svg"
-          />
-        </div>
-      }
-    />
+  <div>
+    <Button
+      className="help-item"
+      isBlock={false}
+      isCompact={false}
+      isDisabled={false}
+      isReversed={false}
+      onClick={[Function]}
+      type="button"
+      variant="default"
+    >
+      <Arrange
+        align="stretch"
+        className="help-item-text"
+        fill={
+          <div>
+            <SafeHtml
+              text="Technical Questions"
+            />
+          </div>
+        }
+        fitEnd={
+          <div>
+            <IconChevronDown
+              className=""
+              data-name="Layer 1"
+              isBidi={true}
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </div>
+        }
+        fitStart={
+          <div
+            className="icon-text-padding"
+          >
+            <IconOutlineQuestionMark
+              height={16}
+              viewBox="0 0 48 48"
+              width={16}
+              xmlns="http://www.w3.org/2000/svg"
+            />
+          </div>
+        }
+      />
+    </Button>
     <Toggle
       className="toggler-padding"
       isAnimated={false}
@@ -63,9 +65,9 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
         </span>
       </p>
     </Toggle>
-  </Button>
+  </div>
   <SmartLink
-    className="help-item"
+    className="help-item help-item-border"
     handleClick={[Function]}
     isExternal={false}
     target="_self"
