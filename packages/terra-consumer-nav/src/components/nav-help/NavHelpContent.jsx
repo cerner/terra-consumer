@@ -44,10 +44,10 @@ class NavHelpContent extends React.Component {
       let contentElement;
       const isOpen = this.state.togglers[index];
       const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
+      const helpItemStyle = cx('help-item', index > 0 && 'help-item-border');
 
       if (content.children && content.children.length > 0) {
-        const helpItemStyle = cx('help-item', index > 0 ? 'help-item-border' : '');
-        contentElement = (<div key={`${content.text}`} ><Button
+        contentElement = (<div key={content.text} ><Button
           onClick={() => this.handleToggle(index)}
           className={helpItemStyle}
         >
@@ -61,7 +61,7 @@ class NavHelpContent extends React.Component {
         </Button>
           <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
             { content.children.map(element => (
-              <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
+              <p key={element.text} className={cx('toggler-content-alignment')}>
                 <span className={cx('help-subitem')}>
                   <SafeHtml text={element.text} />
                 </span>
@@ -70,7 +70,6 @@ class NavHelpContent extends React.Component {
           </Toggler>
         </div>);
       } else {
-        const helpItemStyle = cx('help-item', index > 0 ? 'help-item-border' : '');
         contentElement = (
           <SmartLink
             className={helpItemStyle}
