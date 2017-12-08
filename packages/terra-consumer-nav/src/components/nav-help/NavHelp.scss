@@ -47,8 +47,10 @@
     }
   }
 
-  .help-item-border {
-    border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
+  .border-top-except-first-element {
+    &:not(:first-child) {
+      border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
+    }
   }
 
   .help-item-text {

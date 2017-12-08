@@ -44,35 +44,39 @@ class NavHelpContent extends React.Component {
       let contentElement;
       const isOpen = this.state.togglers[index];
       const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
-      const helpItemStyle = cx('help-item', index > 0 && 'help-item-border');
 
       if (content.children && content.children.length > 0) {
-        contentElement = (<div key={content.text} ><Button
-          onClick={() => this.handleToggle(index)}
-          className={helpItemStyle}
-        >
-          <Arrange
-            className={cx('help-item-text')}
-            align="stretch"
-            fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
-            fill={<div><SafeHtml text={content.text} /></div>}
-            fitEnd={<div>{toggleIcon}</div>}
-          />
-        </Button>
-          <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
-            { content.children.map(element => (
-              <p key={element.text} className={cx('toggler-content-alignment')}>
-                <span className={cx('help-subitem')}>
-                  <SafeHtml text={element.text} />
-                </span>
-              </p>))
-          }
-          </Toggler>
-        </div>);
+        contentElement = (
+          <div
+            className={cx('border-top-except-first-element')}
+            key={content.text}
+          >
+            <Button
+              className={cx('help-item')}
+              onClick={() => this.handleToggle(index)}
+            >
+              <Arrange
+                className={cx('help-item-text')}
+                align="stretch"
+                fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
+                fill={<div><SafeHtml text={content.text} /></div>}
+                fitEnd={<div>{toggleIcon}</div>}
+              />
+            </Button>
+            <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
+              { content.children.map(element => (
+                <p key={element.text} className={cx('toggler-content-alignment')}>
+                  <span className={cx('help-subitem')}>
+                    <SafeHtml text={element.text} />
+                  </span>
+                </p>))
+              }
+            </Toggler>
+          </div>);
       } else {
         contentElement = (
           <SmartLink
-            className={helpItemStyle}
+            className={cx('help-item', 'border-top-except-first-element')}
             key={content.text}
             url={content.url}
             target={content.target}
