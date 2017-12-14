@@ -46,28 +46,33 @@ class NavHelpContent extends React.Component {
       const toggleIcon = isOpen ? <IconChevronUp /> : <IconChevronDown />;
 
       if (content.children && content.children.length > 0) {
-        contentElement = (<Button
-          key={`${content.text}`}
-          onClick={() => this.handleToggle(index)}
-          className={cx('help-item')}
-        >
-          <Arrange
-            className={cx('help-item-text')}
-            align="stretch"
-            fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
-            fill={<div><SafeHtml text={content.text} /></div>}
-            fitEnd={<div>{toggleIcon}</div>}
-          />
-          <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
-            { content.children.map(element => (
-              <p key={`${element.text}`} className={cx('toggler-content-alignment')}>
-                <span className={cx('help-subitem')}>
-                  <SafeHtml text={element.text} />
-                </span>
-              </p>))
-          }
-          </Toggler>
-        </Button>);
+        contentElement = (
+          <div
+            className={cx('help-item-wrapper')}
+            key={content.text}
+          >
+            <Button
+              className={cx('help-item')}
+              onClick={() => this.handleToggle(index)}
+            >
+              <Arrange
+                className={cx('help-item-text')}
+                align="stretch"
+                fitStart={<div className={cx('icon-text-padding')}>{content.icon}</div>}
+                fill={<div><SafeHtml text={content.text} /></div>}
+                fitEnd={<div>{toggleIcon}</div>}
+              />
+            </Button>
+            <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
+              { content.children.map(element => (
+                <p key={element.text} className={cx('toggler-content-alignment')}>
+                  <span className={cx('help-subitem')}>
+                    <SafeHtml text={element.text} />
+                  </span>
+                </p>))
+              }
+            </Toggler>
+          </div>);
       } else {
         contentElement = (
           <SmartLink

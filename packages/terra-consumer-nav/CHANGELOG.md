@@ -1,4 +1,10 @@
 ChangeLog
+# 0.2.10 - (December 07, 2017)
+### Changed
+- Updated the help button content with toggle.Toggle content is separated from
+- toggle header.
+
+------------------
 # 0.2.9 - (November 21, 2017)
 ### Added
 - Added custom callback functions to profile links for click events
