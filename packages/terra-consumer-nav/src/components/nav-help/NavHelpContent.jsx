@@ -48,7 +48,7 @@ class NavHelpContent extends React.Component {
       if (content.children && content.children.length > 0) {
         contentElement = (
           <div
-            className={cx('border-top-except-first-element')}
+            className={cx('help-item-wrapper')}
             key={content.text}
           >
             <Button
@@ -76,7 +76,7 @@ class NavHelpContent extends React.Component {
       } else {
         contentElement = (
           <SmartLink
-            className={cx('help-item', 'border-top-except-first-element')}
+            className={cx('help-item')}
             key={content.text}
             url={content.url}
             target={content.target}

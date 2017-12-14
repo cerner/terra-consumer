@@ -37,6 +37,10 @@
     text-decoration: none;
     width: 100%;
 
+    &:not(:first-child) {
+      border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
+    }
+
     &:hover {
       background: var(--terra-consumer--nav-help-item-hover-background, #eee);
       cursor: pointer;
@@ -47,7 +51,7 @@
     }
   }
 
-  .border-top-except-first-element {
+  .help-item-wrapper {
     &:not(:first-child) {
       border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
     }

@@ -3,7 +3,7 @@
 exports[`Content of the Help Modal/Popup should render a list of items with/without toggler 1`] = `
 <div>
   <div
-    className="border-top-except-first-element"
+    className="help-item-wrapper"
   >
     <Button
       className="help-item"
@@ -69,7 +69,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
     </Toggle>
   </div>
   <SmartLink
-    className="help-item border-top-except-first-element"
+    className="help-item"
     handleClick={[Function]}
     isExternal={false}
     target="_self"
