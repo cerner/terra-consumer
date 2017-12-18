@@ -1,8 +1,12 @@
 ChangeLog
 =========
+Unreleased
+- Move storybook from peerDependencies to devDependencies to avoid warnings in
+applications using this package.
+
 1.2.2 - (September 14, 2017)
 ----------
-Adding outline user icon 
+Adding outline user icon
 
 1.2.1 - (September 06, 2017)
 ----------

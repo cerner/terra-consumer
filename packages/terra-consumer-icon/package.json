@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/cerner/terra-consumer#readme",
   "devDependencies": {
+    "@storybook/react": "^3.2.14",
     "csvtojson": "^1.1.4",
     "jsdom": "^9.11.0",
     "one-cerner-style-icons": "https://github.com/cerner/one-cerner-style-icons/archive/v1.0.0.tar.gz",
@@ -31,7 +32,6 @@
     "terra-toolkit": "^1.2.2"
   },
   "peerDependencies": {
-    "@storybook/react": "^3.2.14",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "terra-base": "^2.1.0"
