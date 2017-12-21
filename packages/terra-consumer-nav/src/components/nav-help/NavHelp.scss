@@ -14,12 +14,12 @@
     padding: 6px 13px;
 
     &:hover {
-      background: var(--terra-consumer--nav-help-button-hover-background, #eee);
+      background: var(--terra-consumer--nav-help-button-hover-background, #cfd0d1);
       cursor: pointer;
     }
 
     &:focus {
-      background: var(--terra-consumer--nav-help-button-focus-background, #eee);
+      background: var(--terra-consumer--nav-help-button-focus-background, #cfd0d1);
     }
 
     &:active {
@@ -42,19 +42,25 @@
     }
 
     &:hover {
-      background: var(--terra-consumer--nav-help-item-hover-background, #eee);
+      background: var(--terra-consumer--nav-help-item-hover-background, #cfd0d1);
       cursor: pointer;
     }
 
     &:focus {
-      background: var(--terra-consumer--nav-help-item-focus-background, #eee);
+      background: var(--terra-consumer--nav-help-item-focus-background, #cfd0d1);
     }
   }
 
   .help-item-wrapper {
+    background: #f3f3f3;
+
     &:not(:first-child) {
       border-top: 1px solid var(--terra-consumer--nav-help-item-border-color, #dedfe0);
     }
+  }
+
+  .toggler-open {
+    background: #f3f3f3;
   }
 
   .help-item-text {
@@ -85,7 +91,8 @@
   }
 
   .toggler-content-alignment {
-    padding: 0 40px 20px 20px;
+    margin: 0;
+    padding: 10px 40px 20px 20px;
     text-align: left;
   }
 
