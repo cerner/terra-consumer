@@ -1,8 +1,7 @@
 ChangeLog
-# 0.2.11 - (December 18, 2017)
+# 0.2.11 - (December 21, 2017)
 ### Changed
-- Updated the hover background for help-button and popup content to make it
-- consistent with profile button and content.
+- Updated the hover background for help-button and popup content to make it consistent with profile button and content.
 - Updated the margin and padding for toggle content in help popup.
 
 ------------------
