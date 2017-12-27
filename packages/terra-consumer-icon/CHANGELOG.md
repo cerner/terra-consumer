@@ -1,6 +1,6 @@
 ChangeLog
 =========
-Unreleased
+1.2.4
 - Move storybook from peerDependencies to devDependencies to avoid warnings in
 applications using this package.
 
