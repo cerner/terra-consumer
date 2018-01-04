@@ -43,10 +43,17 @@ const NavLogo = ({
 }) => {
   const imgProps = {
     className: cx('img'),
-    ...url && { src: url },
+    ...url ? {
+      src: url,
+      alt: altText,
+    } : {
+      children: altText,
+    },
   };
 
-  const imgTag = (<img alt={altText} {...imgProps} />);
+  const LogoElement = url ? 'img' : 'p';
+
+  const imgTag = (<LogoElement {...imgProps} />);
   const imgContent = (link) ? <SmartLink {...link}>{imgTag} </SmartLink> : imgTag;
   const body = (isCard && !!url) ? <Card.Body> {imgContent} </Card.Body> : imgContent;
   const domNode = (isCard && !!url) ? Card : 'div';
