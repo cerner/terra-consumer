@@ -4,7 +4,7 @@ import I18nShell from './I18nShell';
 
 const logoWithOutURL = {
   url: '',
-  altText: 'Nike',
+  altText: 'Alt Text Test',
   isCard: true,
 };
 

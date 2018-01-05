@@ -47,9 +47,10 @@ exports[`Nav Logo should render a div regardless of isCard when no url is provid
 <div
   className="logo-container"
 >
-  <img
-    alt="test"
+  <p
     className="img"
-  />
+  >
+    test
+  </p>
 </div>
 `;

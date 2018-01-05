@@ -1,5 +1,11 @@
 ChangeLog
 
+# Unreleased
+### Changed
+- NavLogo now renders a p tag if no url is passed to avoid missing image icon in chrome/safari/ie
+
+------------------
+
 # 0.2.11 - (December 21, 2017)
 ### Changed
 - Updated the hover background for help-button and popup content to make it consistent with profile button and content.
