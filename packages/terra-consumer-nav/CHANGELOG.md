@@ -1,6 +1,6 @@
 ChangeLog
 
-# Unreleased
+# 0.2.12 - (Jan 5, 2018)
 ### Changed
 - NavLogo now renders a p tag if no url is passed to avoid missing image icon in chrome/safari/ie
 
