@@ -48,7 +48,7 @@ describe('Nav', () => {
     expect(wrapper.find('.profile').exists()).toEqual(true);
   });
   
-  it('should have have the currentURL prop', () => {
+  it('should have the currentURL prop', () => {
     expect(wrapper.find('NavItems').first().props().currentURL).toEqual('http://localhost:8080/');
   });
 });
@@ -67,7 +67,7 @@ describe('Nav without profile', () => {
     expect(wrapper.find('.profile').exists()).toEqual(false);
   });
   
-  it('should have have the currentURL prop', () => {
+  it('should have the currentURL prop', () => {
     expect(wrapper.find('NavItems').first().props().currentURL).toEqual('http://localhost:8080/');
   });
 });
