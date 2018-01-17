@@ -47,20 +47,22 @@ class NavItems extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    const currentComponent = this;
-    const currentURL = nextProps.currentURL;
+    if (this.props !== nextProps) {
+      const currentComponent = this;
+      const currentURL = nextProps.currentURL;
 
-    this.props.navItems.map((element, i) => {
-      if (element.subItems) {
-        element.subItems.map((item) => {
-          if (currentURL === item.url) {
-            currentComponent.setState({
-              openToggle: i,
-            });
-          }
-        });
-      }
-    });
+      this.props.navItems.map((element, i) => {
+        if (element.subItems) {
+          element.subItems.map((item) => {
+            if (currentURL === item.url) {
+              currentComponent.setState({
+                openToggle: i,
+              });
+            }
+          });
+        }
+      });
+    }
   }
 
   handleToggle(toggleId, isOpen) {

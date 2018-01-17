@@ -54,7 +54,7 @@ describe('Nav', () => {
 });
 
 describe('Nav without profile', () => {
-  const { profile, ...data } = testData;
+  const { profile, currentURL, ...data } = testData;
   const wrapper = shallow(<Nav {...data} />);
 
   // Snapshot Tests
@@ -67,7 +67,7 @@ describe('Nav without profile', () => {
     expect(wrapper.find('.profile').exists()).toEqual(false);
   });
   
-  it('should have the currentURL prop', () => {
+  it('should not have the currentURL prop', () => {
     expect(wrapper.find('NavItems').first().props().currentURL).toEqual('http://localhost:8080/');
   });
 });
