@@ -23,6 +23,10 @@ const propTypes = {
    * Function to be applied on all nav links, excluding toggle headers.
   */
   handleClick: PropTypes.func,
+  /**
+   * The current route.
+  */
+  currentURL: PropTypes.string,
 };
 
 const defaultProps = {
@@ -42,6 +46,23 @@ class NavItems extends Component {
     this.handleToggle = this.handleToggle.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    const currentComponent = this;
+    const currentURL = nextProps.currentURL;
+
+    this.props.navItems.map((element, i) => {
+      if (element.subItems) {
+        element.subItems.map((item) => {
+          if (currentURL === item.url) {
+            currentComponent.setState({
+              openToggle: i,
+            });
+          }
+        });
+      }
+    });
+  }
+
   handleToggle(toggleId, isOpen) {
     this.setState({
       openToggle: isOpen ? toggleId : null,
@@ -49,7 +70,7 @@ class NavItems extends Component {
   }
 
   render() {
-    const { navItems, handleClick, ...customProps } = this.props;
+    const { navItems, handleClick, currentURL, ...customProps } = this.props;
 
     const content = navItems.map((element, i) => {
       let toggleProps = {};
