@@ -1,5 +1,11 @@
 ChangeLog
 
+# 0.2.13 - (Jan 18, 2018)
+### Added
+- Ability to open parent nav when directed to a sub navigation item from dashboard
+
+------------------
+
 # 0.2.12 - (Jan 5, 2018)
 ### Changed
 - NavLogo now renders a p tag if no url is passed to avoid missing image icon in chrome/safari/ie
