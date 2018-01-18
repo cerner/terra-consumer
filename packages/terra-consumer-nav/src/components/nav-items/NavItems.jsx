@@ -51,7 +51,8 @@ class NavItems extends Component {
       const currentComponent = this;
       const currentURL = nextProps.currentURL;
 
-      this.props.navItems.forEach((element, i) => {
+      /* if there is a sub nav which matches the currentURL open the parent nav */
+      currentComponent.props.navItems.forEach((element, i) => {
         if (element.subItems) {
           element.subItems.forEach((item) => {
             if (currentURL === item.url) {
