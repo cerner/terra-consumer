@@ -27,7 +27,7 @@ const testData = {
   },
   isMobileNavOpen: false,
   onRequestClose: () => {},
-  currentURL: 'http://localhost:8080/'
+  currentURL: 'http://localhost:8080/',
 };
 
 describe('Nav', () => {
@@ -47,7 +47,7 @@ describe('Nav', () => {
   it('should have have the profile component', () => {
     expect(wrapper.find('.profile').exists()).toEqual(true);
   });
-  
+
   it('should have the currentURL prop', () => {
     expect(wrapper.find('NavItems').first().props().currentURL).toEqual('http://localhost:8080/');
   });
@@ -66,8 +66,8 @@ describe('Nav without profile', () => {
   it('should have not have the profile component', () => {
     expect(wrapper.find('.profile').exists()).toEqual(false);
   });
-  
+
   it('should not have the currentURL prop', () => {
-    expect(wrapper.find('NavItems').first().props().currentURL).toEqual('http://localhost:8080/');
+    expect(wrapper.find('NavItems').first().find('currentURL').exists()).toEqual(false);
   });
 });

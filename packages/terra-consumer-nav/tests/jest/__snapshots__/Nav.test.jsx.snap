@@ -137,7 +137,6 @@ exports[`Nav without profile should render a nav without a profile component 1`]
     url=""
   />
   <NavItems
-    currentURL="http://localhost:8080/"
     handleClick={[Function]}
     navItems={
       Array [

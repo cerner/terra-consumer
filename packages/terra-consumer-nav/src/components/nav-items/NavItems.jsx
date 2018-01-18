@@ -51,9 +51,9 @@ class NavItems extends Component {
       const currentComponent = this;
       const currentURL = nextProps.currentURL;
 
-      this.props.navItems.map((element, i) => {
+      this.props.navItems.forEach((element, i) => {
         if (element.subItems) {
-          element.subItems.map((item) => {
+          element.subItems.forEach((item) => {
             if (currentURL === item.url) {
               currentComponent.setState({
                 openToggle: i,
