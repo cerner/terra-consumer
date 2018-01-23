@@ -1,4 +1,7 @@
 ChangeLog
+# Next Release
+#### changed
+- Removed Roboto font import for stylesheet.
 
 # 0.2.12 - (Jan 5, 2018)
 ### Changed
