@@ -135,7 +135,7 @@ class Nav extends React.Component {
         className={cx('nav', { 'modal-open': this.state.isModalOpen }, customProps.className)}
       >
         <div className={cx('close-button-container')}>
-          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
+          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" aria-label="Close" />
         </div>
         <NavLogo {...logo} />
         <NavItems navItems={navItems} handleClick={onRequestClose} />
