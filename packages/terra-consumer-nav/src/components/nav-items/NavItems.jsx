@@ -55,15 +55,13 @@ class NavItems extends Component {
     const currentURL = nextProps.currentURL;
 
     /* if there is a sub nav which matches the currentURL open the parent nav */
-    currentComponent.props.navItems.find((element, i) => {
+    currentComponent.props.navItems.forEach((element, i) => {
       if (element.subItems) {
-        element.subItems.find((item) => {
-          if (currentURL === item.url) {
-            currentComponent.setState({
-              openToggle: i,
-            });
-          }
-        });
+        /* Use polyfill to support find() in IE*/
+        const match = element.subItems.find(item => item.url === currentURL);
+        if (match) {
+          currentComponent.setState({ openToggle: i });
+        }
       }
     });
   }
