@@ -14,6 +14,7 @@ const rtl = require('postcss-rtl');
 
 const customProperties = CustomProperties({ preserve: true, warnings: false });
 customProperties.setVariables({
+  '--terra-base-font-family': 'Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif',
   // Body
   '--terra-consumer-body-background-color': '#c7d4ea',
   // Nav
