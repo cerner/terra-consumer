@@ -13,7 +13,6 @@ The Nav is a responsive container component that neatly displays a logo, quick-l
 
 - Install from [npmjs](https://www.npmjs.com): `npm install terra-consumer-nav`
 
-
 ## LICENSE
 
 Copyright 2017 Cerner Innovation, Inc.

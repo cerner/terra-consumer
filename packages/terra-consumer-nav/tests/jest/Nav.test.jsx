@@ -49,7 +49,7 @@ describe('Nav', () => {
 });
 
 describe('Nav without profile', () => {
-  const { profile, currentURL, ...data } = testData;
+  const { profile, ...data } = testData;
   const wrapper = shallow(<Nav {...data} />);
 
   // Snapshot Tests
