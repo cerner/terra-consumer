@@ -23,21 +23,24 @@ const propTypes = {
    * Function to be applied on all nav links, excluding toggle headers.
   */
   handleClick: PropTypes.func,
-  /**
-   * The current route.
-  */
-  currentURL: PropTypes.string,
 };
 
 const defaultProps = {
   navItems: [],
 };
 
+/**
+ * Returns the index of Navitems for an isActive subItem.
+ * @param  {object[]} navItems - An array of objects displayed as nav link options.
+ * @param  {number} - The index.
+ */
+const findNavItemsIndex = navItems => navItems.findIndex(item => item.subItems && item.subItems.some(subItem => subItem.isActive));
+
 class NavItems extends Component {
   constructor(props) {
     super(props);
 
-    const initialIndex = props.navItems.findIndex(item => item.subItems && item.subItems.some(subItem => subItem.isActive));
+    const initialIndex = findNavItemsIndex(props.navItems);
 
     this.state = {
       openToggle: initialIndex,
@@ -47,22 +50,14 @@ class NavItems extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.currentURL === nextProps.currentURL) {
+    const index = findNavItemsIndex(nextProps.navItems);
+
+    if (findNavItemsIndex(this.props.navItems) === index) {
       return;
     }
 
-    const currentComponent = this;
-    const currentURL = nextProps.currentURL;
-
-    /* if there is a sub nav which matches the currentURL open the parent nav */
-    currentComponent.props.navItems.forEach((element, i) => {
-      if (element.subItems) {
-        /* Use polyfill to support find() in IE */
-        const match = element.subItems.find(item => item.url === currentURL);
-        if (match) {
-          currentComponent.setState({ openToggle: i });
-        }
-      }
+    this.setState({
+      openToggle: index,
     });
   }
 
@@ -73,7 +68,7 @@ class NavItems extends Component {
   }
 
   render() {
-    const { navItems, handleClick, currentURL, ...customProps } = this.props;
+    const { navItems, handleClick, ...customProps } = this.props;
 
     const content = navItems.map((element, i) => {
       let toggleProps = {};

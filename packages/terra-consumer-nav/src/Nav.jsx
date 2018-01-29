@@ -48,10 +48,6 @@ const propTypes = {
    * Callback function: should be used to close the nav on mobile devices.
    */
   onRequestClose: PropTypes.func.isRequired,
-  /**
-   * The current route.
-  */
-  currentURL: PropTypes.string,
 };
 
 const defaultProps = {
@@ -106,7 +102,7 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { navItems, profile, logo, onRequestClose, currentURL, ...customProps } = this.props;
+    const { navItems, profile, logo, onRequestClose, ...customProps } = this.props;
     const profileId = 'profile-popup-button';
     const defaultElement = (
       <Modal
@@ -142,7 +138,7 @@ class Nav extends React.Component {
           <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" />
         </div>
         <NavLogo {...logo} />
-        <NavItems navItems={navItems} handleClick={onRequestClose} currentURL={currentURL} />
+        <NavItems navItems={navItems} handleClick={onRequestClose} />
         <ResponsiveElement responsiveTo="window" defaultElement={defaultElement} medium={popup} />
         { profile &&
           <div className={cx('profile')}>
