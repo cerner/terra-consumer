@@ -41,7 +41,6 @@
     "terra-responsive-element": "^1.7.0"
   },
   "devDependencies": {
-    "@storybook/react": "^3.2.14",
     "terra-alert": "^1.9.1"
   },
   "scripts": {
