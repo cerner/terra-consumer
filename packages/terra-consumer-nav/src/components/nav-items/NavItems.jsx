@@ -29,17 +29,36 @@ const defaultProps = {
   navItems: [],
 };
 
+/**
+ * Returns the index of Navitems for an isActive subItem.
+ * @param  {object[]} navItems - An array of objects displayed as nav link options.
+ * @param  {number} - The index.
+ */
+const findNavItemsIndex = navItems => navItems.findIndex(item => item.subItems && item.subItems.some(subItem => subItem.isActive));
+
 class NavItems extends Component {
   constructor(props) {
     super(props);
 
-    const initialIndex = props.navItems.findIndex(item => item.subItems && item.subItems.some(subItem => subItem.isActive));
+    const initialIndex = findNavItemsIndex(props.navItems);
 
     this.state = {
       openToggle: initialIndex,
     };
 
     this.handleToggle = this.handleToggle.bind(this);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    const index = findNavItemsIndex(nextProps.navItems);
+
+    if (findNavItemsIndex(this.props.navItems) === index) {
+      return;
+    }
+
+    this.setState({
+      openToggle: index,
+    });
   }
 
   handleToggle(toggleId, isOpen) {
