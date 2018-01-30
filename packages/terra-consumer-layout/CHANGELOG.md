@@ -1,5 +1,8 @@
 ChangeLog
 
+# 0.2.9
+- Remove storybook dependency from package.json
+
 # 0.2.7
 - Move storybook from peerDependencies to devDependencies to avoid warnings in
 applications using this package.

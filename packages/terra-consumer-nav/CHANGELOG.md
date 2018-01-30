@@ -1,18 +1,13 @@
 ChangeLog
 # Next Release
-#### changed
-- Removed Roboto font import for stylesheet.
 
-# 0.2.13 - (Jan 18, 2018)
+# 0.2.13 - (Jan 30, 2018)
 ### Added
 - Ability to open parent nav when directed to a sub navigation item from dashboard
+- Added an aria-label custom prop to NavBurgerButton and Nav close button.
 
-------------------
-
-# 0.2.13 - (Jan 25, 2018)
-### Added
-- Added an aria-label custom prop to NavBurgerButton and Nav close button. 
-
+#### changed
+- Removed Roboto font import for stylesheet.
 ------------------
 
 # 0.2.12 - (Jan 5, 2018)
