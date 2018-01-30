@@ -2,6 +2,7 @@
 
 exports[`Nav Burger should render a default component 1`] = `
 <Button
+  aria-label="Open Navbar"
   className="burger"
   icon={
     <IconMenu
@@ -22,6 +23,7 @@ exports[`Nav Burger should render a default component 1`] = `
 
 exports[`Nav Burger should render accept custom classes 1`] = `
 <Button
+  aria-label="Open Navbar"
   className="burger testClass"
   icon={
     <IconMenu
@@ -42,6 +44,7 @@ exports[`Nav Burger should render accept custom classes 1`] = `
 
 exports[`Nav Burger should render accept custom props 1`] = `
 <Button
+  aria-label="Open Navbar"
   className="burger"
   icon={
     <IconMenu

@@ -20,10 +20,10 @@ const NavBurger = ({
     onClick={handleClick}
     icon={<IconMenu />}
     variant="link"
+    aria-label="Open Navbar"
     className={cx('burger', customProps.className)}
   />
 );
 
 NavBurger.propTypes = propTypes;
-
 export default NavBurger;
