@@ -1,6 +1,12 @@
 ChangeLog
 # Next Release
 
+# 0.2.14 - (Feb 12, 2018)
+### Changed
+- Updated the translation texts for help button
+
+------------------
+
 # 0.2.13 - (Jan 30, 2018)
 ### Added
 - Ability to open parent nav when directed to a sub navigation item from dashboard

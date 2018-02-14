@@ -9,6 +9,7 @@ Cerner Corporation
 - Jim Pruetting [@jpruetting]
 - Yaonan Zhong [@zhongyn]
 - Raihan Ahmed Mohammed [@MohammedRAihanAhmed]
+- Divya Ashritha [@DivyaAshritha]
 
 [@mhemesath]: https://github.com/mhemesath
 [@KevinJJackson]: https://github.com/KevinJJackson
@@ -19,3 +20,4 @@ Cerner Corporation
 [@jpruetting]:https://github.com/jpruetting
 [@zhongyn]:https://github.com/zhongyn
 [@MohammedRAihanAhmed]:https://github.com/MohammedRAihanAhmed
+[@DivyaAshritha]:https://github.com/divyaashritha
