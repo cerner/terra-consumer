@@ -290,7 +290,10 @@ const data = {
   ],
 };
 
-const card = (<div style={{ background: '#FFF', marginBottom: '10px', color: '#000', padding: '10px', borderRadius: '5px' }}>
+const card = (<div style={{
+ background: '#FFF', marginBottom: '10px', color: '#000', padding: '10px', borderRadius: '5px',
+}}
+>
   {/* eslint-disable */}
   { Array.apply(null, { length: 100 }).map((n, i) => <span key={i}>Testing </span>) }
 </div>);

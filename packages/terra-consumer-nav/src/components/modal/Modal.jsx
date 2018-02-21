@@ -44,7 +44,7 @@ const Modal = ({
     <div className={cx('modal-title')}>
       <SafeHtml text={title} />
       <div className={cx('close-button-container')}>
-        <Button className={cx('close-button')} onClick={onRequestClose} variant={'link'}>
+        <Button className={cx('close-button')} onClick={onRequestClose} variant="link">
           <IconClose />
         </Button>
       </div>

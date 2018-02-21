@@ -43,13 +43,13 @@ const defaultProps = {
 };
 
 const NavHelpPopup = ({
- title,
- hasHeader,
- popupContent,
- isOpen,
- closePopup,
- rowCount,
- ...customProps
+  title,
+  hasHeader,
+  popupContent,
+  isOpen,
+  closePopup,
+  rowCount,
+  ...customProps
 }) => {
   const popupHeader = (hasHeader &&
     <div className={cx('popup-title')}>
@@ -57,7 +57,7 @@ const NavHelpPopup = ({
       <Button
         className={cx('close-button')}
         onClick={closePopup}
-        variant={'link'}
+        variant="link"
         icon={<IconClose />}
         isCompact
       />

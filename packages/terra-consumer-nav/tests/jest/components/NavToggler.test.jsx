@@ -10,23 +10,19 @@ const testData = {
 describe('Nav Toggler', () => {
   // Snapshot Tests
   it('should render a default component', () => {
-    const wrapper = shallow(
-      <NavToggler {...testData}>
-        <div>
-          <p>Test Sub element 1</p>
-          <p>Test Sub element 2</p>
-        </div>
-      </NavToggler>,
-    );
+    const wrapper = shallow(<NavToggler {...testData}>
+      <div>
+        <p>Test Sub element 1</p>
+        <p>Test Sub element 2</p>
+      </div>
+                            </NavToggler>);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should apply custom classes', () => {
-    const wrapper = shallow(
-      <NavToggler {...testData} className="test-class" >
-        <div>test</div>
-      </NavToggler>,
-    );
+    const wrapper = shallow(<NavToggler {...testData} className="test-class" >
+      <div>test</div>
+                            </NavToggler>);
     expect(wrapper).toMatchSnapshot();
   });
 });

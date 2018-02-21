@@ -26,7 +26,8 @@ describe('NavHelp button with pop/modal', () => {
   // Snapshot Tests
   it('should render a button with IconInfo,label and a pop/modal not opened', () => {
     const wrapper = shallow(<I18nProvider locale="en-US" messages={messages}>
-      <NavHelp help={helpItems} id="nav-help-button" /></I18nProvider>);
+      <NavHelp help={helpItems} id="nav-help-button" />
+    </I18nProvider>);
     expect(wrapper).toMatchSnapshot();
   });
 });

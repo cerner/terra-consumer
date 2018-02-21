@@ -16,14 +16,12 @@ const propTypes = {
   /**
    * An array of nav items to be displayed on the user profile/ settings menu/popup.
    */
-  linkItems: PropTypes.arrayOf(
-    PropTypes.shape(
-      navElementShape,
-      {
-        subItems: PropTypes.arrayOf(PropTypes.shape(navElementShape)),
-      },
-    ),
-  ),
+  linkItems: PropTypes.arrayOf(PropTypes.shape(
+    navElementShape,
+    {
+      subItems: PropTypes.arrayOf(PropTypes.shape(navElementShape)),
+    },
+  )),
   /**
    * An optional function. When supplied, gets triggered on link click.
    */

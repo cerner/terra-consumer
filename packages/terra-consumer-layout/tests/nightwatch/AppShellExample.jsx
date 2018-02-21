@@ -14,7 +14,6 @@ const defaultProps = {
 };
 
 class DefaultLayout extends React.Component {
-
   constructor(props) {
     super(props);
 

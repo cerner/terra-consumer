@@ -9,6 +9,6 @@ module.exports = resizeTo(['small', 'tiny', 'medium', 'large', 'huge', 'enormous
     browser
       .url(`${browser.launchUrl}/#/tests/nav-tests/simple-nav`)
       .assert.elementPresent('#terra-consumer-nav');
-      // .assert.containsText('body', 'Cannot GET /tests/nav-tests/default');
+    // .assert.containsText('body', 'Cannot GET /tests/nav-tests/default');
   },
 });

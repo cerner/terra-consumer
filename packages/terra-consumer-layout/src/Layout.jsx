@@ -25,7 +25,7 @@ const propTypes = {
   */
   siteAlert: PropTypes.element,
 
-   /* A center justified logo in header for mobile.
+  /* A center justified logo in header for mobile.
    */
   logo: PropTypes.shape({
     /**
@@ -62,7 +62,9 @@ class Layout extends React.Component {
     });
   }
   render() {
-    const { nav, helpItems, logo, siteAlert, intl, ...customProps } = this.props;
+    const {
+      nav, helpItems, logo, siteAlert, intl, ...customProps
+    } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}

@@ -15,17 +15,19 @@ import NavigationTestLinks from 'terra-consumer-nav/tests/nightwatch/NavTestRout
 import IconTestRoutes from 'terra-consumer-icon/tests/nightwatch/IconTestRoutes';
 import LayoutTestRoutes from 'terra-consumer-layout/tests/nightwatch/LayoutTestRoutes';
 
-ReactDOM.render((
-  <Router history={hashHistory}>
-    <Redirect from="/" to="/site" />
-    <Route path="/site" component={App}>
-      <IndexRoute component={Home} />
-      <Route path="icon" component={IconExamples} />
-      <Route path="nav" component={NavExamples} />
-    </Route>
-    <Route path="/tests" component={TestLinks} />
-    { IconTestRoutes }
-    { NavigationTestLinks }
-    { LayoutTestRoutes }
-  </Router>
-), document.getElementById('root'));
+ReactDOM.render(
+  (
+    <Router history={hashHistory}>
+      <Redirect from="/" to="/site" />
+      <Route path="/site" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="icon" component={IconExamples} />
+        <Route path="nav" component={NavExamples} />
+      </Route>
+      <Route path="/tests" component={TestLinks} />
+      { IconTestRoutes }
+      { NavigationTestLinks }
+      { LayoutTestRoutes }
+    </Router>
+  ), document.getElementById('root'),
+);

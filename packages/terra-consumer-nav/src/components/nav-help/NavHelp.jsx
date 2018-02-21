@@ -21,7 +21,7 @@ const propTypes = {
     navElementShape,
     {
       children: PropTypes.arrayOf(PropTypes.shape(
-      navElementShape,
+        navElementShape,
         {
           children: PropTypes.array,
         },
@@ -61,7 +61,9 @@ class NavHelp extends React.Component {
   }
 
   render() {
-    const { helpNavs, id, intl, ...customProps } = this.props;
+    const {
+      helpNavs, id, intl, ...customProps
+    } = this.props;
     const helpText = intl.formatMessage({ id: 'Terra.Consumer.NavHelp.help' });
     const helpButton = (
       <button

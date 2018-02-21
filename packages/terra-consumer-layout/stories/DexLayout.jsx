@@ -96,7 +96,7 @@ const data = {
           target: '_blank',
         },
       ],
-        // comment out userName to see signin
+      // comment out userName to see signin
       userName: 'Martin O&#39;Neil',
       signinUrl: 'http://localhost:8080/',
       signoutUrl: 'http://localhost:8080/',

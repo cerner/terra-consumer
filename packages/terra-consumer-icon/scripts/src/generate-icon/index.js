@@ -12,14 +12,14 @@ removeMakeDirectories();
 
 // get filepath for every svg
 const svgs = fs.readdirSync(IconPathDetails.svgDir)
-    // Only load svg files
-    .filter(f => path.extname(f) === '.svg')
-    // // Resolve to absolute path
-    .map(f => path.join(IconPathDetails.svgDir, f));
+  // Only load svg files
+  .filter(f => path.extname(f) === '.svg')
+  // // Resolve to absolute path
+  .map(f => path.join(IconPathDetails.svgDir, f));
 
 
 svgs.forEach((svg) => {
   parseSvg(svg)
-      .then(renderJsx)
-      .then(writeIcon);
+    .then(renderJsx)
+    .then(writeIcon);
 });

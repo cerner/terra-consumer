@@ -102,7 +102,9 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { navItems, profile, logo, onRequestClose, ...customProps } = this.props;
+    const {
+      navItems, profile, logo, onRequestClose, ...customProps
+    } = this.props;
     const profileId = 'profile-popup-button';
     const defaultElement = (
       <Modal
