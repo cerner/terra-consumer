@@ -95,7 +95,7 @@ class Nav extends React.Component {
             content: <div />,
           },
         // eslint-disable-next-line react/no-unused-state
-        numberOfLinks, // TODO: is this necessary?
+        numberOfLinks,
       });
     }
     this.setState({
