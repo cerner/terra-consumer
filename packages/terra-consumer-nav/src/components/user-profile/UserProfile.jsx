@@ -39,6 +39,7 @@ const propTypes = {
   /**
    * The content of the each profile items.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   profileLinks: PropTypes.array,
   /**
    * A function used as a callback to render modal and popup content.

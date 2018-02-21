@@ -14,10 +14,13 @@ const propTypes = {
   /**
   * Object of configuration for the side navigation and profile.
   */
+  // eslint-disable-next-line react/forbid-prop-types
   nav: PropTypes.object.isRequired,
+
   /**
   * Array of links to show for the content of the help button
   */
+  // eslint-disable-next-line react/forbid-prop-types
   helpItems: PropTypes.array,
   /**
 

@@ -19,6 +19,7 @@ const propTypes = {
   /**
    * An array of objects to be displayed as nav link options.
    */
+  // eslint-disable-next-line react/forbid-prop-types
   navItems: PropTypes.array,
   /**
   * Object representing all the profile information

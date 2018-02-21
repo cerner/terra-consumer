@@ -6,17 +6,9 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
     className="help-item-wrapper"
     key="Technical Questions"
   >
-    <Button
+    <button
       className="help-item"
-      isBlock={false}
-      isCompact={false}
-      isDisabled={false}
-      isIconOnly={false}
-      isReversed={false}
       onClick={[Function]}
-      text="Help Item"
-      type="button"
-      variant="utility"
     >
       <Arrange
         align="stretch"
@@ -52,7 +44,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
           </div>
         }
       />
-    </Button>
+    </button>
     <Toggle
       className="toggler-padding"
       isAnimated={false}
