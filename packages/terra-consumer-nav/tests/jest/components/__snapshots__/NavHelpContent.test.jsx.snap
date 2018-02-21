@@ -4,16 +4,19 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
 <div>
   <div
     className="help-item-wrapper"
+    key="Technical Questions"
   >
     <Button
       className="help-item"
       isBlock={false}
       isCompact={false}
       isDisabled={false}
+      isIconOnly={false}
       isReversed={false}
       onClick={[Function]}
+      text="Help Item"
       type="button"
-      variant="default"
+      variant="utility"
     >
       <Arrange
         align="stretch"
@@ -57,6 +60,7 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
     >
       <p
         className="toggler-content-alignment"
+        key="Need help using this portal or need to report an issue? Contact the support team at 123-xxx-xxxx"
       >
         <span
           className="help-subitem"
@@ -70,8 +74,9 @@ exports[`Content of the Help Modal/Popup should render a list of items with/with
   </div>
   <SmartLink
     className="help-item"
-    handleClick={[Function]}
+    handleClick={[MockFunction]}
     isExternal={false}
+    key="Get Support ID"
     target="_self"
     url="http://localhost:8080/"
   >

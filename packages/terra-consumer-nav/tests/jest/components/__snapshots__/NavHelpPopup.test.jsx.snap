@@ -14,8 +14,8 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
   isContentFocusDisabled={false}
   isHeaderDisabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
-  targetRef={[Function]}
+  onRequestClose={[MockFunction]}
+  targetRef={[MockFunction]}
 >
   <div>
     <div
@@ -36,10 +36,12 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
         isBlock={false}
         isCompact={true}
         isDisabled={false}
+        isIconOnly={false}
         isReversed={false}
-        onClick={[Function]}
+        onClick={[MockFunction]}
+        text="Close Popup"
         type="button"
-        variant="link"
+        variant="utility"
       />
     </div>
     <div>
@@ -65,8 +67,8 @@ exports[`Popup should render a popup without header(title & close button) 1`] = 
   isContentFocusDisabled={false}
   isHeaderDisabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
-  targetRef={[Function]}
+  onRequestClose={[MockFunction]}
+  targetRef={[MockFunction]}
 >
   <div>
     <div>

@@ -3,15 +3,18 @@
 exports[`Profile Link items should render a list of profile link items 1`] = `
 <div>
   <ProfileLink
+    key="Account"
     text="Account"
     url="http://localhost:8080/"
   />
   <ProfileLink
+    key="Notifications"
     text="Notifications"
     url="http://localhost:8080/"
   />
   <div
     className=""
+    key="English (United States)"
   >
     <button
       className="link toggler-wrapper"
@@ -43,23 +46,27 @@ exports[`Profile Link items should render a list of profile link items 1`] = `
       isOpen={false}
     >
       <ProfileLink
-        customOnClick={[Function]}
+        customOnClick={[MockFunction]}
         data-locale="ar"
+        key="العربيّة"
         text="العربيّة"
       />
       <ProfileLink
-        customOnClick={[Function]}
+        customOnClick={[MockFunction]}
         data-locale="es"
+        key="Español"
         text="Español"
       />
       <ProfileLink
-        customOnClick={[Function]}
+        customOnClick={[MockFunction]}
         data-locale="en-gb"
+        key="English (United Kingdom)"
         text="English (United Kingdom)"
       />
       <ProfileLink
-        customOnClick={[Function]}
+        customOnClick={[MockFunction]}
         data-locale="fr-fr"
+        key="Français (France)"
         text="Français (France)"
       />
     </Toggle>

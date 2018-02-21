@@ -2,6 +2,7 @@
 
 exports[`NavHelp button with pop/modal should render a button with IconInfo,label and a pop/modal not opened 1`] = `
 <IntlProvider
+  key="en-US"
   locale="en-US"
   messages={
     Object {
@@ -26,7 +27,7 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
             "icon": <IconOutlineQuestionMark
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
-        />,
+            />,
             "text": "Technical Questions",
             "url": "http://localhost:8080/",
           },
@@ -35,7 +36,7 @@ exports[`NavHelp button with pop/modal should render a button with IconInfo,labe
             "icon": <IconOutlineQuestionMark
               viewBox="0 0 48 48"
               xmlns="http://www.w3.org/2000/svg"
-        />,
+            />,
             "text": "Get Support ID",
             "url": "http://localhost:8080/",
           },

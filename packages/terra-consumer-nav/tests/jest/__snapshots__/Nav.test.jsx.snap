@@ -10,7 +10,6 @@ exports[`Nav should render a default component 1`] = `
     className="close-button-container"
   >
     <Button
-      aria-label="Close"
       className="close-button"
       icon={
         <IconClose
@@ -22,10 +21,12 @@ exports[`Nav should render a default component 1`] = `
       isBlock={false}
       isCompact={false}
       isDisabled={false}
+      isIconOnly={false}
       isReversed={false}
       onClick={[Function]}
+      text="Close"
       type="button"
-      variant="link"
+      variant="utility"
     />
   </div>
   <NavLogo
@@ -114,7 +115,6 @@ exports[`Nav without profile should render a nav without a profile component 1`]
     className="close-button-container"
   >
     <Button
-      aria-label="Close"
       className="close-button"
       icon={
         <IconClose
@@ -126,10 +126,12 @@ exports[`Nav without profile should render a nav without a profile component 1`]
       isBlock={false}
       isCompact={false}
       isDisabled={false}
+      isIconOnly={false}
       isReversed={false}
       onClick={[Function]}
+      text="Close"
       type="button"
-      variant="link"
+      variant="utility"
     />
   </div>
   <NavLogo
