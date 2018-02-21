@@ -45,13 +45,13 @@ describe('Icon', () => {
     });
 
     describe('focusable prop', () => {
-      it('should have default focusable={false}', () => {
+      it('should have default focusable="false"', () => {
         const wrapper = shallow(<IconChatBubble />);
-        expect(wrapper.prop('focusable')).toEqual(false);
+        expect(wrapper.prop('focusable')).toEqual('false');
       });
-      it('should have focusable={true}', () => {
-        const wrapper = shallow(<IconChatBubble focusable />);
-        expect(wrapper.prop('focusable')).toEqual(true);
+      it('should have focusable="true"', () => {
+        const wrapper = shallow(<IconChatBubble focusable="true" />);
+        expect(wrapper.prop('focusable')).toEqual('true');
       });
     });
 
@@ -126,13 +126,13 @@ describe('Icon', () => {
     });
 
     describe('focusable prop', () => {
-      it('should have default focusable={false}', () => {
+      it('should have default focusable="false"', () => {
         const wrapper = shallow(<IconColorIncentives />);
-        expect(wrapper.prop('focusable')).toEqual(false);
+        expect(wrapper.prop('focusable')).toEqual('false');
       });
-      it('should have focusable={true}', () => {
-        const wrapper = shallow(<IconColorIncentives focusable />);
-        expect(wrapper.prop('focusable')).toEqual(true);
+      it('should have focusable="true"', () => {
+        const wrapper = shallow(<IconColorIncentives focusable="true" />);
+        expect(wrapper.prop('focusable')).toEqual('true');
       });
     });
 
@@ -212,13 +212,13 @@ describe('Icon', () => {
     });
 
     describe('focusable prop', () => {
-      it('should have default focusable={false}', () => {
+      it('should have default focusable="false"', () => {
         const wrapper = shallow(<IconOutlineChevronRight />);
-        expect(wrapper.prop('focusable')).toEqual(false);
+        expect(wrapper.prop('focusable')).toEqual('false');
       });
-      it('should have focusable={true}', () => {
-        const wrapper = shallow(<IconOutlineChevronRight focusable />);
-        expect(wrapper.prop('focusable')).toEqual(true);
+      it('should have focusable="true"', () => {
+        const wrapper = shallow(<IconOutlineChevronRight focusable="true" />);
+        expect(wrapper.prop('focusable')).toEqual('true');
       });
     });
 

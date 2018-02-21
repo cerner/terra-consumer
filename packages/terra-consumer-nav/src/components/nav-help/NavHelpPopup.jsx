@@ -57,9 +57,10 @@ const NavHelpPopup = ({
       <Button
         className={cx('close-button')}
         onClick={closePopup}
-        variant="link"
+        variant="utility"
         icon={<IconClose />}
         isCompact
+        text="Close Popup"
       />
     </div>
   );

@@ -1,7 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
-
-const resizeTo = require('./utils').resizeTo;
+const { resizeTo } = require('./utils');
 
 module.exports = resizeTo(['small', 'tiny', 'medium', 'large', 'huge', 'enormous'], {
   '@tags': ['nav'],

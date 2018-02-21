@@ -37,17 +37,19 @@ class App extends React.Component {
                 <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
               </div>
               <div>
-                <label htmlFor="locale"> Current locale: {this.state.locale} </label>
-                <select value={this.state.locale} onChange={this.handleLocaleChange}>
-                  <option value="en">en</option>
-                  <option value="en-GB">en-GB</option>
-                  <option value="en-US">en-US</option>
-                  <option value="de">de</option>
-                  <option value="es">es</option>
-                  <option value="fr">fr</option>
-                  <option value="pt">pt</option>
-                  <option value="fi-FI">fi-FI</option>
-                </select>
+                <label htmlFor="locale">
+                  Current locale: {this.state.locale}
+                  <select value={this.state.locale} onChange={this.handleLocaleChange} id="locale">
+                    <option value="en">en</option>
+                    <option value="en-GB">en-GB</option>
+                    <option value="en-US">en-US</option>
+                    <option value="de">de</option>
+                    <option value="es">es</option>
+                    <option value="fr">fr</option>
+                    <option value="pt">pt</option>
+                    <option value="fi-FI">fi-FI</option>
+                  </select>
+                </label>
               </div>
               <List className={styles['site-nav']}>
                 <List.Item content={<Link to="/">Home</Link>} />

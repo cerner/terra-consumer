@@ -54,6 +54,8 @@ class NavHelpContent extends React.Component {
             <Button
               className={cx('help-item', { 'toggler-open': isOpen })}
               onClick={() => this.handleToggle(index)}
+              variant="utility" // TODO: check this
+              text="Help Item" // TODO: check this
             >
               <Arrange
                 className={cx('help-item-text')}

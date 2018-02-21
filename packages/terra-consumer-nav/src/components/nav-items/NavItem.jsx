@@ -18,7 +18,7 @@ const propTypes = {
   /**
    * Function callback when the toggle component is clicked.
    */
-  handleToggle: PropTypes.func.isRequired,
+  handleToggle: PropTypes.func,
   /**
    * Whether or not the content should be toggled open or not.
    */
@@ -34,7 +34,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isActive: false,
+  // eslint-disable-next-line react/default-props-match-prop-types
+  isActive: false, // Optional from navItemShape
   handleToggle: () => {},
 };
 
@@ -73,29 +74,33 @@ const NavItem = ({
   );
 
   return (children && children.length > 0) ?
-    (<NavToggler
-      {...customProps}
-      header={itemText}
-      handleToggle={open => handleToggle(toggleId, open)}
-      isOpen={isOpen}
-      className={cx('nested', customProps.className)}
-    >
-      {children}
-    </NavToggler>)
-    :
-    (<div className={isActive ? activeClass : ''}>
-      <SmartLink
+    (
+      <NavToggler
         {...customProps}
-        url={url}
-        target={target}
-        isExternal={isExternal}
-        activeClass={activeClass}
-        handleClick={handleClick}
-        className={cx('link', customProps.className)}
+        header={itemText}
+        handleToggle={open => handleToggle(toggleId, open)}
+        isOpen={isOpen}
+        className={cx('nested', customProps.className)}
       >
-        {itemText}
-      </SmartLink>
-    </div>);
+        {children}
+      </NavToggler>
+    )
+    :
+    (
+      <div className={isActive ? activeClass : ''}>
+        <SmartLink
+          {...customProps}
+          url={url}
+          target={target}
+          isExternal={isExternal}
+          activeClass={activeClass}
+          handleClick={handleClick}
+          className={cx('link', customProps.className)}
+        >
+          {itemText}
+        </SmartLink>
+      </div>
+    );
 };
 
 NavItem.propTypes = propTypes;

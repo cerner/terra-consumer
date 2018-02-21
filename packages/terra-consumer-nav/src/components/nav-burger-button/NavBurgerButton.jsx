@@ -19,8 +19,8 @@ const NavBurger = ({
     {...customProps}
     onClick={handleClick}
     icon={<IconMenu />}
-    variant="link"
-    aria-label="Open Navbar"
+    variant="utility"
+    text="Open Navbar"
     className={cx('burger', customProps.className)}
   />
 );

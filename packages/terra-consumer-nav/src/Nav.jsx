@@ -19,7 +19,7 @@ const propTypes = {
   /**
    * An array of objects to be displayed as nav link options.
    */
-  navItems: PropTypes.array.isRequired,
+  navItems: PropTypes.array,
   /**
   * Object representing all the profile information
   */
@@ -93,7 +93,8 @@ class Nav extends React.Component {
             title: '',
             content: <div />,
           },
-        numberOfLinks,
+        // eslint-disable-next-line react/no-unused-state
+        numberOfLinks, // TODO: is this necessary?
       });
     }
     this.setState({
@@ -137,7 +138,7 @@ class Nav extends React.Component {
         className={cx('nav', { 'modal-open': this.state.isModalOpen }, customProps.className)}
       >
         <div className={cx('close-button-container')}>
-          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" aria-label="Close" />
+          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="utility" text="Close" />
         </div>
         <NavLogo {...logo} />
         <NavItems navItems={navItems} handleClick={onRequestClose} />
