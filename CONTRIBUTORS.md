@@ -10,6 +10,7 @@ Cerner Corporation
 - Yaonan Zhong [@zhongyn]
 - Raihan Ahmed Mohammed [@MohammedRAihanAhmed]
 - Divya Ashritha [@DivyaAshritha]
+- Cody Price [@dev-cprice]
 
 [@mhemesath]: https://github.com/mhemesath
 [@KevinJJackson]: https://github.com/KevinJJackson
@@ -21,3 +22,4 @@ Cerner Corporation
 [@zhongyn]:https://github.com/zhongyn
 [@MohammedRAihanAhmed]:https://github.com/MohammedRAihanAhmed
 [@DivyaAshritha]:https://github.com/divyaashritha
+[@dev-cprice]: https://github.com/dev-cprice
