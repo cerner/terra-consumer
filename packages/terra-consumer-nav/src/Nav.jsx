@@ -86,7 +86,7 @@ class Nav extends React.Component {
     this.props.onRequestClose();
   }
 
-  toggleModal(modalObject, numberOfLinks) {
+  toggleModal(modalObject) {
     if (modalObject.title && modalObject.content) {
       this.setState({
         modalContent: modalObject ||
@@ -94,8 +94,6 @@ class Nav extends React.Component {
             title: '',
             content: <div />,
           },
-        // eslint-disable-next-line react/no-unused-state
-        numberOfLinks,
       });
     }
     this.setState({
