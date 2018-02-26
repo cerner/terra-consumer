@@ -11,22 +11,27 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   ...navItemShape,
+
   /**
    * The id of the toggle component to be toggled.
    */
   toggleId: PropTypes.number,
+
   /**
    * Function callback when the toggle component is clicked.
    */
   handleToggle: PropTypes.func,
+
   /**
    * Whether or not the content should be toggled open or not.
    */
   isOpen: PropTypes.bool,
+
   /**
    * Function to be applied to the generated link.
    */
   handleClick: PropTypes.func,
+
   /**
    * Items to be displayed within the toggler.
    */

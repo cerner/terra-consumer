@@ -14,7 +14,7 @@ removeMakeDirectories();
 const svgs = fs.readdirSync(IconPathDetails.svgDir)
   // Only load svg files
   .filter(f => path.extname(f) === '.svg')
-  // // Resolve to absolute path
+  // Resolve to absolute path
   .map(f => path.join(IconPathDetails.svgDir, f));
 
 

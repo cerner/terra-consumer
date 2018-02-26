@@ -14,14 +14,17 @@ const propTypes = {
    * Element to be displayed on top of the button that opens the toggle content.
    */
   header: PropTypes.element,
+
   /**
    * Function callback when the toggle component is clicked.
    */
   handleToggle: PropTypes.func.isRequired,
+
   /**
    * Whether or not the content should be toggled open or not.
    */
   isOpen: PropTypes.bool,
+
   /**
    * Items to be displayed within the toggler.
    */

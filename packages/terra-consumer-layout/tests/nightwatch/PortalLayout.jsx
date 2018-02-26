@@ -352,13 +352,22 @@ const data = {
   ],
 };
 
-const card = (<div style={{
- background: '#FFF', marginBottom: '10px', color: '#000', padding: '10px', borderRadius: '5px',
-}}
->
-  {/* eslint-disable */}
-  { Array.apply(null, { length: 100 }).map((n, i) => <span key={i}>Testing </span>) }
-</div>);
+const cardStyle = {
+  background: '#FFF',
+  marginBottom: '10px',
+  color: '#000',
+  padding: '10px',
+  borderRadius: '5px',
+};
+
+const card = (
+  <div style={cardStyle}>
+    {
+      /* eslint-disable-next-line */
+      Array.apply(null, { length: 100 }).map((_, i) => <span key={i}>Testing </span>)
+    }
+  </div>
+);
 
 const content = (
   <div>
@@ -367,8 +376,10 @@ const content = (
       path="/"
       render={() => (
         <div>
-          {/* eslint-disable */}
-          { Array.apply(null, { length: 5 }).map((n, i) => <div key={i}>{card}</div>) }
+          {
+            /* eslint-disable-next-line */
+            Array.apply(null, { length: 5 }).map((n, i) => <div key={i}>{card}</div>)
+          }
         </div>
       )}
     />
@@ -381,7 +392,6 @@ export default () => (
     <BrowserRouter>
       <Layout {...data}>
         <div>{content}</div>
-        {/* <div style={{ padding: '500px 0', border: '1px dashed white' }} /> */}
       </Layout>
     </BrowserRouter>
   </AppShellExample>

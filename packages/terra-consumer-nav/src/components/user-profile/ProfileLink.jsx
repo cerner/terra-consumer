@@ -10,8 +10,8 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-  * An optional function. When supplied, gets triggered on link click.
-  */
+   * An optional function. When supplied, gets triggered on link click.
+   */
   handleClick: PropTypes.func,
   customOnClick: PropTypes.func,
   ...navElementShape,

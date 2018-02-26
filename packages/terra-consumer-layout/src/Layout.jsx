@@ -12,23 +12,22 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-  * Object of configuration for the side navigation and profile.
-  */
-  // eslint-disable-next-line react/forbid-prop-types
-  nav: PropTypes.object.isRequired,
+   * Object of configuration for the side navigation and profile.
+   */
+  nav: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 
   /**
-  * Array of links to show for the content of the help button
-  */
-  // eslint-disable-next-line react/forbid-prop-types
-  helpItems: PropTypes.array,
-  /**
+   * Array of links to show for the content of the help button
+   */
+  helpItems: PropTypes.array, // eslint-disable-line react/forbid-prop-types
 
-  * Alert banner
-  */
+  /**
+   * Alert banner
+   */
   siteAlert: PropTypes.element,
 
-  /* A center justified logo in header for mobile.
+  /**
+   * A center justified logo in header for mobile.
    */
   logo: PropTypes.shape({
     /**

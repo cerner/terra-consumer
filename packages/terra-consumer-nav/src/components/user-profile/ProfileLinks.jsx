@@ -22,6 +22,7 @@ const propTypes = {
       subItems: PropTypes.arrayOf(PropTypes.shape(navElementShape)),
     },
   )),
+
   /**
    * An optional function. When supplied, gets triggered on link click.
    */

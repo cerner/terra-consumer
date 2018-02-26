@@ -21,13 +21,15 @@ const propTypes = {
    */
   // eslint-disable-next-line react/forbid-prop-types
   navItems: PropTypes.array,
+
   /**
-  * Object representing all the profile information
-  */
+   * Object representing all the profile information
+   */
   profile: PropTypes.shape({
     signinUrl: PropTypes.string,
     avatar: PropTypes.element,
   }),
+
   /**
    * An object defining the logo to be displayed
    */
@@ -36,15 +38,18 @@ const propTypes = {
      * The location where the image to be displayed is stored.
      */
     path: PropTypes.string,
+
     /**
      * Alternate text used be screen readers.
      */
     altText: PropTypes.string,
+
     /**
      * Whether or not the logo should be placed on top of a white card.
      */
     isCard: PropTypes.bool,
   }),
+
   /**
    * Callback function: should be used to close the nav on mobile devices.
    */

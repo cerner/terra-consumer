@@ -12,14 +12,15 @@ const propTypes = {
     navItemShape,
     {
       /**
-         * An optional array of objects to be displayed as sub navs toggled by the main nav.
-         */
+       * An optional array of objects to be displayed as sub navs toggled by the main nav.
+       */
       subItems: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
     },
   )),
+
   /**
    * Function to be applied on all nav links, excluding toggle headers.
-  */
+   */
   handleClick: PropTypes.func,
 };
 
