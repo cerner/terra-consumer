@@ -1,7 +1,6 @@
 // Make Enzyme functions available in all test files without importing
-// eslint-disable-next-line import/no-extraneous-dependencies
+/* eslint-disable import/no-extraneous-dependencies */
 import Adapter from 'enzyme-adapter-react-16';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { configure, mount, render, shallow } from 'enzyme';
 
 configure({ adapter: new Adapter() });

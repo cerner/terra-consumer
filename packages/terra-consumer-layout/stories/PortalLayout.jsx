@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash'; // eslint-disable-line import/no-extraneous-dependencies
 import { BrowserRouter, Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
@@ -301,8 +302,7 @@ const cardStyle = {
 const card = (
   <div style={cardStyle}>
     {
-      /* eslint-disable-next-line */
-      Array.apply(null, { length: 100 }).map((_, i) => <span key={i}>Testing </span>)
+      _.times(100, i => <span key={i}>Testing </span>)
     }
   </div>
 );
@@ -315,8 +315,7 @@ const content = (
       render={() => (
         <div>
           {
-            /* eslint-disable-next-line */
-            Array.apply(null, { length: 5 }).map((n, i) => <div key={i}>{card}</div>)
+            _.times(5, i => <div key={i}>{card}</div>)
           }
         </div>
       )}
