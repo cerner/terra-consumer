@@ -33,7 +33,7 @@
     "prop-types": "^15.6.0",
     "react-intl": "^2.4.0",
     "react-router-dom": "^4.2.2",
-    "terra-arrange": "^2.0.0",
+    "terra-arrange": "^2.1.0",
     "terra-base": "^3.0.0",
     "terra-button": "^2.0.0",
     "terra-card": "^2.0.0",
@@ -44,6 +44,7 @@
     "terra-overlay": "^2.0.0",
     "terra-popup": "^2.0.0",
     "terra-responsive-element": "^2.0.0",
+    "terra-spacer": "^2.1.0",
     "terra-status": "^2.0.0",
     "terra-toggle": "^2.0.0"
   },

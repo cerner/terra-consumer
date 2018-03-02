@@ -18,32 +18,47 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
   targetRef={[MockFunction]}
 >
   <div>
-    <div
+    <Spacer
       className="popup-title"
+      isInlineBlock={false}
+      marginBottom="none"
+      marginLeft="none"
+      marginRight="none"
+      marginTop="none"
+      paddingBottom="small-1"
+      paddingLeft="large+1"
+      paddingRight="small"
+      paddingTop="small-1"
     >
-      <SafeHtml
-        text="Title"
-      />
-      <Button
-        className="close-button"
-        icon={
-          <IconClose
-            data-name="Layer 1"
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+      <Arrange
+        fill={
+          <SafeHtml
+            text="Title"
           />
         }
-        isBlock={false}
-        isCompact={true}
-        isDisabled={false}
-        isIconOnly={false}
-        isReversed={false}
-        onClick={[MockFunction]}
-        text="Close Popup"
-        type="button"
-        variant="utility"
+        fitEnd={
+          <Button
+            className="close-button"
+            icon={
+              <IconClose
+                data-name="Layer 1"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[MockFunction]}
+            text="Close Popup"
+            type="button"
+            variant="utility"
+          />
+        }
       />
-    </div>
+    </Spacer>
     <div>
       <div>
          This is a test content

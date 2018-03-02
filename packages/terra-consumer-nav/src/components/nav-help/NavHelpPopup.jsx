@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
+import Arrange from 'terra-arrange';
 import Button from 'terra-button';
 import IconClose from 'terra-icon/lib/icon/IconClose';
 import Popup from 'terra-popup';
+import Spacer from 'terra-spacer';
 import SafeHtml from '../safe-html/SafeHtml';
 import styles from './NavHelpPopup.scss';
 
@@ -52,17 +54,20 @@ const NavHelpPopup = ({
   ...customProps
 }) => {
   const popupHeader = (hasHeader &&
-    <div className={cx('popup-title')}>
-      <SafeHtml text={title} />
-      <Button
-        className={cx('close-button')}
-        onClick={closePopup}
-        variant="utility"
-        icon={<IconClose />}
-        isCompact
-        text="Close Popup"
+    <Spacer className={cx('popup-title')} paddingTop="small-1" paddingRight="small" paddingBottom="small-1" paddingLeft="large+1">
+      <Arrange
+        fill={<SafeHtml text={title} />}
+        fitEnd={
+          <Button
+            className={cx('close-button')}
+            icon={<IconClose />}
+            onClick={closePopup}
+            text="Close Popup"
+            variant="utility"
+          />
+        }
       />
-    </div>
+    </Spacer>
   );
 
   return (
