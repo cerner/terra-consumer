@@ -1,9 +1,13 @@
 @import '../../variables';
 
+$icon-size: 1.428571428571429rem;
+
 :local {
   .burger {
+    --terra-button-icon-height: $icon-size; /* stylelint-disable-line */
+    --terra-button-icon-width: $icon-size; /* stylelint-disable-line */
     color: var(--terra-consumer-burger-color, #3d3d3d) !important;
-    font-size: 20px !important;
+    font-size: $icon-size !important;
 
     &:hover,
     &:focus {
