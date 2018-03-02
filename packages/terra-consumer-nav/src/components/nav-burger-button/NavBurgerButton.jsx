@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames/bind';
-import Button from 'terra-button';
 import IconMenu from 'terra-icon/lib/icon/IconMenu';
 import styles from './NavBurgerButton.scss';
 
@@ -15,14 +14,17 @@ const NavBurger = ({
   handleClick,
   ...customProps
 }) => (
-  <Button
+  <button
     {...customProps}
     onClick={handleClick}
-    icon={<IconMenu />}
     variant="utility"
     text="Open Navbar"
-    className={cx('burger', customProps.className)}
-  />
+    className={cx('burger', 'button', customProps.className)}
+  >
+    <span className={cx('icon')}>
+      <IconMenu />
+    </span>
+  </button>
 );
 
 NavBurger.propTypes = propTypes;

@@ -1,68 +1,59 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Nav Burger should render a default component 1`] = `
-<Button
-  className="burger"
-  icon={
+<button
+  className="burger button"
+  onClick={[MockFunction]}
+  text="Open Navbar"
+  variant="utility"
+>
+  <span
+    className="icon"
+  >
     <IconMenu
       data-name="Layer 1"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isIconOnly={false}
-  isReversed={false}
-  onClick={[MockFunction]}
-  text="Open Navbar"
-  type="button"
-  variant="utility"
-/>
+  </span>
+</button>
 `;
 
 exports[`Nav Burger should render accept custom classes 1`] = `
-<Button
-  className="burger testClass"
-  icon={
+<button
+  className="burger button testClass"
+  onClick={[MockFunction]}
+  text="Open Navbar"
+  variant="utility"
+>
+  <span
+    className="icon"
+  >
     <IconMenu
       data-name="Layer 1"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isIconOnly={false}
-  isReversed={false}
-  onClick={[MockFunction]}
-  text="Open Navbar"
-  type="button"
-  variant="utility"
-/>
+  </span>
+</button>
 `;
 
 exports[`Nav Burger should render accept custom props 1`] = `
-<Button
-  className="burger"
-  icon={
+<button
+  className="burger button"
+  id="testId"
+  onClick={[MockFunction]}
+  text="Open Navbar"
+  variant="utility"
+>
+  <span
+    className="icon"
+  >
     <IconMenu
       data-name="Layer 1"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  id="testId"
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isIconOnly={false}
-  isReversed={false}
-  onClick={[MockFunction]}
-  text="Open Navbar"
-  type="button"
-  variant="utility"
-/>
+  </span>
+</button>
 `;

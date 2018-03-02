@@ -4,14 +4,58 @@ $icon-size: 1.428571428571429rem;
 
 :local {
   .burger {
-    --terra-button-icon-height: $icon-size; /* stylelint-disable-line */
-    --terra-button-icon-width: $icon-size; /* stylelint-disable-line */
     color: var(--terra-consumer-burger-color, #3d3d3d) !important;
     font-size: $icon-size !important;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 
     &:hover,
     &:focus {
       color: var(--terra-consumer-burger-hover-color, #ccc) !important;
+    }
+  }
+
+  // Copy most styles from terra-button v2, but ensure that visuals match pre-react 16 uplift
+  .button {
+    background-color: transparent;
+    border-style: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.286rem 0;
+    text-align: center;
+    touch-action: manipulation; // Enable fast tap interaction in webkit browsers; see https://webkit.org/blog/5610/more-responsive-tapping-on-ios/
+    user-select: none; // Prevent text selection on buttons on mobile devices
+    white-space: normal;
+
+    // Remove the inner border and padding in Firefox.
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    &:disabled,
+    &.is-disabled {
+      cursor: default;
+      opacity: 0.3;
+      pointer-events: none; // prevent pointer interaction for anchor elements
+    }
+  }
+
+  .icon {
+    display: inline-block;
+
+    > svg {
+      height: $icon-size;
+      width: $icon-size;
     }
   }
 }
