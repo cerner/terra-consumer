@@ -16,10 +16,9 @@ const NavBurger = ({
 }) => (
   <button
     {...customProps}
-    onClick={handleClick}
-    variant="utility"
-    text="Open Navbar"
+    aria-label="Open Navbar"
     className={cx('burger', 'button', customProps.className)}
+    onClick={handleClick}
   >
     <span className={cx('icon')}>
       <IconMenu />

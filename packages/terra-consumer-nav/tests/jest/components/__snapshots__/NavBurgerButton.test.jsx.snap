@@ -2,10 +2,9 @@
 
 exports[`Nav Burger should render a default component 1`] = `
 <button
+  aria-label="Open Navbar"
   className="burger button"
   onClick={[MockFunction]}
-  text="Open Navbar"
-  variant="utility"
 >
   <span
     className="icon"
@@ -21,10 +20,9 @@ exports[`Nav Burger should render a default component 1`] = `
 
 exports[`Nav Burger should render accept custom classes 1`] = `
 <button
+  aria-label="Open Navbar"
   className="burger button testClass"
   onClick={[MockFunction]}
-  text="Open Navbar"
-  variant="utility"
 >
   <span
     className="icon"
@@ -40,11 +38,10 @@ exports[`Nav Burger should render accept custom classes 1`] = `
 
 exports[`Nav Burger should render accept custom props 1`] = `
 <button
+  aria-label="Open Navbar"
   className="burger button"
   id="testId"
   onClick={[MockFunction]}
-  text="Open Navbar"
-  variant="utility"
 >
   <span
     className="icon"
