@@ -27,4 +27,5 @@ const NavBurger = ({
 );
 
 NavBurger.propTypes = propTypes;
+
 export default NavBurger;
