@@ -19,6 +19,7 @@ exports[`Nav Logo should render a Card instead of a div when specified 1`] = `
   <CardBody
     hasPaddingHorizontal={true}
     hasPaddingVertical={true}
+    isContentCentered={false}
   >
      
     <img
