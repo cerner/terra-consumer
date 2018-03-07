@@ -1,6 +1,6 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 // eslint-disable-next-line import/no-extraneous-dependencies
-const screenshot = require('terra-toolkit').screenshot;
+// const screenshot = require('terra-toolkit').screenshot; // TODO: replace this with wdio/Terra screenshots, breaks nightwatch if left in
 
 module.exports = {
   before: (browser, done) => {
@@ -8,9 +8,9 @@ module.exports = {
     browser.resizeWindow(size[0], size[1], done);
   },
 
-  afterEach: (browser, done) => {
-    screenshot(browser, 'terra-consumer-icon', done);
-  },
+  // afterEach: (browser, done) => {
+  //   screenshot(browser, 'terra-consumer-icon', done); // TODO: replace this with wdio/Terra screenshots, breaks nightwatch if left in
+  // },
 
   'Displays a default icon with aria-hidden equal to true': (browser) => {
     browser

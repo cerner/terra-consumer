@@ -11,22 +11,27 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   ...navItemShape,
+
   /**
    * The id of the toggle component to be toggled.
    */
   toggleId: PropTypes.number,
+
   /**
    * Function callback when the toggle component is clicked.
    */
-  handleToggle: PropTypes.func.isRequired,
+  handleToggle: PropTypes.func,
+
   /**
    * Whether or not the content should be toggled open or not.
    */
   isOpen: PropTypes.bool,
+
   /**
    * Function to be applied to the generated link.
    */
   handleClick: PropTypes.func,
+
   /**
    * Items to be displayed within the toggler.
    */
@@ -34,7 +39,8 @@ const propTypes = {
 };
 
 const defaultProps = {
-  isActive: false,
+  // eslint-disable-next-line react/default-props-match-prop-types
+  isActive: false, // Optional from navItemShape
   handleToggle: () => {},
 };
 
@@ -73,29 +79,33 @@ const NavItem = ({
   );
 
   return (children && children.length > 0) ?
-    (<NavToggler
-      {...customProps}
-      header={itemText}
-      handleToggle={open => handleToggle(toggleId, open)}
-      isOpen={isOpen}
-      className={cx('nested', customProps.className)}
-    >
-      {children}
-    </NavToggler>)
-    :
-    (<div className={isActive ? activeClass : ''}>
-      <SmartLink
+    (
+      <NavToggler
         {...customProps}
-        url={url}
-        target={target}
-        isExternal={isExternal}
-        activeClass={activeClass}
-        handleClick={handleClick}
-        className={cx('link', customProps.className)}
+        header={itemText}
+        handleToggle={open => handleToggle(toggleId, open)}
+        isOpen={isOpen}
+        className={cx('nested', customProps.className)}
       >
-        {itemText}
-      </SmartLink>
-    </div>);
+        {children}
+      </NavToggler>
+    )
+    :
+    (
+      <div className={isActive ? activeClass : ''}>
+        <SmartLink
+          {...customProps}
+          url={url}
+          target={target}
+          isExternal={isExternal}
+          activeClass={activeClass}
+          handleClick={handleClick}
+          className={cx('link', customProps.className)}
+        >
+          {itemText}
+        </SmartLink>
+      </div>
+    );
 };
 
 NavItem.propTypes = propTypes;

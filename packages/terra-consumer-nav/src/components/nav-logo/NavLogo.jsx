@@ -10,17 +10,20 @@ const propTypes = {
    *  The url of the logo to be shown.
    */
   url: PropTypes.string,
+
   /**
    *  The alternate text that is read by screen readers are displayed if the image fails to load.
    */
   altText: PropTypes.string,
+
   /**
    * Whether or not the logo should be placed on top of a white card.
    */
   isCard: PropTypes.bool,
+
   /**
-  * Props for a smartlink
-  */
+   * Props for a smartlink
+   */
   link: PropTypes.shape({
     url: PropTypes.string.isRequired,
     isExternal: PropTypes.bool,

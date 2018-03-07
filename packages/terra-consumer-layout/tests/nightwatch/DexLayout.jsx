@@ -99,7 +99,7 @@ const data = {
           target: '_blank',
         },
       ],
-        // comment out userName to see signin
+      // comment out userName to see signin
       userName: 'Martin O&#39;Neil',
       signinUrl: 'http://localhost:8080/',
       signoutUrl: 'http://localhost:8080/',
@@ -152,13 +152,13 @@ export default class DexLayout extends React.Component {
   }
 
   generateAlerts() {
-    return this.state.alerts.map(alert =>
+    return this.state.alerts.map(alert => (
       <div>
         <Alert key={alert} type={Alert.Opts.Types.WARNING} onDismiss={() => { this.dismissAlert(alert); }} >
           <div>Alert Banner Text</div>
         </Alert>
-      </div>,
-    );
+      </div>
+    ));
   }
 
   dismissAlert(alertId) {

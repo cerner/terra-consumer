@@ -24,20 +24,23 @@ exports[`Modal should render a modal with title,close button and content 1`] = `
     >
       <Button
         className="close-button"
+        icon={
+          <IconClose
+            data-name="Layer 1"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          />
+        }
         isBlock={false}
         isCompact={false}
         isDisabled={false}
+        isIconOnly={false}
         isReversed={false}
-        onClick={[Function]}
+        onClick={[MockFunction]}
+        text="Close"
         type="button"
-        variant="link"
-      >
-        <IconClose
-          data-name="Layer 1"
-          viewBox="0 0 48 48"
-          xmlns="http://www.w3.org/2000/svg"
-        />
-      </Button>
+        variant="utility"
+      />
     </div>
   </div>
   <div

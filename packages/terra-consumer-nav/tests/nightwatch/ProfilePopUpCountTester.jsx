@@ -194,7 +194,7 @@ const nav = () => ({
         text: 'Help',
         icon: 'icon-client-question-alt',
       }],
-      // comment out userName to see signin
+    // comment out userName to see signin
     userName: 'John Snow',
     signinUrl: 'http://localhost:8080/',
     signoutUrl: 'http://localhost:8080/',
@@ -202,7 +202,6 @@ const nav = () => ({
 });
 
 export default class ProfilePopUpCountTester extends React.Component {
-
   constructor() {
     super();
     this.state = { count: nav().profile.profileLinks.length };

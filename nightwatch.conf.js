@@ -3,7 +3,7 @@
 
 const fs = require('fs');
 const globSync = require('glob').sync;
-const packages = require('./lerna.json').packages;
+const { packages } = require('./lerna.json');
 const chromedriver = require('chromedriver');
 
 

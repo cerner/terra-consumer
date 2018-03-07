@@ -8,6 +8,7 @@ exports[`Nav Items should apply custom classes 1`] = `
     badgeValue={0}
     handleToggle={[Function]}
     isActive={false}
+    key="testIcon"
     text="testIcon"
     url="#testPath"
   />
@@ -22,6 +23,7 @@ exports[`Nav Items should render a default component 1`] = `
     badgeValue={0}
     handleToggle={[Function]}
     isActive={false}
+    key="testIcon"
     text="testIcon"
     url="#testPath"
   />

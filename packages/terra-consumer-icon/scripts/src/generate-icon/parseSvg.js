@@ -6,7 +6,7 @@ import Icon from './Icon';
 
 const parseSvg = filepath => new Promise((resolve, reject) => {
   const source = fs.readFileSync(filepath, 'utf-8');
-  const name = path.parse(filepath).name;
+  const { name } = path.parse(filepath);
 
   jsdom.env(source, (error, window) => {
     if (error) {

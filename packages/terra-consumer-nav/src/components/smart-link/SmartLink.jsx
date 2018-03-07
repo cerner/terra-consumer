@@ -33,7 +33,7 @@ const SmartLink = ({
   }
   const a = document.createElement('a');
   a.href = url;
-    // fix for pathname quirk in IE : http://stackoverflow.com/questions/956233/javascript-pathname-ie-quirk
+  // fix for pathname quirk in IE : http://stackoverflow.com/questions/956233/javascript-pathname-ie-quirk
   const linkPath = a.pathname[0] === '/' ? a.pathname : `/${a.pathname}`;
 
   return (

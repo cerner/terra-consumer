@@ -12,20 +12,22 @@ const cx = classNames.bind(styles);
 
 const propTypes = {
   /**
-  * Object of configuration for the side navigation and profile.
-  */
-  nav: PropTypes.object.isRequired,
-  /**
-  * Array of links to show for the content of the help button
-  */
-  helpItems: PropTypes.array,
-  /**
+   * Object of configuration for the side navigation and profile.
+   */
+  nav: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
 
-  * Alert banner
-  */
+  /**
+   * Array of links to show for the content of the help button
+   */
+  helpItems: PropTypes.array, // eslint-disable-line react/forbid-prop-types
+
+  /**
+   * Alert banner
+   */
   siteAlert: PropTypes.element,
 
-   /* A center justified logo in header for mobile.
+  /**
+   * A center justified logo in header for mobile.
    */
   logo: PropTypes.shape({
     /**
@@ -62,7 +64,9 @@ class Layout extends React.Component {
     });
   }
   render() {
-    const { nav, helpItems, logo, siteAlert, intl, ...customProps } = this.props;
+    const {
+      nav, helpItems, logo, siteAlert, intl, ...customProps
+    } = this.props;
     const overlay = (
       <Overlay
         onRequestClose={this.toggleNav}

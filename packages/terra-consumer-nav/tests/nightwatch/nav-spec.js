@@ -1,7 +1,5 @@
 /* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
-
-
-const resizeTo = require('./utils').resizeTo;
+const { resizeTo } = require('./utils');
 
 module.exports = resizeTo(['small', 'tiny', 'medium', 'large', 'huge', 'enormous'], {
   '@tags': ['nav'],
@@ -9,6 +7,6 @@ module.exports = resizeTo(['small', 'tiny', 'medium', 'large', 'huge', 'enormous
     browser
       .url(`${browser.launchUrl}/#/tests/nav-tests/simple-nav`)
       .assert.elementPresent('#terra-consumer-nav');
-      // .assert.containsText('body', 'Cannot GET /tests/nav-tests/default');
+    // .assert.containsText('body', 'Cannot GET /tests/nav-tests/default');
   },
 });

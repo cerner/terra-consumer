@@ -19,14 +19,16 @@ const propTypes = {
   /**
    * An array of objects to be displayed as nav link options.
    */
-  navItems: PropTypes.array.isRequired,
+  navItems: PropTypes.array, // eslint-disable-line react/forbid-prop-types
+
   /**
-  * Object representing all the profile information
-  */
+   * Object representing all the profile information
+   */
   profile: PropTypes.shape({
     signinUrl: PropTypes.string,
     avatar: PropTypes.element,
   }),
+
   /**
    * An object defining the logo to be displayed
    */
@@ -35,15 +37,18 @@ const propTypes = {
      * The location where the image to be displayed is stored.
      */
     path: PropTypes.string,
+
     /**
      * Alternate text used be screen readers.
      */
     altText: PropTypes.string,
+
     /**
      * Whether or not the logo should be placed on top of a white card.
      */
     isCard: PropTypes.bool,
   }),
+
   /**
    * Callback function: should be used to close the nav on mobile devices.
    */
@@ -85,7 +90,7 @@ class Nav extends React.Component {
     this.props.onRequestClose();
   }
 
-  toggleModal(modalObject, numberOfLinks) {
+  toggleModal(modalObject) {
     if (modalObject.title && modalObject.content) {
       this.setState({
         modalContent: modalObject ||
@@ -93,7 +98,6 @@ class Nav extends React.Component {
             title: '',
             content: <div />,
           },
-        numberOfLinks,
       });
     }
     this.setState({
@@ -102,7 +106,9 @@ class Nav extends React.Component {
   }
 
   render() {
-    const { navItems, profile, logo, onRequestClose, ...customProps } = this.props;
+    const {
+      navItems, profile, logo, onRequestClose, ...customProps
+    } = this.props;
     const profileId = 'profile-popup-button';
     const defaultElement = (
       <Modal
@@ -135,7 +141,7 @@ class Nav extends React.Component {
         className={cx('nav', { 'modal-open': this.state.isModalOpen }, customProps.className)}
       >
         <div className={cx('close-button-container')}>
-          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="link" aria-label="Close" />
+          <Button icon={<IconClose />} className={cx('close-button')} onClick={() => { onRequestClose(); }} variant="utility" text="Close" />
         </div>
         <NavLogo {...logo} />
         <NavItems navItems={navItems} handleClick={onRequestClose} />

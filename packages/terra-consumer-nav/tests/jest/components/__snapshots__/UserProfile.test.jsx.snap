@@ -9,7 +9,7 @@ exports[`UserProfile should render a default avatar when none is provided 1`] = 
         "icon": <IconOutlineQuestionMark
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
-    />,
+        />,
         "text": "Account",
         "url": "http://localhost:8080/",
       },
@@ -17,7 +17,7 @@ exports[`UserProfile should render a default avatar when none is provided 1`] = 
         "icon": <IconOutlineQuestionMark
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
-    />,
+        />,
         "text": "Notifications",
         "url": "http://localhost:8080/",
       },
@@ -42,7 +42,7 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
         "icon": <IconOutlineQuestionMark
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
-    />,
+        />,
         "text": "Account",
         "url": "http://localhost:8080/",
       },
@@ -50,7 +50,7 @@ exports[`UserProfile should render a user profile with avatar,name and popup but
         "icon": <IconOutlineQuestionMark
           viewBox="0 0 48 48"
           xmlns="http://www.w3.org/2000/svg"
-    />,
+        />,
         "text": "Notifications",
         "url": "http://localhost:8080/",
       },

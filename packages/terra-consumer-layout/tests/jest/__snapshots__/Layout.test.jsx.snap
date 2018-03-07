@@ -2,6 +2,7 @@
 
 exports[`Layout should render a default component 1`] = `
 <IntlProvider
+  key="en-US"
   locale="en-US"
   messages={
     Object {

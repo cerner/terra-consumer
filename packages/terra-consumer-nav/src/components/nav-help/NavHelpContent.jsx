@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Arrange from 'terra-arrange';
-import Button from 'terra-button';
 import classNames from 'classnames/bind';
 import IconChevronDown from 'terra-icon/lib/icon/IconChevronDown';
 import IconChevronUp from 'terra-icon/lib/icon/IconChevronUp';
@@ -51,7 +50,7 @@ class NavHelpContent extends React.Component {
             className={cx('help-item-wrapper')}
             key={content.text}
           >
-            <Button
+            <button
               className={cx('help-item', { 'toggler-open': isOpen })}
               onClick={() => this.handleToggle(index)}
             >
@@ -62,7 +61,7 @@ class NavHelpContent extends React.Component {
                 fill={<div><SafeHtml text={content.text} /></div>}
                 fitEnd={<div>{toggleIcon}</div>}
               />
-            </Button>
+            </button>
             <Toggler isOpen={isOpen} isAnimated={false} className={cx('toggler-padding')}>
               { content.children.map(element => (
                 <p key={element.text} className={cx('toggler-content-alignment')}>

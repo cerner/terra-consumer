@@ -8,20 +8,19 @@ import styles from './NavItem.scss';
 const cx = classNames.bind(styles);
 
 const propTypes = {
-  navItems: PropTypes.arrayOf(
-    PropTypes.shape(
-      navItemShape,
-      {
-        /**
-         * An optional array of objects to be displayed as sub navs toggled by the main nav.
-         */
-        subItems: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
-      },
-    ),
-  ),
+  navItems: PropTypes.arrayOf(PropTypes.shape(
+    navItemShape,
+    {
+      /**
+       * An optional array of objects to be displayed as sub navs toggled by the main nav.
+       */
+      subItems: PropTypes.arrayOf(PropTypes.shape(navItemShape)),
+    },
+  )),
+
   /**
    * Function to be applied on all nav links, excluding toggle headers.
-  */
+   */
   handleClick: PropTypes.func,
 };
 

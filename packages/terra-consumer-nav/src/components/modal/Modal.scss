@@ -42,11 +42,11 @@
     margin: 0;
     padding: 0;
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 0;
 
     @media screen and (max-width: $terra-tiny-breakpoint - 1) {
-      right: 15px;
+      right: 0;
     }
   }
 

@@ -15,14 +15,17 @@ const propTypes = {
    * Title to be rendered on top of the modal content
    */
   title: PropTypes.string,
+
   /**
    * Boolean value to render modal.
    */
-  isModalOpen: PropTypes.bool.isRequired,
+  isModalOpen: PropTypes.bool,
+
   /**
    * Required callback function for use by parent component to update state.
    */
   onRequestClose: PropTypes.func.isRequired,
+
   /**
    * Content to be rendered in the body of the dialog box.
    */
@@ -44,9 +47,7 @@ const Modal = ({
     <div className={cx('modal-title')}>
       <SafeHtml text={title} />
       <div className={cx('close-button-container')}>
-        <Button className={cx('close-button')} onClick={onRequestClose} variant={'link'}>
-          <IconClose />
-        </Button>
+        <Button icon={<IconClose />} className={cx('close-button')} onClick={onRequestClose} variant="utility" text="Close" />
       </div>
     </div>
   );

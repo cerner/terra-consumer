@@ -14,34 +14,51 @@ exports[`Popup should render a pop with title,close button and content 1`] = `
   isContentFocusDisabled={false}
   isHeaderDisabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
-  targetRef={[Function]}
+  onRequestClose={[MockFunction]}
+  targetRef={[MockFunction]}
 >
   <div>
-    <div
+    <Spacer
       className="popup-title"
+      isInlineBlock={false}
+      marginBottom="none"
+      marginLeft="none"
+      marginRight="none"
+      marginTop="none"
+      paddingBottom="small-1"
+      paddingLeft="large+1"
+      paddingRight="small"
+      paddingTop="small-1"
     >
-      <SafeHtml
-        text="Title"
-      />
-      <Button
-        className="close-button"
-        icon={
-          <IconClose
-            data-name="Layer 1"
-            viewBox="0 0 48 48"
-            xmlns="http://www.w3.org/2000/svg"
+      <Arrange
+        fill={
+          <SafeHtml
+            text="Title"
           />
         }
-        isBlock={false}
-        isCompact={true}
-        isDisabled={false}
-        isReversed={false}
-        onClick={[Function]}
-        type="button"
-        variant="link"
+        fitEnd={
+          <Button
+            className="close-button"
+            icon={
+              <IconClose
+                data-name="Layer 1"
+                viewBox="0 0 48 48"
+                xmlns="http://www.w3.org/2000/svg"
+              />
+            }
+            isBlock={false}
+            isCompact={false}
+            isDisabled={false}
+            isIconOnly={false}
+            isReversed={false}
+            onClick={[MockFunction]}
+            text="Close Popup"
+            type="button"
+            variant="utility"
+          />
+        }
       />
-    </div>
+    </Spacer>
     <div>
       <div>
          This is a test content
@@ -65,8 +82,8 @@ exports[`Popup should render a popup without header(title & close button) 1`] = 
   isContentFocusDisabled={false}
   isHeaderDisabled={true}
   isOpen={false}
-  onRequestClose={[Function]}
-  targetRef={[Function]}
+  onRequestClose={[MockFunction]}
+  targetRef={[MockFunction]}
 >
   <div>
     <div>

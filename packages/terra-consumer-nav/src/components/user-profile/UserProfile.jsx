@@ -16,43 +16,51 @@ const propTypes = {
    * User name to be displayed in profile if user is signed in.
    */
   userName: PropTypes.string,
+
   /**
    * Avatar to be displayed in profile.
    */
   avatar: PropTypes.element,
+
   /**
    * A unique id set to the profile popup button that will be referred in profile popup.
    */
   id: PropTypes.string,
+
   /**
    * The path signout button would redirect to.
    */
   signoutUrl: PropTypes.string.isRequired,
+
   /**
    * The path to the login page.
    */
   signinUrl: PropTypes.string,
+
   /**
    * Determiniate of whether profile should render as signin link or profile button.
    */
   isSignIn: PropTypes.bool,
+
   /**
    * The content of the each profile items.
    */
-  profileLinks: PropTypes.array,
+  profileLinks: PropTypes.array, // eslint-disable-line react/forbid-prop-types
+
   /**
    * A function used as a callback to render modal and popup content.
    */
   handleClick: PropTypes.func.isRequired,
+
   /**
    * Injected react-intl formatting api
    */
   intl: intlShape.isRequired,
+
   /**
    * A function used as a callback when user clicks on any link in the content.
    */
   onLinkClick: PropTypes.func.isRequired,
-
 };
 
 const defaultProps = {

@@ -33,7 +33,7 @@ describe('Nav Item', () => {
     });
 
     it('should render when a string is provided', () => {
-      const wrapper = shallow(<NavItem {...testData} badgeValue={'!'} />);
+      const wrapper = shallow(<NavItem {...testData} badgeValue="!" />);
       expect(wrapper).toMatchSnapshot();
     });
   });

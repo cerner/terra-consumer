@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash'; // eslint-disable-line import/no-extraneous-dependencies
 import { BrowserRouter, Route } from 'react-router-dom';
 import IconPerson from 'terra-icon/lib/icon/IconPerson';
 import IconOutlineQuestionMark from 'terra-consumer-icon/lib/icon/IconOutlineQuestionMark';
@@ -290,10 +291,21 @@ const data = {
   ],
 };
 
-const card = (<div style={{ background: '#FFF', marginBottom: '10px', color: '#000', padding: '10px', borderRadius: '5px' }}>
-  {/* eslint-disable */}
-  { Array.apply(null, { length: 100 }).map((n, i) => <span key={i}>Testing </span>) }
-</div>);
+const cardStyle = {
+  background: '#FFF',
+  marginBottom: '10px',
+  color: '#000',
+  padding: '10px',
+  borderRadius: '5px',
+};
+
+const card = (
+  <div style={cardStyle}>
+    {
+      _.times(100, i => <span key={i}>Testing </span>)
+    }
+  </div>
+);
 
 const content = (
   <div>
@@ -302,8 +314,9 @@ const content = (
       path="/"
       render={() => (
         <div>
-          {/* eslint-disable */}
-          { Array.apply(null, { length: 5 }).map((n, i) => <div key={i}>{card}</div>) }
+          {
+            _.times(5, i => <div key={i}>{card}</div>)
+          }
         </div>
       )}
     />
@@ -312,10 +325,9 @@ const content = (
 );
 
 export default () => (
-    <BrowserRouter>
-      <Layout {...data}>
-        <div>{content}</div>
-        {/* <div style={{ padding: '500px 0', border: '1px dashed white' }} /> */}
-      </Layout>
-    </BrowserRouter>
+  <BrowserRouter>
+    <Layout {...data}>
+      <div>{content}</div>
+    </Layout>
+  </BrowserRouter>
 );

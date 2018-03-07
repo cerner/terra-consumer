@@ -1,65 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Nav Burger should render a default component 1`] = `
-<Button
+<button
   aria-label="Open Navbar"
-  className="burger"
-  icon={
+  className="burger button"
+  onClick={[MockFunction]}
+>
+  <span
+    className="icon"
+  >
     <IconMenu
       data-name="Layer 1"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isReversed={false}
-  onClick={[Function]}
-  type="button"
-  variant="link"
-/>
+  </span>
+</button>
 `;
 
 exports[`Nav Burger should render accept custom classes 1`] = `
-<Button
+<button
   aria-label="Open Navbar"
-  className="burger testClass"
-  icon={
+  className="burger button testClass"
+  onClick={[MockFunction]}
+>
+  <span
+    className="icon"
+  >
     <IconMenu
       data-name="Layer 1"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isReversed={false}
-  onClick={[Function]}
-  type="button"
-  variant="link"
-/>
+  </span>
+</button>
 `;
 
 exports[`Nav Burger should render accept custom props 1`] = `
-<Button
+<button
   aria-label="Open Navbar"
-  className="burger"
-  icon={
+  className="burger button"
+  id="testId"
+  onClick={[MockFunction]}
+>
+  <span
+    className="icon"
+  >
     <IconMenu
       data-name="Layer 1"
       viewBox="0 0 48 48"
       xmlns="http://www.w3.org/2000/svg"
     />
-  }
-  id="testId"
-  isBlock={false}
-  isCompact={false}
-  isDisabled={false}
-  isReversed={false}
-  onClick={[Function]}
-  type="button"
-  variant="link"
-/>
+  </span>
+</button>
 `;
