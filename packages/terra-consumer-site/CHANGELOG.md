@@ -1,5 +1,8 @@
 Changelog
 =========
+
+Deprecated in favor of storybook
+
 0.4.9 - (October 10, 2017)
 ----------
 

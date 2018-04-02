@@ -1,5 +1,9 @@
 ChangeLog
 
+# 1.0.0
+--------
+- Upgrade to react 16
+
 # 0.2.9
 - Remove storybook dependency from package.json
 

@@ -1,6 +1,10 @@
 ChangeLog
 # Next Release
 
+# 1.0.0
+--------
+- Upgrade to react 16
+
 # 0.2.14 - (Feb 12, 2018)
 ### Changed
 - Updated the translation texts for help button
