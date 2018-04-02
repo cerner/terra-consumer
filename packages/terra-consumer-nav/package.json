@@ -1,7 +1,7 @@
 {
   "name": "terra-consumer-nav",
   "main": "lib/Nav.js",
-  "version": "0.2.14",
+  "version": "1.0.0",
   "description": "A responsive container that neatly displays logo, quicklinks, navlinks and profile.",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
     "terra-base": "^3.0.0",
     "terra-button": "^2.0.0",
     "terra-card": "^2.0.0",
-    "terra-consumer-icon": "1.2.5",
+    "terra-consumer-icon": "^2.0.0",
     "terra-i18n": "^2.0.0",
     "terra-icon": "^2.0.0",
     "terra-mixins": "^1.13.0",
