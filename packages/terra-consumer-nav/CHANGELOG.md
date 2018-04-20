@@ -1,7 +1,7 @@
 ChangeLog
 # Next Release
 
-# Unreleased
+# 1.0.1
 ### Changed
 - Added translations for new locale nl-BE.
 
