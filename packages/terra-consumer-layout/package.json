@@ -1,7 +1,7 @@
 {
   "name": "terra-consumer-layout",
   "main": "lib/Layout.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A re-usable layout component that puts together our navigation",
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "react-intl": "^2.4.0",
     "terra-base": "^3.0.0",
     "terra-consumer-icon": "^2.0.0",
-    "terra-consumer-nav": "^1.0.0",
+    "terra-consumer-nav": "^1.0.1",
     "terra-i18n": "^2.0.0",
     "terra-icon": "^2.0.0",
     "terra-overlay": "^2.0.0",
