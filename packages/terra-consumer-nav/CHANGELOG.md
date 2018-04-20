@@ -1,6 +1,10 @@
 ChangeLog
 # Next Release
 
+# Unreleased
+### Changed
+- Added translations for new locale nl-BE.
+
 # 1.0.0
 --------
 - Upgrade to react 16

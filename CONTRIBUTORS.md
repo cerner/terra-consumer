@@ -11,6 +11,7 @@ Cerner Corporation
 - Raihan Ahmed Mohammed [@MohammedRAihanAhmed]
 - Divya Ashritha [@DivyaAshritha]
 - Cody Price [@dev-cprice]
+- Wenxue Zhang [@zhangwenx]
 
 [@mhemesath]: https://github.com/mhemesath
 [@KevinJJackson]: https://github.com/KevinJJackson
@@ -23,3 +24,4 @@ Cerner Corporation
 [@MohammedRAihanAhmed]:https://github.com/MohammedRAihanAhmed
 [@DivyaAshritha]:https://github.com/divyaashritha
 [@dev-cprice]: https://github.com/dev-cprice
+[@zhangwenx]: https://github.com/zhangwenx
