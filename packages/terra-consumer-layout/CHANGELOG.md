@@ -1,5 +1,10 @@
 ChangeLog
 
+# Unreleased
+--------
+### Added
+- Add translations for sv and sv-SE
+
 # 1.0.0
 --------
 - Upgrade to react 16

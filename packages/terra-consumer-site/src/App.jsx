@@ -37,6 +37,7 @@ class App extends React.Component {
                 <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
               </div>
               <div>
+                {/* eslint-disable-next-line */}
                 <label htmlFor="locale">
                   Current locale: {this.state.locale}
                   <select value={this.state.locale} onChange={this.handleLocaleChange} id="locale">

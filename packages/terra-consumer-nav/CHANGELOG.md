@@ -1,5 +1,8 @@
 ChangeLog
 # Next Release
+--------------
+### Added
+- Add translations for sv and sv-SE
 
 # 1.0.1
 ### Changed
