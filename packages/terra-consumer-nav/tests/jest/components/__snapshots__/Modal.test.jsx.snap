@@ -12,6 +12,8 @@ exports[`Modal should render a modal with title,close button and content 1`] = `
   isOpen={false}
   isRelativeToContainer={false}
   isScrollable={false}
+  rootSelector="[data-terra-base]"
+  zIndex="100"
 >
   <div
     className="modal-title"
