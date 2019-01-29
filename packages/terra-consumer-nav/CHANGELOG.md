@@ -1,6 +1,11 @@
 ChangeLog
 # Next Release
 
+# 2.0.0 - (January 29, 2019)
+--------
+### Changed
+- Bump Terra UI packages to latest major version release
+
 # 1.0.1
 ### Changed
 - Added translations for new locale nl-BE.

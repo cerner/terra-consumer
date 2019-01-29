@@ -34,7 +34,8 @@
     ],
     "moduleNameMapper": {
       "\\.(css|scss)$": "identity-obj-proxy"
-    }
+    },
+    "testURL": "http://localhost"
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
@@ -116,11 +117,11 @@
     "stylelint-order": "^0.8.1",
     "stylelint-scss": "^2.3.0",
     "stylelint-suitcss": "^2.0.0",
-    "terra-base": "^3.0.0",
-    "terra-i18n": "^2.0.0",
+    "terra-base": "^4.0.0",
+    "terra-i18n": "^3.0.0",
     "terra-i18n-plugin": "^2.0.0",
-    "terra-icon": "^2.0.0",
-    "terra-table": "^2.0.0",
+    "terra-icon": "^3.1.0",
+    "terra-table": "^3.3.0",
     "terra-toolkit": "^2.8.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"

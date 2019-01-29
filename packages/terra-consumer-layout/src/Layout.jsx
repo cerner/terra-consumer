@@ -73,6 +73,7 @@ class Layout extends React.Component {
         isOpen={this.state.isMobileNavOpen}
         backgroundStyle="clear"
         isRelativeToContainer
+        zIndex="6000"
       />
     );
 

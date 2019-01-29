@@ -1,6 +1,10 @@
 ChangeLog
 =========
 
+3.0.0 - (January 29, 2019)
+--------
+- Bump Terra UI packages to latest major version release
+
 2.0.0
 --------
 - Upgrade to react 16
