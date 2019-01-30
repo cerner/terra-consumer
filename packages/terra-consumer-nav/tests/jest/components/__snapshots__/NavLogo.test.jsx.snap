@@ -15,6 +15,7 @@ exports[`Nav Logo should apply custom classes 1`] = `
 exports[`Nav Logo should render a Card instead of a div when specified 1`] = `
 <Card
   className="logo-container"
+  variant="default"
 >
   <CardBody
     hasPaddingHorizontal={true}

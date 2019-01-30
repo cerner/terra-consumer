@@ -37,6 +37,7 @@ class App extends React.Component {
                 <button onClick={() => document.getElementsByTagName('html')[0].setAttribute('dir', 'rtl')} >rtl</button>
               </div>
               <div>
+                {/* eslint-disable jsx-a11y/label-has-for */}
                 <label htmlFor="locale">
                   Current locale: {this.state.locale}
                   <select value={this.state.locale} onChange={this.handleLocaleChange} id="locale">
@@ -50,6 +51,7 @@ class App extends React.Component {
                     <option value="fi-FI">fi-FI</option>
                   </select>
                 </label>
+                {/* eslint-enable jsx-a11y/label-has-for */}
               </div>
               <List className={styles['site-nav']}>
                 <List.Item content={<Link to="/">Home</Link>} />

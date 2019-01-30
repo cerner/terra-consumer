@@ -79,7 +79,7 @@ exports[`Icon IconColorIncentives should shallow IconBase 1`] = `
 exports[`Icon IconOutlineChevronRight should render IconBase with custom-class 1`] = `
 <svg
   aria-hidden="true"
-  class="icon is-bidi custom-class"
+  class="tui-Icon icon is-bidi custom-class"
   focusable="false"
   height="1em"
   viewBox="0 0 48 48"

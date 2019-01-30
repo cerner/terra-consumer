@@ -1,5 +1,9 @@
 ChangeLog
 
+# 1.1.0
+--------
+- Update nav z-index
+
 # 1.0.0
 --------
 - Upgrade to react 16
