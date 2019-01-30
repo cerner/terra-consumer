@@ -1,5 +1,13 @@
 {
   "lerna": "2.9.0",
+  "commands": {
+    "publish": {
+      "ignore": [
+        "tests/**/*",
+        "terra-consumer-site"
+      ]
+    }
+  },
   "packages": [
     "packages/*"
   ],
