@@ -10,6 +10,7 @@
     position: absolute;
     right: 20px;
     top: 60px;
+    z-index: 300;
 
     @media screen and (max-width: $terra-tiny-breakpoint - 1) {
       left: 10px;

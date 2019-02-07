@@ -27,7 +27,7 @@
     min-width: var(--terra-consumer-nav-width, 320px);
     position: relative;
     width: var(--terra-consumer-nav-width, 320px);
-    z-index: 99;
+    z-index: 200;
 
     @media screen and (max-width: $terra-medium-breakpoint - 1) {
       background-color: var(--terra-consumer-body-background-color, #c7d4ea);
@@ -159,5 +159,9 @@
 
   .skip-container {
     text-align: center;
+  }
+
+  .overlay {
+    top: 0;
   }
 }

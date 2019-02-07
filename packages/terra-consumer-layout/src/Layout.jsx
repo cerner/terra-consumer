@@ -69,6 +69,7 @@ class Layout extends React.Component {
     } = this.props;
     const overlay = (
       <Overlay
+        className={cx('overlay')}
         onRequestClose={this.toggleNav}
         isOpen={this.state.isMobileNavOpen}
         backgroundStyle="clear"

@@ -20,6 +20,7 @@
 
   .profile {
     bottom: 0;
+    overflow: hidden;
     position: fixed;
     width: var(--terra-consumer-profile-link-width, 320px);
 
