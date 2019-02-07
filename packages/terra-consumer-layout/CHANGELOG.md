@@ -1,5 +1,8 @@
 ChangeLog
 
+# Unreleased
+- Update DOM order in layout
+
 # 1.1.0
 --------
 - Update nav z-index
